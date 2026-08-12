@@ -30,4 +30,4 @@ npm run android   # requires Android SDK / emulator or a device
 
 ## Building an APK
 
-APKs are built automatically by GitHub Actions ([`.github/workflows/build-apk.yml`](.github/workflows/build-apk.yml)) on every push to `main`, and can also be triggered manually from the Actions tab. The workflow runs `expo prebuild` + a Gradle debug build and uploads `app-debug.apk` as a downloadable build artifact — no local Android toolchain needed.
+APKs are built automatically by GitHub Actions ([`.github/workflows/build-apk.yml`](.github/workflows/build-apk.yml)) on every push to `main`, and can also be triggered manually from the Actions tab. The workflow runs `expo prebuild` + a Gradle release build and uploads `app-release.apk` as a downloadable build artifact — no local Android toolchain needed. The release build is self-contained (JS bundle embedded) and installable standalone, unlike a debug build which requires a live Metro dev server on the same network.
