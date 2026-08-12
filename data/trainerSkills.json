@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Athletics",
+    "governingStat": "Attack",
+    "description": "When it comes to running, jumping, climbing, swimming, and various feats of strength, you’ll be using Athletics to check your success. Climbing a ladder might not be an issue, but athletics comes into play when climbing a sheer cliffside, a towering tree, or while avoiding hazardous holds on a wall. When making a long or high jump or while doing some kind of maneuver mid-jump you might need to use athletics. Swimming against currents, swimming for an hour, or just staying above treacherous waters will also use athletics. There are many more applications of the athletics skills; holding onto something, pushing over a massive object, breaking out of a hold, busting through a door, catching a falling object, sprinting away from a hungry Pokémon, or forcing your way through an angry crowd are just a few of the numerous examples where you’ll be asked to make a check."
+  },
+  {
+    "name": "Concentration",
+    "governingStat": "Defense",
+    "description": "Maintaining focus on a task while under stressful situations is where Concentration comes into play. If you need focus to perform a task, concentration will help get you through the task without losing focus even while being struck by an attack or under some threat that messes with your nerves. When taking damage or while disoriented by some psychological attack, the GM may ask you to make a concentration check if they feel the task you are performing is particularly difficult while under duress."
+  },
+  {
+    "name": "Constitution",
+    "governingStat": "Defense",
+    "description": "If you’re under some kind of physical stress it’s likely that the GM will ask you to make a Constitution check. Constitution checks might be given to you when poisoned or burned, as they are a way for a trainer to free themselves of afflictions. Holding your breath, going days without food or water, enduring hours of holding a heavy Pokémon, or tirelessness when on the run for over 24 hours are all reasons your constitution will be checked."
+  },
+  {
+    "name": "Engineering/Operation",
+    "governingStat": "Special Attack",
+    "description": "When you have a talent for it, you’re more adept than most at understanding and operating machinery. The GM may make you make an Engineering check when coming upon a machine or you could roll it when trying to discern the use of a device. Even if you can understand the mechanical use and how a machine works, you could still be asked to make an Operation check. Technical capability when maneuvering a complicated aerial vehicle or using a medical device could still need a skill check if you’re not spending time to learn about the device in question."
+  },
+  {
+    "name": "History",
+    "governingStat": "Special Attack",
+    "description": "Sometimes you need to know more about the past of the Pokémon world. The better your History, the more you know about the world. When in a new space or hearing about, some kind of historical event you may initiate a check or your GM might ask you to make one when your party isn’t sure about where anything is. Current events is also history, so if you are talented in the History skill, it’s likely that you keep up with news and could discern information about a new place you’re visiting and know about any safe or unsafe spaces while exploring the city or town."
+  },
+  {
+    "name": "Investigate",
+    "governingStat": "Special Attack",
+    "description": "When trying to understand something’s purpose or find relevant items in an area, Investigation helps. This is used sometimes to find items of importance in a space or something else you may have missed. Sometimes you come upon an empty but mysterious scene that you’re investigating and a talented trainer could discern what happened with a high enough check. You could even use it to deduce pieces of information while investigating existing evidence or find information about a bridge or wall such as its likely weak points. Skills"
+  },
+  {
+    "name": "Medicine",
+    "governingStat": "Special Attack",
+    "description": "When you’re out in the wild, or even far from a hospital in the city, medicine can help to stabilize an injured friend. If an ally has broken a bone, you can help to set it so they can be moved, or to place a dislocated bone back where it belongs. When wounded and bleeding, you can stop a friend from a grave injury. You could use your knowledge of medicine to stop the spreading of poison or the harm a burn can do, even though a friend would remain afflicted. At times, medicine could even help to identify useful berries when in the wild."
+  },
+  {
+    "name": "Nature",
+    "governingStat": "Special Attack",
+    "description": "Nature has to do with facts that you know about the world of Pokémon outside of civilization’s concrete walls. Without a Pokédex handy, nature might be helpful to identify a Pokémon’s type or strengths. It could also be used to identify tracks or an unattended egg. Even more helpful, nature could help you know whether some foraged food is safe for consumption or poisonous."
+  },
+  {
+    "name": "Programming",
+    "governingStat": "Special Attack",
+    "description": "A better understanding and access of computers is possible with Programming. While you may be able to attempt any of the following things, you will want to be as specific as possible while you manipulate a computer since each task might require a separate skill check. Programming tasks: Access digital device (timer, detonator, lock), access personal computer, access small network (small office, personal business), access large network (Pokémon Centers in the city, local government), access massive conglomerate network (Ranger Union, Rocket database, Silph Co.), damage programming, crash computers, crash network, activate/shutdown remote task (cameras, locks, alarm), change network keys, manipulate computer hardware, hide evidence of tampering."
+  },
+  {
+    "name": "Bluff/Deception",
+    "governingStat": "Special Defense",
+    "description": "Deception is a tricky thing and without care, you could expose yourself to retaliation. Whenever you’re bluffing your way through a conversation, or plainly lying to someone about your intentions or some truth you’re twisting, you’ll be making a Bluff/Deception check. You could also be asked to make a check while forging documents, coning someone during a game of cards, or putting on a shoddy disguise."
+  },
+  {
+    "name": "Diplomacy/Persuasion",
+    "governingStat": "Special Defense",
+    "description": "Diplomacy requires attention to someone else’s needs and desires. Persuasion involves convincing someone to do something that isn’t necessarily on their agenda. Both might help you to convince others to do as you say. Whether it’s by explaining the benefits of helping you or by showing some muscle, both diplomacy and persuasion will surely be useful to accomplish your needs."
+  },
+  {
+    "name": "Insight",
+    "governingStat": "Special Defense",
+    "description": "Discerning intention could be useful in a world filled with dishonest people. With insight you could tell if a person is kindhearted or devious. You can figure out if someone’s tell while playing a game of chance, or find someone’s weak points while playing a game of wits. Insight into a person might also reveal topics to avoid or pressure points to press during conversation."
+  },
+  {
+    "name": "Perception",
+    "governingStat": "Special Defense",
+    "description": "Often, things are happening around you. Perception is important to catch things that you wouldn’t catch otherwise. A good sense of perception could stop you from walking into a trap, a wild Pokémon’s den, or to avoid missing a shiny evolution stone in some thicket. Perception might also be used to eavesdrop or listen for stealthy groups of wild Pokémon infiltrating a town’s borders."
+  },
+  {
+    "name": "Perform",
+    "governingStat": "Special Defense",
+    "description": "Perform helps you play your instruments better, put on your magician’s act, dance with more charm, or even give a rousing speech. Talented execution could turn an improvised street performance into some credits for your pocket or offers to join some other private performance at a later date. With enough talent, people might even begin talking about your performances elsewhere, garnering you a reputation."
+  },
+  {
+    "name": "Pokémon Handling",
+    "governingStat": "Special Defense",
+    "description": "When it comes to Pokémon, there’s just so much to know. Handling specifically has to do with approaching and interacting with Pokémon who are strangers to you or Pokémon who really do not like you. You could use Pokémon handling to slowly approach a wary wild or to attempt to calm a rampaging Tauros. Pokémon Handling might even be checked when you’re mounted on a Pokémon who isn’t very comfortable with you yet."
+  },
+  {
+    "name": "Acrobatics",
+    "governingStat": "Speed",
+    "description": "Whether its careful balance, a parkour climb, or a swinging flip, good Acrobatics will come in handy to succeed. Keeping your footing in a slippery situation requires your acrobatics, or standing upright when a train suddenly departs without warning could need your balance. Sticking to a mounted Pokémon while it runs along a wall or spins in the air could also need your acrobatic know-how. While tumbling out of danger’s way, flipping over a wall, navigating a thin wire, diving safely into water from high, or swinging from a vine you could also be asked to make an acrobatics check among many other examples."
+  },
+  {
+    "name": "Sleight of Hand",
+    "governingStat": "Speed",
+    "description": "While pickpocketing is bad, some still want to be able to do it well. This is also useful for concealing things you own on your person. While manipulating difficult puzzles, or locks that require a non-electronic key, a slight of hand skill check would also be required. When performing any kind of misdirection or technical application with your hands and an object near or in your hands, sleight of hand matters."
+  },
+  {
+    "name": "Stealth",
+    "governingStat": "Speed",
+    "description": "Moving sneakily comes in handy. With Stealth, you can move quieter and hide yourself better. You can use stealth to slip past grunts who are patrolling a perimeter, approach or follow someone from behind without being noticed, or to suddenly conceal yourself by jumping into a nearby bush. Even something mundane like reading a newspaper could use a stealth check if you’re trying to be inconspicuous and avoid attention."
+  }
+]
