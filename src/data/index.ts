@@ -1,13 +1,36 @@
 import trainerClassesRaw from '../../data/trainerClasses.json';
 import trainerSkillsRaw from '../../data/trainerSkills.json';
 import pokemonRaw from '../../data/pokemon.json';
+import legendaryPokemonRaw from '../../data/legendaryPokemon.json';
 import pokemonSkillsRaw from '../../data/pokemonSkills.json';
-import type { TrainerClass, TrainerSkill, PokemonFamily, PokemonSkill } from '../types/models';
+import gmGuideRaw from '../../data/gmGuide.json';
+import type { TrainerClass, TrainerSkill, PokemonFamily, PokemonSkill, GmGuideSection } from '../types/models';
+
+function toModifier(v: unknown): number {
+  if (typeof v === 'number') return v;
+  const n = parseInt(String(v).replace('+', ''), 10);
+  return Number.isFinite(n) ? n : 0;
+}
+
+function normalizeFamily(family: any): PokemonFamily {
+  return {
+    ...family,
+    stages: family.stages.map((stage: any) => ({
+      ...stage,
+      moveModifiers: {
+        attack: toModifier(stage.moveModifiers?.attack),
+        specialAttack: toModifier(stage.moveModifiers?.specialAttack),
+        effect: toModifier(stage.moveModifiers?.effect),
+      },
+    })),
+  };
+}
 
 export const trainerClasses = trainerClassesRaw as TrainerClass[];
 export const trainerSkills = trainerSkillsRaw as TrainerSkill[];
-export const pokemonFamilies = pokemonRaw as PokemonFamily[];
+export const pokemonFamilies = [...(pokemonRaw as any[]), ...(legendaryPokemonRaw as any[])].map(normalizeFamily);
 export const pokemonSkills = pokemonSkillsRaw as PokemonSkill[];
+export const gmGuideSections = gmGuideRaw as GmGuideSection[];
 
 export const trainerClassById = new Map(trainerClasses.map((c) => [c.id, c]));
 export const pokemonFamilyById = new Map(pokemonFamilies.map((p) => [p.familyId, p]));

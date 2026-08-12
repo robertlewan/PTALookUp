@@ -20,9 +20,15 @@ export type HomeStackParamList = {
   Home: undefined;
 };
 
+export type GmGuideStackParamList = {
+  GmGuideList: undefined;
+  GmGuideDetail: { sectionId: string };
+};
+
 export type RootTabParamList = {
   HomeTab: undefined;
   ClassesTab: undefined;
   DexTab: undefined;
   CharactersTab: undefined;
+  GmGuideTab: undefined;
 };

@@ -35,6 +35,11 @@ export default function HomeScreen() {
         desc="Create and save trainer character sheets, and manage your Pokémon party."
         onPress={() => navigation.navigate('CharactersTab')}
       />
+      <NavCard
+        title="GM Guide"
+        desc="Capture rates, encounter building, loyalty, evolution, and other game master reference rules."
+        onPress={() => navigation.navigate('GmGuideTab')}
+      />
     </ScrollView>
   );
 }

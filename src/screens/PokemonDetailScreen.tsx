@@ -26,10 +26,14 @@ export default function PokemonDetailScreen() {
 
       {family.biology && (
         <Section title="Biology">
-          <ListRow label="Egg Groups" value={family.biology.eggGroups.join(', ')} />
-          <ListRow label="Hatch Rate" value={family.biology.hatchRate} />
-          <ListRow label="Diet" value={family.biology.diet} />
-          <ListRow label="Habitats" value={family.biology.habitats.join(', ')} />
+          {family.biology.eggGroups.length > 0 && (
+            <ListRow label="Egg Groups" value={family.biology.eggGroups.join(', ')} />
+          )}
+          <ListRow label="Hatch Rate" value={family.biology.hatchRate ?? '—'} />
+          <ListRow label="Diet" value={family.biology.diet ?? '—'} />
+          {family.biology.habitats.length > 0 && (
+            <ListRow label="Habitats" value={family.biology.habitats.join(', ')} />
+          )}
           {family.rarity && <ListRow label="Rarity" value={family.rarity} />}
         </Section>
       )}

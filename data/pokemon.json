@@ -13673,6 +13673,246 @@
         ]
       },
       {
+        "name": "Wormadam (Plant Cloak)",
+        "types": [
+          "Bug",
+          "Grass"
+        ],
+        "size": "Small",
+        "weight": "Light",
+        "stats": {
+          "hp": 36,
+          "defense": 9,
+          "specialDefense": 12,
+          "speed": 7,
+          "speedFt": 35,
+          "attack": 6,
+          "specialAttack": 9
+        },
+        "skills": [
+          {
+            "name": "Telekinetic",
+            "description": "can move things with their mind"
+          },
+          {
+            "name": "Threaded",
+            "description": ""
+          }
+        ],
+        "passives": [
+          {
+            "name": "Quiver Dance",
+            "description": "+1 Special Attack, +1 Special Defense, +1 Speed"
+          },
+          {
+            "name": "String Shot",
+            "description": "+2 Speed"
+          },
+          {
+            "name": "Overcoat",
+            "description": "You are immune to damage from weather."
+          },
+          {
+            "name": "Shed Skin",
+            "description": ""
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+3",
+          "specialAttack": "+4",
+          "effect": "+3"
+        },
+        "moves": [
+          {
+            "name": "Confusion",
+            "range": "Ranged(10ft)",
+            "moveType": "Psychic",
+            "category": "Special Attack",
+            "frequency": "At-Will",
+            "power": "1d12",
+            "effect": "On hit, if you got 19 or higher on Accuracy Check, the target is Confused."
+          },
+          {
+            "name": "Razor Leaf",
+            "range": "Ranged(25ft)",
+            "moveType": "Grass",
+            "category": "Attack",
+            "frequency": "At-Will",
+            "power": "2d8",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, Razor Leaf is a critical hit."
+          },
+          {
+            "name": "Bug Buzz",
+            "range": "Ranged(20ft)",
+            "moveType": "Bug",
+            "category": "Special Attack",
+            "frequency": "1/day",
+            "power": "3d12",
+            "effect": "On hit, the target’s Special Defense is -1 for 10 mins."
+          }
+        ]
+      },
+      {
+        "name": "Wormadam (Trash Cloak)",
+        "types": [
+          "Bug",
+          "Steel"
+        ],
+        "size": "Small",
+        "weight": "Light",
+        "stats": {
+          "hp": 36,
+          "defense": 10,
+          "specialDefense": 11,
+          "speed": 5,
+          "speedFt": 25,
+          "attack": 7,
+          "specialAttack": 9
+        },
+        "skills": [
+          {
+            "name": "Telekinetic",
+            "description": ""
+          },
+          {
+            "name": "Threaded",
+            "description": ""
+          }
+        ],
+        "passives": [
+          {
+            "name": "Metal Sound",
+            "description": "+1 Special Attack"
+          },
+          {
+            "name": "Quiver Dance",
+            "description": ""
+          },
+          {
+            "name": "Overcoat",
+            "description": ""
+          },
+          {
+            "name": "Shed Skin",
+            "description": ""
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+3",
+          "specialAttack": "+4",
+          "effect": "+2"
+        },
+        "moves": [
+          {
+            "name": "Confusion",
+            "range": "Ranged(10ft)",
+            "moveType": "Psychic",
+            "category": "Special Attack",
+            "frequency": "At-Will",
+            "power": "1d12",
+            "effect": "On hit, if you got 19 or higher on Accuracy Check, the target is Confused."
+          },
+          {
+            "name": "Mirror Shot",
+            "range": "Ranged(20ft)",
+            "moveType": "Steel",
+            "category": "Special Attack",
+            "frequency": "At-Will",
+            "power": "2d8",
+            "effect": ""
+          },
+          {
+            "name": "Bug Buzz",
+            "range": "Ranged(20ft)",
+            "moveType": "Bug",
+            "category": "Special Attack",
+            "frequency": "1/day",
+            "power": "3d12",
+            "effect": "On hit, the target’s Special Defense is -1 for 10 mins."
+          }
+        ]
+      },
+      {
+        "name": "Wormadam (Sandy Cloak)",
+        "types": [
+          "Bug",
+          "Ground"
+        ],
+        "size": "Small",
+        "weight": "Light",
+        "stats": {
+          "hp": 36,
+          "defense": 13,
+          "specialDefense": 10,
+          "speed": 5,
+          "speedFt": 25,
+          "attack": 8,
+          "specialAttack": 7
+        },
+        "skills": [
+          {
+            "name": "Telekinetic",
+            "description": ""
+          },
+          {
+            "name": "Threaded",
+            "description": ""
+          }
+        ],
+        "passives": [
+          {
+            "name": "Iron Defense",
+            "description": "+2 Defense"
+          },
+          {
+            "name": "Quiver Dance",
+            "description": ""
+          },
+          {
+            "name": "Overcoat",
+            "description": ""
+          },
+          {
+            "name": "Shed Skin",
+            "description": ""
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+4",
+          "specialAttack": "+3",
+          "effect": "+2"
+        },
+        "moves": [
+          {
+            "name": "Confusion",
+            "range": "Ranged(10ft)",
+            "moveType": "Psychic",
+            "category": "Special Attack",
+            "frequency": "At-Will",
+            "power": "1d12",
+            "effect": "On hit, if you got 19 or higher on Accuracy Check, the target is Confused."
+          },
+          {
+            "name": "Rock Blast",
+            "range": "Ranged(10ft)",
+            "moveType": "Rock",
+            "category": "Attack",
+            "frequency": "At-Will",
+            "power": "1d4",
+            "effect": "Rock Blast has -2 during Accuracy Check. Rock Blast is a Scatter attack. Up to 5 attacks."
+          },
+          {
+            "name": "Bug Buzz",
+            "range": "Ranged(20ft)",
+            "moveType": "Bug",
+            "category": "Special Attack",
+            "frequency": "1/day",
+            "power": "3d12",
+            "effect": "On hit, the target’s Special Defense is -1 for 10 mins."
+          }
+        ]
+      },
+      {
         "name": "Mothim",
         "types": [
           "Bug",
@@ -14646,6 +14886,198 @@
             "frequency": "3/day",
             "power": null,
             "effect": "Place the Sticky Web Hazard in the area surrounding you. Sticky Web Hazard has the following ability: Foes moving through Sticky Web Hazard on the ground have -25ft movement per turn, to a minimum of 5ft. This Hazard disappears after 2 mins."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "familyId": "volbeat",
+    "familyName": "Volbeat",
+    "rarity": "Uncommon",
+    "biology": {
+      "eggGroups": [
+        "Bug"
+      ],
+      "hatchRate": "10 Days",
+      "diet": "Herbivore",
+      "habitats": [
+        "Beaches",
+        "Caves",
+        "Mountains"
+      ]
+    },
+    "evolutionText": null,
+    "proficiencies": [
+      "Bug",
+      "Rock"
+    ],
+    "megaEvolution": false,
+    "gigantamax": false,
+    "stages": [
+      {
+        "name": "Volbeat",
+        "types": [
+          "Bug"
+        ],
+        "size": "Medium",
+        "weight": "Medium",
+        "stats": {
+          "hp": 42,
+          "defense": 8,
+          "specialDefense": 9,
+          "speed": 9,
+          "speedFt": 45,
+          "attack": 7,
+          "specialAttack": 8
+        },
+        "skills": [
+          {
+            "name": "Flight",
+            "description": "can fly"
+          },
+          {
+            "name": "Genetic Relation",
+            "description": "can breed to produce Illumise"
+          },
+          {
+            "name": "Glow",
+            "description": "can produce light"
+          }
+        ],
+        "passives": [
+          {
+            "name": "Tail Glow",
+            "description": "+3 Special Attack"
+          },
+          {
+            "name": "Prankster",
+            "description": "Your attacks that do not deal damage on hit have Priority."
+          },
+          {
+            "name": "Swarm",
+            "description": "When you are below 20 HP, your Bug-type attacks deal +4 damage"
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+3",
+          "specialAttack": "+4",
+          "effect": "+4"
+        },
+        "moves": [
+          {
+            "name": "Signal Beam",
+            "range": "Ranged(15ft beam)",
+            "moveType": "Bug",
+            "category": "Special Attack",
+            "frequency": "3/day",
+            "power": "3d10",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Confused."
+          },
+          {
+            "name": "Zen Headbutt",
+            "range": "Melee",
+            "moveType": "Psychic",
+            "category": "Attack",
+            "frequency": "3/day",
+            "power": "3d10",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Stunned."
+          },
+          {
+            "name": "Play Rough",
+            "range": "Melee",
+            "moveType": "Fairy",
+            "category": "Attack",
+            "frequency": "3/day",
+            "power": "3d10",
+            "effect": "On hit, the target’s Attack is -1 for 10 mins."
+          }
+        ]
+      },
+      {
+        "name": "Illumise",
+        "types": [
+          "Bug"
+        ],
+        "size": "Medium",
+        "weight": "Medium",
+        "stats": {
+          "hp": 42,
+          "defense": 9,
+          "specialDefense": 9,
+          "speed": 9,
+          "speedFt": 45,
+          "attack": 5,
+          "specialAttack": 7
+        },
+        "skills": [
+          {
+            "name": "Alluring",
+            "description": "attracts others with their aroma"
+          },
+          {
+            "name": "Flight",
+            "description": "can fly"
+          },
+          {
+            "name": "Genetic Relation",
+            "description": "can breed to produce Volbeat"
+          },
+          {
+            "name": "Glow",
+            "description": "can produce light"
+          }
+        ],
+        "passives": [
+          {
+            "name": "Charm",
+            "description": "+1 Defense"
+          },
+          {
+            "name": "Oblivious",
+            "description": "You are immune to Infatuation."
+          },
+          {
+            "name": "Prankster",
+            "description": "Your attacks that do not deal damage on hit have Priority."
+          },
+          {
+            "name": "Tinted Lens",
+            "description": "Your resisted attacks deal +4 damage."
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+2",
+          "specialAttack": "+3",
+          "effect": "+4"
+        },
+        "moves": [
+          {
+            "name": "Moonlight",
+            "range": "Melee",
+            "moveType": "Fairy",
+            "category": "Effect",
+            "frequency": "1/day",
+            "power": null,
+            "effect": "Target an ally or yourself. The target is healed HP equal to half of the target’s Max HP. If you are within Sunny Weather, the target is healed HP equal to 3/4ths of the target’s Max HP instead."
+          },
+          {
+            "name": "Encore",
+            "range": "Ranged(10ft)",
+            "moveType": "Normal",
+            "category": "Effect",
+            "frequency": "3/day",
+            "power": null,
+            "effect": "If the target can, it must use the last move it did for the next 3 rounds or until it no longer can."
+          },
+          {
+            "name": "Bug Buzz",
+            "range": "Ranged(20ft)",
+            "moveType": "Bug",
+            "category": "Special Attack",
+            "frequency": "1/day",
+            "power": "3d12",
+            "effect": "On hit, the target’s Special Defense is -1 for 10 mins."
           }
         ]
       }
@@ -23272,6 +23704,74 @@
     "gigantamax": false,
     "stages": [
       {
+        "name": "Voltorb (Antique)",
+        "types": [
+          "Electric",
+          "Grass"
+        ],
+        "size": "Small",
+        "weight": "Light",
+        "stats": {
+          "hp": 24,
+          "defense": 5,
+          "specialDefense": 8,
+          "speed": 10,
+          "speedFt": 50,
+          "attack": 3,
+          "specialAttack": 6
+        },
+        "skills": [
+          {
+            "name": "Zapper",
+            "description": "can produce electricity"
+          }
+        ],
+        "passives": [
+          {
+            "name": "Eerie Impulse",
+            "description": "+2 Special Defense"
+          },
+          {
+            "name": "Static",
+            "description": "Whenever you are hit with a melee attack, roll 1d4. On 4, Paralyze the attacker."
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+1",
+          "specialAttack": "+3",
+          "effect": "+5"
+        },
+        "moves": [
+          {
+            "name": "Tackle",
+            "range": "Melee",
+            "moveType": "Normal",
+            "category": "Attack",
+            "frequency": "At-Will",
+            "power": "2d6",
+            "effect": ""
+          },
+          {
+            "name": "Spark",
+            "range": "Melee",
+            "moveType": "Electric",
+            "category": "Attack",
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, if you got 14 or higher on Accuracy Check, the target is Paralyzed."
+          },
+          {
+            "name": "Magical Leaf",
+            "range": "Ranged(25ft)",
+            "moveType": "Grass",
+            "category": "Special Attack",
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "You can’t miss targets with less than 15 Special Defense."
+          }
+        ]
+      },
+      {
         "name": "Electrode (Antique)",
         "types": [
           "Electric",
@@ -23705,6 +24205,180 @@
             "frequency": "3/day",
             "power": "3d10",
             "effect": "On hit, the target’s Attack is -1 for 10 mins."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "familyId": "arctozolt",
+    "familyName": "Arctozolt",
+    "rarity": "Rare",
+    "biology": {
+      "eggGroups": [],
+      "hatchRate": null,
+      "diet": "Omnivore",
+      "habitats": [
+        "Unknown"
+      ]
+    },
+    "evolutionText": null,
+    "proficiencies": [
+      "Dragon",
+      "Electric"
+    ],
+    "megaEvolution": false,
+    "gigantamax": false,
+    "stages": [
+      {
+        "name": "Dracozolt",
+        "types": [
+          "Electric",
+          "Dragon"
+        ],
+        "size": "Large",
+        "weight": "Superweight",
+        "stats": {
+          "hp": 54,
+          "defense": 9,
+          "specialDefense": 7,
+          "speed": 8,
+          "speedFt": 40,
+          "attack": 10,
+          "specialAttack": 8
+        },
+        "skills": [
+          {
+            "name": "Zapper",
+            "description": "can produce electricity"
+          }
+        ],
+        "passives": [
+          {
+            "name": "Hustle",
+            "description": "Your attacks against foes have -2 Accuracy. After the first time you miss an attack during an encounter, the -2 Accuracy penalty is removed and you gain +4 Attack until the end of the encounter."
+          },
+          {
+            "name": "Sand Rush",
+            "description": "While in Sandstorming Weather, your Speed is +2 and you don’t take damage from Sandstorming weather."
+          },
+          {
+            "name": "Volt Absorb",
+            "description": "When you are hit by an electric-type attack, halve the damage, then you heal that much HP instead of taking damage."
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+5",
+          "specialAttack": "+4",
+          "effect": "+4"
+        },
+        "moves": [
+          {
+            "name": "Thunder Shock",
+            "range": "Ranged(20ft)",
+            "moveType": "Electric",
+            "category": "Special Attack",
+            "frequency": null,
+            "power": null,
+            "effect": "AtWill 1d12. On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
+          },
+          {
+            "name": "Slam",
+            "range": "Melee",
+            "moveType": "Normal",
+            "category": "Attack",
+            "frequency": "3/day",
+            "power": "3d10",
+            "effect": "Slam has -2 during Accuracy Check."
+          },
+          {
+            "name": "Dragon Pulse",
+            "range": "Ranged(10ft)",
+            "moveType": "Dragon",
+            "category": "Special Attack",
+            "frequency": "3/day",
+            "power": "3d10",
+            "effect": ""
+          }
+        ]
+      },
+      {
+        "name": "Arctozolt",
+        "types": [
+          "Electric",
+          "Ice"
+        ],
+        "size": "Large",
+        "weight": "Heavy",
+        "stats": {
+          "hp": 54,
+          "defense": 9,
+          "specialDefense": 8,
+          "speed": 6,
+          "speedFt": 30,
+          "attack": 10,
+          "specialAttack": 9
+        },
+        "skills": [
+          {
+            "name": "Freezer",
+            "description": "can create ice"
+          },
+          {
+            "name": "Swimmer",
+            "description": "can swim"
+          },
+          {
+            "name": "Zapper",
+            "description": "can produce electricity"
+          }
+        ],
+        "passives": [
+          {
+            "name": "Slush Rush",
+            "description": "While in Hailing weather, your Speed is +2. and you don’t take damage from Hailing weather"
+          },
+          {
+            "name": "Static",
+            "description": "Whenever you are hit with a melee attack, roll 1d4. On 4, Paralyze the attacker."
+          },
+          {
+            "name": "Volt Absorb",
+            "description": "When you are hit by an electric-type attack, halve the damage, then you heal that much HP instead of taking damage."
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+5",
+          "specialAttack": "+4",
+          "effect": "+3"
+        },
+        "moves": [
+          {
+            "name": "Thunder Shock",
+            "range": "Ranged(20ft)",
+            "moveType": "Electric",
+            "category": "Special Attack",
+            "frequency": null,
+            "power": null,
+            "effect": "AtWill 1d12. On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
+          },
+          {
+            "name": "Slam",
+            "range": "Melee",
+            "moveType": "Normal",
+            "category": "Attack",
+            "frequency": "3/day",
+            "power": "3d10",
+            "effect": "Slam has -2 during Accuracy Check."
+          },
+          {
+            "name": "Freeze-Dry",
+            "range": "Ranged(10ft)",
+            "moveType": "Ice",
+            "category": "Special Attack",
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "Freeze-Dry is Super effective against Water types. On hit, if you got 18 or higher on Accuracy Check, the target is Frozen."
           }
         ]
       }
@@ -24315,6 +24989,197 @@
             "frequency": "1/day",
             "power": null,
             "effect": "You are healed HP equal to half of your Max HP."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "familyId": "plusle",
+    "familyName": "Plusle",
+    "rarity": "Uncommon",
+    "biology": {
+      "eggGroups": [
+        "Fairy",
+        "Field"
+      ],
+      "hatchRate": "10 Days",
+      "diet": "Herbivore",
+      "habitats": [
+        "Fields"
+      ]
+    },
+    "evolutionText": null,
+    "proficiencies": [
+      "Electric",
+      "Cutesy"
+    ],
+    "megaEvolution": false,
+    "gigantamax": false,
+    "stages": [
+      {
+        "name": "Plusle",
+        "types": [
+          "Electric"
+        ],
+        "size": "Small",
+        "weight": "Light",
+        "stats": {
+          "hp": 36,
+          "defense": 5,
+          "specialDefense": 8,
+          "speed": 12,
+          "speedFt": 60,
+          "attack": 5,
+          "specialAttack": 10
+        },
+        "skills": [
+          {
+            "name": "Genetic Relation",
+            "description": "can breed to produce Minun"
+          },
+          {
+            "name": "Zapper",
+            "description": "can produce electricity"
+          }
+        ],
+        "passives": [
+          {
+            "name": "Agility",
+            "description": "+2 Speed"
+          },
+          {
+            "name": "Charm",
+            "description": "+1 Defense"
+          },
+          {
+            "name": "Nasty Plot",
+            "description": "+1 Special Attack"
+          },
+          {
+            "name": "Lightning Rod",
+            "description": "Any foe’s ranged Electrictype attacks within 25ft or any adjacent foe’s Electric-type attacks are negated and drawn to you. Your Special Attack is +2 until the end of your next turn whenever you negate an Electric-type attack."
+          },
+          {
+            "name": "Plus",
+            "description": "If at least one ally has Plus or Minus within 10ft of you, you have +3 Special Attack."
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+2",
+          "specialAttack": "+5",
+          "effect": "+6"
+        },
+        "moves": [
+          {
+            "name": "Thunder Wave",
+            "range": "Ranged(20ft)",
+            "moveType": "Electric",
+            "category": "Effect",
+            "frequency": "1/day",
+            "power": null,
+            "effect": "On hit, the target is Paralyzed."
+          },
+          {
+            "name": "Electro Ball",
+            "range": "Ranged(15ft)",
+            "moveType": "Electric",
+            "category": "Special Attack",
+            "frequency": "3/day",
+            "power": "3d10",
+            "effect": "Electro Ball can only be used against targets slower than you."
+          },
+          {
+            "name": "Thunderbolt",
+            "range": "Ranged(30ft)",
+            "moveType": "Electric",
+            "category": "Special Attack",
+            "frequency": "3/day",
+            "power": "3d10",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
+          }
+        ]
+      },
+      {
+        "name": "Minun",
+        "types": [
+          "Electric"
+        ],
+        "size": "Small",
+        "weight": "Light",
+        "stats": {
+          "hp": 36,
+          "defense": 6,
+          "specialDefense": 9,
+          "speed": 12,
+          "speedFt": 60,
+          "attack": 4,
+          "specialAttack": 10
+        },
+        "skills": [
+          {
+            "name": "Genetic Relation",
+            "description": "can breed to produce Plusle"
+          },
+          {
+            "name": "Zapper",
+            "description": "can produce electricity"
+          }
+        ],
+        "passives": [
+          {
+            "name": "Agility",
+            "description": "+2 Speed"
+          },
+          {
+            "name": "Charm",
+            "description": "+1 Defense"
+          },
+          {
+            "name": "Fake Tears",
+            "description": "+2 Special Attack"
+          },
+          {
+            "name": "Minus",
+            "description": "If at least one ally has Plus or Minus within 10ft of you, you have +3 Special Attack."
+          },
+          {
+            "name": "Volt Absorb",
+            "description": "When you are hit by an electric-type attack, halve the damage, then you heal that much HP instead of taking damage."
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+2",
+          "specialAttack": "+5",
+          "effect": "+6"
+        },
+        "moves": [
+          {
+            "name": "Encore",
+            "range": "Ranged(10ft)",
+            "moveType": "Normal",
+            "category": "Effect",
+            "frequency": "3/day",
+            "power": null,
+            "effect": "If the target can, it must use the last move it did for the next 3 rounds or until it no longer can."
+          },
+          {
+            "name": "Electro Ball",
+            "range": "Ranged(15ft)",
+            "moveType": "Electric",
+            "category": "Special Attack",
+            "frequency": "3/day",
+            "power": "3d10",
+            "effect": "Electro Ball can only be used against targets slower than you."
+          },
+          {
+            "name": "Thunderbolt",
+            "range": "Ranged(30ft)",
+            "moveType": "Electric",
+            "category": "Special Attack",
+            "frequency": "3/day",
+            "power": "3d10",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
           }
         ]
       }
@@ -27712,6 +28577,72 @@
             "effect": "On hit, you lose HP equal to 1/3rd of the damage you deal."
           }
         ]
+      },
+      {
+        "name": "Farfetch’d (Massive Leeks)",
+        "types": [
+          "Fighting"
+        ],
+        "size": "Medium",
+        "weight": "Medium",
+        "stats": {
+          "hp": 30,
+          "defense": 6,
+          "specialDefense": 6,
+          "speed": 8,
+          "speedFt": 40,
+          "attack": 12,
+          "specialAttack": 6
+        },
+        "skills": [],
+        "passives": [
+          {
+            "name": "Agility",
+            "description": "+2 Speed"
+          },
+          {
+            "name": "Swords Dance",
+            "description": "+2 Attack"
+          },
+          {
+            "name": "Steadfast",
+            "description": "When you are Stunned, your Speed is +1 for 10 mins."
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+6",
+          "specialAttack": "+3",
+          "effect": "+4"
+        },
+        "moves": [
+          {
+            "name": "Rock Smash",
+            "range": "Melee",
+            "moveType": "Fighting",
+            "category": "Attack",
+            "frequency": "At-Will",
+            "power": "2d6",
+            "effect": "On hit, the target’s Defense is -1 for 10 mins."
+          },
+          {
+            "name": "Brutal Swing",
+            "range": "Melee(5ft burst)",
+            "moveType": "Dark",
+            "category": "Attack",
+            "frequency": "At-Will",
+            "power": "2d8",
+            "effect": ""
+          },
+          {
+            "name": "Detect",
+            "range": "Self",
+            "moveType": "Fighting",
+            "category": "Effect",
+            "frequency": "1/day",
+            "power": null,
+            "effect": "Detect is used as a Reaction. When you would be hit by a move, use Detect to instead ignore the damage and any effects of the attack."
+          }
+        ]
       }
     ]
   },
@@ -29350,6 +30281,179 @@
     ]
   },
   {
+    "familyId": "sawk",
+    "familyName": "Sawk",
+    "rarity": "Uncommon",
+    "biology": {
+      "eggGroups": [
+        "Human-Like"
+      ],
+      "hatchRate": "10 Days",
+      "diet": "Omnivore",
+      "habitats": [
+        "Forests",
+        "Mountains"
+      ]
+    },
+    "evolutionText": null,
+    "proficiencies": [
+      "Fighting",
+      "Bruiser"
+    ],
+    "megaEvolution": false,
+    "gigantamax": false,
+    "stages": [
+      {
+        "name": "Sawk",
+        "types": [
+          "Fighting"
+        ],
+        "size": "Medium",
+        "weight": "Medium",
+        "stats": {
+          "hp": 48,
+          "defense": 9,
+          "specialDefense": 8,
+          "speed": 9,
+          "speedFt": 45,
+          "attack": 15,
+          "specialAttack": 3
+        },
+        "skills": [],
+        "passives": [
+          {
+            "name": "Bulk Up",
+            "description": "+1 Attack, +1 Defense"
+          },
+          {
+            "name": "Leer",
+            "description": "+1 Attack"
+          },
+          {
+            "name": "Inner Focus",
+            "description": "You are immune to being Stunned."
+          },
+          {
+            "name": "Mold Breaker",
+            "description": "Your attacks ignore any passives that would redirect, negate or weaken your attacks."
+          },
+          {
+            "name": "Sturdy",
+            "description": "If you would be brought from Max HP to 0 or below, you are instead brought to 1 HP."
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+7",
+          "specialAttack": "+1",
+          "effect": "+4"
+        },
+        "moves": [
+          {
+            "name": "Brick Break",
+            "range": "Melee",
+            "moveType": "Fighting",
+            "category": "Attack",
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "Destroy any Walls within 5 ft. You may target Walls with Brick Break without needing to roll Accuracy Check or damage."
+          },
+          {
+            "name": "Retaliate",
+            "range": "Melee",
+            "moveType": "Normal",
+            "category": "Attack",
+            "frequency": "1/day",
+            "power": "1d20",
+            "effect": "If the target knocked out an ally during this round, Retaliate has 5d12 for damage instead."
+          },
+          {
+            "name": "Close Combat",
+            "range": "Melee",
+            "moveType": "Fighting",
+            "category": "Attack",
+            "frequency": "1/day",
+            "power": "5d12",
+            "effect": "On hit, your Defense and Special Defense are -2 for 10 mins."
+          }
+        ]
+      },
+      {
+        "name": "Throh",
+        "types": [
+          "Fighting"
+        ],
+        "size": "Medium",
+        "weight": "Medium",
+        "stats": {
+          "hp": 72,
+          "defense": 10,
+          "specialDefense": 9,
+          "speed": 5,
+          "speedFt": 25,
+          "attack": 12,
+          "specialAttack": 3
+        },
+        "skills": [],
+        "passives": [
+          {
+            "name": "Bulk Up",
+            "description": "+1 Attack, +1 Defense"
+          },
+          {
+            "name": "Leer",
+            "description": "+1 Attack"
+          },
+          {
+            "name": "Guts",
+            "description": "While afflicted, your Attack is +2."
+          },
+          {
+            "name": "Inner Focus",
+            "description": "You are immune to being Stunned."
+          },
+          {
+            "name": "Mold Breaker",
+            "description": "Your attacks ignore any passives that would redirect, negate or weaken your attacks."
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+6",
+          "specialAttack": "+1",
+          "effect": "+2"
+        },
+        "moves": [
+          {
+            "name": "Body Slam",
+            "range": "Melee",
+            "moveType": "Normal",
+            "category": "Attack",
+            "frequency": "1/day",
+            "power": "3d12",
+            "effect": "On hit, if you got 14 or higher on Accuracy Check, the target is Paralyzed. Body Slam can Paralyze Electric-types."
+          },
+          {
+            "name": "Circle Throw",
+            "range": "Melee",
+            "moveType": "Fighting",
+            "category": "Attack",
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, move the target 40ft away."
+          },
+          {
+            "name": "Superpower",
+            "range": "Melee",
+            "moveType": "Fighting",
+            "category": "Attack",
+            "frequency": "1/day",
+            "power": "5d12",
+            "effect": "On hit, your Attack and Defense is -2 for 10 mins."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "familyId": "tauros-aqua-breed",
     "familyName": "Tauros (Aqua Breed)",
     "rarity": "Rare",
@@ -30683,6 +31787,82 @@
     "megaEvolution": false,
     "gigantamax": false,
     "stages": [
+      {
+        "name": "Growlithe (Ancient)",
+        "types": [
+          "Fire",
+          "Rock"
+        ],
+        "size": "Small",
+        "weight": "Medium",
+        "stats": {
+          "hp": 36,
+          "defense": 5,
+          "specialDefense": 5,
+          "speed": 8,
+          "speedFt": 40,
+          "attack": 9,
+          "specialAttack": 7
+        },
+        "skills": [
+          {
+            "name": "Firestarter",
+            "description": "can create fire"
+          },
+          {
+            "name": "Tracker",
+            "description": "can follow scents"
+          }
+        ],
+        "passives": [
+          {
+            "name": "Agility",
+            "description": "+2 Speed"
+          },
+          {
+            "name": "Leer",
+            "description": "+1 Attack"
+          },
+          {
+            "name": "Flash Fire",
+            "description": "You are immune to Fire-type attacks. If you would be hit by a Firetype attack, your Fire type attacks deal +4 damage for 2 mins."
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+4",
+          "specialAttack": "+3",
+          "effect": "+4"
+        },
+        "moves": [
+          {
+            "name": "Bite",
+            "range": "Melee",
+            "moveType": "Dark",
+            "category": "Attack",
+            "frequency": "At-Will",
+            "power": "2d8",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Stunned."
+          },
+          {
+            "name": "Ember",
+            "range": "Ranged(10ft)",
+            "moveType": "Fire",
+            "category": "Special Attack",
+            "frequency": "At-Will",
+            "power": "1d12",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Burned."
+          },
+          {
+            "name": "Fire Fang",
+            "range": "Melee",
+            "moveType": "Fire",
+            "category": "Attack",
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is randomly either Stunned or Burned."
+          }
+        ]
+      },
       {
         "name": "Arcanine (Ancient)",
         "types": [
@@ -35170,6 +36350,194 @@
             "frequency": "1/day",
             "power": null,
             "effect": "On hit, the target gets a Seed Coat. The Coat has the following ability: At the beginning of your turn, if you are within 20 ft of the enemy who gave you the Seed Coat, you lose 1d12 HP. The enemy who gave you the Seed Coat will gain the same amount of HP that you lost. This Coat lasts for 3 mins, or until you are at 0 or less HP."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "familyId": "pumpkaboo",
+    "familyName": "Pumpkaboo",
+    "rarity": "Uncommon",
+    "biology": {
+      "eggGroups": [
+        "Amorphous",
+        "Grass"
+      ],
+      "hatchRate": "10 Days",
+      "diet": "Phototroph / Psiotroph",
+      "habitats": [
+        "Forests",
+        "Woodlands"
+      ]
+    },
+    "evolutionText": "Pumpkaboo Gourgeist",
+    "proficiencies": [
+      "Ghost",
+      "Grass",
+      "Elemental Attack F",
+      "Hexwork"
+    ],
+    "megaEvolution": false,
+    "gigantamax": false,
+    "stages": [
+      {
+        "name": "Gourgeist (Small)",
+        "types": [
+          "Ghost",
+          "Grass"
+        ],
+        "size": "Small",
+        "weight": "Medium",
+        "stats": {
+          "hp": 42,
+          "defense": 12,
+          "specialDefense": 8,
+          "speed": 10,
+          "speedFt": 50,
+          "attack": 9,
+          "specialAttack": 6
+        },
+        "skills": [
+          {
+            "name": "Glow",
+            "description": ""
+          },
+          {
+            "name": "Hover",
+            "description": ""
+          },
+          {
+            "name": "Pumpkin Sized",
+            "description": ""
+          },
+          {
+            "name": "Telekinetic",
+            "description": ""
+          }
+        ],
+        "passives": [
+          {
+            "name": "Scary Face",
+            "description": ""
+          },
+          {
+            "name": "Insomnia",
+            "description": ""
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+4/+5",
+          "specialAttack": "+3",
+          "effect": "+5/+4/+3"
+        },
+        "moves": [
+          {
+            "name": "Shadow Ball",
+            "range": "Ranged(20ft)",
+            "moveType": "Ghost",
+            "category": "Special Attack",
+            "frequency": "3/day",
+            "power": "3d10",
+            "effect": "On hit, the target’s Special Defense is -1 for 10 mins."
+          },
+          {
+            "name": "Seed Bomb",
+            "range": "Ranged(15ft)",
+            "moveType": "Grass",
+            "category": "Attack",
+            "frequency": "3/day",
+            "power": "3d10",
+            "effect": ""
+          },
+          {
+            "name": "Trick-or-Treat",
+            "range": "Melee",
+            "moveType": "Ghost",
+            "category": "Effect",
+            "frequency": "3/day",
+            "power": null,
+            "effect": "On hit, put a Treat Coat on the target. The Coat has the following ability: You lose your current Types and become only Ghosttype for 10 mins."
+          }
+        ]
+      },
+      {
+        "name": "Pumpkaboo (Small)",
+        "types": [
+          "Ghost",
+          "Grass"
+        ],
+        "size": "Tiny",
+        "weight": "Light",
+        "stats": {
+          "hp": 24,
+          "defense": 7,
+          "specialDefense": 6,
+          "speed": 8,
+          "speedFt": 40,
+          "attack": 7,
+          "specialAttack": 4
+        },
+        "skills": [
+          {
+            "name": "Glow",
+            "description": "can produce light"
+          },
+          {
+            "name": "Hover",
+            "description": "can hover"
+          },
+          {
+            "name": "Pumpkin Sized",
+            "description": "depending on your size, your stats vary"
+          },
+          {
+            "name": "Telekinetic",
+            "description": "can move things with their mind"
+          }
+        ],
+        "passives": [
+          {
+            "name": "Scary Face",
+            "description": "+2 Speed"
+          },
+          {
+            "name": "Insomnia",
+            "description": "You are immune to being put to Sleep."
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+3",
+          "specialAttack": "+2",
+          "effect": "+4/+3"
+        },
+        "moves": [
+          {
+            "name": "Trick",
+            "range": "Melee",
+            "moveType": "Psychic",
+            "category": "Effect",
+            "frequency": "1/day",
+            "power": null,
+            "effect": "On hit, you and the target trade any held items. If only you or the target has an item, take or give the item to exchange who has possession of it."
+          },
+          {
+            "name": "Astonish",
+            "range": "Melee",
+            "moveType": "Ghost",
+            "category": "Attack",
+            "frequency": "At-Will",
+            "power": "1d10",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Stunned."
+          },
+          {
+            "name": "Razor Leaf",
+            "range": "Ranged(25ft)",
+            "moveType": "Grass",
+            "category": "Attack",
+            "frequency": "At-Will",
+            "power": "2d8",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, Razor Leaf is a critical hit."
           }
         ]
       }
@@ -43473,6 +44841,82 @@
             "effect": ""
           }
         ]
+      },
+      {
+        "name": "Diglett (Volcanic)",
+        "types": [
+          "Ground",
+          "Steel"
+        ],
+        "size": "Tiny",
+        "weight": "Featherweight",
+        "stats": {
+          "hp": 6,
+          "defense": 4,
+          "specialDefense": 5,
+          "speed": 10,
+          "speedFt": 50,
+          "attack": 6,
+          "specialAttack": 4
+        },
+        "skills": [
+          {
+            "name": "Burrow",
+            "description": ""
+          },
+          {
+            "name": "Sinker",
+            "description": ""
+          }
+        ],
+        "passives": [
+          {
+            "name": "Growl",
+            "description": "+1 Defense"
+          },
+          {
+            "name": "Tangling Hair",
+            "description": "+1 Speed"
+          },
+          {
+            "name": "Sand Veil",
+            "description": "While in Sandstorming Weather, any foe’s attacks made against you have -1 during accuracy check and you don’t take damage from Sandstorming weather."
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+3",
+          "specialAttack": "+2",
+          "effect": "+5"
+        },
+        "moves": [
+          {
+            "name": "Metal Claw",
+            "range": "Melee",
+            "moveType": "Steel",
+            "category": "Attack",
+            "frequency": "At-Will",
+            "power": "2d6",
+            "effect": "On hit, your Attack is +1 for 10 mins."
+          },
+          {
+            "name": "Mud-Slap",
+            "range": "Ranged(5ft)",
+            "moveType": "Ground",
+            "category": "Special Attack",
+            "frequency": "At-Will",
+            "power": "1d6",
+            "effect": "On hit, the target’s Accuracy Checks are -1 during their next turn."
+          },
+          {
+            "name": "Dig",
+            "range": "Melee",
+            "moveType": "Ground",
+            "category": "Attack",
+            "frequency": "3/day",
+            "power": "3d10",
+            "effect": "Dig is a two-turn move. On the first turn, burrow up to 40 ft straight down. On the second turn, burrow up to your movement speed +40 ft, then you can roll Dig’s Accuracy Check and damage."
+          }
+        ]
       }
     ]
   },
@@ -46775,6 +48219,73 @@
         "passives": [],
         "moveModifiers": {},
         "moves": []
+      },
+      {
+        "name": "Darumaka (Icy Mountain)",
+        "types": [
+          "Ice"
+        ],
+        "size": "Small",
+        "weight": "Medium",
+        "stats": {
+          "hp": 42,
+          "defense": 5,
+          "specialDefense": 5,
+          "speed": 5,
+          "speedFt": 25,
+          "attack": 9,
+          "specialAttack": 2
+        },
+        "skills": [
+          {
+            "name": "Chilled",
+            "description": "always cold"
+          },
+          {
+            "name": "Freezer",
+            "description": "can create ice"
+          }
+        ],
+        "passives": [
+          {
+            "name": "Hustle",
+            "description": "Your attacks against foes have -2 Accuracy. After the first time you miss an attack during an encounter, the -2 Accuracy penalty is removed and you gain +4 Attack until the end of the encounter."
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+4",
+          "specialAttack": "+1",
+          "effect": "+2"
+        },
+        "moves": [
+          {
+            "name": "Taunt",
+            "range": "Ranged(20ft)",
+            "moveType": "Dark",
+            "category": "Effect",
+            "frequency": "3/day",
+            "power": null,
+            "effect": "On hit, the target may only use attacks that target you or your allies for 1 min."
+          },
+          {
+            "name": "Ice Fang",
+            "range": "Melee",
+            "moveType": "Ice",
+            "category": "Attack",
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is randomly either Stunned or Frozen."
+          },
+          {
+            "name": "Headbutt",
+            "range": "Melee",
+            "moveType": "Normal",
+            "category": "Attack",
+            "frequency": "At-Will",
+            "power": "2d8",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Stunned."
+          }
+        ]
       }
     ]
   },
@@ -46880,6 +48391,78 @@
             "frequency": "1/day",
             "power": "5d12",
             "effect": "Blizzard has -2 during Accuracy Check unless it’s Hailing. On hit, if you got 18 or higher on Accuracy Check, the targets are Frozen."
+          }
+        ]
+      },
+      {
+        "name": "Sandshrew (Icy Mountain)",
+        "types": [
+          "Ice",
+          "Steel"
+        ],
+        "size": "Small",
+        "weight": "Medium",
+        "stats": {
+          "hp": 30,
+          "defense": 10,
+          "specialDefense": 4,
+          "speed": 4,
+          "speedFt": 20,
+          "attack": 8,
+          "specialAttack": 1
+        },
+        "skills": [
+          {
+            "name": "Burrow",
+            "description": "moves through earth easily"
+          },
+          {
+            "name": "Freezer",
+            "description": "can create ice"
+          }
+        ],
+        "passives": [
+          {
+            "name": "Defense Curl",
+            "description": "+1 Defense"
+          },
+          {
+            "name": "Snow Cloak",
+            "description": "While in Hailing weather, any foe’s attacks made against you have -1 during Accuracy Check and you don’t take damage from Hailing weather."
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+4",
+          "specialAttack": "+0",
+          "effect": "+2"
+        },
+        "moves": [
+          {
+            "name": "Powder Snow",
+            "range": "Ranged(5ft burst)",
+            "moveType": "Ice",
+            "category": "Special Attack",
+            "frequency": "At-Will",
+            "power": "1d12",
+            "effect": "On hit, if you got 19 or higher on Accuracy Check, the target is Frozen."
+          },
+          {
+            "name": "Metal Claw",
+            "range": "Melee",
+            "moveType": "Steel",
+            "category": "Attack",
+            "frequency": "At-Will",
+            "power": "2d6",
+            "effect": "On hit, your Attack is +1 for 10 mins."
+          },
+          {
+            "name": "Swift",
+            "range": "Ranged(20ft)",
+            "moveType": "Normal",
+            "category": "Special Attack",
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "You can’t miss targets with less than 15 Special Defense."
           }
         ]
       }
@@ -47325,6 +48908,77 @@
             "frequency": "1/day",
             "power": null,
             "effect": "Put a Safe Coat on all allies and yourself. The Coat has the following ability: You cannot become afflicted. This Coat lasts for 2 mins."
+          }
+        ]
+      },
+      {
+        "name": "Vulpix (Icy Mountain)",
+        "types": [
+          "Ice"
+        ],
+        "size": "Small",
+        "weight": "Light",
+        "stats": {
+          "hp": 24,
+          "defense": 5,
+          "specialDefense": 7,
+          "speed": 7,
+          "speedFt": 35,
+          "attack": 5,
+          "specialAttack": 5
+        },
+        "skills": [
+          {
+            "name": "Freezer",
+            "description": "can create ice"
+          }
+        ],
+        "passives": [
+          {
+            "name": "Baby-Doll Eyes",
+            "description": "+1 Defense"
+          },
+          {
+            "name": "Tail Whip",
+            "description": "+1 Attack"
+          },
+          {
+            "name": "Snow Cloak",
+            "description": "While in Hailing weather, any foe’s attacks made against you have -1 during Accuracy Check and you don’t take damage from Hailing weather."
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+2",
+          "specialAttack": "+2",
+          "effect": "+3"
+        },
+        "moves": [
+          {
+            "name": "Powder Snow",
+            "range": "Ranged(5ft burst)",
+            "moveType": "Ice",
+            "category": "Special Attack",
+            "frequency": "At-Will",
+            "power": "1d12",
+            "effect": "On hit, if you got 19 or higher on Accuracy Check, the target is Frozen."
+          },
+          {
+            "name": "Quick Attack",
+            "range": "Melee",
+            "moveType": "Normal",
+            "category": "Attack",
+            "frequency": "At-Will",
+            "power": "2d6",
+            "effect": "Quick Attack has Priority."
+          },
+          {
+            "name": "Confuse Ray",
+            "range": "Ranged(20ft)",
+            "moveType": "Ghost",
+            "category": "Effect",
+            "frequency": "1/day",
+            "power": null,
+            "effect": "On hit, the target becomes Confused."
           }
         ]
       }
@@ -52748,11 +54402,83 @@
     "proficiencies": [
       "Dark",
       "Claws",
-      "Elemental Attack E (Persian)"
+      "Fangs",
+      "Normal Block"
     ],
     "megaEvolution": false,
     "gigantamax": false,
     "stages": [
+      {
+        "name": "Meowth (Tropical Climate)",
+        "types": [
+          "Dark"
+        ],
+        "size": "Small",
+        "weight": "Light",
+        "stats": {
+          "hp": 24,
+          "defense": 5,
+          "specialDefense": 4,
+          "speed": 9,
+          "speedFt": 45,
+          "attack": 6,
+          "specialAttack": 5
+        },
+        "skills": [
+          {
+            "name": "Stealth",
+            "description": "can make stealth skill checks"
+          }
+        ],
+        "passives": [
+          {
+            "name": "Growl",
+            "description": "+1 Defense"
+          },
+          {
+            "name": "Screech",
+            "description": "+2 Attack"
+          },
+          {
+            "name": "Technician",
+            "description": "When rolling damage, replace any rolled 1s or 2s with 3."
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+3",
+          "specialAttack": "+2",
+          "effect": "+4"
+        },
+        "moves": [
+          {
+            "name": "Fake Out",
+            "range": "Melee",
+            "moveType": "Normal",
+            "category": "Attack",
+            "frequency": "At-Will",
+            "power": "2d6",
+            "effect": "Fake Out has Priority. Fake Out can only be used as the first action during an encounter. On hit, the target is Stunned."
+          },
+          {
+            "name": "Fury Swipes",
+            "range": "Melee",
+            "moveType": "Normal",
+            "category": "Attack",
+            "frequency": "At-Will",
+            "power": "1d4",
+            "effect": "Fury Swipes has -2 during Accuracy Check. Fury Swipes is a Scatter attack. Up to 5 attacks."
+          },
+          {
+            "name": "Feint Attack",
+            "range": "Melee",
+            "moveType": "Dark",
+            "category": "Attack",
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "You can’t miss targets with less than 15 Defense."
+          }
+        ]
+      },
       {
         "name": "Persian",
         "types": [
@@ -52829,6 +54555,77 @@
             "frequency": "3/day",
             "power": "3d8",
             "effect": "On hit, if you got 18 or higher on Accuracy Check, Night Slash is a critical hit. This Pokémon has a Gigantamax form in PHB2."
+          }
+        ]
+      },
+      {
+        "name": "Meowth (Cold Climate)",
+        "types": [
+          "Steel"
+        ],
+        "size": "Small",
+        "weight": "Light",
+        "stats": {
+          "hp": 30,
+          "defense": 7,
+          "specialDefense": 4,
+          "speed": 4,
+          "speedFt": 20,
+          "attack": 8,
+          "specialAttack": 4
+        },
+        "skills": [
+          {
+            "name": "Stealth",
+            "description": "can make stealth skill checks"
+          }
+        ],
+        "passives": [
+          {
+            "name": "Growl",
+            "description": "+1 Defense"
+          },
+          {
+            "name": "Tail Whip",
+            "description": "+1 Attack"
+          },
+          {
+            "name": "Tough Claws",
+            "description": "Your slashing attacks deal +4 damage."
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+4",
+          "specialAttack": "+2",
+          "effect": "+2"
+        },
+        "moves": [
+          {
+            "name": "Fake Out",
+            "range": "Melee",
+            "moveType": "Normal",
+            "category": "Attack",
+            "frequency": "At-Will",
+            "power": "2d6",
+            "effect": "Fake Out has Priority. Fake Out can only be used as the first action during an encounter. On hit, the target is Stunned."
+          },
+          {
+            "name": "Fury Swipes",
+            "range": "Melee",
+            "moveType": "Normal",
+            "category": "Attack",
+            "frequency": "At-Will",
+            "power": "1d4",
+            "effect": "Fury Swipes has -2 during Accuracy Check. Fury Swipes is a Scatter attack. Up to 5 attacks."
+          },
+          {
+            "name": "Metal Claw",
+            "range": "Melee",
+            "moveType": "Steel",
+            "category": "Attack",
+            "frequency": "At-Will",
+            "power": "2d6",
+            "effect": "On hit, your Attack is +1 for 10 mins."
           }
         ]
       }
@@ -53361,12 +55158,85 @@
     "evolutionText": "Rattata Raticate",
     "proficiencies": [
       "Dark",
-      "Elemental Attack EI",
-      "Fangs"
+      "Poison",
+      "Fangs",
+      "Elemental Attacks I"
     ],
     "megaEvolution": false,
     "gigantamax": false,
     "stages": [
+      {
+        "name": "Rattata (Island)",
+        "types": [
+          "Dark",
+          "Normal"
+        ],
+        "size": "Small",
+        "weight": "Light",
+        "stats": {
+          "hp": 18,
+          "defense": 4,
+          "specialDefense": 4,
+          "speed": 7,
+          "speedFt": 35,
+          "attack": 7,
+          "specialAttack": 3
+        },
+        "skills": [
+          {
+            "name": "Stealth",
+            "description": ""
+          }
+        ],
+        "passives": [
+          {
+            "name": "Focus Energy",
+            "description": "Attacks are critical hits on natural 18-20"
+          },
+          {
+            "name": "Tail Whip",
+            "description": "+1 Attack"
+          },
+          {
+            "name": "Hustle",
+            "description": "Your attacks against foes have -2 Accuracy. After the first time you miss an attack during an encounter, the -2 Accuracy penalty is removed and you gain +4 Attack until the end of the encounter."
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+3",
+          "specialAttack": "+1",
+          "effect": "+4"
+        },
+        "moves": [
+          {
+            "name": "Quick Attack",
+            "range": "Melee",
+            "moveType": "Normal",
+            "category": "Attack",
+            "frequency": "At-Will",
+            "power": "2d6",
+            "effect": "Quick Attack has Priority."
+          },
+          {
+            "name": "Bite",
+            "range": "Melee",
+            "moveType": "Dark",
+            "category": "Attack",
+            "frequency": "At-Will",
+            "power": "2d8",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Stunned."
+          },
+          {
+            "name": "Pursuit",
+            "range": "Melee",
+            "moveType": "Dark",
+            "category": "Attack",
+            "frequency": "At-Will",
+            "power": "2d6",
+            "effect": "Pursuit deals +6 damage to a target if they ended their turn further away from you during the start of their turn."
+          }
+        ]
+      },
       {
         "name": "Raticate",
         "types": [
@@ -55485,23 +57355,87 @@
     "rarity": "Rare",
     "biology": {
       "eggGroups": [
-        "Fairy"
+        "Field"
       ],
       "hatchRate": "10 Days",
-      "diet": "Herbivore",
+      "diet": "Omnivore",
       "habitats": [
-        "Forests",
-        "Urban"
+        "Mountain"
       ]
     },
-    "evolutionText": null,
+    "evolutionText": "Zorua (Icy Mountain) Zoroark (Icy Mountain)",
     "proficiencies": [
-      "Elemental Attack",
-      "Healer Audino have one of the most acute senses of hearing in the Pokémon world. By touching the feelers on their ears to objects, these Pokémon can pick up even the smallest sound waves; because of this, Audino are common sights in hospitals and Pokémon Centers, where they are trained to use their feelers as stethoscopes to detect irregularities in the heartbeats of patients. Their hearing is so advanced that they can also use their feelers to assess other aspects of an individual’s health, including blood pressure, breathing, and digestion. Even without using their feelers, their hearing is still superb, being as sensitive as many artificial radars. Audino are rarely seen in the wild, as they are shy Pokémon that retreat and hide when they hear someone approaching—considering their extraordinary aural abilities, this means that they almost always are hiding from potential enemies. Bouffalant are short-tempered Pokémon that have the tendency to charge at the slightest provocation. They can be found roaming plains and savannas in herds. Bouffalant herds are territorial; they will break into stampedes when intruders draw near as they all attempt to charge at the invaders at once. The thick tuft of fur on Bouffalant heads are incredibly shock-absorbent, allowing it to headbutt with enough force to harm foes without feeling any significant knockback. This fur is also a symbol of dominance among Bouffalant. Individuals with the largest and most luxurious head fur are the first to graze if food is scarce. Interestingly, these Pokémon also respond to similar-looking hair among other beings, including humans. Herds charging at travelers have been known to suddenly stop upon noticing that one of the visitors has a particularly voluminous afro."
+      "Ghost",
+      "Normal Block",
+      "Tricky"
     ],
     "megaEvolution": false,
     "gigantamax": false,
     "stages": [
+      {
+        "name": "Zorua (Icy Mountain)",
+        "types": [
+          "Normal",
+          "Ghost"
+        ],
+        "size": "Small",
+        "weight": "Medium",
+        "stats": {
+          "hp": 24,
+          "defense": 4,
+          "specialDefense": 4,
+          "speed": 7,
+          "speedFt": 35,
+          "attack": 6,
+          "specialAttack": 9
+        },
+        "skills": [
+          {
+            "name": "Stealth",
+            "description": "can make stealth skill checks"
+          }
+        ],
+        "passives": [
+          {
+            "name": "Illusion",
+            "description": "As a free action, you may change your appearance to look like any Pokémon you have interacted with within the past hour. You may not appear as a Pokémon more than twice your size and the illusion is dropped when you are hit by an attack."
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+3",
+          "specialAttack": "+4",
+          "effect": "+3"
+        },
+        "moves": [
+          {
+            "name": "Scratch",
+            "range": "Melee",
+            "moveType": "Normal",
+            "category": "Attack",
+            "frequency": "At-Will",
+            "power": "2d6",
+            "effect": ""
+          },
+          {
+            "name": "Shadow Sneak",
+            "range": "Melee",
+            "moveType": "Ghost",
+            "category": "Attack",
+            "frequency": "At-Will",
+            "power": "2d6",
+            "effect": "Shadow Sneak has Priority."
+          },
+          {
+            "name": "Swift",
+            "range": "Ranged(20ft)",
+            "moveType": "Normal",
+            "category": "Special Attack",
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "You can’t miss targets with less than 15 Special Defense."
+          }
+        ]
+      },
       {
         "name": "Zoroark (Icy Mountain)",
         "types": [
@@ -58592,6 +60526,78 @@
     "megaEvolution": false,
     "gigantamax": false,
     "stages": [
+      {
+        "name": "Grimer (Oil Polluted)",
+        "types": [
+          "Poison",
+          "Dark"
+        ],
+        "size": "Medium",
+        "weight": "Medium",
+        "stats": {
+          "hp": 48,
+          "defense": 7,
+          "specialDefense": 5,
+          "speed": 3,
+          "speedFt": 15,
+          "attack": 10,
+          "specialAttack": 4
+        },
+        "skills": [
+          {
+            "name": "Amorphous",
+            "description": ""
+          }
+        ],
+        "passives": [
+          {
+            "name": "Acid Armor",
+            "description": ""
+          },
+          {
+            "name": "Screech",
+            "description": ""
+          },
+          {
+            "name": "Poison Touch",
+            "description": "Whenever you hit with a melee attack, you may roll 1d6. On 6, Poison the target."
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+5",
+          "specialAttack": "+2",
+          "effect": "+1"
+        },
+        "moves": [
+          {
+            "name": "Bite",
+            "range": "Melee",
+            "moveType": "Dark",
+            "category": "Attack",
+            "frequency": "At-Will",
+            "power": "2d8",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Stunned."
+          },
+          {
+            "name": "Acid Spray",
+            "range": "Ranged(20ft)",
+            "moveType": "Poison",
+            "category": "Special Attack",
+            "frequency": "3/day",
+            "power": "1d20",
+            "effect": "On hit, the target’s Special Defense is -1 for 10 mins."
+          },
+          {
+            "name": "Disable",
+            "range": "Ranged(20ft)",
+            "moveType": "Normal",
+            "category": "Effect",
+            "frequency": "1/day",
+            "power": null,
+            "effect": "For 1 minute, the attack last used by the target may not be used again."
+          }
+        ]
+      },
       {
         "name": "Muk (Oil Polluted)",
         "types": [
@@ -63385,6 +65391,81 @@
             "effect": "On hit, the target’s Special Defense is -1 for 10 mins."
           }
         ]
+      },
+      {
+        "name": "Ponyta (Forest Glade)",
+        "types": [
+          "Psychic"
+        ],
+        "size": "Medium",
+        "weight": "Medium",
+        "stats": {
+          "hp": 30,
+          "defense": 7,
+          "specialDefense": 7,
+          "speed": 10,
+          "speedFt": 50,
+          "attack": 10,
+          "specialAttack": 7
+        },
+        "skills": [
+          {
+            "name": "Telekinetic",
+            "description": "can move things with their mind"
+          }
+        ],
+        "passives": [
+          {
+            "name": "Growl",
+            "description": "+1 Defense"
+          },
+          {
+            "name": "Run Away",
+            "description": "+1 Speed"
+          },
+          {
+            "name": "Tail Whip",
+            "description": "+1 Attack"
+          },
+          {
+            "name": "Pastel Veil",
+            "description": "You and your allies within 10ft of you are immune to being Poisoned or Toxified."
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+5",
+          "specialAttack": "+3",
+          "effect": "+5"
+        },
+        "moves": [
+          {
+            "name": "Tackle",
+            "range": "Melee",
+            "moveType": "Normal",
+            "category": "Attack",
+            "frequency": "At-Will",
+            "power": "2d6",
+            "effect": ""
+          },
+          {
+            "name": "Confusion",
+            "range": "Ranged(10ft)",
+            "moveType": "Psychic",
+            "category": "Special Attack",
+            "frequency": "At-Will",
+            "power": "1d12",
+            "effect": "On hit, if you got 19 or higher on Accuracy Check, the target is Confused."
+          },
+          {
+            "name": "Fairy Wind",
+            "range": "Ranged(20ft)",
+            "moveType": "Fairy",
+            "category": "Special Attack",
+            "frequency": "At-Will",
+            "power": "1d12",
+            "effect": ""
+          }
+        ]
       }
     ]
   },
@@ -64964,6 +67045,162 @@
     "megaEvolution": false,
     "gigantamax": false,
     "stages": [
+      {
+        "name": "Graveler (Iron-rich)",
+        "types": [
+          "Rock",
+          "Electric"
+        ],
+        "size": "Medium",
+        "weight": "Heavy",
+        "stats": {
+          "hp": 36,
+          "defense": 13,
+          "specialDefense": 5,
+          "speed": 6,
+          "speedFt": 30,
+          "attack": 10,
+          "specialAttack": 5
+        },
+        "skills": [
+          {
+            "name": "Sinker",
+            "description": "can’t swim"
+          },
+          {
+            "name": "Zapper",
+            "description": ""
+          }
+        ],
+        "passives": [
+          {
+            "name": "Defense Curl",
+            "description": ""
+          },
+          {
+            "name": "Rock Polish",
+            "description": ""
+          },
+          {
+            "name": "Rock Head",
+            "description": "Your attacks that damage yourself on hit do not damage yourself."
+          },
+          {
+            "name": "Sturdy",
+            "description": ""
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+5",
+          "specialAttack": "+2",
+          "effect": "+3"
+        },
+        "moves": [
+          {
+            "name": "Magnet Pull",
+            "range": "Ranged(10ft)",
+            "moveType": "Electric",
+            "category": "Effect",
+            "frequency": "3/day",
+            "power": null,
+            "effect": "Magnet Pull can’t miss. If used on a Steel type, the target is bound to you."
+          },
+          {
+            "name": "Thunder Punch",
+            "range": "Melee",
+            "moveType": "Electric",
+            "category": "Attack",
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, if you got 17 or higher on Accuracy Check, the target is Paralyzed."
+          },
+          {
+            "name": "Rock Blast",
+            "range": "Ranged(10ft)",
+            "moveType": "Rock",
+            "category": "Attack",
+            "frequency": "At-Will",
+            "power": "1d4",
+            "effect": "Rock Blast has -2 during Accuracy Check. Rock Blast is a Scatter attack. Up to 5 attacks."
+          }
+        ]
+      },
+      {
+        "name": "Geodude (Iron-rich)",
+        "types": [
+          "Rock",
+          "Electric"
+        ],
+        "size": "Small",
+        "weight": "Medium",
+        "stats": {
+          "hp": 24,
+          "defense": 11,
+          "specialDefense": 3,
+          "speed": 4,
+          "speedFt": 20,
+          "attack": 8,
+          "specialAttack": 3
+        },
+        "skills": [
+          {
+            "name": "Hover",
+            "description": "can hover"
+          },
+          {
+            "name": "Zapper",
+            "description": "can produce electricity"
+          }
+        ],
+        "passives": [
+          {
+            "name": "Defense Curl",
+            "description": "+1 Defense"
+          },
+          {
+            "name": "Rock Polish",
+            "description": "+2 Speed"
+          },
+          {
+            "name": "Sturdy",
+            "description": "If you would be brought from Max HP to 0 or below, you are instead brought to 1 HP."
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+4",
+          "specialAttack": "+1",
+          "effect": "+2"
+        },
+        "moves": [
+          {
+            "name": "Rollout",
+            "range": "Melee",
+            "moveType": "Rock",
+            "category": "Attack",
+            "frequency": "At-Will",
+            "power": "1d4",
+            "effect": "For each time you’ve successfully used Rollout against the same target during the encounter, add 1d8 to Rollout’s damage."
+          },
+          {
+            "name": "Rock Throw",
+            "range": "Ranged(20ft)",
+            "moveType": "Rock",
+            "category": "Attack",
+            "frequency": "At-Will",
+            "power": "2d6",
+            "effect": ""
+          },
+          {
+            "name": "Spark",
+            "range": "Melee",
+            "moveType": "Electric",
+            "category": "Attack",
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, if you got 14 or higher on Accuracy Check, the target is Paralyzed."
+          }
+        ]
+      },
       {
         "name": "Golem (Iron-rich)",
         "types": [
@@ -68373,6 +70610,85 @@
     "gigantamax": false,
     "stages": [
       {
+        "name": "Lycanroc (Day)",
+        "types": [
+          "Rock"
+        ],
+        "size": "Medium",
+        "weight": "Medium",
+        "stats": {
+          "hp": 48,
+          "defense": 7,
+          "specialDefense": 7,
+          "speed": 13,
+          "speedFt": 65,
+          "attack": 13,
+          "specialAttack": 6
+        },
+        "skills": [
+          {
+            "name": "Tracker",
+            "description": ""
+          }
+        ],
+        "passives": [
+          {
+            "name": "Howl",
+            "description": ""
+          },
+          {
+            "name": "Scary Face",
+            "description": "+2 Speed"
+          },
+          {
+            "name": "Keen Eye",
+            "description": ""
+          },
+          {
+            "name": "Sand Rush",
+            "description": "While in Sandstorming Weather, your Speed is +2 and you don’t take damage from Sandstorming weather."
+          },
+          {
+            "name": "Steadfast",
+            "description": "When you are Stunned, your Speed is +1 for 10 mins."
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+6",
+          "specialAttack": "+3",
+          "effect": "+6"
+        },
+        "moves": [
+          {
+            "name": "Accelerock",
+            "range": "Melee",
+            "moveType": "Rock",
+            "category": "Attack",
+            "frequency": "At-Will",
+            "power": "2d6",
+            "effect": "Accelerock has Priority."
+          },
+          {
+            "name": "Rock Slide",
+            "range": "Ranged(20ft, 10ft wave)",
+            "moveType": "Rock",
+            "category": "Attack",
+            "frequency": "1/day",
+            "power": "5d12",
+            "effect": "Rock Slide has -2 during Accuracy Check. On hit, if you got 14 or higher on Accuracy Check, the target is Stunned."
+          },
+          {
+            "name": "Crunch",
+            "range": "Melee",
+            "moveType": "Dark",
+            "category": "Attack",
+            "frequency": "3/day",
+            "power": "3d10",
+            "effect": "On hit, the target’s Defense is -1 for 10 mins."
+          }
+        ]
+      },
+      {
         "name": "Rockruff",
         "types": [
           "Rock"
@@ -68436,6 +70752,164 @@
             "frequency": "At-Will",
             "power": "2d6",
             "effect": ""
+          }
+        ]
+      },
+      {
+        "name": "Lycanroc (Night)",
+        "types": [
+          "Rock"
+        ],
+        "size": "Medium",
+        "weight": "Medium",
+        "stats": {
+          "hp": 54,
+          "defense": 8,
+          "specialDefense": 8,
+          "speed": 10,
+          "speedFt": 50,
+          "attack": 13,
+          "specialAttack": 6
+        },
+        "skills": [
+          {
+            "name": "Tracker",
+            "description": ""
+          }
+        ],
+        "passives": [
+          {
+            "name": "Howl",
+            "description": ""
+          },
+          {
+            "name": "Scary Face",
+            "description": ""
+          },
+          {
+            "name": "Keen Eye",
+            "description": ""
+          },
+          {
+            "name": "No Guard",
+            "description": "You cannot miss your attacks, and attacks made against you cannot miss."
+          },
+          {
+            "name": "Vital Spirit",
+            "description": "You are immune to being put to Sleep."
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+6",
+          "specialAttack": "+3",
+          "effect": "+5"
+        },
+        "moves": [
+          {
+            "name": "Counter",
+            "range": "Melee",
+            "moveType": "Fighting",
+            "category": "Effect",
+            "frequency": "1/day",
+            "power": null,
+            "effect": "Counter is used as a Reaction. After an enemy hits you with a melee Attack move that deals damage, use Counter to deal exactly twice the damage to the enemy that you received. Do not apply weakness or resistances."
+          },
+          {
+            "name": "Rock Slide",
+            "range": "Ranged(20ft, 10ft wave)",
+            "moveType": "Rock",
+            "category": "Attack",
+            "frequency": "1/day",
+            "power": "5d12",
+            "effect": "Rock Slide has -2 during Accuracy Check. On hit, if you got 14 or higher on Accuracy Check, the target is Stunned."
+          },
+          {
+            "name": "Crunch",
+            "range": "Melee",
+            "moveType": "Dark",
+            "category": "Attack",
+            "frequency": "3/day",
+            "power": "3d10",
+            "effect": "On hit, the target’s Defense is -1 for 10 mins."
+          }
+        ]
+      },
+      {
+        "name": "Lycanroc (Dusk)",
+        "types": [
+          "Rock"
+        ],
+        "size": "Medium",
+        "weight": "Medium",
+        "stats": {
+          "hp": 48,
+          "defense": 7,
+          "specialDefense": 7,
+          "speed": 13,
+          "speedFt": 65,
+          "attack": 13,
+          "specialAttack": 6
+        },
+        "skills": [
+          {
+            "name": "Tracker",
+            "description": ""
+          }
+        ],
+        "passives": [
+          {
+            "name": "Howl",
+            "description": ""
+          },
+          {
+            "name": "Scary Face",
+            "description": ""
+          },
+          {
+            "name": "Keen Eye",
+            "description": ""
+          },
+          {
+            "name": "Own Tempo",
+            "description": "You are immune to being Confused."
+          },
+          {
+            "name": "Tough Claws",
+            "description": "Your slashing attacks deal +4 damage."
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+6",
+          "specialAttack": "+3",
+          "effect": "+6"
+        },
+        "moves": [
+          {
+            "name": "Thrash",
+            "range": "Melee",
+            "moveType": "Normal",
+            "category": "Attack",
+            "frequency": "1/day",
+            "power": "5d12",
+            "effect": "Thrash is a two -turn move. On each turn, move to the closest character within 25 ft that you can reach, and roll this move’s Accuracy Check and damage against them."
+          },
+          {
+            "name": "Rock Slide",
+            "range": "Ranged(20ft, 10ft wave)",
+            "moveType": "Rock",
+            "category": "Attack",
+            "frequency": "1/day",
+            "power": "5d12",
+            "effect": "Rock Slide has -2 during Accuracy Check. On hit, if you got 14 or higher on Accuracy Check, the target is Stunned."
+          },
+          {
+            "name": "Crunch",
+            "range": "Melee",
+            "moveType": "Dark",
+            "category": "Attack",
+            "frequency": "3/day",
+            "power": "3d10",
+            "effect": "On hit, the target’s Defense is -1 for 10 mins."
           }
         ]
       }
@@ -68744,6 +71218,184 @@
             "frequency": "1/day",
             "power": null,
             "effect": "Protect is used as a Reaction. When you would be hit by a move, use Protect to instead ignore the damage and any effects of the attack."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "familyId": "lunatone",
+    "familyName": "Lunatone",
+    "rarity": "Uncommon",
+    "biology": {
+      "eggGroups": [
+        "Mineral"
+      ],
+      "hatchRate": "13 Days",
+      "diet": "Phototroph",
+      "habitats": [
+        "Caves",
+        "Mountains"
+      ]
+    },
+    "evolutionText": null,
+    "proficiencies": [
+      "Fire",
+      "Rock",
+      "Psychic"
+    ],
+    "megaEvolution": false,
+    "gigantamax": false,
+    "stages": [
+      {
+        "name": "Solrock",
+        "types": [
+          "Rock",
+          "Psychic"
+        ],
+        "size": "Medium",
+        "weight": "Heavy",
+        "stats": {
+          "hp": 54,
+          "defense": 11,
+          "specialDefense": 8,
+          "speed": 7,
+          "speedFt": 35,
+          "attack": 10,
+          "specialAttack": 6
+        },
+        "skills": [
+          {
+            "name": "Flight",
+            "description": "can fly"
+          },
+          {
+            "name": "Telekinetic",
+            "description": "can move things with their mind"
+          }
+        ],
+        "passives": [
+          {
+            "name": "Cosmic Power",
+            "description": "+1 Defense, +1 Special Defense"
+          },
+          {
+            "name": "Harden",
+            "description": "+1 Defense"
+          },
+          {
+            "name": "Levitate",
+            "description": "You are immune to Groundtype moves while you are airborne."
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+5",
+          "specialAttack": "+3",
+          "effect": "+3"
+        },
+        "moves": [
+          {
+            "name": "Fire Spin",
+            "range": "Ranged(20ft)",
+            "moveType": "Fire",
+            "category": "Special Attack",
+            "frequency": "3/day",
+            "power": "1d4",
+            "effect": "On hit, the target is bound in place for 1d4 rounds. For each round the target is bound, it takes 1d4 special damage on its turns."
+          },
+          {
+            "name": "Psychic",
+            "range": "Ranged(25ft)",
+            "moveType": "Psychic",
+            "category": "Special Attack",
+            "frequency": "3/day",
+            "power": "3d10",
+            "effect": "On hit, the target’s Special Defense is -1 for 10 mins."
+          },
+          {
+            "name": "Solar Beam",
+            "range": "Ranged(30ft beam)",
+            "moveType": "Grass",
+            "category": "Special Attack",
+            "frequency": null,
+            "power": null,
+            "effect": "1/ day 5d12. Solar Beam is a two-turn move unless it is Sunny. On the first turn, do nothing. On the second turn or if it is Sunny, roll Solar Beam’s Accuracy Check and damage."
+          }
+        ]
+      },
+      {
+        "name": "Lunatone",
+        "types": [
+          "Rock",
+          "Psychic"
+        ],
+        "size": "Medium",
+        "weight": "Heavy",
+        "stats": {
+          "hp": 54,
+          "defense": 9,
+          "specialDefense": 10,
+          "speed": 7,
+          "speedFt": 35,
+          "attack": 6,
+          "specialAttack": 10
+        },
+        "skills": [
+          {
+            "name": "Flight",
+            "description": "can fly"
+          },
+          {
+            "name": "Telekinetic",
+            "description": "can move things with their mind"
+          }
+        ],
+        "passives": [
+          {
+            "name": "Cosmic Power",
+            "description": "+1 Defense, +1 Special Defense"
+          },
+          {
+            "name": "Harden",
+            "description": "+1 Defense"
+          },
+          {
+            "name": "Levitate",
+            "description": "You are immune to Groundtype moves while you are airborne."
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+3",
+          "specialAttack": "+5",
+          "effect": "+3"
+        },
+        "moves": [
+          {
+            "name": "Hypnosis",
+            "range": "Ranged(10ft)",
+            "moveType": "Psychic",
+            "category": "Effect",
+            "frequency": "3/day",
+            "power": null,
+            "effect": "Hypnosis has -4 during Accuracy Check. On hit, the target is put Asleep."
+          },
+          {
+            "name": "Psychic",
+            "range": "Ranged(25ft)",
+            "moveType": "Psychic",
+            "category": "Special Attack",
+            "frequency": "3/day",
+            "power": "3d10",
+            "effect": "On hit, the target’s Special Defense is -1 for 10 mins."
+          },
+          {
+            "name": "Stone Edge",
+            "range": "Ranged(25ft)",
+            "moveType": "Rock",
+            "category": "Attack",
+            "frequency": "1/day",
+            "power": "5d12",
+            "effect": "Stone Edge has -2 during Accuracy Check. On hit, if you got 18 or higher on Accuracy Check, Stone Edge is a critical hit."
           }
         ]
       }
@@ -69537,6 +72189,64 @@
         ]
       },
       {
+        "name": "Sliggoo (Iron-rich)",
+        "types": [
+          "Steel",
+          "Dragon"
+        ],
+        "size": "Medium",
+        "weight": "Heavy",
+        "stats": {
+          "hp": 36,
+          "defense": 11,
+          "specialDefense": 11,
+          "speed": 4,
+          "speedFt": 20,
+          "attack": 8,
+          "specialAttack": 8
+        },
+        "skills": [],
+        "passives": [
+          {
+            "name": "Shelter",
+            "description": "+3 Defense"
+          },
+          {
+            "name": "Overcoat",
+            "description": "You are immune to damage from weather."
+          },
+          {
+            "name": "Sap Sipper",
+            "description": "You are immune to Grass-type attacks. If you would be hit by a Grass-type attack, your Attack is +2 for 10 mins."
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+4",
+          "specialAttack": "+4",
+          "effect": "+2"
+        },
+        "moves": [
+          {
+            "name": "Iron Head",
+            "range": "Melee",
+            "moveType": "Steel",
+            "category": "Attack",
+            "frequency": "3/day",
+            "power": "3d10",
+            "effect": "On hit, if you got 14 or higher on Accuracy Check, the target is Stunned."
+          },
+          {
+            "name": "Dragon Breath",
+            "range": "Ranged(10ft)",
+            "moveType": "Dragon",
+            "category": "Special Attack",
+            "frequency": null,
+            "power": null,
+            "effect": "AtWill 2d8. On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed. Rain Dance - Water Field Effect: 3/day. You create a circle of Raining Weather with a 60ft diameter. Within the Raining weather, Water-type attacks deal an additional 8 damage and Fire-type attacks deal 8 less damage. This weather disappears after 2 mins."
+          }
+        ]
+      },
+      {
         "name": "Goodra (Iron-rich)",
         "types": [
           "Steel",
@@ -69619,25 +72329,20 @@
     "rarity": "Uncommon",
     "biology": {
       "eggGroups": [
-        "Dragon",
-        "Water 3"
+        "Mineral"
       ],
-      "hatchRate": "20 Days",
-      "diet": "Omnivore",
+      "hatchRate": "10 Days",
+      "diet": "Psiotroph",
       "habitats": [
-        "Marshes",
-        "Swamps"
+        "Ruins",
+        "Urban Abandoned"
       ]
     },
-    "evolutionText": "Goomy Iron-rich wetlands Sliggoo (Iron-rich) Goodra (Iron-rich)",
+    "evolutionText": "Honedge Doublade Dusk Stone Aegislash",
     "proficiencies": [
-      "Dragon",
-      "Steel (Sliggoo Iron-rich",
-      "Goodra Iron-rich)",
-      "Draconian (Goodra Iron-rich)",
-      "Elemental Attack (Goodra Iron-rich)",
-      "Weather (Sliggoo Iron-rich",
-      "Goodra Iron-rich) *Goomy is also capable of evolving into Sliggoo. A duplicate Goomy entry followed by it’s alternate evolution is located with other Dragon-type Pokémon."
+      "Ghost",
+      "Steel",
+      "Blades"
     ],
     "megaEvolution": false,
     "gigantamax": false,
@@ -69787,6 +72492,104 @@
             "frequency": "3/day",
             "power": "3d8",
             "effect": "On hit, if you got 18 or higher on Accuracy Check, Night Slash is a critical hit."
+          }
+        ]
+      },
+      {
+        "name": "Aegislash (Shield)",
+        "types": [
+          "Steel",
+          "Ghost"
+        ],
+        "size": "Medium",
+        "weight": "Medium",
+        "stats": {
+          "hp": 36,
+          "defense": 16,
+          "specialDefense": 14,
+          "speed": 8,
+          "speedFt": 40,
+          "attack": 7,
+          "specialAttack": 5
+        },
+        "skills": [],
+        "passives": [],
+        "moveModifiers": {},
+        "moves": []
+      },
+      {
+        "name": "Aegislash (Sword)",
+        "types": [
+          "Steel",
+          "Ghost"
+        ],
+        "size": "Medium",
+        "weight": "Medium",
+        "stats": {
+          "hp": 36,
+          "defense": 7,
+          "specialDefense": 5,
+          "speed": 8,
+          "speedFt": 40,
+          "attack": 16,
+          "specialAttack": 14
+        },
+        "skills": [
+          {
+            "name": "Flight",
+            "description": ""
+          }
+        ],
+        "passives": [
+          {
+            "name": "Autotomize",
+            "description": ""
+          },
+          {
+            "name": "Iron Defense",
+            "description": ""
+          },
+          {
+            "name": "Swords Dance",
+            "description": ""
+          },
+          {
+            "name": "Stance Change",
+            "description": "Aegislash has two forms it constantly changes between. When you attack a foe, before making your accuracy check change into your Sword Form. When using a reaction move such as King’s Shield or Protect, or a protective move like Safeguard or Light Screen, immediately change to Shield Form."
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+3/+8",
+          "specialAttack": "+2/+7",
+          "effect": "+4"
+        },
+        "moves": [
+          {
+            "name": "Iron Head",
+            "range": "Melee",
+            "moveType": "Steel",
+            "category": "Attack",
+            "frequency": "3/day",
+            "power": "3d10",
+            "effect": "On hit, if you got 14 or higher on Accuracy Check, the target is Stunned."
+          },
+          {
+            "name": "King’s Shield",
+            "range": "Self",
+            "moveType": "Steel",
+            "category": "Effect",
+            "frequency": "1/day",
+            "power": null,
+            "effect": "King’s Shield is used as a Reaction. If you would be hit by a melee attack, use King's Shield to instead ignore the damage and any effects of the attack, and also the attacker’s Attack is -4 for 10 mins."
+          },
+          {
+            "name": "Sacred Sword",
+            "range": "Melee",
+            "moveType": "Fighting",
+            "category": "Attack",
+            "frequency": "3/day",
+            "power": "3d10",
+            "effect": "Sacred Sword has +2 during Accuracy Check."
           }
         ]
       }
@@ -70481,6 +73284,98 @@
             "effect": "After use, your Special Attack is -4 for 10 mins."
           }
         ]
+      },
+      {
+        "name": "Gimmighoul (Chest)",
+        "types": [
+          "Ghost"
+        ],
+        "size": "Small",
+        "weight": "Light",
+        "stats": {
+          "hp": 30,
+          "defense": 7,
+          "specialDefense": 7,
+          "speed": 1,
+          "speedFt": 5,
+          "attack": 3,
+          "specialAttack": 8
+        },
+        "skills": [],
+        "passives": [],
+        "moveModifiers": {},
+        "moves": []
+      },
+      {
+        "name": "Gimmighoul (Roaming)",
+        "types": [
+          "Ghost"
+        ],
+        "size": "Tiny",
+        "weight": "Featherweight",
+        "stats": {
+          "hp": 30,
+          "defense": 3,
+          "specialDefense": 5,
+          "speed": 8,
+          "speedFt": 40,
+          "attack": 3,
+          "specialAttack": 8
+        },
+        "skills": [
+          {
+            "name": "Collector",
+            "description": "Gimmighoul can change into its Roaming form by abandoning its chest of gold pieces. If Gimmighoul has at least 50 gold pieces, it can change back into its Chest form."
+          },
+          {
+            "name": "Sinker [Chest]",
+            "description": "can’t swim"
+          },
+          {
+            "name": "Swimmer [Roaming]",
+            "description": "can swim"
+          }
+        ],
+        "passives": [
+          {
+            "name": "Rattled",
+            "description": "When a foe hits you with a Bug-type, Ghost-type, or Dark-type attack, your Speed is +1 for 10 mins. This can stack."
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+1",
+          "specialAttack": "+4",
+          "effect": "+0/+4"
+        },
+        "moves": [
+          {
+            "name": "Tackle",
+            "range": "Melee",
+            "moveType": "Normal",
+            "category": "Attack",
+            "frequency": "At-Will",
+            "power": "2d6",
+            "effect": ""
+          },
+          {
+            "name": "Splash",
+            "range": "Melee",
+            "moveType": "Normal",
+            "category": "Effect",
+            "frequency": "At-Will",
+            "power": null,
+            "effect": "Instead of making an Accuracy Check, roll 1d20. On 18 or higher, all adjacent foes are moved 5 ft away from the user."
+          },
+          {
+            "name": "Astonish",
+            "range": "Melee",
+            "moveType": "Ghost",
+            "category": "Attack",
+            "frequency": "At-Will",
+            "power": "1d10",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Stunned."
+          }
+        ]
       }
     ]
   },
@@ -70509,77 +73404,6 @@
     "megaEvolution": false,
     "gigantamax": false,
     "stages": [
-      {
-        "name": "Meowth (Cold Climate)",
-        "types": [
-          "Steel"
-        ],
-        "size": "Small",
-        "weight": "Light",
-        "stats": {
-          "hp": 30,
-          "defense": 7,
-          "specialDefense": 4,
-          "speed": 4,
-          "speedFt": 20,
-          "attack": 8,
-          "specialAttack": 4
-        },
-        "skills": [
-          {
-            "name": "Stealth",
-            "description": "can make stealth skill checks"
-          }
-        ],
-        "passives": [
-          {
-            "name": "Growl",
-            "description": "+1 Defense"
-          },
-          {
-            "name": "Tail Whip",
-            "description": "+1 Attack"
-          },
-          {
-            "name": "Tough Claws",
-            "description": "Your slashing attacks deal +4 damage."
-          }
-        ],
-        "moveModifiers": {
-          "attack": "+4",
-          "specialAttack": "+2",
-          "effect": "+2"
-        },
-        "moves": [
-          {
-            "name": "Fake Out",
-            "range": "Melee",
-            "moveType": "Normal",
-            "category": "Attack",
-            "frequency": "At-Will",
-            "power": "2d6",
-            "effect": "Fake Out has Priority. Fake Out can only be used as the first action during an encounter. On hit, the target is Stunned."
-          },
-          {
-            "name": "Fury Swipes",
-            "range": "Melee",
-            "moveType": "Normal",
-            "category": "Attack",
-            "frequency": "At-Will",
-            "power": "1d4",
-            "effect": "Fury Swipes has -2 during Accuracy Check. Fury Swipes is a Scatter attack. Up to 5 attacks."
-          },
-          {
-            "name": "Metal Claw",
-            "range": "Melee",
-            "moveType": "Steel",
-            "category": "Attack",
-            "frequency": "At-Will",
-            "power": "2d6",
-            "effect": "On hit, your Attack is +1 for 10 mins."
-          }
-        ]
-      },
       {
         "name": "Perrserker",
         "types": [
@@ -75219,6 +78043,93 @@
     "gigantamax": false,
     "stages": [
       {
+        "name": "Palafin (Zero)",
+        "types": [
+          "Water"
+        ],
+        "size": "Medium",
+        "weight": "Medium",
+        "stats": {
+          "hp": 60,
+          "defense": 8,
+          "specialDefense": 6,
+          "speed": 10,
+          "speedFt": 50,
+          "attack": 7,
+          "specialAttack": 5
+        },
+        "skills": [],
+        "passives": [],
+        "moveModifiers": {},
+        "moves": []
+      },
+      {
+        "name": "Palafin (Hero)",
+        "types": [
+          "Water"
+        ],
+        "size": "Large",
+        "weight": "Heavy",
+        "stats": {
+          "hp": 60,
+          "defense": 11,
+          "specialDefense": 9,
+          "speed": 10,
+          "speedFt": 50,
+          "attack": 16,
+          "specialAttack": 11
+        },
+        "skills": [
+          {
+            "name": "Swimmer",
+            "description": ""
+          }
+        ],
+        "passives": [
+          {
+            "name": "Charm",
+            "description": ""
+          },
+          {
+            "name": "Focus Energy",
+            "description": ""
+          },
+          {
+            "name": "Water Veil",
+            "description": ""
+          },
+          {
+            "name": "Zero to Hero",
+            "description": "When Palafin is reduced to 30 or less HP or if an ally is knocked out within 30ft of Palafin, you change from your Zero form to your Hero form for 10 mins."
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+3/+8",
+          "specialAttack": "+2/+5",
+          "effect": "+5"
+        },
+        "moves": [
+          {
+            "name": "Focus Punch",
+            "range": "Melee",
+            "moveType": "Fighting",
+            "category": "Attack",
+            "frequency": "3/day",
+            "power": "5d12",
+            "effect": "Focus Punch is a two-turn move. On the first turn: if anyone hits you before your next turn, you are Stunned. On the second turn, move up to twice your movement speed, then roll Focus Punch’s Accuracy Check and damage."
+          },
+          {
+            "name": "Jet Punch",
+            "range": "Melee",
+            "moveType": "Water",
+            "category": "Attack",
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "Jet Punch has Priority. Mist - Ice Field Effect: 3/day. You create a circle of Misty Weather with a 60ft diameter. Within the Misty weather, Stats cannot be lowered. This weather disappears after 2 mins."
+          }
+        ]
+      },
+      {
         "name": "Finizen",
         "types": [
           "Water"
@@ -79233,6 +82144,148 @@
     "gigantamax": false,
     "stages": [
       {
+        "name": "Slowbro (Spice Diet)",
+        "types": [
+          "Poison",
+          "Psychic"
+        ],
+        "size": "Medium",
+        "weight": "Heavy",
+        "stats": {
+          "hp": 60,
+          "defense": 11,
+          "specialDefense": 9,
+          "speed": 3,
+          "speedFt": 15,
+          "attack": 10,
+          "specialAttack": 10
+        },
+        "skills": [
+          {
+            "name": "Swimmer",
+            "description": ""
+          },
+          {
+            "name": "Telekinetic",
+            "description": ""
+          }
+        ],
+        "passives": [
+          {
+            "name": "Amnesia",
+            "description": "+2 Special Defense"
+          },
+          {
+            "name": "Withdraw",
+            "description": "+1 Defense"
+          },
+          {
+            "name": "Own Tempo",
+            "description": ""
+          },
+          {
+            "name": "Quick Draw",
+            "description": "1/day, you may give one of your moves priority."
+          },
+          {
+            "name": "Regenerator",
+            "description": "When returned to a Poke Ball, you recover to Max HP after being stored for 1 hour."
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+5",
+          "specialAttack": "+5",
+          "effect": "+1"
+        },
+        "moves": [
+          {
+            "name": "Water Pulse",
+            "range": "Ranged(20ft burst)",
+            "moveType": "Water",
+            "category": "Special Attack",
+            "frequency": null,
+            "power": null,
+            "effect": "3/ day 3d8. On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
+          },
+          {
+            "name": "Psychic",
+            "range": "Ranged(25ft)",
+            "moveType": "Psychic",
+            "category": "Special Attack",
+            "frequency": "3/day",
+            "power": "3d10",
+            "effect": "On hit, the target’s Special Defense is -1 for 10 mins."
+          }
+        ]
+      },
+      {
+        "name": "Slowpoke (Spice Diet)",
+        "types": [
+          "Psychic"
+        ],
+        "size": "Medium",
+        "weight": "Medium",
+        "stats": {
+          "hp": 54,
+          "defense": 6,
+          "specialDefense": 6,
+          "speed": 2,
+          "speedFt": 10,
+          "attack": 7,
+          "specialAttack": 4
+        },
+        "skills": [
+          {
+            "name": "Swimmer",
+            "description": "can swim"
+          },
+          {
+            "name": "Telekinetic",
+            "description": "can move things with their mind"
+          }
+        ],
+        "passives": [
+          {
+            "name": "Own Tempo",
+            "description": "You are immune to being Confused."
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+3",
+          "specialAttack": "+2",
+          "effect": "+1"
+        },
+        "moves": [
+          {
+            "name": "Tackle",
+            "range": "Melee",
+            "moveType": "Normal",
+            "category": "Attack",
+            "frequency": "At-Will",
+            "power": "2d6",
+            "effect": ""
+          },
+          {
+            "name": "Confusion",
+            "range": "Ranged(10ft)",
+            "moveType": "Psychic",
+            "category": "Special Attack",
+            "frequency": "At-Will",
+            "power": "1d12",
+            "effect": "On hit, if you got 19 or higher on Accuracy Check, the target is Confused."
+          },
+          {
+            "name": "Yawn",
+            "range": "Melee",
+            "moveType": "Normal",
+            "category": "Effect",
+            "frequency": "3/day",
+            "power": null,
+            "effect": "On hit, the target falls Asleep after its next turn."
+          }
+        ]
+      },
+      {
         "name": "Slowking",
         "types": [
           "Water",
@@ -79436,6 +82489,193 @@
             "frequency": null,
             "power": null,
             "effect": "3/ day 3d8. On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "familyId": "arctovish",
+    "familyName": "Arctovish",
+    "rarity": "Rare",
+    "biology": {
+      "eggGroups": [],
+      "hatchRate": null,
+      "diet": "Omnivore",
+      "habitats": [
+        "Unknown"
+      ]
+    },
+    "evolutionText": null,
+    "proficiencies": [
+      "Dragon",
+      "Water",
+      "Fangs"
+    ],
+    "megaEvolution": false,
+    "gigantamax": false,
+    "stages": [
+      {
+        "name": "Arctovish",
+        "types": [
+          "Water",
+          "Ice"
+        ],
+        "size": "Large",
+        "weight": "Heavy",
+        "stats": {
+          "hp": 54,
+          "defense": 10,
+          "specialDefense": 9,
+          "speed": 6,
+          "speedFt": 30,
+          "attack": 9,
+          "specialAttack": 8
+        },
+        "skills": [
+          {
+            "name": "Fountain",
+            "description": "can create water"
+          },
+          {
+            "name": "Freezer",
+            "description": "can create ice"
+          },
+          {
+            "name": "Gilled",
+            "description": "can breathe underwater"
+          },
+          {
+            "name": "Swimmer",
+            "description": "can swim"
+          }
+        ],
+        "passives": [
+          {
+            "name": "Ice Body",
+            "description": "If in Hailing weather, you recover 4 HP after you act and you don’t take damage from Hailing weather."
+          },
+          {
+            "name": "Slush Rush",
+            "description": "While in Hailing weather, your Speed is +2 and you don’t take damage from Hailing weather."
+          },
+          {
+            "name": "Water Absorb",
+            "description": "When you are hit by a water-type attack, halve the damage, then you heal that much HP instead of taking damage."
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+4",
+          "specialAttack": "+4",
+          "effect": "+3"
+        },
+        "moves": [
+          {
+            "name": "Protect",
+            "range": "Self",
+            "moveType": "Normal",
+            "category": "Effect",
+            "frequency": "1/day",
+            "power": null,
+            "effect": "Protect is used as a Reaction. When you would be hit by a move, use Protect to instead ignore the damage and any effects of the attack."
+          },
+          {
+            "name": "Water Gun",
+            "range": "Ranged(20ft)",
+            "moveType": "Water",
+            "category": "Special Attack",
+            "frequency": "At-Will",
+            "power": "2d6",
+            "effect": ""
+          },
+          {
+            "name": "Freeze-Dry",
+            "range": "Ranged(10ft)",
+            "moveType": "Ice",
+            "category": "Special Attack",
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "Freeze-Dry is Super effective against Water types. On hit, if you got 18 or higher on Accuracy Check, the target is Frozen."
+          }
+        ]
+      },
+      {
+        "name": "Dracovish",
+        "types": [
+          "Water",
+          "Dragon"
+        ],
+        "size": "Large",
+        "weight": "Superweight",
+        "stats": {
+          "hp": 54,
+          "defense": 10,
+          "specialDefense": 8,
+          "speed": 8,
+          "speedFt": 40,
+          "attack": 9,
+          "specialAttack": 7
+        },
+        "skills": [
+          {
+            "name": "Fountain",
+            "description": "can create water"
+          },
+          {
+            "name": "Gilled",
+            "description": "can breathe underwater"
+          },
+          {
+            "name": "Swimmer",
+            "description": "can swim"
+          }
+        ],
+        "passives": [
+          {
+            "name": "Sand Rush",
+            "description": "While in Sandstorming Weather, your Speed is +2 and you don’t take damage from Sandstorming weather."
+          },
+          {
+            "name": "Strong Jaw",
+            "description": "Your biting attacks deal +4 damage."
+          },
+          {
+            "name": "Water Absorb",
+            "description": "When you are hit by a water-type attack, halve the damage, then you heal that much HP instead of taking damage."
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+4",
+          "specialAttack": "+3",
+          "effect": "+4"
+        },
+        "moves": [
+          {
+            "name": "Protect",
+            "range": "Self",
+            "moveType": "Normal",
+            "category": "Effect",
+            "frequency": "1/day",
+            "power": null,
+            "effect": "Protect is used as a Reaction. When you would be hit by a move, use Protect to instead ignore the damage and any effects of the attack."
+          },
+          {
+            "name": "Water Gun",
+            "range": "Ranged(20ft)",
+            "moveType": "Water",
+            "category": "Special Attack",
+            "frequency": "At-Will",
+            "power": "2d6",
+            "effect": ""
+          },
+          {
+            "name": "Dragon Pulse",
+            "range": "Ranged(10ft)",
+            "moveType": "Dragon",
+            "category": "Special Attack",
+            "frequency": "3/day",
+            "power": "3d10",
+            "effect": ""
           }
         ]
       }
@@ -80445,6 +83685,132 @@
             "frequency": "3/day",
             "power": "3d10",
             "effect": "On hit, if you got 18 or higher on Accuracy Check, Aqua Cutter is a critical hit."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "familyId": "wishiwashi",
+    "familyName": "Wishiwashi",
+    "rarity": "Common",
+    "biology": {
+      "eggGroups": [
+        "Water 2"
+      ],
+      "hatchRate": "10 Days",
+      "diet": "Herbivore",
+      "habitats": [
+        "Ocean Reefs",
+        "Ocean"
+      ]
+    },
+    "evolutionText": null,
+    "proficiencies": [
+      "Water",
+      "Piscian",
+      "Stampeding Wild Wishiwashi are small, defenseless Pokémon on their own. Because they are so easy to catch and are notably tasty, they are popular prey for many marine Pokémon. However, predators must act fast to catch these frail creatures. If they fail to take one by surprise, they must cut their losses and flee. When Wishiwashi sense danger, their eyes will begin to water; the wobbling tears glisten in the light and signal to other nearby Wishiwashi that it is time to group up. Schooled together, these monstrous School Form Wishiwashi are feared even by apex predators like Gyarados. When each Wishiwashi in a school lets loose a burst of water, the combined attack is stronger than cannon fire. Wishiwashi cannot eat or sleep properly in their School Forms, however, so they cannot remain in these states indefinitely. Schools will seek secluded areas of the sea away from predators to safely disperse in before returning to their normal lives. If a School Form Wishiwashi is sufficiently damaged or loses enough members, its uniquely synchronous cooperation deteriorates, and it begins to behave more like a normal school of fish. When on their own on land, trained Wishiwashi can summon orbs of water shaped like other Wishiwashi to create a façade of their School Form and boosting their power as if they were with hundreds of Wishiwashi in the wild."
+    ],
+    "megaEvolution": false,
+    "gigantamax": false,
+    "stages": [
+      {
+        "name": "Wishiwashi (Single form)",
+        "types": [
+          "Water"
+        ],
+        "size": "Tiny",
+        "weight": "Featherweight",
+        "stats": {
+          "hp": 30,
+          "defense": 3,
+          "specialDefense": 4,
+          "speed": 4,
+          "speedFt": 20,
+          "attack": 2,
+          "specialAttack": 3
+        },
+        "skills": [],
+        "passives": [],
+        "moveModifiers": {},
+        "moves": []
+      },
+      {
+        "name": "Wishiwashi (School form)",
+        "types": [
+          "Water"
+        ],
+        "size": "Gigantic",
+        "weight": "Superweight",
+        "stats": {
+          "hp": 30,
+          "defense": 14,
+          "specialDefense": 15,
+          "speed": 3,
+          "speedFt": 15,
+          "attack": 14,
+          "specialAttack": 14
+        },
+        "skills": [
+          {
+            "name": "Flopper",
+            "description": "treats dry land as special terrain"
+          },
+          {
+            "name": "Fountain",
+            "description": "can create water"
+          },
+          {
+            "name": "Gilled",
+            "description": "can breathe underwater"
+          },
+          {
+            "name": "Swimmer",
+            "description": "can swim"
+          }
+        ],
+        "passives": [
+          {
+            "name": "Tearful Look",
+            "description": "+1 Defense, +1 Special Defense"
+          },
+          {
+            "name": "Schooling",
+            "description": "When Wishiwashi is at half its HP or higher, it is in its School form. In its School form, Wishiwashi summons hundreds of fish-shaped balls of water and surrounds itself making it appear larger and making it stronger. When Wishiwashi is below half of its max hit points, Wishiwashi is in its Single form, dropping its façade and appearing much smaller on its own."
+          }
+        ],
+        "moveModifiers": {
+          "attack": "+1/+7",
+          "specialAttack": "+1/+7",
+          "effect": "+2/+1"
+        },
+        "moves": [
+          {
+            "name": "Aqua Ring",
+            "range": "Self",
+            "moveType": "Water",
+            "category": "Effect",
+            "frequency": "1/day",
+            "power": null,
+            "effect": "Put a Ring Coat on yourself. The Coat has the following ability: At the beginning of your turn, recover 1d10 HP. This Coat lasts for 1 min. If it’s raining, the Coat lasts for 2 mins."
+          },
+          {
+            "name": "Aqua Tail",
+            "range": "Melee",
+            "moveType": "Water",
+            "category": "Attack",
+            "frequency": "1/day",
+            "power": "3d12",
+            "effect": ""
+          },
+          {
+            "name": "Take Down",
+            "range": "Melee",
+            "moveType": "Normal",
+            "category": "Attack",
+            "frequency": "3/day",
+            "power": "3d10",
+            "effect": "On hit, you lose HP equal to 1/4th of the damage you deal."
           }
         ]
       }

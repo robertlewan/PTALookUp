@@ -14,11 +14,14 @@ import CharacterSheetScreen from '../screens/CharacterSheetScreen';
 import PokemonSheetScreen from '../screens/PokemonSheetScreen';
 import PickClassScreen from '../screens/PickClassScreen';
 import AddPokemonScreen from '../screens/AddPokemonScreen';
+import GmGuideListScreen from '../screens/GmGuideListScreen';
+import GmGuideDetailScreen from '../screens/GmGuideDetailScreen';
 
 const HomeStack = createNativeStackNavigator();
 const ClassesStack = createNativeStackNavigator();
 const DexStack = createNativeStackNavigator();
 const CharactersStack = createNativeStackNavigator();
+const GmGuideStack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
 const screenOptions = {
@@ -66,6 +69,15 @@ function CharactersStackNav() {
   );
 }
 
+function GmGuideStackNav() {
+  return (
+    <GmGuideStack.Navigator screenOptions={screenOptions}>
+      <GmGuideStack.Screen name="GmGuideList" component={GmGuideListScreen} options={{ title: 'GM Guide' }} />
+      <GmGuideStack.Screen name="GmGuideDetail" component={GmGuideDetailScreen} options={{ title: 'GM Guide' }} />
+    </GmGuideStack.Navigator>
+  );
+}
+
 const navTheme = {
   ...DarkTheme,
   colors: {
@@ -93,6 +105,7 @@ export default function RootNavigator() {
         <Tab.Screen name="ClassesTab" component={ClassesStackNav} options={{ title: 'Classes' }} />
         <Tab.Screen name="DexTab" component={DexStackNav} options={{ title: 'Pokédex' }} />
         <Tab.Screen name="CharactersTab" component={CharactersStackNav} options={{ title: 'Characters' }} />
+        <Tab.Screen name="GmGuideTab" component={GmGuideStackNav} options={{ title: 'GM Guide' }} />
       </Tab.Navigator>
     </NavigationContainer>
   );

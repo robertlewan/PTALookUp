@@ -55,16 +55,19 @@ export interface PokemonMove {
   category: string;
   power: string | null;
   effect: string;
+  special?: string | null;
 }
 
 export interface PokemonSkillRef {
   name: string;
   description: string;
+  special?: string | null;
 }
 
 export interface PokemonPassive {
   name: string;
   description: string;
+  special?: string | null;
 }
 
 export interface PokemonStage {
@@ -81,9 +84,21 @@ export interface PokemonStage {
 
 export interface PokemonBiology {
   eggGroups: string[];
-  hatchRate: string;
-  diet: string;
+  hatchRate: string | null;
+  diet: string | null;
   habitats: string[];
+}
+
+export interface GmGuideTable {
+  columns: string[];
+  rows: (string | number)[][];
+}
+
+export interface GmGuideSection {
+  id: string;
+  title: string;
+  body: string;
+  table: GmGuideTable | null;
 }
 
 export interface PokemonFamily {
