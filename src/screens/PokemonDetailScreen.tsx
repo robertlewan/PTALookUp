@@ -5,7 +5,8 @@ import { colors } from '../theme/theme';
 import { pokemonFamilyById } from '../data';
 import { Section, ListRow } from '../components/Section';
 import { TypeBadge } from '../components/TypeBadge';
-import type { PokemonStage } from '../types/models';
+import { movesForProficiency } from '../utils/moves';
+import type { PokemonFamily, PokemonStage } from '../types/models';
 
 export default function PokemonDetailScreen() {
   const route = useRoute<any>();
@@ -52,13 +53,13 @@ export default function PokemonDetailScreen() {
       )}
 
       {family.stages.map((stage, i) => (
-        <StageCard key={`${stage.name}-${i}`} stage={stage} />
+        <StageCard key={`${stage.name}-${i}`} stage={stage} proficiencies={family.proficiencies} />
       ))}
     </ScrollView>
   );
 }
 
-function StageCard({ stage }: { stage: PokemonStage }) {
+function StageCard({ stage, proficiencies }: { stage: PokemonStage; proficiencies: PokemonFamily['proficiencies'] }) {
   return (
     <View style={styles.stageCard}>
       <Text style={styles.stageName}>{stage.name}</Text>
@@ -93,6 +94,21 @@ function StageCard({ stage }: { stage: PokemonStage }) {
               <Text style={styles.bold}>{p.name}</Text> — {p.description}
             </Text>
           ))}
+        </View>
+      )}
+
+      {proficiencies.length > 0 && (
+        <View style={styles.subSection}>
+          <Text style={styles.subTitle}>Moves by Proficiency</Text>
+          {proficiencies.map((prof) => {
+            const matches = movesForProficiency(stage.moves, prof);
+            return (
+              <Text key={prof} style={styles.body}>
+                <Text style={styles.bold}>{prof}</Text>
+                {matches.length > 0 ? `: ${matches.map((m) => m.name).join(', ')}` : ''}
+              </Text>
+            );
+          })}
         </View>
       )}
 

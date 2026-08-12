@@ -40,6 +40,11 @@ export default function HomeScreen() {
         desc="Capture rates, encounter building, loyalty, evolution, and other game master reference rules."
         onPress={() => navigation.navigate('GmGuideTab')}
       />
+      <NavCard
+        title="Items"
+        desc="Poké Balls, medical items, held items, berries, TMs, and other gear."
+        onPress={() => navigation.navigate('ItemsTab')}
+      />
     </ScrollView>
   );
 }

@@ -14,6 +14,12 @@ export type CharactersStackParamList = {
   PokemonSheet: { characterId: string; pokemonId: string };
   AddPokemon: { characterId: string };
   PickClass: { characterId: string; slot: 'base' | 'advanced'; forBaseId?: string };
+  PickItem: { onPick: (itemId: string) => void | Promise<void>; defaultCategory?: string };
+};
+
+export type ItemsStackParamList = {
+  ItemList: undefined;
+  ItemDetail: { itemId: string };
 };
 
 export type HomeStackParamList = {
@@ -31,4 +37,5 @@ export type RootTabParamList = {
   DexTab: undefined;
   CharactersTab: undefined;
   GmGuideTab: undefined;
+  ItemsTab: undefined;
 };

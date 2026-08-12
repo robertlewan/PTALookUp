@@ -3,12 +3,21 @@ import { Alert, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View 
 import { useFocusEffect, useNavigation, useRoute } from '@react-navigation/native';
 import { colors } from '../theme/theme';
 import { getCharacter, saveCharacter, deleteCharacter, newOwnedPokemon } from '../storage/characterStorage';
-import { trainerClassById, trainerSkills, pokemonFamilyById, findPokemonStage } from '../data';
+import { trainerClassById, trainerSkills, pokemonFamilyById, findPokemonStage, itemById } from '../data';
 import { Section } from '../components/Section';
+import { HpInput } from '../components/HpInput';
 import type { CharacterSheet } from '../types/models';
 
 function rollD6() {
   return 1 + Math.floor(Math.random() * 6);
+}
+
+// Talents grant +2; taking the same talent a second time bumps it to +5
+// (PHB "Talents" rule). Cycle: 0 picks -> 1 (+2) -> 2 (+5) -> 0.
+function cycleTalent(skills: string[], name: string): string[] {
+  const rank = skills.filter((n) => n === name).length;
+  if (rank >= 2) return skills.filter((n) => n !== name);
+  return [...skills, name];
 }
 
 export default function CharacterSheetScreen() {
@@ -74,7 +83,7 @@ export default function CharacterSheetScreen() {
           <TouchableOpacity style={styles.stepBtn} onPress={() => onChange(Math.max(min, value - 1))}>
             <Text style={styles.stepBtnText}>−</Text>
           </TouchableOpacity>
-          <Text style={styles.stepperValue}>{value}</Text>
+          <HpInput value={value} max={max} onChange={onChange} />
           <TouchableOpacity style={styles.stepBtn} onPress={() => onChange(max === undefined ? value + 1 : Math.min(max, value + 1))}>
             <Text style={styles.stepBtnText}>+</Text>
           </TouchableOpacity>
@@ -171,20 +180,20 @@ export default function CharacterSheetScreen() {
       </Section>
 
       <Section title="Skill Talents">
+        <Text style={styles.emptyHint}>Tap a talent for +2. Tap again for +5 (taking the same talent twice). Tap a third time to clear it.</Text>
         <View style={styles.skillWrap}>
           {trainerSkills.map((s) => {
-            const active = char.skills.includes(s.name);
+            const rank = char.skills.filter((n) => n === s.name).length;
             return (
               <TouchableOpacity
                 key={s.name}
-                style={[styles.skillChip, active && styles.skillChipActive]}
-                onPress={() =>
-                  update({
-                    skills: active ? char.skills.filter((n) => n !== s.name) : [...char.skills, s.name],
-                  })
-                }
+                style={[styles.skillChip, rank === 1 && styles.skillChipActive, rank >= 2 && styles.skillChipMax]}
+                onPress={() => update({ skills: cycleTalent(char.skills, s.name) })}
               >
-                <Text style={[styles.skillChipText, active && styles.skillChipTextActive]}>{s.name}</Text>
+                <Text style={[styles.skillChipText, rank > 0 && styles.skillChipTextActive]}>
+                  {s.name}
+                  {rank === 1 ? ' +2' : rank >= 2 ? ' +5' : ''}
+                </Text>
               </TouchableOpacity>
             );
           })}
@@ -250,6 +259,7 @@ export default function CharacterSheetScreen() {
 }
 
 function InventoryEditor({ items, onChange }: { items: string[]; onChange: (items: string[]) => void }) {
+  const navigation = useNavigation<any>();
   const [text, setText] = useState('');
   return (
     <View>
@@ -264,7 +274,7 @@ function InventoryEditor({ items, onChange }: { items: string[]; onChange: (item
       <View style={styles.hpRow}>
         <TextInput
           style={[styles.nameInput, { flex: 1, fontSize: 14, marginBottom: 0 }]}
-          placeholder="Add item..."
+          placeholder="Add custom item..."
           placeholderTextColor={colors.textMuted}
           value={text}
           onChangeText={setText}
@@ -276,6 +286,19 @@ function InventoryEditor({ items, onChange }: { items: string[]; onChange: (item
           }}
         />
       </View>
+      <TouchableOpacity
+        style={styles.addBtn}
+        onPress={() =>
+          navigation.navigate('PickItem', {
+            onPick: async (itemId: string) => {
+              const item = itemById.get(itemId);
+              if (item) onChange([...items, item.name]);
+            },
+          })
+        }
+      >
+        <Text style={styles.addBtnText}>+ Add from Items</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -327,6 +350,7 @@ const styles = StyleSheet.create({
   skillWrap: { flexDirection: 'row', flexWrap: 'wrap' },
   skillChip: { backgroundColor: colors.surfaceAlt, borderRadius: 14, paddingHorizontal: 12, paddingVertical: 6, marginRight: 6, marginBottom: 6 },
   skillChipActive: { backgroundColor: colors.primary },
+  skillChipMax: { backgroundColor: colors.good },
   skillChipText: { color: colors.textMuted, fontSize: 12, fontWeight: '600' },
   skillChipTextActive: { color: '#fff' },
   inventoryRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 },

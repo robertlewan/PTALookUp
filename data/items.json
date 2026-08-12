@@ -1,0 +1,2571 @@
+[
+  {
+    "id": "basic-ball",
+    "name": "Basic Ball",
+    "category": "Poke Balls",
+    "price": "100",
+    "effect": "+5 to your capture roll."
+  },
+  {
+    "id": "great-ball",
+    "name": "Great Ball",
+    "category": "Poke Balls",
+    "price": "600",
+    "effect": "+0 to your capture roll."
+  },
+  {
+    "id": "ultra-ball",
+    "name": "Ultra Ball",
+    "category": "Poke Balls",
+    "price": "1000",
+    "effect": "-5 from your capture roll."
+  },
+  {
+    "id": "master-ball",
+    "name": "Master Ball",
+    "category": "Poke Balls",
+    "price": null,
+    "effect": "-100 from your capture roll. The Master Ball can and will often fail when thrown at legendary Pokemon."
+  },
+  {
+    "id": "park-ball",
+    "name": "Park Ball",
+    "category": "Poke Balls",
+    "price": "550",
+    "effect": "-20 from your capture roll against domesticated wild Pokemon; otherwise, +5 to your capture roll. Often used in capture contests or on wild reserves."
+  },
+  {
+    "id": "safari-ball",
+    "name": "Safari Ball",
+    "category": "Poke Balls",
+    "price": "550",
+    "effect": "-20 from your capture roll against domesticated wild Pokemon; otherwise, +5 to your capture roll. Often used in capture contests or on wild reserves."
+  },
+  {
+    "id": "sport-ball",
+    "name": "Sport Ball",
+    "category": "Poke Balls",
+    "price": "550",
+    "effect": "-20 from your capture roll against domesticated wild Pokemon; otherwise, +5 to your capture roll. Often used in capture contests or on wild reserves."
+  },
+  {
+    "id": "cherish-ball",
+    "name": "Cherish Ball",
+    "category": "Poke Balls",
+    "price": "1500",
+    "effect": "-5 from your capture roll. Captured Pokemon are more easily befriended."
+  },
+  {
+    "id": "luxury-ball",
+    "name": "Luxury Ball",
+    "category": "Poke Balls",
+    "price": "1500",
+    "effect": "-5 from your capture roll. Captured Pokemon are more easily befriended."
+  },
+  {
+    "id": "premier-ball",
+    "name": "Premier Ball",
+    "category": "Poke Balls",
+    "price": "1500",
+    "effect": "-5 from your capture roll. Captured Pokemon are more easily befriended. Many Poke Marts give away 1 free Premier Ball for large purchases of other Poke Balls."
+  },
+  {
+    "id": "dive-ball",
+    "name": "Dive Ball",
+    "category": "Poke Balls",
+    "price": "1250",
+    "effect": "+10 to your capture roll normally; -12 from your capture roll instead if the Pokemon is in water."
+  },
+  {
+    "id": "dusk-ball",
+    "name": "Dusk Ball",
+    "category": "Poke Balls",
+    "price": "1150",
+    "effect": "+10 to your capture roll normally; -7 from your capture roll instead if it's night time (no sunlight)."
+  },
+  {
+    "id": "fast-ball",
+    "name": "Fast Ball",
+    "category": "Poke Balls",
+    "price": "1250",
+    "effect": "+10 to your capture roll normally; -8 from your capture roll instead on a Pokemon that acts before your Pokemon."
+  },
+  {
+    "id": "lure-ball",
+    "name": "Lure Ball",
+    "category": "Poke Balls",
+    "price": "1250",
+    "effect": "+10 to your capture roll normally; -10 from your capture roll instead if you lured the wild Pokemon into combat."
+  },
+  {
+    "id": "quick-ball",
+    "name": "Quick Ball",
+    "category": "Poke Balls",
+    "price": "1550",
+    "effect": "+10 to your capture roll normally; -16 from your capture roll instead if thrown as your first action during combat."
+  },
+  {
+    "id": "repeat-ball",
+    "name": "Repeat Ball",
+    "category": "Poke Balls",
+    "price": "1250",
+    "effect": "+10 to your capture roll normally; -10 from your capture roll instead if the Pokemon already had a Poke Ball thrown at it this encounter."
+  },
+  {
+    "id": "timer-ball",
+    "name": "Timer Ball",
+    "category": "Poke Balls",
+    "price": "1450",
+    "effect": "+10 to your capture roll normally; -10 from your capture roll instead if the encounter has lasted at least one minute, or -18 from your capture roll if the encounter has lasted at least two minutes."
+  },
+  {
+    "id": "friend-ball",
+    "name": "Friend Ball",
+    "category": "Poke Balls",
+    "price": "1000",
+    "effect": "+0 to your capture roll. Captured Pokemon are more easily befriended."
+  },
+  {
+    "id": "heal-ball",
+    "name": "Heal Ball",
+    "category": "Poke Balls",
+    "price": "1000",
+    "effect": "+0 to your capture roll. Captured Pokemon are healed 20 hit points."
+  },
+  {
+    "id": "dream-ball",
+    "name": "Dream Ball",
+    "category": "Poke Balls",
+    "price": "1250",
+    "effect": "+10 to your capture roll normally; -10 from your capture roll instead if the Pokemon is afflicted."
+  },
+  {
+    "id": "heavy-ball",
+    "name": "Heavy Ball",
+    "category": "Poke Balls",
+    "price": "1250",
+    "effect": "+10 to your capture roll normally; -15 from your capture roll instead if the Pokemon is Heavy or Superweight."
+  },
+  {
+    "id": "level-ball",
+    "name": "Level Ball",
+    "category": "Poke Balls",
+    "price": "1250",
+    "effect": "+10 to your capture roll normally; -10 from your capture roll instead if the Pokemon is fully evolved, and did evolve at least once."
+  },
+  {
+    "id": "love-ball",
+    "name": "Love Ball",
+    "category": "Poke Balls",
+    "price": "1250",
+    "effect": "+10 to your capture roll normally; -10 from your capture roll instead if the target shares a type with one of your active Pokemon."
+  },
+  {
+    "id": "moon-ball",
+    "name": "Moon Ball",
+    "category": "Poke Balls",
+    "price": "1250",
+    "effect": "+10 to your capture roll normally; -10 from your capture roll instead if the Pokemon evolves with an evolution stone."
+  },
+  {
+    "id": "nest-ball",
+    "name": "Nest Ball",
+    "category": "Poke Balls",
+    "price": "1250",
+    "effect": "+10 to your capture roll normally; -10 from your capture roll instead if the Pokemon can evolve, but is not evolved."
+  },
+  {
+    "id": "net-ball",
+    "name": "Net Ball",
+    "category": "Poke Balls",
+    "price": "1250",
+    "effect": "+10 to your capture roll normally; -15 from your capture roll instead when used against a Bug or Water type Pokemon."
+  },
+  {
+    "id": "beast-ball",
+    "name": "Beast Ball",
+    "category": "Poke Balls",
+    "price": null,
+    "effect": "+10 to your capture roll normally; -25 from your capture roll instead if the Pokemon is from a parallel dimension. Rarely works well outside that circumstance."
+  },
+  {
+    "id": "strange-ball",
+    "name": "Strange Ball",
+    "category": "Poke Balls",
+    "price": null,
+    "effect": "+10 to your capture roll normally; -25 from your capture roll instead if the Pokemon is temporally displaced. Rarely works well outside that circumstance."
+  },
+  {
+    "id": "potion",
+    "name": "Potion",
+    "category": "Medical Items",
+    "price": "25",
+    "effect": "Heals a Pokemon 12 HP."
+  },
+  {
+    "id": "super-potion",
+    "name": "Super Potion",
+    "category": "Medical Items",
+    "price": "250",
+    "effect": "Heals a Pokemon 24 HP."
+  },
+  {
+    "id": "hyper-potion",
+    "name": "Hyper Potion",
+    "category": "Medical Items",
+    "price": "550",
+    "effect": "Heals a Pokemon 36 HP."
+  },
+  {
+    "id": "max-potion",
+    "name": "Max Potion",
+    "category": "Medical Items",
+    "price": "850",
+    "effect": "Heals a Pokemon to their Max HP."
+  },
+  {
+    "id": "full-restore",
+    "name": "Full Restore",
+    "category": "Medical Items",
+    "price": "1200",
+    "effect": "Heals a Pokemon to their Max HP and cures them of any afflictions."
+  },
+  {
+    "id": "potion-water",
+    "name": "Potion Water",
+    "category": "Medical Items",
+    "price": "100",
+    "effect": "Heals a human 10 HP."
+  },
+  {
+    "id": "super-soda",
+    "name": "Super Soda",
+    "category": "Medical Items",
+    "price": "300",
+    "effect": "Heals a human 20 HP."
+  },
+  {
+    "id": "hyper-lemonade",
+    "name": "Hyper Lemonade",
+    "category": "Medical Items",
+    "price": "550",
+    "effect": "Heals a human 30 HP."
+  },
+  {
+    "id": "moo-moo-milk",
+    "name": "Moo Moo Milk",
+    "category": "Medical Items",
+    "price": "175",
+    "effect": "Heals anything 8 HP."
+  },
+  {
+    "id": "antidote",
+    "name": "Antidote",
+    "category": "Medical Items",
+    "price": "120",
+    "effect": "Cures a Pokemon or human of Poisoned or Toxified."
+  },
+  {
+    "id": "awakening",
+    "name": "Awakening",
+    "category": "Medical Items",
+    "price": "120",
+    "effect": "Cures a Pokemon or human of Drowsy."
+  },
+  {
+    "id": "burn-heal",
+    "name": "Burn Heal",
+    "category": "Medical Items",
+    "price": "120",
+    "effect": "Cures a Pokemon or human of Burned."
+  },
+  {
+    "id": "ice-heal",
+    "name": "Ice Heal",
+    "category": "Medical Items",
+    "price": "120",
+    "effect": "Cures a Pokemon or human of Frostbite."
+  },
+  {
+    "id": "paralyze-heal",
+    "name": "Paralyze Heal",
+    "category": "Medical Items",
+    "price": "120",
+    "effect": "Cures a Pokemon or human of Paralysis."
+  },
+  {
+    "id": "touga-spray",
+    "name": "Touga Spray",
+    "category": "Medical Items",
+    "price": "120",
+    "effect": "Cures a Pokemon of Entranced."
+  },
+  {
+    "id": "full-heal",
+    "name": "Full Heal",
+    "category": "Medical Items",
+    "price": "520",
+    "effect": "Cures a Pokemon or human of all afflictions."
+  },
+  {
+    "id": "ether",
+    "name": "Ether",
+    "category": "Medical Items",
+    "price": "480",
+    "effect": "A Pokemon's strength is partially restored and regains a single use of one of its 3/day moves."
+  },
+  {
+    "id": "elixir",
+    "name": "Elixir",
+    "category": "Medical Items",
+    "price": "1280",
+    "effect": "A Pokemon's strength is partially restored and regains a single use of one of its 1/day moves."
+  },
+  {
+    "id": "max-ether",
+    "name": "Max Ether",
+    "category": "Medical Items",
+    "price": "1280",
+    "effect": "A Pokemon's strength is partially restored. Choose two 3/day and/or 1/day moves to restore all uses of those moves."
+  },
+  {
+    "id": "max-elixir",
+    "name": "Max Elixir",
+    "category": "Medical Items",
+    "price": "1280",
+    "effect": "A Pokemon's strength is partially restored. Choose two 3/day and/or 1/day moves to restore all uses of those moves."
+  },
+  {
+    "id": "x-attack",
+    "name": "X Attack",
+    "category": "Medical Items",
+    "price": "240",
+    "effect": "Gives a Pokemon Attack (up arrow)."
+  },
+  {
+    "id": "x-defend",
+    "name": "X Defend",
+    "category": "Medical Items",
+    "price": "240",
+    "effect": "Gives a Pokemon Defense (up arrow)."
+  },
+  {
+    "id": "x-special",
+    "name": "X Special",
+    "category": "Medical Items",
+    "price": "240",
+    "effect": "Gives a Pokemon Special Attack (up arrow)."
+  },
+  {
+    "id": "x-sp-def",
+    "name": "X Sp. Def",
+    "category": "Medical Items",
+    "price": "240",
+    "effect": "Gives a Pokemon Special Defense (up arrow)."
+  },
+  {
+    "id": "x-speed",
+    "name": "X Speed",
+    "category": "Medical Items",
+    "price": "240",
+    "effect": "Gives a Pokemon Speed (up arrow)."
+  },
+  {
+    "id": "x-accuracy",
+    "name": "X Accuracy",
+    "category": "Medical Items",
+    "price": "240",
+    "effect": "Increases a Pokemon's AC by +1."
+  },
+  {
+    "id": "dire-hit",
+    "name": "Dire Hit",
+    "category": "Medical Items",
+    "price": "840",
+    "effect": "The next attack the Pokemon makes is Lethal."
+  },
+  {
+    "id": "guard-spec",
+    "name": "Guard Spec.",
+    "category": "Medical Items",
+    "price": "440",
+    "effect": "The next time the Pokemon would get a stat decrease (down arrow) from a foe, ignore it."
+  },
+  {
+    "id": "hp-up",
+    "name": "HP Up",
+    "category": "Medical Items",
+    "price": "4800",
+    "effect": "Increase HP by 4 for two weeks."
+  },
+  {
+    "id": "protein",
+    "name": "Protein",
+    "category": "Medical Items",
+    "price": "4800",
+    "effect": "Increase Attack by 1 for two weeks."
+  },
+  {
+    "id": "iron",
+    "name": "Iron",
+    "category": "Medical Items",
+    "price": "4800",
+    "effect": "Increase Defense by 1 for two weeks."
+  },
+  {
+    "id": "calcium",
+    "name": "Calcium",
+    "category": "Medical Items",
+    "price": "4800",
+    "effect": "Increase Special Attack by 1 for two weeks."
+  },
+  {
+    "id": "zinc",
+    "name": "Zinc",
+    "category": "Medical Items",
+    "price": "4800",
+    "effect": "Increase Special Defense by 1 for two weeks."
+  },
+  {
+    "id": "carbos",
+    "name": "Carbos",
+    "category": "Medical Items",
+    "price": "4800",
+    "effect": "Increase Speed by 1 for two weeks."
+  },
+  {
+    "id": "pp-up",
+    "name": "PP Up",
+    "category": "Medical Items",
+    "price": "9800",
+    "effect": "Increase the frequency of a 3/day move to 4/day for one week."
+  },
+  {
+    "id": "pp-max",
+    "name": "PP Max",
+    "category": "Medical Items",
+    "price": "19800",
+    "effect": "Increase the frequency of a 1/day move to 2/day (1/combat) for one week."
+  },
+  {
+    "id": "revive",
+    "name": "Revive",
+    "category": "Medical Items",
+    "price": "1350",
+    "effect": "Restore an unconscious Pokemon to half of its max HP."
+  },
+  {
+    "id": "max-revive",
+    "name": "Max Revive",
+    "category": "Medical Items",
+    "price": "2950",
+    "effect": "Restore an unconscious Pokemon to its max HP."
+  },
+  {
+    "id": "repel",
+    "name": "Repel",
+    "category": "Medical Items",
+    "price": "150",
+    "effect": "Wild Pokemon find the smell repulsive for one hour after applied, but may ignore it to protect something precious to them."
+  },
+  {
+    "id": "super-repel",
+    "name": "Super Repel",
+    "category": "Medical Items",
+    "price": "400",
+    "effect": "Wild Pokemon find the smell repulsive for three hours after applied, but may ignore it to protect something precious to them."
+  },
+  {
+    "id": "max-repel",
+    "name": "Max Repel",
+    "category": "Medical Items",
+    "price": "1000",
+    "effect": "Wild Pokemon find the smell repulsive for ten hours after applied, but may ignore it to protect something precious to them."
+  },
+  {
+    "id": "heal-powder",
+    "name": "Heal Powder",
+    "category": "Medical Items",
+    "price": "480",
+    "effect": "Removes any affliction."
+  },
+  {
+    "id": "energy-powder",
+    "name": "Energy Powder",
+    "category": "Medical Items",
+    "price": "125",
+    "effect": "Recovers 30 Hit Points (Pokemon)."
+  },
+  {
+    "id": "energy-root",
+    "name": "Energy Root",
+    "category": "Medical Items",
+    "price": "400",
+    "effect": "Recovers 48 Hit Points (Pokemon)."
+  },
+  {
+    "id": "revival-herb",
+    "name": "Revival Herb",
+    "category": "Medical Items",
+    "price": "1000",
+    "effect": "Recovers an unconscious Pokemon to half of their max HP."
+  },
+  {
+    "id": "cinnaleaf-mint",
+    "name": "Cinnaleaf Mint",
+    "category": "Medical Items",
+    "price": "48750",
+    "effect": "Remove the bonuses and penalties to a Pokemon's stats caused by its nature, then: raise Attack 1 point, then lower Defense, Special Attack, Special Defense, or Speed 1 point. Takes about half a day to take effect; a Pokemon can only take one mint per week."
+  },
+  {
+    "id": "stonebalm-mint",
+    "name": "Stonebalm Mint",
+    "category": "Medical Items",
+    "price": "48750",
+    "effect": "Remove the bonuses and penalties to a Pokemon's stats caused by its nature, then: raise Defense 1 point, then lower Attack, Special Attack, Special Defense, or Speed 1 point. Takes about half a day to take effect; a Pokemon can only take one mint per week."
+  },
+  {
+    "id": "spearmist-mint",
+    "name": "Spearmist Mint",
+    "category": "Medical Items",
+    "price": "48750",
+    "effect": "Remove the bonuses and penalties to a Pokemon's stats caused by its nature, then: raise Special Attack 1 point, then lower Attack, Defense, Special Defense, or Speed 1 point. Takes about half a day to take effect; a Pokemon can only take one mint per week."
+  },
+  {
+    "id": "calmrest-mint",
+    "name": "Calmrest Mint",
+    "category": "Medical Items",
+    "price": "48750",
+    "effect": "Remove the bonuses and penalties to a Pokemon's stats caused by its nature, then: raise Special Defense 1 point, then lower Attack, Defense, Special Attack, or Speed 1 point. Takes about half a day to take effect; a Pokemon can only take one mint per week."
+  },
+  {
+    "id": "lightwind-mint",
+    "name": "Lightwind Mint",
+    "category": "Medical Items",
+    "price": "48750",
+    "effect": "Remove the bonuses and penalties to a Pokemon's stats caused by its nature, then: raise Speed 1 point, then lower Attack, Defense, Special Attack, or Special Defense 1 point. Takes about half a day to take effect; a Pokemon can only take one mint per week."
+  },
+  {
+    "id": "pureleaf-mint",
+    "name": "Pureleaf Mint",
+    "category": "Medical Items",
+    "price": "48750",
+    "effect": "Remove the bonuses and penalties to a Pokemon's stats caused by its nature, and do not add to or subtract from any stats afterward. Takes about half a day to take effect; a Pokemon can only take one mint per week."
+  },
+  {
+    "id": "ability-shield",
+    "name": "Ability Shield",
+    "category": "Held Items",
+    "price": "1350",
+    "effect": "Your passives cannot be disabled or replaced by any foe's effects during combat."
+  },
+  {
+    "id": "absorb-bulb",
+    "name": "Absorb Bulb",
+    "category": "Held Items",
+    "price": "300",
+    "effect": "When you are hit by a Water-type attack, Absorb Bulb is destroyed and you get Special Attack (up arrow)."
+  },
+  {
+    "id": "adrenaline-orb",
+    "name": "Adrenaline Orb",
+    "category": "Held Items",
+    "price": "2550",
+    "effect": "If you get Attack (down arrow) or Special Attack (down arrow) from a foe's effects, you get Speed (up arrow). If you get Attack (double down arrow) or Special Attack (double down arrow) from a foe's effects, you get Speed (double up arrow)."
+  },
+  {
+    "id": "air-balloon",
+    "name": "Air Balloon",
+    "category": "Held Items",
+    "price": "1350",
+    "effect": "You are immune to Ground-type attacks. If you are hit by any other type of attack, Air Balloon is destroyed."
+  },
+  {
+    "id": "assault-vest",
+    "name": "Assault Vest",
+    "category": "Held Items",
+    "price": "2550",
+    "effect": "Your Special Defense is +2. You may not use moves that do not have power."
+  },
+  {
+    "id": "big-root",
+    "name": "Big Root",
+    "category": "Held Items",
+    "price": "2550",
+    "effect": "Whenever you would recover HP or gain temporary HP after dealing damage to a foe, gain +1d4 temporary HP."
+  },
+  {
+    "id": "binding-band",
+    "name": "Binding Band",
+    "category": "Held Items",
+    "price": "2550",
+    "effect": "If you use an attack that binds a target, the target loses 1d4 HP at the end of each of your turns if they are still Bound."
+  },
+  {
+    "id": "black-sludge",
+    "name": "Black Sludge",
+    "category": "Held Items",
+    "price": "1050",
+    "effect": "As an action, consume and destroy Black Sludge. Poison-types regain 1d4 HP after acting until at max HP. All other Pokemon are Poisoned by consuming Black Sludge."
+  },
+  {
+    "id": "bright-powder",
+    "name": "Bright Powder",
+    "category": "Held Items",
+    "price": "850",
+    "effect": "As a free action, destroy Bright Powder. Until your next turn, if you are targeted by an attack, the attacker must roll +2 higher in order to hit you during AC."
+  },
+  {
+    "id": "cell-battery",
+    "name": "Cell Battery",
+    "category": "Held Items",
+    "price": "300",
+    "effect": "When you are hit by an Electric-type attack, Cell Battery is destroyed and you get Attack (up arrow)."
+  },
+  {
+    "id": "choice-band",
+    "name": "Choice Band",
+    "category": "Held Items",
+    "price": "2550",
+    "effect": "Your Attack stat is +2. Whenever you use a move, that is the only move you can use for the rest of the encounter. If you can no longer use that move, you may still Struggle."
+  },
+  {
+    "id": "choice-scarf",
+    "name": "Choice Scarf",
+    "category": "Held Items",
+    "price": "2550",
+    "effect": "Your Speed stat is +2. Whenever you use a move, that is the only move you can use for the rest of the encounter. If you can no longer use that move, you may still Struggle."
+  },
+  {
+    "id": "choice-specs",
+    "name": "Choice Specs",
+    "category": "Held Items",
+    "price": "2550",
+    "effect": "Your Special Attack stat is +2. Whenever you use a move, that is the only move you can use for the rest of the encounter. If you can no longer use that move, you may still Struggle."
+  },
+  {
+    "id": "clear-amulet",
+    "name": "Clear Amulet",
+    "category": "Held Items",
+    "price": "1350",
+    "effect": "You are immune to getting a stat decrease (down arrow) from the effects of your foe's Styles."
+  },
+  {
+    "id": "covert-cloak",
+    "name": "Covert Cloak",
+    "category": "Held Items",
+    "price": "1350",
+    "effect": "You are immune to the effects of your foe's held items."
+  },
+  {
+    "id": "destiny-knot",
+    "name": "Destiny Knot",
+    "category": "Held Items",
+    "price": "1750",
+    "effect": "When you become Entranced, the Pokemon who caused your Entranced becomes Entranced with you as well."
+  },
+  {
+    "id": "eviolite",
+    "name": "Eviolite",
+    "category": "Held Items",
+    "price": "2550",
+    "effect": "If you can still potentially evolve, your Defense and Special Defense stats are +1."
+  },
+  {
+    "id": "expert-belt",
+    "name": "Expert Belt",
+    "category": "Held Items",
+    "price": "2550",
+    "effect": "When you hit with a super-effective or extremely-effective attack, deal an additional +2 damage."
+  },
+  {
+    "id": "flame-orb",
+    "name": "Flame Orb",
+    "category": "Held Items",
+    "price": "1350",
+    "effect": "After acting, you are Burned."
+  },
+  {
+    "id": "float-stone",
+    "name": "Float Stone",
+    "category": "Held Items",
+    "price": "1350",
+    "effect": "If you are Heavy (weight), you are treated as Medium (weight). This is also true for Medium to Light and Light to Featherweight."
+  },
+  {
+    "id": "focus-band",
+    "name": "Focus Band",
+    "category": "Held Items",
+    "price": "1950",
+    "effect": "If you would be knocked out, you may roll 1d20. On 17 or higher, you are instead set to 1 hit point and the Focus Band is destroyed."
+  },
+  {
+    "id": "focus-sash",
+    "name": "Focus Sash",
+    "category": "Held Items",
+    "price": "2550",
+    "effect": "If you would be knocked out from a single attack when you were at max hit points, instead you are set to 1 hit point once per battle."
+  },
+  {
+    "id": "grip-claw",
+    "name": "Grip Claw",
+    "category": "Held Items",
+    "price": "1950",
+    "effect": "If you bind a foe and your foe tries to escape, they must roll +4 higher to escape successfully."
+  },
+  {
+    "id": "heavy-boots",
+    "name": "Heavy Boots",
+    "category": "Held Items",
+    "price": "2550",
+    "effect": "The first time you would take damage from a Hazard per combat, ignore that damage."
+  },
+  {
+    "id": "iron-ball",
+    "name": "Iron Ball",
+    "category": "Held Items",
+    "price": "1350",
+    "effect": "If you are Featherweight (weight), you are treated as Light (weight). This is also true for Light to Medium and Medium to Heavy."
+  },
+  {
+    "id": "kings-rock",
+    "name": "King's Rock",
+    "category": "Held Items",
+    "price": "2550",
+    "effect": "On your first single-target attack per day, the attack gains the following effect: \"18 or higher during AC inflicts Dazed.\""
+  },
+  {
+    "id": "lagging-tail",
+    "name": "Lagging Tail",
+    "category": "Held Items",
+    "price": "1350",
+    "effect": "You act last during each round of combat."
+  },
+  {
+    "id": "leftovers",
+    "name": "Leftovers",
+    "category": "Held Items",
+    "price": "2550",
+    "effect": "As an action, consume and destroy Leftovers. Regain 1d6 HP after acting until you are at max HP."
+  },
+  {
+    "id": "life-orb",
+    "name": "Life Orb",
+    "category": "Held Items",
+    "price": "2550",
+    "effect": "Your attacks have +1d6 power. After acting, no matter what actions you take, you lose 1d6 HP."
+  },
+  {
+    "id": "luminous-moss",
+    "name": "Luminous Moss",
+    "category": "Held Items",
+    "price": "300",
+    "effect": "When you are hit by a Water-type attack, Luminous Moss is destroyed and you get Special Defense (up arrow)."
+  },
+  {
+    "id": "mental-herb",
+    "name": "Mental Herb",
+    "category": "Held Items",
+    "price": "650",
+    "effect": "As a free action, consume and destroy Mental Herb. If a foe does anything to try and prevent you from using any of your moves, it fails."
+  },
+  {
+    "id": "metronome",
+    "name": "Metronome",
+    "category": "Held Items",
+    "price": "2550",
+    "effect": "Your attacks have +1d4 power for each other time the same attack has been used that encounter (max +3d4)."
+  },
+  {
+    "id": "mirror-herb",
+    "name": "Mirror Herb",
+    "category": "Held Items",
+    "price": "350",
+    "effect": "As a free Reaction [When a foe gets a stat increase (up arrow)], consume and destroy Mirror Herb. Gain the same stat increase that the foe just gained."
+  },
+  {
+    "id": "muscle-band",
+    "name": "Muscle Band",
+    "category": "Held Items",
+    "price": "3550",
+    "effect": "Your Physical attacks deal +1 damage."
+  },
+  {
+    "id": "power-herb",
+    "name": "Power Herb",
+    "category": "Held Items",
+    "price": "850",
+    "effect": "As a free Reaction [When you use a move with multiple turns], consume and destroy Power Herb. Skip the first turn of the move and immediately do the second turn of the move."
+  },
+  {
+    "id": "protective-pads",
+    "name": "Protective Pads",
+    "category": "Held Items",
+    "price": "2550",
+    "effect": "If you would be damaged as a result of making a melee attack against a foe by a foe's passive or other effect, ignore that damage."
+  },
+  {
+    "id": "quick-claw",
+    "name": "Quick Claw",
+    "category": "Held Items",
+    "price": "2550",
+    "effect": "On your first single-target melee attack with at-will frequency per day, the attack gains the following effect: \"This attack has Priority.\""
+  },
+  {
+    "id": "razor-claw",
+    "name": "Razor Claw",
+    "category": "Held Items",
+    "price": "2550",
+    "effect": "On your first single-target melee attack per day, the attack gains the following effect: \"This attack is Lethal.\""
+  },
+  {
+    "id": "razor-fang",
+    "name": "Razor Fang",
+    "category": "Held Items",
+    "price": "2550",
+    "effect": "Your Latched attacks deal +2 damage."
+  },
+  {
+    "id": "ring-target",
+    "name": "Ring Target",
+    "category": "Held Items",
+    "price": "1050",
+    "effect": "You lose all of your type immunities. When hit by an attack that you are usually immune to, treat the damage as ineffective."
+  },
+  {
+    "id": "rocky-helmet",
+    "name": "Rocky Helmet",
+    "category": "Held Items",
+    "price": "3550",
+    "effect": "Whenever you are hit by an attack at melee range, the attacker loses 1d4 HP."
+  },
+  {
+    "id": "safety-goggles",
+    "name": "Safety Goggles",
+    "category": "Held Items",
+    "price": "2550",
+    "effect": "You are immune to damaging effects from Weather."
+  },
+  {
+    "id": "scope-lens",
+    "name": "Scope Lens",
+    "category": "Held Items",
+    "price": "2550",
+    "effect": "On your first single-target ranged attack per day, the attack gains the following effect: \"This attack is Lethal.\""
+  },
+  {
+    "id": "shed-shell",
+    "name": "Shed Shell",
+    "category": "Held Items",
+    "price": "450",
+    "effect": "As a free Reaction [When you become Bound by a foe], destroy Shed Shell. You are no longer Bound."
+  },
+  {
+    "id": "shell-bell",
+    "name": "Shell Bell",
+    "category": "Held Items",
+    "price": "3550",
+    "effect": "Whenever you hit with an attack, you can drop your highest rolled damage result. If you do, recover 1d4 HP."
+  },
+  {
+    "id": "snowball",
+    "name": "Snowball",
+    "category": "Held Items",
+    "price": "300",
+    "effect": "When you are hit by an Ice-type attack, Snowball is destroyed and you get Attack (up arrow)."
+  },
+  {
+    "id": "sticky-barb",
+    "name": "Sticky Barb",
+    "category": "Held Items",
+    "price": "2050",
+    "effect": "Whenever you move more than 10ft during your turn, you lose 1d4 HP. If you are hit by a melee range attack, give Sticky Barb to the attacker."
+  },
+  {
+    "id": "throat-spray",
+    "name": "Throat Spray",
+    "category": "Held Items",
+    "price": "1850",
+    "effect": "Your Sound attacks deal +2 damage."
+  },
+  {
+    "id": "toxic-orb",
+    "name": "Toxic Orb",
+    "category": "Held Items",
+    "price": "1350",
+    "effect": "After acting, you are Poisoned."
+  },
+  {
+    "id": "white-herb",
+    "name": "White Herb",
+    "category": "Held Items",
+    "price": "650",
+    "effect": "As a free action, consume and destroy White Herb. Get rid of any stat decreases (down arrows) that you have."
+  },
+  {
+    "id": "wide-lens",
+    "name": "Wide Lens",
+    "category": "Held Items",
+    "price": "3550",
+    "effect": "Your effect moves have +1 during AC."
+  },
+  {
+    "id": "wise-glasses",
+    "name": "Wise Glasses",
+    "category": "Held Items",
+    "price": "3550",
+    "effect": "Your Special attacks deal +1 damage."
+  },
+  {
+    "id": "zoom-lens",
+    "name": "Zoom Lens",
+    "category": "Held Items",
+    "price": "3550",
+    "effect": "On your first attack per combat, your attack has +2 during AC and -4 power."
+  },
+  {
+    "id": "elemental-boons",
+    "name": "Elemental Boons",
+    "category": "Held Items",
+    "price": "1850",
+    "effect": "Elemental Boons have many names, each corresponding to a Pokemon type (Soft Sand for Ground, Silk Scarf for Normal, Never Melt Ice for Ice, etc.). Ability: any of your same-typed attacks deal an additional +2 damage."
+  },
+  {
+    "id": "elemental-plate",
+    "name": "Elemental Plate",
+    "category": "Held Items",
+    "price": "19800",
+    "effect": "Elemental Plates are rare artifacts named per Pokemon type (Bug Plate, Dark Plate, etc.). Ability: any of your same-typed attacks deal an additional +4 damage."
+  },
+  {
+    "id": "weather-terrain-and-zone-rocks",
+    "name": "Weather, Terrain, and Zone Rocks",
+    "category": "Held Items",
+    "price": "450",
+    "effect": "Named after the Weather, Terrain, or Zone the held item affects (Sunny Rock, Tricky Rock, Grassy Rock, etc.). Ability: when you create the corresponding Weather, Terrain, or Zone, destroy this item; the Weather, Terrain, or Zone you create lasts for five minutes."
+  },
+  {
+    "id": "weather-terrain-and-zone-seeds",
+    "name": "Weather, Terrain, and Zone Seeds",
+    "category": "Held Items",
+    "price": "450",
+    "effect": "Named after the Weather, Terrain, or Zone the held item affects (Rainy Seed, Gravity Seed, Electric Seed, etc.). Ability: when you are in the corresponding Weather, Terrain, or Zone, destroy this item; you get Speed (up arrow)."
+  },
+  {
+    "id": "oran-berry",
+    "name": "Oran Berry",
+    "category": "Berries",
+    "price": "25",
+    "effect": "Heals a Pokemon 5 HP."
+  },
+  {
+    "id": "sitrus-berry",
+    "name": "Sitrus Berry",
+    "category": "Berries",
+    "price": "120",
+    "effect": "Heals a Pokemon 12 HP."
+  },
+  {
+    "id": "aguav-berry",
+    "name": "Aguav Berry",
+    "category": "Berries",
+    "price": "850",
+    "effect": "Heals 1/3 of a Pokemon's max HP, then they are Confused (if the Pokemon favors this berry's flavor, they are immune to the Confused effect)."
+  },
+  {
+    "id": "figy-berry",
+    "name": "Figy Berry",
+    "category": "Berries",
+    "price": "850",
+    "effect": "Heals 1/3 of a Pokemon's max HP, then they are Confused (if the Pokemon favors this berry's flavor, they are immune to the Confused effect)."
+  },
+  {
+    "id": "iapapa-berry",
+    "name": "Iapapa Berry",
+    "category": "Berries",
+    "price": "850",
+    "effect": "Heals 1/3 of a Pokemon's max HP, then they are Confused (if the Pokemon favors this berry's flavor, they are immune to the Confused effect)."
+  },
+  {
+    "id": "mago-berry",
+    "name": "Mago Berry",
+    "category": "Berries",
+    "price": "850",
+    "effect": "Heals 1/3 of a Pokemon's max HP, then they are Confused (if the Pokemon favors this berry's flavor, they are immune to the Confused effect)."
+  },
+  {
+    "id": "wiki-berry",
+    "name": "Wiki Berry",
+    "category": "Berries",
+    "price": "850",
+    "effect": "Heals 1/3 of a Pokemon's max HP, then they are Confused (if the Pokemon favors this berry's flavor, they are immune to the Confused effect)."
+  },
+  {
+    "id": "aspear-berry",
+    "name": "Aspear Berry",
+    "category": "Berries",
+    "price": "120",
+    "effect": "Cures Frostbite."
+  },
+  {
+    "id": "cheri-berry",
+    "name": "Cheri Berry",
+    "category": "Berries",
+    "price": "120",
+    "effect": "Cures Paralysis."
+  },
+  {
+    "id": "chesto-berry",
+    "name": "Chesto Berry",
+    "category": "Berries",
+    "price": "120",
+    "effect": "Cures Drowsy."
+  },
+  {
+    "id": "pecha-berry",
+    "name": "Pecha Berry",
+    "category": "Berries",
+    "price": "120",
+    "effect": "Cures Poisoned and Toxified."
+  },
+  {
+    "id": "persim-berry",
+    "name": "Persim Berry",
+    "category": "Berries",
+    "price": "120",
+    "effect": "Cures Confused."
+  },
+  {
+    "id": "rawst-berry",
+    "name": "Rawst Berry",
+    "category": "Berries",
+    "price": "120",
+    "effect": "Cures Burns."
+  },
+  {
+    "id": "lum-berry",
+    "name": "Lum Berry",
+    "category": "Berries",
+    "price": "580",
+    "effect": "Cures all Afflictions."
+  },
+  {
+    "id": "grepa-berry",
+    "name": "Grepa Berry",
+    "category": "Berries",
+    "price": "680",
+    "effect": "When you have Special Defense (down arrow) you get Special Defense (up arrow)."
+  },
+  {
+    "id": "hondew-berry",
+    "name": "Hondew Berry",
+    "category": "Berries",
+    "price": "680",
+    "effect": "When you have Special Attack (down arrow) you get Special Attack (up arrow)."
+  },
+  {
+    "id": "kelpsy-berry",
+    "name": "Kelpsy Berry",
+    "category": "Berries",
+    "price": "680",
+    "effect": "When you have Attack (down arrow) you get Attack (up arrow)."
+  },
+  {
+    "id": "pomeg-berry",
+    "name": "Pomeg Berry",
+    "category": "Berries",
+    "price": "1080",
+    "effect": "When you have any stat decrease (down arrow) you get a matching stat increase (up arrow)."
+  },
+  {
+    "id": "qualot-berry",
+    "name": "Qualot Berry",
+    "category": "Berries",
+    "price": "680",
+    "effect": "When you have Defense (down arrow) you get Defense (up arrow)."
+  },
+  {
+    "id": "tamato-berry",
+    "name": "Tamato Berry",
+    "category": "Berries",
+    "price": "680",
+    "effect": "When you have Speed (down arrow) you get Speed (up arrow)."
+  },
+  {
+    "id": "babiri-berry",
+    "name": "Babiri Berry",
+    "category": "Berries",
+    "price": "540",
+    "effect": "Protection from Steel-type attacks: consumed as a free action when hit by an attack, even if unable to move normally. If the attack is Steel-type, treat it as resisted, removing one die from the attacker's roll; if the attack is super effective, negate the extra die; if extremely effective, the attacker only adds one die to their attack's damage."
+  },
+  {
+    "id": "charti-berry",
+    "name": "Charti Berry",
+    "category": "Berries",
+    "price": "540",
+    "effect": "Protection from Rock-type attacks: consumed as a free action when hit by an attack, even if unable to move normally. If the attack is Rock-type, treat it as resisted, removing one die from the attacker's roll; if the attack is super effective, negate the extra die; if extremely effective, the attacker only adds one die to their attack's damage."
+  },
+  {
+    "id": "chilan-berry",
+    "name": "Chilan Berry",
+    "category": "Berries",
+    "price": "540",
+    "effect": "Protection from Normal-type attacks: consumed as a free action when hit by an attack, even if unable to move normally. If the attack is Normal-type, treat it as resisted, removing one die from the attacker's roll; if the attack is super effective, negate the extra die; if extremely effective, the attacker only adds one die to their attack's damage."
+  },
+  {
+    "id": "chople-berry",
+    "name": "Chople Berry",
+    "category": "Berries",
+    "price": "540",
+    "effect": "Protection from Fighting-type attacks: consumed as a free action when hit by an attack, even if unable to move normally. If the attack is Fighting-type, treat it as resisted, removing one die from the attacker's roll; if the attack is super effective, negate the extra die; if extremely effective, the attacker only adds one die to their attack's damage."
+  },
+  {
+    "id": "coba-berry",
+    "name": "Coba Berry",
+    "category": "Berries",
+    "price": "540",
+    "effect": "Protection from Flying-type attacks: consumed as a free action when hit by an attack, even if unable to move normally. If the attack is Flying-type, treat it as resisted, removing one die from the attacker's roll; if the attack is super effective, negate the extra die; if extremely effective, the attacker only adds one die to their attack's damage."
+  },
+  {
+    "id": "colbur-berry",
+    "name": "Colbur Berry",
+    "category": "Berries",
+    "price": "540",
+    "effect": "Protection from Dark-type attacks: consumed as a free action when hit by an attack, even if unable to move normally. If the attack is Dark-type, treat it as resisted, removing one die from the attacker's roll; if the attack is super effective, negate the extra die; if extremely effective, the attacker only adds one die to their attack's damage."
+  },
+  {
+    "id": "haban-berry",
+    "name": "Haban Berry",
+    "category": "Berries",
+    "price": "540",
+    "effect": "Protection from Dragon-type attacks: consumed as a free action when hit by an attack, even if unable to move normally. If the attack is Dragon-type, treat it as resisted, removing one die from the attacker's roll; if the attack is super effective, negate the extra die; if extremely effective, the attacker only adds one die to their attack's damage."
+  },
+  {
+    "id": "kasib-berry",
+    "name": "Kasib Berry",
+    "category": "Berries",
+    "price": "540",
+    "effect": "Protection from Ghost-type attacks: consumed as a free action when hit by an attack, even if unable to move normally. If the attack is Ghost-type, treat it as resisted, removing one die from the attacker's roll; if the attack is super effective, negate the extra die; if extremely effective, the attacker only adds one die to their attack's damage."
+  },
+  {
+    "id": "kebia-berry",
+    "name": "Kebia Berry",
+    "category": "Berries",
+    "price": "540",
+    "effect": "Protection from Poison-type attacks: consumed as a free action when hit by an attack, even if unable to move normally. If the attack is Poison-type, treat it as resisted, removing one die from the attacker's roll; if the attack is super effective, negate the extra die; if extremely effective, the attacker only adds one die to their attack's damage."
+  },
+  {
+    "id": "occa-berry",
+    "name": "Occa Berry",
+    "category": "Berries",
+    "price": "540",
+    "effect": "Protection from Fire-type attacks: consumed as a free action when hit by an attack, even if unable to move normally. If the attack is Fire-type, treat it as resisted, removing one die from the attacker's roll; if the attack is super effective, negate the extra die; if extremely effective, the attacker only adds one die to their attack's damage."
+  },
+  {
+    "id": "passho-berry",
+    "name": "Passho Berry",
+    "category": "Berries",
+    "price": "540",
+    "effect": "Protection from Water-type attacks: consumed as a free action when hit by an attack, even if unable to move normally. If the attack is Water-type, treat it as resisted, removing one die from the attacker's roll; if the attack is super effective, negate the extra die; if extremely effective, the attacker only adds one die to their attack's damage."
+  },
+  {
+    "id": "payapa-berry",
+    "name": "Payapa Berry",
+    "category": "Berries",
+    "price": "540",
+    "effect": "Protection from Psychic-type attacks: consumed as a free action when hit by an attack, even if unable to move normally. If the attack is Psychic-type, treat it as resisted, removing one die from the attacker's roll; if the attack is super effective, negate the extra die; if extremely effective, the attacker only adds one die to their attack's damage."
+  },
+  {
+    "id": "rindo-berry",
+    "name": "Rindo Berry",
+    "category": "Berries",
+    "price": "540",
+    "effect": "Protection from Grass-type attacks: consumed as a free action when hit by an attack, even if unable to move normally. If the attack is Grass-type, treat it as resisted, removing one die from the attacker's roll; if the attack is super effective, negate the extra die; if extremely effective, the attacker only adds one die to their attack's damage."
+  },
+  {
+    "id": "roseli-berry",
+    "name": "Roseli Berry",
+    "category": "Berries",
+    "price": "540",
+    "effect": "Protection from Fairy-type attacks: consumed as a free action when hit by an attack, even if unable to move normally. If the attack is Fairy-type, treat it as resisted, removing one die from the attacker's roll; if the attack is super effective, negate the extra die; if extremely effective, the attacker only adds one die to their attack's damage."
+  },
+  {
+    "id": "shuca-berry",
+    "name": "Shuca Berry",
+    "category": "Berries",
+    "price": "540",
+    "effect": "Protection from Ground-type attacks: consumed as a free action when hit by an attack, even if unable to move normally. If the attack is Ground-type, treat it as resisted, removing one die from the attacker's roll; if the attack is super effective, negate the extra die; if extremely effective, the attacker only adds one die to their attack's damage."
+  },
+  {
+    "id": "tanga-berry",
+    "name": "Tanga Berry",
+    "category": "Berries",
+    "price": "540",
+    "effect": "Protection from Bug-type attacks: consumed as a free action when hit by an attack, even if unable to move normally. If the attack is Bug-type, treat it as resisted, removing one die from the attacker's roll; if the attack is super effective, negate the extra die; if extremely effective, the attacker only adds one die to their attack's damage."
+  },
+  {
+    "id": "wacan-berry",
+    "name": "Wacan Berry",
+    "category": "Berries",
+    "price": "540",
+    "effect": "Protection from Electric-type attacks: consumed as a free action when hit by an attack, even if unable to move normally. If the attack is Electric-type, treat it as resisted, removing one die from the attacker's roll; if the attack is super effective, negate the extra die; if extremely effective, the attacker only adds one die to their attack's damage."
+  },
+  {
+    "id": "yache-berry",
+    "name": "Yache Berry",
+    "category": "Berries",
+    "price": "540",
+    "effect": "Protection from Ice-type attacks: consumed as a free action when hit by an attack, even if unable to move normally. If the attack is Ice-type, treat it as resisted, removing one die from the attacker's roll; if the attack is super effective, negate the extra die; if extremely effective, the attacker only adds one die to their attack's damage."
+  },
+  {
+    "id": "apicot-berry",
+    "name": "Apicot Berry",
+    "category": "Berries",
+    "price": "1880",
+    "effect": "At half HP or lower, consumed as a free action: you get Special Defense (up arrow)."
+  },
+  {
+    "id": "ganlon-berry",
+    "name": "Ganlon Berry",
+    "category": "Berries",
+    "price": "1880",
+    "effect": "At half HP or lower, consumed as a free action: you get Defense (up arrow)."
+  },
+  {
+    "id": "lansat-berry",
+    "name": "Lansat Berry",
+    "category": "Berries",
+    "price": "1880",
+    "effect": "At half HP or lower, consumed as a free action: your next attack is Lethal."
+  },
+  {
+    "id": "liechi-berry",
+    "name": "Liechi Berry",
+    "category": "Berries",
+    "price": "1880",
+    "effect": "At half HP or lower, consumed as a free action: you get Attack (up arrow)."
+  },
+  {
+    "id": "micle-berry",
+    "name": "Micle Berry",
+    "category": "Berries",
+    "price": "1880",
+    "effect": "At half HP or lower, consumed as a free action: increase your AC by +1 until the end of combat."
+  },
+  {
+    "id": "petaya-berry",
+    "name": "Petaya Berry",
+    "category": "Berries",
+    "price": "1880",
+    "effect": "At half HP or lower, consumed as a free action: you get Special Attack (up arrow)."
+  },
+  {
+    "id": "salac-berry",
+    "name": "Salac Berry",
+    "category": "Berries",
+    "price": "1880",
+    "effect": "At half HP or lower, consumed as a free action: you get Speed (up arrow)."
+  },
+  {
+    "id": "starf-berry",
+    "name": "Starf Berry",
+    "category": "Berries",
+    "price": "1280",
+    "effect": "At half HP or lower, consumed as a free action: get a random stat increase (up arrow)."
+  },
+  {
+    "id": "custap-berry",
+    "name": "Custap Berry",
+    "category": "Berries",
+    "price": null,
+    "effect": "When at 6 HP or less, consumed as a free action: your next At-Will attack has Priority."
+  },
+  {
+    "id": "enigma-berry",
+    "name": "Enigma Berry",
+    "category": "Berries",
+    "price": null,
+    "effect": "When hit by a super-effective or extremely-effective attack, consumed as a free action: restore HP equal to 1/4th of your max HP."
+  },
+  {
+    "id": "jacoba-berry",
+    "name": "Jacoba Berry",
+    "category": "Berries",
+    "price": null,
+    "effect": "When hit by a melee Attack move, consumed as a free action: the attacker loses HP equal to 1/4th the damage you just took."
+  },
+  {
+    "id": "kee-berry",
+    "name": "Kee Berry",
+    "category": "Berries",
+    "price": null,
+    "effect": "When hit by an Attack move, consumed as a free action: increase Defense by 1 for 2 minutes."
+  },
+  {
+    "id": "leppa-berry",
+    "name": "Leppa Berry",
+    "category": "Berries",
+    "price": null,
+    "effect": "Consumed as a free action: restore the use of one 3/day frequency move as if you've had an extended rest."
+  },
+  {
+    "id": "maranga-berry",
+    "name": "Maranga Berry",
+    "category": "Berries",
+    "price": null,
+    "effect": "When hit by a Special Attack move, consumed as a free action: increase Special Defense by 1 for 2 minutes."
+  },
+  {
+    "id": "rowap-berry",
+    "name": "Rowap Berry",
+    "category": "Berries",
+    "price": null,
+    "effect": "When hit by a ranged Special Attack move, consumed as a free action: the offender loses HP equal to 1/4th the damage you just took."
+  },
+  {
+    "id": "belue-berry",
+    "name": "Belue Berry",
+    "category": "Berries",
+    "price": "120",
+    "effect": "No discernible battle ability; used purely for its flavor in Contest Treats."
+  },
+  {
+    "id": "bluk-berry",
+    "name": "Bluk Berry",
+    "category": "Berries",
+    "price": "120",
+    "effect": "No discernible battle ability; used purely for its flavor in Contest Treats."
+  },
+  {
+    "id": "cornn-berry",
+    "name": "Cornn Berry",
+    "category": "Berries",
+    "price": "120",
+    "effect": "No discernible battle ability; used purely for its flavor in Contest Treats."
+  },
+  {
+    "id": "durin-berry",
+    "name": "Durin Berry",
+    "category": "Berries",
+    "price": "120",
+    "effect": "No discernible battle ability; used purely for its flavor in Contest Treats."
+  },
+  {
+    "id": "magost-berry",
+    "name": "Magost Berry",
+    "category": "Berries",
+    "price": "120",
+    "effect": "No discernible battle ability; used purely for its flavor in Contest Treats."
+  },
+  {
+    "id": "nanab-berry",
+    "name": "Nanab Berry",
+    "category": "Berries",
+    "price": "120",
+    "effect": "No discernible battle ability; used purely for its flavor in Contest Treats."
+  },
+  {
+    "id": "nomel-berry",
+    "name": "Nomel Berry",
+    "category": "Berries",
+    "price": "120",
+    "effect": "No discernible battle ability; used purely for its flavor in Contest Treats."
+  },
+  {
+    "id": "pamtre-berry",
+    "name": "Pamtre Berry",
+    "category": "Berries",
+    "price": "120",
+    "effect": "No discernible battle ability; used purely for its flavor in Contest Treats."
+  },
+  {
+    "id": "pinap-berry",
+    "name": "Pinap Berry",
+    "category": "Berries",
+    "price": "120",
+    "effect": "No discernible battle ability; used purely for its flavor in Contest Treats."
+  },
+  {
+    "id": "rabuta-berry",
+    "name": "Rabuta Berry",
+    "category": "Berries",
+    "price": "120",
+    "effect": "No discernible battle ability; used purely for its flavor in Contest Treats."
+  },
+  {
+    "id": "razz-berry",
+    "name": "Razz Berry",
+    "category": "Berries",
+    "price": "120",
+    "effect": "No discernible battle ability; used purely for its flavor in Contest Treats."
+  },
+  {
+    "id": "spelon-berry",
+    "name": "Spelon Berry",
+    "category": "Berries",
+    "price": "120",
+    "effect": "No discernible battle ability; used purely for its flavor in Contest Treats."
+  },
+  {
+    "id": "watmel-berry",
+    "name": "Watmel Berry",
+    "category": "Berries",
+    "price": "120",
+    "effect": "No discernible battle ability; used purely for its flavor in Contest Treats."
+  },
+  {
+    "id": "wepear-berry",
+    "name": "Wepear Berry",
+    "category": "Berries",
+    "price": "120",
+    "effect": "No discernible battle ability; used purely for its flavor in Contest Treats."
+  },
+  {
+    "id": "sweet-pokeblock",
+    "name": "Sweet Pokeblock",
+    "category": "Contest Treats / Accessories",
+    "price": "980",
+    "effect": "Example level-1 Contest Treat. Raises Cute stat +1. (Contest Treats normally cost (900 x treat level) + 80; see Berries chapter for how treats are crafted from berries.)"
+  },
+  {
+    "id": "dry-and-sweet-poffin",
+    "name": "Dry & Sweet Poffin",
+    "category": "Contest Treats / Accessories",
+    "price": "1880",
+    "effect": "Example level-2 Contest Treat. Raises both Beauty and Cute stat +2."
+  },
+  {
+    "id": "bitter-donut",
+    "name": "Bitter Donut",
+    "category": "Contest Treats / Accessories",
+    "price": "3680",
+    "effect": "Example level-4 Contest Treat. Raises Clever stat +4."
+  },
+  {
+    "id": "spicy-pokeblock",
+    "name": "Spicy Pokeblock",
+    "category": "Contest Treats / Accessories",
+    "price": "4580",
+    "effect": "Example level-5 Contest Treat. Raises Cool stat +5."
+  },
+  {
+    "id": "null-poffin",
+    "name": "Null Poffin",
+    "category": "Contest Treats / Accessories",
+    "price": "480",
+    "effect": "Example Contest Treat. Permanently lowers 4 Contest stats (they can be raised again later)."
+  },
+  {
+    "id": "beautiful-bandanna",
+    "name": "Beautiful Bandanna",
+    "category": "Contest Treats / Accessories",
+    "price": "2280",
+    "effect": "Contest Scarf accessory. Beauty stat is +2. Only one accessory's bonus can be active on a Pokemon at a time."
+  },
+  {
+    "id": "clever-cravat",
+    "name": "Clever Cravat",
+    "category": "Contest Treats / Accessories",
+    "price": "2280",
+    "effect": "Contest Scarf accessory. Clever stat is +2. Only one accessory's bonus can be active on a Pokemon at a time."
+  },
+  {
+    "id": "cool-kerchief",
+    "name": "Cool Kerchief",
+    "category": "Contest Treats / Accessories",
+    "price": "2280",
+    "effect": "Contest Scarf accessory. Cool stat is +2. Only one accessory's bonus can be active on a Pokemon at a time."
+  },
+  {
+    "id": "cute-comforter",
+    "name": "Cute Comforter",
+    "category": "Contest Treats / Accessories",
+    "price": "2280",
+    "effect": "Contest Scarf accessory. Cute stat is +2. Only one accessory's bonus can be active on a Pokemon at a time."
+  },
+  {
+    "id": "tough-tippet",
+    "name": "Tough Tippet",
+    "category": "Contest Treats / Accessories",
+    "price": "2280",
+    "effect": "Contest Scarf accessory. Tough stat is +2. Only one accessory's bonus can be active on a Pokemon at a time."
+  },
+  {
+    "id": "dawn-stone",
+    "name": "Dawn Stone",
+    "category": "Evolution Stones",
+    "price": "9800",
+    "effect": "Induces evolution in the specific Pokemon species that are compatible with this stone."
+  },
+  {
+    "id": "dusk-stone",
+    "name": "Dusk Stone",
+    "category": "Evolution Stones",
+    "price": "9800",
+    "effect": "Induces evolution in the specific Pokemon species that are compatible with this stone."
+  },
+  {
+    "id": "fire-stone",
+    "name": "Fire Stone",
+    "category": "Evolution Stones",
+    "price": "9800",
+    "effect": "Induces evolution in the specific Pokemon species that are compatible with this stone."
+  },
+  {
+    "id": "ice-stone",
+    "name": "Ice Stone",
+    "category": "Evolution Stones",
+    "price": "9800",
+    "effect": "Induces evolution in the specific Pokemon species that are compatible with this stone."
+  },
+  {
+    "id": "leaf-stone",
+    "name": "Leaf Stone",
+    "category": "Evolution Stones",
+    "price": "9800",
+    "effect": "Induces evolution in the specific Pokemon species that are compatible with this stone."
+  },
+  {
+    "id": "moon-stone",
+    "name": "Moon Stone",
+    "category": "Evolution Stones",
+    "price": "9800",
+    "effect": "Induces evolution in the specific Pokemon species that are compatible with this stone."
+  },
+  {
+    "id": "shiny-stone",
+    "name": "Shiny Stone",
+    "category": "Evolution Stones",
+    "price": "9800",
+    "effect": "Induces evolution in the specific Pokemon species that are compatible with this stone."
+  },
+  {
+    "id": "sun-stone",
+    "name": "Sun Stone",
+    "category": "Evolution Stones",
+    "price": "9800",
+    "effect": "Induces evolution in the specific Pokemon species that are compatible with this stone."
+  },
+  {
+    "id": "thunder-stone",
+    "name": "Thunder Stone",
+    "category": "Evolution Stones",
+    "price": "9800",
+    "effect": "Induces evolution in the specific Pokemon species that are compatible with this stone."
+  },
+  {
+    "id": "water-stone",
+    "name": "Water Stone",
+    "category": "Evolution Stones",
+    "price": "9800",
+    "effect": "Induces evolution in the specific Pokemon species that are compatible with this stone."
+  },
+  {
+    "id": "tm-at-will",
+    "name": "TM (At-Will)",
+    "category": "Technical Machines",
+    "price": "4800",
+    "effect": "Teaches an at-will frequency move to a compatible Pokemon at a Pokemon Center's teaching device. Can be used up to 3 times before its data corrupts. Price is approximate."
+  },
+  {
+    "id": "tm-3day",
+    "name": "TM (3/day)",
+    "category": "Technical Machines",
+    "price": "11800",
+    "effect": "Teaches a 3/day frequency move to a compatible Pokemon at a Pokemon Center's teaching device. Can be used up to 3 times before its data corrupts. Price is approximate."
+  },
+  {
+    "id": "tm-1day",
+    "name": "TM (1/day)",
+    "category": "Technical Machines",
+    "price": "26800",
+    "effect": "Teaches a 1/day frequency move to a compatible Pokemon at a Pokemon Center's teaching device. Can be used up to 3 times before its data corrupts. Price is approximate."
+  },
+  {
+    "id": "tr-at-will",
+    "name": "TR (At-Will)",
+    "category": "Technical Machines",
+    "price": "2400",
+    "effect": "Technical Record. Teaches an at-will frequency move to a compatible Pokemon at a Pokemon Center's teaching device. Rendered useless after 1 use. Price is approximate."
+  },
+  {
+    "id": "tr-3day",
+    "name": "TR (3/day)",
+    "category": "Technical Machines",
+    "price": "5900",
+    "effect": "Technical Record. Teaches a 3/day frequency move to a compatible Pokemon at a Pokemon Center's teaching device. Rendered useless after 1 use. Price is approximate."
+  },
+  {
+    "id": "tr-1day",
+    "name": "TR (1/day)",
+    "category": "Technical Machines",
+    "price": "13400",
+    "effect": "Technical Record. Teaches a 1/day frequency move to a compatible Pokemon at a Pokemon Center's teaching device. Rendered useless after 1 use. Price is approximate."
+  },
+  {
+    "id": "hm-at-will",
+    "name": "HM (At-Will)",
+    "category": "Technical Machines",
+    "price": null,
+    "effect": "Teaches an at-will frequency move to a compatible Pokemon at a Pokemon Center's teaching device. Exceedingly rare; never runs out of uses no matter how many times it is used."
+  },
+  {
+    "id": "hm-3day",
+    "name": "HM (3/day)",
+    "category": "Technical Machines",
+    "price": null,
+    "effect": "Teaches a 3/day frequency move to a compatible Pokemon at a Pokemon Center's teaching device. Exceedingly rare; never runs out of uses no matter how many times it is used."
+  },
+  {
+    "id": "hm-1day",
+    "name": "HM (1/day)",
+    "category": "Technical Machines",
+    "price": null,
+    "effect": "Teaches a 1/day frequency move to a compatible Pokemon at a Pokemon Center's teaching device. Exceedingly rare; never runs out of uses no matter how many times it is used."
+  },
+  {
+    "id": "basic-tool-kit",
+    "name": "Basic Tool Kit",
+    "category": "Trainer Exploration",
+    "price": "95",
+    "effect": "Basic tools for basic repairs or maintenance. Includes hammer, screwdriver (adaptable head), wrench, handsaw, steel ruler, level, nails (40 assorted), screws (40 assorted), nuts and bolts (40 assorted), and a tackle box they fit snugly in with little room for anything else."
+  },
+  {
+    "id": "camera-bag",
+    "name": "Camera Bag",
+    "category": "Trainer Exploration",
+    "price": "220",
+    "effect": "Everything you need as a traveling photographer, minus the camera. Includes lenses (3), extra bulbs (2), gaffer tape, microfiber cloth, micro screw driver, micro flash light, extra battery (1), extra memory card (20 GB), ear plugs, and the bag which has room for your camera (camera not included)."
+  },
+  {
+    "id": "cooking-kit",
+    "name": "Cooking Kit",
+    "category": "Trainer Exploration",
+    "price": "850",
+    "effect": "For the chef on the go, in the wilds. Includes portable electric stove (2 burners), cast iron pan, cast iron pot with lid, water purifier, cutting board, cutting knife, measuring cups and spoons, spatula, cooking spoon, and a sturdy bag it all fits into. The electric stove can be charged to use for two weeks after a 4-hour charge."
+  },
+  {
+    "id": "dig-kit",
+    "name": "Dig Kit",
+    "category": "Trainer Exploration",
+    "price": "150",
+    "effect": "Whatever you're looking for, this should help. Includes extendable shovel, extendable pickaxe, hammer, trowel, compass, measuring tape (25ft), 6 in. stakes (10), string (600 ft), and a tool roll bag with some room for more equipment."
+  },
+  {
+    "id": "drawing-kit",
+    "name": "Drawing Kit",
+    "category": "Trainer Exploration",
+    "price": "35",
+    "effect": "For an artist, or maybe just a doodler. Includes drawing pad (200pp), journal (200pp), blue pencils (10), mechanical pencils (2), kneaded eraser, white vinyl eraser, blender, pen and ink, assorted brush pens (10), and a bag with extra room to carry it all."
+  },
+  {
+    "id": "studious-pack",
+    "name": "Studious Pack",
+    "category": "Trainer Exploration",
+    "price": "260",
+    "effect": "Useful things for a trainer with a knack for academics. Includes solar charger, universal power adapter, universal adapter dongle, memory stick (40 GB), binder, folders (6), notebooks (3), journal, notepad, pencils (5), pens (3), highlighter, vinyl eraser, pencil sharpener, ruler, headphones, water bottle, and a backpack or side pack to fit everything with extra room for a laptop (laptop not included)."
+  },
+  {
+    "id": "travelers-pack",
+    "name": "Traveler's Pack",
+    "category": "Trainer Exploration",
+    "price": "150",
+    "effect": "Really useful gear for extended travel through the wilds. Includes collapsible pop-up tent (two-person 7x4 ft), tarp (8x10 ft), sleeping bag, pocket knife, solar flashlight, compass, waterproof matches (20), water bottle, and a compression sack with straps to snugly fit everything."
+  },
+  {
+    "id": "trainers-pack",
+    "name": "Trainer's Pack",
+    "category": "Trainer Exploration",
+    "price": "140",
+    "effect": "Basic goods for a trainer who's starting their journey. Includes solar charger, universal power adapter, compression bands (4), crepe bandages (4), micro screwdriver, water bottle, and a backpack or side pack to fit everything with a great deal of extra room."
+  },
+  {
+    "id": "engineers-tool-kit",
+    "name": "Engineer's Tool Kit",
+    "category": "Trainer Exploration",
+    "price": "1050",
+    "effect": "If you're building something on the go, or taking something else apart. Includes electric unfolding soldering table (2x2 ft), soldering iron, desoldering pump, assorted soldering iron tips (8), soldering assist tools (2), tin wire tube, tweezers, wire stripper cutter, electric wire (80 ft), long nose pliers (2), precision screwdriver, magnetic/gripping retrieving tool, telescoping mirror, various spare screws (100). The table folds into itself while storing all of the supplies, revealing a handle."
+  },
+  {
+    "id": "field-survey-kit",
+    "name": "Field Survey Kit",
+    "category": "Trainer Exploration",
+    "price": "200",
+    "effect": "For trainers who want to do research while out in the wilds. Includes track molds, casting plaster, sample vials (10), scent tags (6), UV flashlight, measuring calipers, field notebook, and a weatherproof case."
+  },
+  {
+    "id": "fishing-kit",
+    "name": "Fishing Kit",
+    "category": "Trainer Exploration",
+    "price": "250",
+    "effect": "For trainers who are looking to lure underwater Pokemon to the surface. Includes telescoping fishing rod, spare reel lines (2), assorted hooks (100), assorted bobbers (10), sinkers (10), assorted lures (10), needle nose pliers, small knife, and a tackle box with room to store a bit more."
+  },
+  {
+    "id": "grooming-kit",
+    "name": "Grooming Kit",
+    "category": "Trainer Exploration",
+    "price": "150",
+    "effect": "Your Pokemon will always look their best when you're using this kit. Includes electronic trimmer, trimmer length attachments (8), assorted combs (5), assorted brushes (5), assorted scissors/shears (3), clippers, nail file, soap (8 oz.), shampoo (8 oz.), and bag with room for more. The trimmer can be charged to use for one week after a 1-hour charge."
+  },
+  {
+    "id": "make-up-kit",
+    "name": "Make Up Kit",
+    "category": "Trainer Exploration",
+    "price": "150",
+    "effect": "You will always look your best with this kit. Includes moisturizer, primers, concealers, foundation, assorted blush, assorted bronzer/highlighter, powders, setting spray, eyeliner pencil, liquid eyeliner, assorted mascara, lash curler, assorted lip balm, assorted lipstick, assorted lip gloss, and a collapsing case with room to expand your options."
+  },
+  {
+    "id": "medical-field-kit",
+    "name": "Medical Field Kit",
+    "category": "Trainer Exploration",
+    "price": "1750",
+    "effect": "Includes pain relievers (20 pills), antihistamine (20 pills), cold/flu relievers (20 pills), electrolyte tablets (20 pills), antiseptic solution (8oz.), antiseptic gel (8 oz.), medical adhesive tape (30ft), slings (2), crepe bandages (2 3ft. rolls), cloth bandages (4 3ft. rolls), gauze swabs (30), stitch strips (20), ear plugs (10), safety pins (20), thermometer, small scissors, small scalpel, tweezers, and assorted adhesive bandages (40), and a folding carrying case. Useful for keeping trainers from dying, but less useful with Pokemon unless proficient in its use. As an action, attempt a Medicine skill check of 15 to stabilize an unconscious trainer to 1 hit point (or spend 5 minutes out of combat for the same effect). Out of combat, you may attempt a Medicine skill check of 15 once per hour to cure a target of any affliction."
+  },
+  {
+    "id": "mess-kit",
+    "name": "Mess Kit",
+    "category": "Trainer Exploration",
+    "price": "10",
+    "effect": "Everything you need to enjoy a meal on the go. Includes a plate, a bowl, a fork, a spoon, a knife, a cup, and a slip it all fits into neatly."
+  },
+  {
+    "id": "miscreants-pack",
+    "name": "Miscreant's Pack",
+    "category": "Trainer Exploration",
+    "price": "300",
+    "effect": "There's no real reason to have this, let alone sell it; not easily found in stores. Includes solar charger, universal power adapter, universal adapter dongle, memory sticks (4 80 GB), micro file (2), lock picks (8), multi-head screwdriver, hammer, crowbar, small narrow saw, small narrow scissors, telescoping mirror, thin wire (20 ft), water bottle, and a backpack or side pack to fit everything with some extra room."
+  },
+  {
+    "id": "performers-pack",
+    "name": "Performer's Pack",
+    "category": "Trainer Exploration",
+    "price": "700",
+    "effect": "Perfect for trainers who travel as entertainers, coordinators, or influencers. Includes portable sound amplifier, collapsible microphone stand, handheld microphone, lighting orb (soft adjustable illumination), styling kit (hair ties, pins, compact mirror), autograph pens (5), poster tube, and a reinforced carry pack with segmented storage."
+  },
+  {
+    "id": "poke-ball-smith-kit",
+    "name": "Poke Ball Smith Kit",
+    "category": "Trainer Exploration",
+    "price": "1250",
+    "effect": "If you're planning to make your own Poke Balls, this will be necessary. Includes electric unfolding soldering table (2x2 ft), soldering iron, desoldering pump, assorted soldering iron tips (8), tin wire tube, tweezers, wire stripper cutter, electric wire (80 ft), micro screwdriver, micro screws (400), micro glass and mirror spares (200), micro rods (200), micro steel sheets (200). The table folds into itself while storing all of the supplies, revealing a handle."
+  },
+  {
+    "id": "portable-chemistry-set",
+    "name": "Portable Chemistry Set",
+    "category": "Trainer Exploration",
+    "price": "800",
+    "effect": "Science on the go! Includes portable Bunsen burner, beakers (1 250 ml/1 50 ml), conical flask (100 ml), measuring cylinder (25ml), test tubes (6 10 ml), reusable spray bottles (6), test tube rack, heat clamps, thermometer, glass dropper, stirring rod, cleaning brush, corks (12), mortar and pestle, spatula, and a padded case. The reusable bottles can store concoctions to be reused once cleaned."
+  },
+  {
+    "id": "ruin-explorers-pack",
+    "name": "Ruin Explorer's Pack",
+    "category": "Trainer Exploration",
+    "price": "325",
+    "effect": "Intended for trainers investigating ancient sites, abandoned structures, and lost routes. Includes artifact brushes (3), chisels (2), small pry bar, UV lamp, translation rubbing kit (paper sheets 50, charcoal sticks 6), clay impression tools, measuring calipers, sealing wax and tubes for fragment storage, protective gloves, and a padded backpack with reinforced compartments and limited extra room."
+  },
+  {
+    "id": "sewing-kit",
+    "name": "Sewing Kit",
+    "category": "Trainer Exploration",
+    "price": "325",
+    "effect": "This is useful for the designer on the go. Includes electronic folding sewing machine, measuring tape (6ft), assorted buttons and fasteners (50), assorted spools of thread (20), hand-sewing needles (10), fabric pens (10), bleach pen, stain removing pen, pins (50), needle threader, pincushion, fabric shears, seam ripper, thimbles. The sewing machine folds into itself while storing all of the supplies, revealing a handle, and can be charged to use for two weeks after a 4-hour charge."
+  },
+  {
+    "id": "spiritualists-pack",
+    "name": "Spiritualist's Pack",
+    "category": "Trainer Exploration",
+    "price": "140",
+    "effect": "For those who travel and spread the word of various greater beings. Includes solar charger, universal power adapter, religious texts (2), religious symbol, candles (10), incense sticks (20), waterproof matches (25), water bottle, and a backpack or side pack to fit everything with a great deal of extra room."
+  },
+  {
+    "id": "arctic-travel-pack",
+    "name": "Arctic Travel Pack",
+    "category": "Trainer Exploration",
+    "price": "575",
+    "effect": "For exposure to cold climates and snow-covered routes. Includes thermal cloak, insulated boots, snow goggles, chemical heat packs (10), collapsible snow shovel, insulated water flask, and a compression pack rated for sub-zero conditions."
+  },
+  {
+    "id": "climbers-pack",
+    "name": "Climber's Pack",
+    "category": "Trainer Exploration",
+    "price": "350",
+    "effect": "For steep routes, cliffs, and elevated terrain. Includes climbing rope (200 ft), pitons (12), hammer, climbing harness, locking carabiners (6), chalk pouch, protective gloves, and a compression pack with external loops for securing rope."
+  },
+  {
+    "id": "coastal-and-open-water-pack",
+    "name": "Coastal & Open Water Pack",
+    "category": "Trainer Exploration",
+    "price": "525",
+    "effect": "For long island routes, shoreline travel, and open-water crossings. Includes flotation vest, dry bags (3), rope (75 ft), signal whistle, saltwater filter attachment, collapsible paddle, and a waterproof backpack with sealed zippers."
+  },
+  {
+    "id": "extreme-weather-pack",
+    "name": "Extreme Weather Pack",
+    "category": "Trainer Exploration",
+    "price": "425",
+    "effect": "For routes with dangerous or unpredictable weather conditions. Includes insulated cloak (reversible heat-reflective lining), weatherproof poncho, protective goggles (ash/sand/snow), breathing scarf with replaceable filter, emergency thermal blanket, signal flare (2), and a reinforced pack with sealed seams and minimal extra space."
+  },
+  {
+    "id": "swamp-and-wetlands-pack",
+    "name": "Swamp & Wetlands Pack",
+    "category": "Trainer Exploration",
+    "price": "575",
+    "effect": "Built for travel through marshes, bogs, and flooded wilds. Includes waterproof thigh-high boots, collapsible walking pole, waterproof map case, rope (50 ft), and a sealed carrying bag with drainage grommets."
+  },
+  {
+    "id": "volcanic-route-pack",
+    "name": "Volcanic Route Pack",
+    "category": "Trainer Exploration",
+    "price": "850",
+    "effect": "Intended for travel near active volcanic zones and other dangerous extreme heat environments. Includes heat-resistant cloak, fireproof tarp (6x8 ft), insulated gloves, respirator mask, cooling gel packs (4), emergency water ration (2 liters), and a reinforced pack with heat-shielded lining."
+  },
+  {
+    "id": "egg-incubator",
+    "name": "Egg Incubator",
+    "category": "Portable Utility Items",
+    "price": "1350",
+    "effect": "Electronic, reusable container that safely keeps and warms a Pokemon egg. Once charged over 4 hours, it lasts for weeks to keep the egg safe and warm for healthy hatching. Can be dropped from up to 100 ft or submerged in water without harming the egg."
+  },
+  {
+    "id": "folding-bicycle",
+    "name": "Folding Bicycle",
+    "category": "Portable Utility Items",
+    "price": "950",
+    "effect": "A 3-speed bike that folds onto itself. Wheels are 26 in.; unfolded frame length and height are 48x40 in.; has telescoping handles and seats adjustable for any rider's height."
+  },
+  {
+    "id": "lure-module-launcher",
+    "name": "Lure Module Launcher",
+    "category": "Portable Utility Items",
+    "price": "950",
+    "effect": "An electronic setup that deploys scent/light emitters lasting 30 minutes that attract Pokemon to your location in wild spaces. Emitter reloads cost 150 each, and cost more for specialized Type-attracting emitters."
+  },
+  {
+    "id": "portable-berry-planter",
+    "name": "Portable Berry Planter",
+    "category": "Portable Utility Items",
+    "price": "2800",
+    "effect": "Creates a mini-ecosystem for a planted berry to rapidly grow into a fruit-bearing shrub, often producing two or three berries. When planting, roll a Nature skill check; then roll a Nature skill check once per day over the next five days while watering. If you ever roll under 6, the shrub yields 1 berry when it fruits. If you roll over 5 each time, the shrub yields 2 berries. If you ever roll over 20 without rolling under 6, the shrub yields 3 berries. Failing to water the shrub at least once per day, or harvesting its berries, kills the shrub."
+  },
+  {
+    "id": "signal-scanner",
+    "name": "Signal Scanner",
+    "category": "Portable Utility Items",
+    "price": "650",
+    "effect": "Handheld device that detects nearby electronic signals (50ft), recent Poke Ball activity (2 minutes), and strong energy emissions nearby (150ft). Holds a charge for 6 hours of use; charges in 30 minutes."
+  },
+  {
+    "id": "solar-charger",
+    "name": "Solar Charger",
+    "category": "Portable Utility Items",
+    "price": "500",
+    "effect": "An unfolding solar panel that charges devices such as phones, computers, or other portable items when left open in the sun. Does not hold a charge itself, only charging other things."
+  },
+  {
+    "id": "blizzard-wear",
+    "name": "Blizzard Wear",
+    "category": "Survival Gear",
+    "price": "1050",
+    "effect": "Carefully made clothes for humans. While worn, human trainers do not take damage from Hailing Weather, whether made by Pokemon or naturally occurring."
+  },
+  {
+    "id": "desert-gear",
+    "name": "Desert Gear",
+    "category": "Survival Gear",
+    "price": "1050",
+    "effect": "Carefully made clothes for humans. While worn, human trainers do not take damage from Sandstorming Weather, whether made by Pokemon or naturally occurring."
+  },
+  {
+    "id": "diving-gear",
+    "name": "Diving Gear",
+    "category": "Survival Gear",
+    "price": "1050",
+    "effect": "Self-contained underwater breathing apparatus. Allows humans to explore underwater with enough air to breathe for two hours. The tank can be refilled above water with a solar-powered tank in two hours."
+  },
+  {
+    "id": "hazmat-suit",
+    "name": "Hazmat Suit",
+    "category": "Survival Gear",
+    "price": "750",
+    "effect": "Full-body protective suit that shields trainers from dangerous chemical, biological, radiological, or nuclear harms. While worn, human trainers will not suffer damage or penalties during long-term exposure."
+  },
+  {
+    "id": "wet-suit",
+    "name": "Wet Suit",
+    "category": "Survival Gear",
+    "price": "750",
+    "effect": "Insulated body suit for diving in any waters, including gloves and flippers. While worn, human trainers will not suffer damage even in arctic temperatures."
+  },
+  {
+    "id": "backpack",
+    "name": "Backpack",
+    "category": "Other General Items",
+    "price": "5",
+    "effect": null
+  },
+  {
+    "id": "ball-bearings-25",
+    "name": "Ball Bearings (25)",
+    "category": "Other General Items",
+    "price": "10",
+    "effect": null
+  },
+  {
+    "id": "bedroll",
+    "name": "Bedroll",
+    "category": "Other General Items",
+    "price": "5",
+    "effect": null
+  },
+  {
+    "id": "binoculars-digital",
+    "name": "Binoculars (Digital)",
+    "category": "Other General Items",
+    "price": "45",
+    "effect": null
+  },
+  {
+    "id": "blanket",
+    "name": "Blanket",
+    "category": "Other General Items",
+    "price": "2",
+    "effect": null
+  },
+  {
+    "id": "blanket-winter",
+    "name": "Blanket (Winter)",
+    "category": "Other General Items",
+    "price": "10",
+    "effect": null
+  },
+  {
+    "id": "block-and-tackle",
+    "name": "Block and Tackle",
+    "category": "Other General Items",
+    "price": "50",
+    "effect": null
+  },
+  {
+    "id": "bolt-cutter",
+    "name": "Bolt Cutter",
+    "category": "Other General Items",
+    "price": "10",
+    "effect": null
+  },
+  {
+    "id": "book-hardcover",
+    "name": "Book (Hardcover)",
+    "category": "Other General Items",
+    "price": "10",
+    "effect": null
+  },
+  {
+    "id": "book-paperback",
+    "name": "Book (Paperback)",
+    "category": "Other General Items",
+    "price": "5",
+    "effect": null
+  },
+  {
+    "id": "bottle-glass",
+    "name": "Bottle (Glass)",
+    "category": "Other General Items",
+    "price": "3",
+    "effect": null
+  },
+  {
+    "id": "bottle-metal",
+    "name": "Bottle (Metal)",
+    "category": "Other General Items",
+    "price": "8",
+    "effect": null
+  },
+  {
+    "id": "briefcase",
+    "name": "Briefcase",
+    "category": "Other General Items",
+    "price": "5",
+    "effect": null
+  },
+  {
+    "id": "cable-steel-25-ft",
+    "name": "Cable (Steel, 25 ft)",
+    "category": "Other General Items",
+    "price": "20",
+    "effect": null
+  },
+  {
+    "id": "camera-digital-high-end",
+    "name": "Camera (Digital High End)",
+    "category": "Other General Items",
+    "price": "2850",
+    "effect": null
+  },
+  {
+    "id": "camera-digital",
+    "name": "Camera (Digital)",
+    "category": "Other General Items",
+    "price": "450",
+    "effect": null
+  },
+  {
+    "id": "camera-film-high-end",
+    "name": "Camera (Film High End)",
+    "category": "Other General Items",
+    "price": "1050",
+    "effect": null
+  },
+  {
+    "id": "canteen",
+    "name": "Canteen",
+    "category": "Other General Items",
+    "price": "5",
+    "effect": null
+  },
+  {
+    "id": "case-aluminum",
+    "name": "Case (Aluminum)",
+    "category": "Other General Items",
+    "price": "20",
+    "effect": null
+  },
+  {
+    "id": "carabiner-4",
+    "name": "Carabiner (4)",
+    "category": "Other General Items",
+    "price": "6",
+    "effect": null
+  },
+  {
+    "id": "cell-phone",
+    "name": "Cell Phone",
+    "category": "Other General Items",
+    "price": "80",
+    "effect": null
+  },
+  {
+    "id": "chain-10-ft",
+    "name": "Chain (10 ft)",
+    "category": "Other General Items",
+    "price": "5",
+    "effect": null
+  },
+  {
+    "id": "chalk-10-sticks",
+    "name": "Chalk (10 Sticks)",
+    "category": "Other General Items",
+    "price": "1",
+    "effect": null
+  },
+  {
+    "id": "clothes-brand-names",
+    "name": "Clothes (Brand Names)",
+    "category": "Other General Items",
+    "price": "100",
+    "effect": null
+  },
+  {
+    "id": "clothes-custom-fit-high-end",
+    "name": "Clothes (Custom-Fit High End)",
+    "category": "Other General Items",
+    "price": "1250",
+    "effect": null
+  },
+  {
+    "id": "clothes-designer-brands",
+    "name": "Clothes (Designer Brands)",
+    "category": "Other General Items",
+    "price": "350",
+    "effect": null
+  },
+  {
+    "id": "clothes-camo-fatigue",
+    "name": "Clothes (Camo Fatigue)",
+    "category": "Other General Items",
+    "price": "65",
+    "effect": null
+  },
+  {
+    "id": "clothes-generic-brands",
+    "name": "Clothes (Generic Brands)",
+    "category": "Other General Items",
+    "price": "35",
+    "effect": null
+  },
+  {
+    "id": "clothes-workout-outdoors",
+    "name": "Clothes (Workout / Outdoors)",
+    "category": "Other General Items",
+    "price": "20",
+    "effect": null
+  },
+  {
+    "id": "computer-desktop",
+    "name": "Computer (Desktop)",
+    "category": "Other General Items",
+    "price": "780",
+    "effect": null
+  },
+  {
+    "id": "computer-laptop",
+    "name": "Computer (Laptop)",
+    "category": "Other General Items",
+    "price": "1080",
+    "effect": null
+  },
+  {
+    "id": "computer-tablet",
+    "name": "Computer (Tablet)",
+    "category": "Other General Items",
+    "price": "880",
+    "effect": null
+  },
+  {
+    "id": "cooler-bag-foldable",
+    "name": "Cooler Bag (Foldable)",
+    "category": "Other General Items",
+    "price": "10",
+    "effect": null
+  },
+  {
+    "id": "crowbar",
+    "name": "Crowbar",
+    "category": "Other General Items",
+    "price": "10",
+    "effect": null
+  },
+  {
+    "id": "duct-tape",
+    "name": "Duct Tape",
+    "category": "Other General Items",
+    "price": "5",
+    "effect": null
+  },
+  {
+    "id": "flashlight",
+    "name": "Flashlight",
+    "category": "Other General Items",
+    "price": "2",
+    "effect": null
+  },
+  {
+    "id": "flask",
+    "name": "Flask",
+    "category": "Other General Items",
+    "price": "4",
+    "effect": null
+  },
+  {
+    "id": "gas-mask",
+    "name": "Gas Mask",
+    "category": "Other General Items",
+    "price": "25",
+    "effect": null
+  },
+  {
+    "id": "grappling-hook",
+    "name": "Grappling Hook",
+    "category": "Other General Items",
+    "price": "10",
+    "effect": null
+  },
+  {
+    "id": "hammer",
+    "name": "Hammer",
+    "category": "Other General Items",
+    "price": "10",
+    "effect": null
+  },
+  {
+    "id": "hammer-sledge",
+    "name": "Hammer (Sledge)",
+    "category": "Other General Items",
+    "price": "15",
+    "effect": null
+  },
+  {
+    "id": "handheld-transceiver-pair",
+    "name": "Handheld Transceiver (Pair)",
+    "category": "Other General Items",
+    "price": "60",
+    "effect": null
+  },
+  {
+    "id": "ink-bottle",
+    "name": "Ink (Bottle)",
+    "category": "Other General Items",
+    "price": "10",
+    "effect": null
+  },
+  {
+    "id": "jacket-rain",
+    "name": "Jacket (Rain)",
+    "category": "Other General Items",
+    "price": "65",
+    "effect": null
+  },
+  {
+    "id": "jacket-snow",
+    "name": "Jacket (Snow)",
+    "category": "Other General Items",
+    "price": "145",
+    "effect": null
+  },
+  {
+    "id": "jacket-windbreaker",
+    "name": "Jacket (Windbreaker)",
+    "category": "Other General Items",
+    "price": "50",
+    "effect": null
+  },
+  {
+    "id": "knife-folding",
+    "name": "Knife (Folding)",
+    "category": "Other General Items",
+    "price": "10",
+    "effect": null
+  },
+  {
+    "id": "ladder-folding-10ft",
+    "name": "Ladder (Folding, 10ft)",
+    "category": "Other General Items",
+    "price": "15",
+    "effect": null
+  },
+  {
+    "id": "lantern-fuel",
+    "name": "Lantern (Fuel)",
+    "category": "Other General Items",
+    "price": "20",
+    "effect": null
+  },
+  {
+    "id": "lantern-battery",
+    "name": "Lantern (Battery)",
+    "category": "Other General Items",
+    "price": "20",
+    "effect": null
+  },
+  {
+    "id": "lantern-solar",
+    "name": "Lantern (Solar)",
+    "category": "Other General Items",
+    "price": "45",
+    "effect": null
+  },
+  {
+    "id": "lighter",
+    "name": "Lighter",
+    "category": "Other General Items",
+    "price": "2",
+    "effect": null
+  },
+  {
+    "id": "lock-combination",
+    "name": "Lock (Combination)",
+    "category": "Other General Items",
+    "price": "5",
+    "effect": null
+  },
+  {
+    "id": "lock-with-key",
+    "name": "Lock (With Key)",
+    "category": "Other General Items",
+    "price": "6",
+    "effect": null
+  },
+  {
+    "id": "luggage-bag-wheeled",
+    "name": "Luggage Bag (Wheeled)",
+    "category": "Other General Items",
+    "price": "5",
+    "effect": null
+  },
+  {
+    "id": "messenger-bag",
+    "name": "Messenger Bag",
+    "category": "Other General Items",
+    "price": "5",
+    "effect": null
+  },
+  {
+    "id": "memory-stick-100gb",
+    "name": "Memory Stick (100gb)",
+    "category": "Other General Items",
+    "price": "45",
+    "effect": null
+  },
+  {
+    "id": "metal-detector",
+    "name": "Metal Detector",
+    "category": "Other General Items",
+    "price": "30",
+    "effect": null
+  },
+  {
+    "id": "mirror-signal",
+    "name": "Mirror (Signal)",
+    "category": "Other General Items",
+    "price": "4",
+    "effect": null
+  },
+  {
+    "id": "mobile-trailer-home-for-1",
+    "name": "Mobile Trailer Home (for 1)",
+    "category": "Other General Items",
+    "price": "19800",
+    "effect": null
+  },
+  {
+    "id": "mobile-trailer-home-for-4",
+    "name": "Mobile Trailer Home (for 4)",
+    "category": "Other General Items",
+    "price": "39800",
+    "effect": null
+  },
+  {
+    "id": "multi-purpose-tool",
+    "name": "Multi-Purpose Tool",
+    "category": "Other General Items",
+    "price": "20",
+    "effect": null
+  },
+  {
+    "id": "nails-100",
+    "name": "Nails (100)",
+    "category": "Other General Items",
+    "price": "5",
+    "effect": null
+  },
+  {
+    "id": "night-vision-goggles",
+    "name": "Night-Vision Goggles",
+    "category": "Other General Items",
+    "price": "350",
+    "effect": null
+  },
+  {
+    "id": "nintendo-switch",
+    "name": "Nintendo Switch",
+    "category": "Other General Items",
+    "price": "350",
+    "effect": null
+  },
+  {
+    "id": "padlock-and-key",
+    "name": "Padlock and Key",
+    "category": "Other General Items",
+    "price": "10",
+    "effect": null
+  },
+  {
+    "id": "pencils-10-coloring",
+    "name": "Pencils (10 Coloring)",
+    "category": "Other General Items",
+    "price": "2",
+    "effect": null
+  },
+  {
+    "id": "pencils-10-graphite",
+    "name": "Pencils (10 Graphite)",
+    "category": "Other General Items",
+    "price": "2",
+    "effect": null
+  },
+  {
+    "id": "pens-10-coloring",
+    "name": "Pens (10 Coloring)",
+    "category": "Other General Items",
+    "price": "2",
+    "effect": null
+  },
+  {
+    "id": "pens-5-writing",
+    "name": "Pens (5 Writing)",
+    "category": "Other General Items",
+    "price": "2",
+    "effect": null
+  },
+  {
+    "id": "pick",
+    "name": "Pick",
+    "category": "Other General Items",
+    "price": "10",
+    "effect": null
+  },
+  {
+    "id": "pitons-5",
+    "name": "Pitons (5)",
+    "category": "Other General Items",
+    "price": "5",
+    "effect": null
+  },
+  {
+    "id": "pokemon-card-booster-pack",
+    "name": "Pokemon Card Booster Pack",
+    "category": "Other General Items",
+    "price": "4",
+    "effect": null
+  },
+  {
+    "id": "pole-steel-10-ft",
+    "name": "Pole (Steel, 10 ft)",
+    "category": "Other General Items",
+    "price": "5",
+    "effect": null
+  },
+  {
+    "id": "rope-50-ft",
+    "name": "Rope (50 ft)",
+    "category": "Other General Items",
+    "price": "5",
+    "effect": null
+  },
+  {
+    "id": "saddle-large",
+    "name": "Saddle (Large)",
+    "category": "Other General Items",
+    "price": "35",
+    "effect": null
+  },
+  {
+    "id": "saddle-massive",
+    "name": "Saddle (Massive)",
+    "category": "Other General Items",
+    "price": "55",
+    "effect": null
+  },
+  {
+    "id": "saddle-small",
+    "name": "Saddle (Small)",
+    "category": "Other General Items",
+    "price": "15",
+    "effect": null
+  },
+  {
+    "id": "shovel-folding",
+    "name": "Shovel (Folding)",
+    "category": "Other General Items",
+    "price": "10",
+    "effect": null
+  },
+  {
+    "id": "smartphone",
+    "name": "Smartphone",
+    "category": "Other General Items",
+    "price": "580",
+    "effect": null
+  },
+  {
+    "id": "soap-shampoo-toothpaste",
+    "name": "Soap / Shampoo / Toothpaste",
+    "category": "Other General Items",
+    "price": "4",
+    "effect": null
+  },
+  {
+    "id": "tent-folding-two-person",
+    "name": "Tent (Folding, Two-Person)",
+    "category": "Other General Items",
+    "price": "35",
+    "effect": null
+  },
+  {
+    "id": "tarp-6x8-ft",
+    "name": "Tarp (6x8 ft)",
+    "category": "Other General Items",
+    "price": "10",
+    "effect": null
+  },
+  {
+    "id": "tarp-10x12-ft",
+    "name": "Tarp (10x12 ft)",
+    "category": "Other General Items",
+    "price": "20",
+    "effect": null
+  },
+  {
+    "id": "thermos",
+    "name": "Thermos",
+    "category": "Other General Items",
+    "price": "10",
+    "effect": null
+  },
+  {
+    "id": "torch-5",
+    "name": "Torch (5)",
+    "category": "Other General Items",
+    "price": "5",
+    "effect": null
+  },
+  {
+    "id": "vehicle-bus",
+    "name": "Vehicle (Bus)",
+    "category": "Other General Items",
+    "price": "248800",
+    "effect": null
+  },
+  {
+    "id": "vehicle-car",
+    "name": "Vehicle (Car)",
+    "category": "Other General Items",
+    "price": "49800",
+    "effect": null
+  },
+  {
+    "id": "vehicle-camper",
+    "name": "Vehicle (Camper)",
+    "category": "Other General Items",
+    "price": "124800",
+    "effect": null
+  },
+  {
+    "id": "vehicle-motorcycle",
+    "name": "Vehicle (Motorcycle)",
+    "category": "Other General Items",
+    "price": "4980",
+    "effect": null
+  },
+  {
+    "id": "vehicle-truck",
+    "name": "Vehicle (Truck)",
+    "category": "Other General Items",
+    "price": "69800",
+    "effect": null
+  },
+  {
+    "id": "vehicle-van",
+    "name": "Vehicle (Van)",
+    "category": "Other General Items",
+    "price": "49800",
+    "effect": null
+  },
+  {
+    "id": "vial",
+    "name": "Vial",
+    "category": "Other General Items",
+    "price": "5",
+    "effect": null
+  },
+  {
+    "id": "wallet",
+    "name": "Wallet",
+    "category": "Other General Items",
+    "price": "5",
+    "effect": null
+  },
+  {
+    "id": "whistle",
+    "name": "Whistle",
+    "category": "Other General Items",
+    "price": "2",
+    "effect": null
+  },
+  {
+    "id": "zip-ties-30",
+    "name": "Zip Ties (30)",
+    "category": "Other General Items",
+    "price": "10",
+    "effect": null
+  }
+]

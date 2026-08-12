@@ -4,7 +4,8 @@ import pokemonRaw from '../../data/pokemon.json';
 import legendaryPokemonRaw from '../../data/legendaryPokemon.json';
 import pokemonSkillsRaw from '../../data/pokemonSkills.json';
 import gmGuideRaw from '../../data/gmGuide.json';
-import type { TrainerClass, TrainerSkill, PokemonFamily, PokemonSkill, GmGuideSection } from '../types/models';
+import itemsRaw from '../../data/items.json';
+import type { TrainerClass, TrainerSkill, PokemonFamily, PokemonSkill, GmGuideSection, Item } from '../types/models';
 
 function toModifier(v: unknown): number {
   if (typeof v === 'number') return v;
@@ -31,9 +32,11 @@ export const trainerSkills = trainerSkillsRaw as TrainerSkill[];
 export const pokemonFamilies = [...(pokemonRaw as any[]), ...(legendaryPokemonRaw as any[])].map(normalizeFamily);
 export const pokemonSkills = pokemonSkillsRaw as PokemonSkill[];
 export const gmGuideSections = gmGuideRaw as GmGuideSection[];
+export const items = itemsRaw as Item[];
 
 export const trainerClassById = new Map(trainerClasses.map((c) => [c.id, c]));
 export const pokemonFamilyById = new Map(pokemonFamilies.map((p) => [p.familyId, p]));
+export const itemById = new Map(items.map((i) => [i.id, i]));
 
 export function baseClasses(): TrainerClass[] {
   return trainerClasses.filter((c) => c.tier === 'base');

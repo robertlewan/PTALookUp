@@ -101,6 +101,14 @@ export interface GmGuideSection {
   table: GmGuideTable | null;
 }
 
+export interface Item {
+  id: string;
+  name: string;
+  category: string;
+  price: string | null;
+  effect: string;
+}
+
 export interface PokemonFamily {
   familyId: string;
   familyName: string;
@@ -130,6 +138,7 @@ export interface OwnedPokemon {
   statusConditions: string[];
   notes: string;
   moveUses?: Record<string, number>;
+  heldItem?: string | null;
 }
 
 export interface CharacterSheet {

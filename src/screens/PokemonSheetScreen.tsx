@@ -3,10 +3,11 @@ import { Alert, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View 
 import { useFocusEffect, useNavigation, useRoute } from '@react-navigation/native';
 import { colors } from '../theme/theme';
 import { getCharacter, saveCharacter } from '../storage/characterStorage';
-import { findPokemonStage, pokemonFamilyById } from '../data';
+import { findPokemonStage, pokemonFamilyById, itemById } from '../data';
 import { Section } from '../components/Section';
 import { TypeBadge } from '../components/TypeBadge';
 import { moveMaxUses, movesForProficiency, remainingUses } from '../utils/moves';
+import { HpInput } from '../components/HpInput';
 import type { CharacterSheet, OwnedPokemon, PokemonMove } from '../types/models';
 
 const COMMON_STATUS = ['Poisoned', 'Burned', 'Paralyzed', 'Asleep', 'Frozen', 'Confused'];
@@ -114,7 +115,7 @@ export default function PokemonSheetScreen() {
           <TouchableOpacity style={styles.stepBtn} onPress={() => updateMon({ currentHp: Math.max(0, mon.currentHp - 1) })}>
             <Text style={styles.stepBtnText}>−</Text>
           </TouchableOpacity>
-          <Text style={styles.stepperValue}>{mon.currentHp}</Text>
+          <HpInput value={mon.currentHp} max={ref?.stage.stats.hp} onChange={(v) => updateMon({ currentHp: v })} />
           <TouchableOpacity
             style={styles.stepBtn}
             onPress={() => updateMon({ currentHp: Math.min(ref?.stage.stats.hp ?? Infinity, mon.currentHp + 1) })}
@@ -145,6 +146,30 @@ export default function PokemonSheetScreen() {
             );
           })}
         </View>
+
+        <Text style={styles.stepperLabel}>Held Item</Text>
+        <View style={styles.heldItemRow}>
+          <Text style={styles.heldItemText}>{mon.heldItem || 'None'}</Text>
+          <TouchableOpacity
+            style={styles.addBtnSmall}
+            onPress={() =>
+              navigation.navigate('PickItem', {
+                defaultCategory: 'Held Items',
+                onPick: async (itemId: string) => {
+                  const item = itemById.get(itemId);
+                  if (item) updateMon({ heldItem: item.name });
+                },
+              })
+            }
+          >
+            <Text style={styles.addBtnSmallText}>{mon.heldItem ? 'Change' : 'Set'}</Text>
+          </TouchableOpacity>
+          {mon.heldItem && (
+            <TouchableOpacity style={styles.addBtnSmall} onPress={() => updateMon({ heldItem: null })}>
+              <Text style={styles.removeText}>Clear</Text>
+            </TouchableOpacity>
+          )}
+        </View>
       </Section>
 
       <Section title="Notes">
@@ -153,7 +178,7 @@ export default function PokemonSheetScreen() {
           value={mon.notes}
           onChangeText={(v) => updateMon({ notes: v })}
           multiline
-          placeholder="Personality, held items, battle notes..."
+          placeholder="Personality, battle notes..."
           placeholderTextColor={colors.textMuted}
         />
       </Section>
@@ -307,6 +332,11 @@ const styles = StyleSheet.create({
   skillChipActive: { backgroundColor: colors.primary },
   skillChipText: { color: colors.textMuted, fontSize: 12, fontWeight: '600' },
   skillChipTextActive: { color: '#fff' },
+  heldItemRow: { flexDirection: 'row', alignItems: 'center', marginTop: 4 },
+  heldItemText: { color: colors.text, fontSize: 14, flex: 1 },
+  addBtnSmall: { backgroundColor: colors.primaryMuted, borderRadius: 6, paddingHorizontal: 10, paddingVertical: 6, marginLeft: 8 },
+  addBtnSmallText: { color: '#fff', fontWeight: '700', fontSize: 12 },
+  removeText: { color: '#f87171', fontSize: 12, fontWeight: '700' },
   notesInput: {
     backgroundColor: colors.surfaceAlt,
     color: colors.text,

@@ -16,12 +16,15 @@ import PickClassScreen from '../screens/PickClassScreen';
 import AddPokemonScreen from '../screens/AddPokemonScreen';
 import GmGuideListScreen from '../screens/GmGuideListScreen';
 import GmGuideDetailScreen from '../screens/GmGuideDetailScreen';
+import ItemsListScreen from '../screens/ItemsListScreen';
+import ItemDetailScreen from '../screens/ItemDetailScreen';
 
 const HomeStack = createNativeStackNavigator();
 const ClassesStack = createNativeStackNavigator();
 const DexStack = createNativeStackNavigator();
 const CharactersStack = createNativeStackNavigator();
 const GmGuideStack = createNativeStackNavigator();
+const ItemsStack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
 const screenOptions = {
@@ -65,7 +68,17 @@ function CharactersStackNav() {
       <CharactersStack.Screen name="PokemonSheet" component={PokemonSheetScreen} options={{ title: 'Pokémon Sheet' }} />
       <CharactersStack.Screen name="PickClass" component={PickClassScreen} options={{ title: 'Choose Class', presentation: 'modal' }} />
       <CharactersStack.Screen name="AddPokemon" component={AddPokemonScreen} options={{ title: 'Add Pokémon', presentation: 'modal' }} />
+      <CharactersStack.Screen name="PickItem" component={ItemsListScreen} options={{ title: 'Choose Item', presentation: 'modal' }} />
     </CharactersStack.Navigator>
+  );
+}
+
+function ItemsStackNav() {
+  return (
+    <ItemsStack.Navigator screenOptions={screenOptions}>
+      <ItemsStack.Screen name="ItemList" component={ItemsListScreen} options={{ title: 'Items' }} />
+      <ItemsStack.Screen name="ItemDetail" component={ItemDetailScreen} options={{ title: 'Item' }} />
+    </ItemsStack.Navigator>
   );
 }
 
@@ -106,6 +119,7 @@ export default function RootNavigator() {
         <Tab.Screen name="DexTab" component={DexStackNav} options={{ title: 'Pokédex' }} />
         <Tab.Screen name="CharactersTab" component={CharactersStackNav} options={{ title: 'Characters' }} />
         <Tab.Screen name="GmGuideTab" component={GmGuideStackNav} options={{ title: 'GM Guide' }} />
+        <Tab.Screen name="ItemsTab" component={ItemsStackNav} options={{ title: 'Items' }} />
       </Tab.Navigator>
     </NavigationContainer>
   );

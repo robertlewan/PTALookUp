@@ -74,5 +74,6 @@ export function newOwnedPokemon(familyId: string, stageName: string): CharacterS
     currentHp: ref?.stage.stats.hp ?? 1,
     statusConditions: [],
     notes: '',
+    heldItem: null,
   };
 }
