@@ -1,11 +1,15 @@
 import React, { useCallback, useState } from 'react';
-import { ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { Alert, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { useFocusEffect, useNavigation, useRoute } from '@react-navigation/native';
 import { colors } from '../theme/theme';
 import { getCharacter, saveCharacter, deleteCharacter, newOwnedPokemon } from '../storage/characterStorage';
-import { trainerClassById, trainerSkills, pokemonFamilyById } from '../data';
+import { trainerClassById, trainerSkills, pokemonFamilyById, findPokemonStage } from '../data';
 import { Section } from '../components/Section';
 import type { CharacterSheet } from '../types/models';
+
+function rollD6() {
+  return 1 + Math.floor(Math.random() * 6);
+}
 
 export default function CharacterSheetScreen() {
   const route = useRoute<any>();
@@ -34,7 +38,35 @@ export default function CharacterSheetScreen() {
     setChar(next);
   }
 
-  function Stepper({ label, value, onChange, min = 0 }: { label: string; value: number; onChange: (v: number) => void; min?: number }) {
+  async function rest() {
+    if (!char) return;
+    const trainerHeal = rollD6();
+    const party = char.party.map((mon) => {
+      const ref = findPokemonStage(mon.familyId, mon.stageName);
+      const maxHp = ref?.stage.stats.hp ?? mon.currentHp;
+      const healed = Math.round(maxHp / 6);
+      return { ...mon, moveUses: {}, currentHp: Math.min(maxHp, mon.currentHp + healed) };
+    });
+    await update({
+      currentHp: Math.min(char.maxHp, char.currentHp + trainerHeal),
+      party,
+    });
+    Alert.alert('Rest (8 hours)', `${char.name || 'Trainer'} healed ${trainerHeal} HP. All Pokémon healed and had their move uses refreshed.`);
+  }
+
+  function Stepper({
+    label,
+    value,
+    onChange,
+    min = 0,
+    max,
+  }: {
+    label: string;
+    value: number;
+    onChange: (v: number) => void;
+    min?: number;
+    max?: number;
+  }) {
     return (
       <View style={styles.stepperBox}>
         <Text style={styles.stepperLabel}>{label}</Text>
@@ -43,7 +75,7 @@ export default function CharacterSheetScreen() {
             <Text style={styles.stepBtnText}>−</Text>
           </TouchableOpacity>
           <Text style={styles.stepperValue}>{value}</Text>
-          <TouchableOpacity style={styles.stepBtn} onPress={() => onChange(value + 1)}>
+          <TouchableOpacity style={styles.stepBtn} onPress={() => onChange(max === undefined ? value + 1 : Math.min(max, value + 1))}>
             <Text style={styles.stepBtnText}>+</Text>
           </TouchableOpacity>
         </View>
@@ -61,9 +93,12 @@ export default function CharacterSheetScreen() {
 
       <Section title="Hit Points">
         <View style={styles.hpRow}>
-          <Stepper label="Current HP" value={char.currentHp} onChange={(v) => update({ currentHp: v })} />
+          <Stepper label="Current HP" value={char.currentHp} max={char.maxHp} onChange={(v) => update({ currentHp: v })} />
           <Stepper label="Max HP" value={char.maxHp} min={1} onChange={(v) => update({ maxHp: v })} />
         </View>
+        <TouchableOpacity style={styles.restBtn} onPress={rest}>
+          <Text style={styles.restBtnText}>Rest (8 hours) — heal & refresh party moves</Text>
+        </TouchableOpacity>
       </Section>
 
       <Section title="Stats">
@@ -110,6 +145,29 @@ export default function CharacterSheetScreen() {
         >
           <Text style={styles.addBtnText}>+ Add Class</Text>
         </TouchableOpacity>
+      </Section>
+
+      <Section title="Available Features">
+        {char.classes.length === 0 && <Text style={styles.emptyHint}>Add a trainer class to see its features here.</Text>}
+        {char.classes.map((pick, i) => {
+          const cls = trainerClassById.get(pick.classId);
+          if (!cls) return null;
+          const unlocked = cls.features.filter((f) => f.level <= pick.level);
+          if (unlocked.length === 0) return null;
+          return (
+            <View key={`${pick.classId}-${i}`} style={{ marginBottom: 10 }}>
+              <Text style={styles.classGroupLabel}>{cls.name}</Text>
+              {unlocked.map((f, fi) => (
+                <View key={`${f.name}-${fi}`} style={styles.feature}>
+                  <Text style={styles.featureName}>
+                    {f.name} <Text style={styles.featureLevel}>(Lvl {f.level})</Text>
+                  </Text>
+                  <Text style={styles.featureDesc}>{f.description}</Text>
+                </View>
+              ))}
+            </View>
+          );
+        })}
       </Section>
 
       <Section title="Skill Talents">
@@ -258,6 +316,14 @@ const styles = StyleSheet.create({
   removeText: { color: '#f87171', fontSize: 12, fontWeight: '700' },
   addBtn: { backgroundColor: colors.primaryMuted, borderRadius: 8, padding: 10, alignItems: 'center', marginTop: 4 },
   addBtnText: { color: '#fff', fontWeight: '700', fontSize: 13 },
+  restBtn: { backgroundColor: colors.primaryMuted, borderRadius: 8, padding: 10, alignItems: 'center', marginTop: 10 },
+  restBtnText: { color: '#fff', fontWeight: '700', fontSize: 13 },
+  emptyHint: { color: colors.textMuted, fontSize: 13 },
+  classGroupLabel: { color: colors.primary, fontSize: 13, fontWeight: '700', marginBottom: 4, textTransform: 'uppercase' },
+  feature: { marginBottom: 8 },
+  featureName: { color: colors.text, fontSize: 14, fontWeight: '700' },
+  featureLevel: { color: colors.textMuted, fontWeight: '400', fontSize: 12 },
+  featureDesc: { color: colors.textMuted, fontSize: 13, lineHeight: 19, marginTop: 2 },
   skillWrap: { flexDirection: 'row', flexWrap: 'wrap' },
   skillChip: { backgroundColor: colors.surfaceAlt, borderRadius: 14, paddingHorizontal: 12, paddingVertical: 6, marginRight: 6, marginBottom: 6 },
   skillChipActive: { backgroundColor: colors.primary },

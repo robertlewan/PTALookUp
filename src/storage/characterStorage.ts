@@ -1,5 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import type { CharacterSheet } from '../types/models';
+import { findPokemonStage } from '../data';
 
 const STORAGE_KEY = 'pta_lookup.characters.v1';
 
@@ -63,13 +64,14 @@ export function newCharacter(name: string): CharacterSheet {
 }
 
 export function newOwnedPokemon(familyId: string, stageName: string): CharacterSheet['party'][number] {
+  const ref = findPokemonStage(familyId, stageName);
   return {
     id: `mon_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`,
     familyId,
     stageName,
     nickname: '',
     level: 1,
-    currentHp: 0,
+    currentHp: ref?.stage.stats.hp ?? 1,
     statusConditions: [],
     notes: '',
   };

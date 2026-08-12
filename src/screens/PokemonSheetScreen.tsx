@@ -1,12 +1,13 @@
 import React, { useCallback, useState } from 'react';
-import { ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { Alert, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { useFocusEffect, useNavigation, useRoute } from '@react-navigation/native';
 import { colors } from '../theme/theme';
 import { getCharacter, saveCharacter } from '../storage/characterStorage';
 import { findPokemonStage, pokemonFamilyById } from '../data';
 import { Section } from '../components/Section';
 import { TypeBadge } from '../components/TypeBadge';
-import type { CharacterSheet, OwnedPokemon } from '../types/models';
+import { moveMaxUses, movesForProficiency, remainingUses } from '../utils/moves';
+import type { CharacterSheet, OwnedPokemon, PokemonMove } from '../types/models';
 
 const COMMON_STATUS = ['Poisoned', 'Burned', 'Paralyzed', 'Asleep', 'Frozen', 'Confused'];
 
@@ -59,6 +60,30 @@ export default function PokemonSheetScreen() {
     navigation.goBack();
   }
 
+  function useMove(move: PokemonMove) {
+    const max = moveMaxUses(move.frequency);
+    if (max === null) return; // At-Will or unparseable frequency: nothing to track
+    const current = remainingUses(mon!.moveUses, move) ?? max;
+    if (current <= 0) return;
+    updateMon({ moveUses: { ...(mon!.moveUses ?? {}), [move.name]: current - 1 } });
+  }
+
+  function restoreMove(move: PokemonMove) {
+    const max = moveMaxUses(move.frequency);
+    if (max === null) return;
+    const current = remainingUses(mon!.moveUses, move) ?? max;
+    if (current >= max) return;
+    updateMon({ moveUses: { ...(mon!.moveUses ?? {}), [move.name]: current + 1 } });
+  }
+
+  function rest() {
+    if (!ref) return;
+    const maxHp = ref.stage.stats.hp;
+    const healed = Math.round(maxHp / 6);
+    updateMon({ moveUses: {}, currentHp: Math.min(maxHp, mon!.currentHp + healed) });
+    Alert.alert('Rest', `${mon!.nickname || mon!.stageName} refreshed all move uses and healed ${healed} HP.`);
+  }
+
   return (
     <ScrollView style={styles.container} contentContainerStyle={{ padding: 14 }}>
       <TextInput
@@ -90,7 +115,10 @@ export default function PokemonSheetScreen() {
             <Text style={styles.stepBtnText}>−</Text>
           </TouchableOpacity>
           <Text style={styles.stepperValue}>{mon.currentHp}</Text>
-          <TouchableOpacity style={styles.stepBtn} onPress={() => updateMon({ currentHp: mon.currentHp + 1 })}>
+          <TouchableOpacity
+            style={styles.stepBtn}
+            onPress={() => updateMon({ currentHp: Math.min(ref?.stage.stats.hp ?? Infinity, mon.currentHp + 1) })}
+          >
             <Text style={styles.stepBtnText}>+</Text>
           </TouchableOpacity>
           {ref && <Text style={styles.maxHp}>/ {ref.stage.stats.hp} max</Text>}
@@ -136,6 +164,18 @@ export default function PokemonSheetScreen() {
             Atk {ref.stage.stats.attack} · Def {ref.stage.stats.defense} · SpAtk {ref.stage.stats.specialAttack} · SpDef{' '}
             {ref.stage.stats.specialDefense} · Spd {ref.stage.stats.speed} ({ref.stage.stats.speedFt}ft)
           </Text>
+
+          {ref.stage.skills.length > 0 && (
+            <>
+              <Text style={styles.subTitle}>Skills</Text>
+              {ref.stage.skills.map((s, i) => (
+                <Text key={i} style={styles.body}>
+                  <Text style={styles.bold}>{s.name}</Text> — {s.description}
+                </Text>
+              ))}
+            </>
+          )}
+
           {ref.stage.passives.length > 0 && (
             <>
               <Text style={styles.subTitle}>Passives</Text>
@@ -146,16 +186,34 @@ export default function PokemonSheetScreen() {
               ))}
             </>
           )}
-          <Text style={styles.subTitle}>Moves</Text>
+
+          {family && family.proficiencies.length > 0 && (
+            <>
+              <Text style={styles.subTitle}>Proficiencies</Text>
+              {family.proficiencies.map((prof) => {
+                const matches = movesForProficiency(ref.stage.moves, prof);
+                return (
+                  <View key={prof} style={{ marginBottom: 6 }}>
+                    <Text style={styles.body}>
+                      <Text style={styles.bold}>{prof}</Text>
+                      {matches.length > 0 ? `: ${matches.map((m) => m.name).join(', ')}` : ''}
+                    </Text>
+                  </View>
+                );
+              })}
+            </>
+          )}
+
+          <View style={styles.movesHeaderRow}>
+            <Text style={[styles.subTitle, { marginTop: 8 }]}>Moves</Text>
+            <TouchableOpacity style={styles.restBtn} onPress={() => rest()}>
+              <Text style={styles.restBtnText}>Rest (refresh moves)</Text>
+            </TouchableOpacity>
+          </View>
           {ref.stage.moves.map((m, i) => (
-            <View key={i} style={{ marginBottom: 6 }}>
-              <Text style={styles.body}>
-                <Text style={styles.bold}>{m.name}</Text> · {m.frequency} · {m.range} · {m.moveType} {m.category}
-                {m.power ? ` · ${m.power}` : ''}
-              </Text>
-              {!!m.effect && <Text style={styles.moveEffect}>{m.effect}</Text>}
-            </View>
+            <MoveRow key={i} move={m} moveUses={mon.moveUses} onUse={() => useMove(m)} onRestore={() => restoreMove(m)} />
           ))}
+
           <TouchableOpacity onPress={() => navigation.navigate('DexTab', { screen: 'DexDetail', params: { familyId: mon.familyId } })}>
             <Text style={styles.link}>View full Pokédex entry →</Text>
           </TouchableOpacity>
@@ -166,6 +224,46 @@ export default function PokemonSheetScreen() {
         <Text style={styles.deleteBtnText}>Remove from Party</Text>
       </TouchableOpacity>
     </ScrollView>
+  );
+}
+
+function MoveRow({
+  move,
+  moveUses,
+  onUse,
+  onRestore,
+}: {
+  move: PokemonMove;
+  moveUses: Record<string, number> | undefined;
+  onUse: () => void;
+  onRestore: () => void;
+}) {
+  const max = moveMaxUses(move.frequency);
+  const remaining = remainingUses(moveUses, move);
+
+  return (
+    <View style={styles.moveRow}>
+      <View style={{ flex: 1 }}>
+        <Text style={styles.body}>
+          <Text style={styles.bold}>{move.name}</Text> · {move.frequency} · {move.range} · {move.moveType} {move.category}
+          {move.power ? ` · ${move.power}` : ''}
+        </Text>
+        {!!move.effect && <Text style={styles.moveEffect}>{move.effect}</Text>}
+      </View>
+      {max !== null && (
+        <View style={styles.useBox}>
+          <TouchableOpacity style={styles.useStepBtn} onPress={onRestore} disabled={remaining === max}>
+            <Text style={[styles.useStepBtnText, remaining === max && styles.useStepBtnTextDisabled]}>+</Text>
+          </TouchableOpacity>
+          <Text style={styles.useCount}>
+            {remaining}/{max}
+          </Text>
+          <TouchableOpacity style={[styles.useBtn, remaining === 0 && styles.useBtnDisabled]} onPress={onUse} disabled={remaining === 0}>
+            <Text style={styles.useBtnText}>Use</Text>
+          </TouchableOpacity>
+        </View>
+      )}
+    </View>
   );
 }
 
@@ -192,6 +290,18 @@ const styles = StyleSheet.create({
   stepBtnText: { color: colors.text, fontSize: 16, fontWeight: '700' },
   stepperValue: { color: colors.text, fontSize: 16, fontWeight: '700', marginHorizontal: 12, minWidth: 24, textAlign: 'center' },
   maxHp: { color: colors.textMuted, fontSize: 12, marginLeft: 8 },
+  movesHeaderRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
+  restBtn: { backgroundColor: colors.primaryMuted, borderRadius: 8, paddingHorizontal: 10, paddingVertical: 6, marginTop: 6 },
+  restBtnText: { color: '#fff', fontWeight: '700', fontSize: 12 },
+  moveRow: { flexDirection: 'row', alignItems: 'center', marginBottom: 8 },
+  useBox: { flexDirection: 'row', alignItems: 'center', marginLeft: 8 },
+  useStepBtn: { backgroundColor: colors.surfaceAlt, width: 22, height: 22, borderRadius: 5, alignItems: 'center', justifyContent: 'center' },
+  useStepBtnText: { color: colors.text, fontSize: 13, fontWeight: '700' },
+  useStepBtnTextDisabled: { color: colors.textMuted },
+  useCount: { color: colors.text, fontSize: 12, fontWeight: '700', marginHorizontal: 6, minWidth: 26, textAlign: 'center' },
+  useBtn: { backgroundColor: colors.accent, borderRadius: 6, paddingHorizontal: 10, paddingVertical: 6 },
+  useBtnDisabled: { backgroundColor: colors.surfaceAlt },
+  useBtnText: { color: '#fff', fontWeight: '700', fontSize: 12 },
   skillWrap: { flexDirection: 'row', flexWrap: 'wrap' },
   skillChip: { backgroundColor: colors.surfaceAlt, borderRadius: 14, paddingHorizontal: 12, paddingVertical: 6, marginRight: 6, marginBottom: 6 },
   skillChipActive: { backgroundColor: colors.primary },

@@ -129,6 +129,7 @@ export interface OwnedPokemon {
   currentHp: number;
   statusConditions: string[];
   notes: string;
+  moveUses?: Record<string, number>;
 }
 
 export interface CharacterSheet {
