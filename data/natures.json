@@ -1,0 +1,22 @@
+[
+  { "name": "Lonely", "increasedStat": "attack", "decreasedStat": "defense" },
+  { "name": "Brave", "increasedStat": "attack", "decreasedStat": "speed" },
+  { "name": "Adamant", "increasedStat": "attack", "decreasedStat": "specialAttack" },
+  { "name": "Naughty", "increasedStat": "attack", "decreasedStat": "specialDefense" },
+  { "name": "Bold", "increasedStat": "defense", "decreasedStat": "attack" },
+  { "name": "Relaxed", "increasedStat": "defense", "decreasedStat": "speed" },
+  { "name": "Impish", "increasedStat": "defense", "decreasedStat": "specialAttack" },
+  { "name": "Lax", "increasedStat": "defense", "decreasedStat": "specialDefense" },
+  { "name": "Timid", "increasedStat": "speed", "decreasedStat": "attack" },
+  { "name": "Hasty", "increasedStat": "speed", "decreasedStat": "defense" },
+  { "name": "Jolly", "increasedStat": "speed", "decreasedStat": "specialAttack" },
+  { "name": "Naive", "increasedStat": "speed", "decreasedStat": "specialDefense" },
+  { "name": "Modest", "increasedStat": "specialAttack", "decreasedStat": "attack" },
+  { "name": "Mild", "increasedStat": "specialAttack", "decreasedStat": "defense" },
+  { "name": "Quiet", "increasedStat": "specialAttack", "decreasedStat": "speed" },
+  { "name": "Rash", "increasedStat": "specialAttack", "decreasedStat": "specialDefense" },
+  { "name": "Calm", "increasedStat": "specialDefense", "decreasedStat": "attack" },
+  { "name": "Gentle", "increasedStat": "specialDefense", "decreasedStat": "defense" },
+  { "name": "Sassy", "increasedStat": "specialDefense", "decreasedStat": "speed" },
+  { "name": "Careful", "increasedStat": "specialDefense", "decreasedStat": "specialAttack" }
+]

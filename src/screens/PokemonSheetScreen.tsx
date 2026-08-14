@@ -3,10 +3,11 @@ import { Alert, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View 
 import { useFocusEffect, useNavigation, useRoute } from '@react-navigation/native';
 import { colors } from '../theme/theme';
 import { getCharacter, saveCharacter } from '../storage/characterStorage';
-import { findPokemonStage, pokemonFamilyById, itemById, itemByName, allMoveByName } from '../data';
+import { findPokemonStage, pokemonFamilyById, itemById, itemByName, allMoveByName, natures, natureByName } from '../data';
 import { Section } from '../components/Section';
 import { TypeBadge } from '../components/TypeBadge';
 import { moveMaxUses, movesForProficiency, remainingUses } from '../utils/moves';
+import { applyNature, STAT_LABELS, STAT_FLAVORS } from '../utils/nature';
 import { HpInput } from '../components/HpInput';
 import type { CharacterSheet, OwnedPokemon, PokemonMove } from '../types/models';
 
@@ -173,6 +174,28 @@ export default function PokemonSheetScreen() {
         {mon.heldItem && itemByName.get(mon.heldItem) && (
           <Text style={styles.heldItemEffect}>{itemByName.get(mon.heldItem)!.effect}</Text>
         )}
+
+        <Text style={styles.stepperLabel}>Nature</Text>
+        <View style={styles.skillWrap}>
+          {natures.map((n) => {
+            const active = mon.nature === n.name;
+            return (
+              <TouchableOpacity
+                key={n.name}
+                style={[styles.skillChip, active && styles.skillChipActive]}
+                onPress={() => updateMon({ nature: active ? null : n.name })}
+              >
+                <Text style={[styles.skillChipText, active && styles.skillChipTextActive]}>{n.name}</Text>
+              </TouchableOpacity>
+            );
+          })}
+        </View>
+        {mon.nature && natureByName.get(mon.nature) && (
+          <Text style={styles.heldItemEffect}>
+            +1 {STAT_LABELS[natureByName.get(mon.nature)!.increasedStat]} ({STAT_FLAVORS[natureByName.get(mon.nature)!.increasedStat]}), −1{' '}
+            {STAT_LABELS[natureByName.get(mon.nature)!.decreasedStat]} ({STAT_FLAVORS[natureByName.get(mon.nature)!.decreasedStat]})
+          </Text>
+        )}
       </Section>
 
       <Section title="Notes">
@@ -188,10 +211,15 @@ export default function PokemonSheetScreen() {
 
       {ref && (
         <Section title="Dex Reference">
-          <Text style={styles.body}>
-            Atk {ref.stage.stats.attack} · Def {ref.stage.stats.defense} · SpAtk {ref.stage.stats.specialAttack} · SpDef{' '}
-            {ref.stage.stats.specialDefense} · Spd {ref.stage.stats.speed} ({ref.stage.stats.speedFt}ft)
-          </Text>
+          {(() => {
+            const eff = applyNature(ref.stage.stats, mon.nature ? natureByName.get(mon.nature) : null);
+            return (
+              <Text style={styles.body}>
+                Atk {eff.attack} · Def {eff.defense} · SpAtk {eff.specialAttack} · SpDef {eff.specialDefense} · Spd {eff.speed} ({ref.stage.stats.speedFt}ft)
+                {mon.nature ? ' (nature-adjusted)' : ''}
+              </Text>
+            );
+          })()}
 
           {ref.stage.skills.length > 0 && (
             <>

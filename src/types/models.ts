@@ -109,6 +109,14 @@ export interface Item {
   effect: string;
 }
 
+export type StatKey = 'attack' | 'defense' | 'specialAttack' | 'specialDefense' | 'speed';
+
+export interface Nature {
+  name: string;
+  increasedStat: StatKey;
+  decreasedStat: StatKey;
+}
+
 export interface PokemonFamily {
   familyId: string;
   familyName: string;
@@ -140,6 +148,7 @@ export interface OwnedPokemon {
   moveUses?: Record<string, number>;
   heldItem?: string | null;
   extraMoves?: string[];
+  nature?: string | null;
 }
 
 export interface CharacterSheet {
