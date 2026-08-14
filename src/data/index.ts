@@ -15,11 +15,29 @@ function toModifier(v: unknown): number {
   return Number.isFinite(n) ? n : 0;
 }
 
+export const allMoves = allMovesRaw as PokemonMove[];
+export const allMoveByName = new Map(allMoves.map((m) => [m.name, m]));
+
+// The per-species Pokedex movesets were extracted from an older 3.0-era
+// Pokedex book, while the master move list (allMoves.json) was extracted
+// from the current 3.5 Player's Handbook and is authoritative. Where a move
+// name exists in both, the 3.5 version's frequency/range/type/category/
+// power/effect wins; a move's own `special` tag (legendary bonus abilities)
+// is kept if present. Moves not in the master list (mostly rare signature
+// moves documented in a separate PHB chapter that wasn't extracted) fall
+// back to the embedded data unchanged.
+function reconcileMove(move: any): PokemonMove {
+  const canonical = allMoveByName.get(move.name);
+  if (!canonical) return move as PokemonMove;
+  return { ...canonical, special: move.special ?? canonical.special ?? null };
+}
+
 function normalizeFamily(family: any): PokemonFamily {
   return {
     ...family,
     stages: family.stages.map((stage: any) => ({
       ...stage,
+      moves: stage.moves.map(reconcileMove),
       moveModifiers: {
         attack: toModifier(stage.moveModifiers?.attack),
         specialAttack: toModifier(stage.moveModifiers?.specialAttack),
@@ -35,14 +53,12 @@ export const pokemonFamilies = [...(pokemonRaw as any[]), ...(legendaryPokemonRa
 export const pokemonSkills = pokemonSkillsRaw as PokemonSkill[];
 export const gmGuideSections = gmGuideRaw as GmGuideSection[];
 export const items = itemsRaw as Item[];
-export const allMoves = allMovesRaw as PokemonMove[];
 export const natures = naturesRaw as Nature[];
 
 export const trainerClassById = new Map(trainerClasses.map((c) => [c.id, c]));
 export const pokemonFamilyById = new Map(pokemonFamilies.map((p) => [p.familyId, p]));
 export const itemById = new Map(items.map((i) => [i.id, i]));
 export const itemByName = new Map(items.map((i) => [i.name, i]));
-export const allMoveByName = new Map(allMoves.map((m) => [m.name, m]));
 export const natureByName = new Map(natures.map((n) => [n.name, n]));
 
 export function baseClasses(): TrainerClass[] {

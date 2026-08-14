@@ -247,9 +247,9 @@
             "range": "Ranged(30ft beam)",
             "moveType": "Grass",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 5d12. Solar Beam is a two-turn move unless it is Sunny. On the first turn, do nothing. On the second turn or if it is Sunny, roll Solar Beam’s Accuracy Check and damage."
+            "frequency": "1/day",
+            "power": "5d12",
+            "effect": "Solar Beam is a two-turn move unless it is Sunny. On the first turn, do nothing. On the second turn or if it is Sunny, roll Solar Beam’s Accuracy Check and damage."
           }
         ]
       }
@@ -2089,9 +2089,9 @@
             "range": "Ranged(25ft burst)",
             "moveType": "Normal",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 3d12. Anyone within range of Boomburst is cured of Sleep."
+            "frequency": "1/day",
+            "power": "3d12",
+            "effect": "Anyone within range of Boomburst is cured of Sleep."
           },
           {
             "name": "Endeavor",
@@ -2578,9 +2578,9 @@
             "range": "Ranged(20ft beam)",
             "moveType": "Fire",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d10. On hit, if you got 18 or higher on Accuracy Check, the target is Burned."
+            "frequency": "3/day",
+            "power": "3d10",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Burned."
           },
           {
             "name": "Fire Spin",
@@ -2823,9 +2823,9 @@
             "range": "Ranged(20ft beam)",
             "moveType": "Fire",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d10. On hit, if you got 18 or higher on Accuracy Check, the target is Burned."
+            "frequency": "3/day",
+            "power": "3d10",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Burned."
           },
           {
             "name": "Double Edge",
@@ -2903,9 +2903,9 @@
             "range": "Ranged(20ft beam)",
             "moveType": "Fire",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d10. On hit, if you got 18 or higher on Accuracy Check, the target is Burned."
+            "frequency": "3/day",
+            "power": "3d10",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Burned."
           },
           {
             "name": "Hex",
@@ -4655,9 +4655,9 @@
             "range": "Ranged(30ft beam)",
             "moveType": "Normal",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 3d12."
+            "frequency": "1/day",
+            "power": "3d12",
+            "effect": ""
           }
         ]
       }
@@ -4745,9 +4745,9 @@
             "range": "Ranged(20ft burst)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d8. On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
           },
           {
             "name": "Skull Bash",
@@ -4900,9 +4900,9 @@
             "range": "Ranged(30ft beam)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 5d12. Hydro Pump has -2 during Accuracy Check unless it’s Raining."
+            "frequency": "1/day",
+            "power": "5d12",
+            "effect": "Hydro Pump has -2 during Accuracy Check unless it’s Raining."
           }
         ]
       }
@@ -5524,9 +5524,9 @@
             "range": "Ranged(20ft beam)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d8. On hit, the target’s Speed is -1 for 10 mins."
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, the target’s Speed is -1 for 10 mins."
           }
         ]
       },
@@ -6094,9 +6094,9 @@
             "range": "Ranged(20ft burst)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d8. On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
           },
           {
             "name": "Smoke Screen",
@@ -6378,9 +6378,9 @@
             "range": "Ranged(20ft beam)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d8. On hit, the target’s Speed is -1 for 10 mins."
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, the target’s Speed is -1 for 10 mins."
           }
         ]
       },
@@ -6507,9 +6507,9 @@
             "range": "Ranged(20ft burst)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 3d12. Sparkling Aria cures any ally’s Burns within range without damaging them."
+            "frequency": "1/day",
+            "power": "3d12",
+            "effect": "Sparkling Aria cures any ally’s Burns within range without damaging them."
           },
           {
             "name": "Moonblast",
@@ -6629,9 +6629,9 @@
             "range": "Ranged(20ft burst)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d8. On hit, if you got 16 or higher on Accuracy Check, the target is Confused. Rain Dance - Water Field Effect: 3/day. You create a circle of Raining Weather with a 60ft diameter. Within the Raining weather, Water-type attacks deal an additional 8 damage and Fire-type attacks deal 8 less damage. This weather disappears after 2 mins."
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, if you got 16 or higher on Accuracy Check, the target is Confused. Rain Dance - Water Field Effect: 3/day. You create a circle of Raining Weather with a 60ft diameter. Within the Raining weather, Water-type attacks deal an additional 8 damage and Fire-type attacks deal 8 less damage. This weather disappears after 2 mins."
           }
         ]
       },
@@ -6888,9 +6888,9 @@
             "range": "Ranged(20ft burst)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d8. On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
           },
           {
             "name": "Low Sweep",
@@ -7136,9 +7136,9 @@
             "range": "Ranged(20ft)",
             "moveType": "Electric",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "AtWill 1d12. On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
+            "frequency": "At-Will",
+            "power": "1d12",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
           },
           {
             "name": "Sweet Kiss",
@@ -7312,9 +7312,9 @@
             "range": "Ranged(30ft, 5ft blast)",
             "moveType": "Electric",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 5d12. Thunder has -2 during Accuracy Check unless it’s Raining. On hit, if you got 14 or higher on Accuracy Check, the targets are Paralyzed."
+            "frequency": "1/day",
+            "power": "5d12",
+            "effect": "Thunder has -2 during Accuracy Check unless it’s Raining. On hit, if you got 14 or higher on Accuracy Check, the targets are Paralyzed."
           }
         ]
       },
@@ -7591,9 +7591,9 @@
             "range": "Ranged(30ft beam)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 5d12. Hydro Pump has -2 during Accuracy Check unless it’s Raining."
+            "frequency": "1/day",
+            "power": "5d12",
+            "effect": "Hydro Pump has -2 during Accuracy Check unless it’s Raining."
           }
         ]
       },
@@ -7656,9 +7656,9 @@
             "range": "Ranged(20ft)",
             "moveType": "Electric",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "AtWill 1d12. On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
+            "frequency": "At-Will",
+            "power": "1d12",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
           },
           {
             "name": "Pin Missile",
@@ -7674,9 +7674,9 @@
             "range": "Ranged(30ft, 5ft blast)",
             "moveType": "Electric",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 5d12. Thunder has -2 during Accuracy Check unless it’s Raining. On hit, if you got 14 or higher on Accuracy Check, the targets are Paralyzed."
+            "frequency": "1/day",
+            "power": "5d12",
+            "effect": "Thunder has -2 during Accuracy Check unless it’s Raining. On hit, if you got 14 or higher on Accuracy Check, the targets are Paralyzed."
           }
         ]
       },
@@ -9158,9 +9158,9 @@
             "range": "Ranged(25ft, 10ft blast)",
             "moveType": "Flying",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 5d12. Hurricane has -2 during Accuracy Check unless it’s Raining. On hit, if you got 14 or higher on Accuracy Check, the targets are Confused."
+            "frequency": "1/day",
+            "power": "5d12",
+            "effect": "Hurricane has -2 during Accuracy Check unless it’s Raining. On hit, if you got 14 or higher on Accuracy Check, the targets are Confused."
           },
           {
             "name": "Powder",
@@ -11430,9 +11430,9 @@
             "range": "Ranged(25ft, 10ft blast)",
             "moveType": "Flying",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 5d12. Hurricane has -2 during Accuracy Check unless it’s Raining. On hit, if you got 14 or higher on Accuracy Check, the targets are Confused."
+            "frequency": "1/day",
+            "power": "5d12",
+            "effect": "Hurricane has -2 during Accuracy Check unless it’s Raining. On hit, if you got 14 or higher on Accuracy Check, the targets are Confused."
           },
           {
             "name": "Fiery Dance",
@@ -12782,9 +12782,9 @@
             "range": "Ranged(20ft beam)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d8. On hit, the target’s Speed is -1 for 10 mins."
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, the target’s Speed is -1 for 10 mins."
           }
         ]
       },
@@ -14382,9 +14382,9 @@
             "range": "Ranged(15ft)",
             "moveType": "Fighting",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "AtWill 2d6. Vacuum Wave has Priority."
+            "frequency": "At-Will",
+            "power": "2d6",
+            "effect": "Vacuum Wave has Priority."
           },
           {
             "name": "Slash",
@@ -15215,9 +15215,9 @@
             "range": "Ranged(10ft)",
             "moveType": "Dragon",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "AtWill 2d8. On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
+            "frequency": "At-Will",
+            "power": "2d8",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
           },
           {
             "name": "Crunch",
@@ -15309,9 +15309,9 @@
             "range": "Ranged(30ft beam)",
             "moveType": "Normal",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 3d12."
+            "frequency": "1/day",
+            "power": "3d12",
+            "effect": ""
           }
         ]
       }
@@ -16214,9 +16214,9 @@
             "range": "Ranged(20ft beam)",
             "moveType": "Fire",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d10. On hit, if you got 18 or higher on Accuracy Check, the target is Burned."
+            "frequency": "3/day",
+            "power": "3d10",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Burned."
           },
           {
             "name": "Crunch",
@@ -17487,9 +17487,9 @@
             "range": "Ranged(20ft burst)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d8. On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
           }
         ]
       },
@@ -19032,9 +19032,9 @@
             "range": "Ranged(10ft)",
             "moveType": "Dragon",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "AtWill 2d8. On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
+            "frequency": "At-Will",
+            "power": "2d8",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
           },
           {
             "name": "Crunch",
@@ -19829,9 +19829,9 @@
             "range": "Ranged(10ft)",
             "moveType": "Dragon",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "AtWill 2d8. On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
+            "frequency": "At-Will",
+            "power": "2d8",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
           },
           {
             "name": "Ice Fang",
@@ -20332,9 +20332,9 @@
             "range": "Ranged(10ft)",
             "moveType": "Dragon",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "AtWill 2d8. On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed. Rain Dance - Water Field Effect: 3/day. You create a circle of Raining Weather with a 60ft diameter. Within the Raining weather, Water-type attacks deal an additional 8 damage and Fire-type attacks deal 8 less damage. This weather disappears after 2 mins."
+            "frequency": "At-Will",
+            "power": "2d8",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed. Rain Dance - Water Field Effect: 3/day. You create a circle of Raining Weather with a 60ft diameter. Within the Raining weather, Water-type attacks deal an additional 8 damage and Fire-type attacks deal 8 less damage. This weather disappears after 2 mins."
           }
         ]
       },
@@ -20735,9 +20735,9 @@
             "range": "Ranged(10ft)",
             "moveType": "Dragon",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "AtWill 2d8. On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
+            "frequency": "At-Will",
+            "power": "2d8",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
           },
           {
             "name": "Perish Song",
@@ -21234,9 +21234,9 @@
             "range": "Ranged(20ft)",
             "moveType": "Electric",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "AtWill 1d12. On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
+            "frequency": "At-Will",
+            "power": "1d12",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
           },
           {
             "name": "Low Kick",
@@ -21380,9 +21380,9 @@
             "range": "Ranged(30ft, 5ft blast)",
             "moveType": "Electric",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 5d12. Thunder has -2 during Accuracy Check unless it’s Raining. On hit, if you got 14 or higher on Accuracy Check, the targets are Paralyzed."
+            "frequency": "1/day",
+            "power": "5d12",
+            "effect": "Thunder has -2 during Accuracy Check unless it’s Raining. On hit, if you got 14 or higher on Accuracy Check, the targets are Paralyzed."
           },
           {
             "name": "Giga Impact",
@@ -21478,9 +21478,9 @@
             "range": "Ranged(20ft)",
             "moveType": "Electric",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "AtWill 1d12. On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
+            "frequency": "At-Will",
+            "power": "1d12",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
           },
           {
             "name": "Magnet Pull",
@@ -21741,9 +21741,9 @@
             "range": "Ranged(20ft)",
             "moveType": "Electric",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "AtWill 1d12. On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
+            "frequency": "At-Will",
+            "power": "1d12",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
           }
         ]
       },
@@ -22987,9 +22987,9 @@
             "range": "Ranged(30ft, 5ft blast)",
             "moveType": "Electric",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 5d12. Thunder has -2 during Accuracy Check unless it’s Raining. On hit, if you got 14 or higher on Accuracy Check, the targets are Paralyzed."
+            "frequency": "1/day",
+            "power": "5d12",
+            "effect": "Thunder has -2 during Accuracy Check unless it’s Raining. On hit, if you got 14 or higher on Accuracy Check, the targets are Paralyzed."
           }
         ]
       }
@@ -23072,9 +23072,9 @@
             "range": "Ranged(20ft)",
             "moveType": "Electric",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "AtWill 1d12. On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
+            "frequency": "At-Will",
+            "power": "1d12",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
           },
           {
             "name": "Mud-Slap",
@@ -23161,9 +23161,9 @@
             "range": "Ranged(30ft beam)",
             "moveType": "Grass",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 5d12. Solar Beam is a two-turn move unless it is Sunny. On the first turn, do nothing. On the second turn or if it is Sunny, roll Solar Beam’s Accuracy Check and damage."
+            "frequency": "1/day",
+            "power": "5d12",
+            "effect": "Solar Beam is a two-turn move unless it is Sunny. On the first turn, do nothing. On the second turn or if it is Sunny, roll Solar Beam’s Accuracy Check and damage."
           }
         ]
       }
@@ -23248,9 +23248,9 @@
             "range": "Ranged(20ft)",
             "moveType": "Electric",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "AtWill 1d12. On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
+            "frequency": "At-Will",
+            "power": "1d12",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
           },
           {
             "name": "Charge",
@@ -23941,9 +23941,9 @@
             "range": "Ranged(20ft)",
             "moveType": "Electric",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "AtWill 1d12. On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
+            "frequency": "At-Will",
+            "power": "1d12",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
           },
           {
             "name": "Charge",
@@ -24290,9 +24290,9 @@
             "range": "Ranged(20ft)",
             "moveType": "Electric",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "AtWill 1d12. On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
+            "frequency": "At-Will",
+            "power": "1d12",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
           },
           {
             "name": "Slam",
@@ -24370,9 +24370,9 @@
             "range": "Ranged(20ft)",
             "moveType": "Electric",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "AtWill 1d12. On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
+            "frequency": "At-Will",
+            "power": "1d12",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
           },
           {
             "name": "Slam",
@@ -25916,9 +25916,9 @@
             "range": "Ranged(30ft beam)",
             "moveType": "Grass",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 5d12. Solar Beam is a two-turn move unless it is Sunny. On the first turn, do nothing. On the second turn or if it is Sunny, roll Solar Beam’s Accuracy Check and damage."
+            "frequency": "1/day",
+            "power": "5d12",
+            "effect": "Solar Beam is a two-turn move unless it is Sunny. On the first turn, do nothing. On the second turn or if it is Sunny, roll Solar Beam’s Accuracy Check and damage."
           }
         ]
       }
@@ -28391,9 +28391,9 @@
             "range": "Ranged(20ft beam)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d8. On hit, the target’s Speed is -1 for 10 mins."
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, the target’s Speed is -1 for 10 mins."
           },
           {
             "name": "Power-Up Punch",
@@ -31265,27 +31265,27 @@
             "range": "Ranged(20ft beam)",
             "moveType": "Fire",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d10. On hit, if you got 18 or higher on Accuracy Check, the target is Burned."
+            "frequency": "3/day",
+            "power": "3d10",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Burned."
           },
           {
             "name": "Fire Blast",
             "range": "Ranged(40ft, 10ft blast)",
             "moveType": "Fire",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 5d12. Fire Blast has -2 during Accuracy Check unless it’s Sunny. On hit, if you got 18 or higher on Accuracy Check, the targets are Burned."
+            "frequency": "1/day",
+            "power": "5d12",
+            "effect": "Fire Blast has -2 during Accuracy Check unless it’s Sunny. On hit, if you got 18 or higher on Accuracy Check, the targets are Burned."
           },
           {
             "name": "Hyper Beam",
             "range": "Ranged(25ft beam)",
             "moveType": "Normal",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 5d20. Hyper Beam has a recharge turn and -2 during Accuracy Check."
+            "frequency": "1/day",
+            "power": "5d20",
+            "effect": "Hyper Beam has a recharge turn and -2 during Accuracy Check."
           }
         ]
       }
@@ -32104,9 +32104,9 @@
             "range": "Ranged(20ftbeam )",
             "moveType": "Fire",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d10. On hit, if you got 18 or higher on Accuracy Check, the target is Burned."
+            "frequency": "3/day",
+            "power": "3d10",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Burned."
           },
           {
             "name": "Crunch",
@@ -32122,9 +32122,9 @@
             "range": "Ranged(30ft beam)",
             "moveType": "Normal",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 3d12."
+            "frequency": "1/day",
+            "power": "3d12",
+            "effect": ""
           }
         ]
       }
@@ -32500,9 +32500,9 @@
             "range": "Ranged(20ft, 5ft blast)",
             "moveType": "Fire",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d8."
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": ""
           },
           {
             "name": "Crunch",
@@ -33070,9 +33070,9 @@
             "range": "Ranged(20ft beam)",
             "moveType": "Fire",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d10. On hit, if you got 18 or higher on Accuracy Check, the target is Burned."
+            "frequency": "3/day",
+            "power": "3d10",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Burned."
           },
           {
             "name": "Earth Power",
@@ -33236,9 +33236,9 @@
             "range": "Ranged(20ft beam)",
             "moveType": "Fire",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d10. On hit, if you got 18 or higher on Accuracy Check, the target is Burned."
+            "frequency": "3/day",
+            "power": "3d10",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Burned."
           },
           {
             "name": "Will-O-Wisp",
@@ -33344,9 +33344,9 @@
             "range": "Ranged(5ft burst)",
             "moveType": "Poison",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "AtWill 1d12."
+            "frequency": "At-Will",
+            "power": "1d12",
+            "effect": ""
           }
         ]
       },
@@ -33424,9 +33424,9 @@
             "range": "Ranged(30ft)",
             "moveType": "Psychic",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 3d12. If you are within Psychic Terrain while using Expanding Force, it deals +2d12 damage on hit."
+            "frequency": "1/day",
+            "power": "3d12",
+            "effect": "If you are within Psychic Terrain while using Expanding Force, it deals +2d12 damage on hit."
           }
         ]
       },
@@ -33610,9 +33610,9 @@
             "range": "Ranged(20ft beam)",
             "moveType": "Fire",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d10. On hit, if you got 18 or higher on Accuracy Check, the target is Burned."
+            "frequency": "3/day",
+            "power": "3d10",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Burned."
           }
         ]
       }
@@ -33826,9 +33826,9 @@
             "range": "Ranged(20ft beam)",
             "moveType": "Fire",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d10. On hit, if you got 18 or higher on Accuracy Check, the target is Burned."
+            "frequency": "3/day",
+            "power": "3d10",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Burned."
           }
         ]
       }
@@ -34288,9 +34288,9 @@
             "range": "Ranged(25ft, 10ft blast)",
             "moveType": "Flying",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 5d12. Hurricane has -2 during Accuracy Check unless it’s Raining. On hit, if you got 14 or higher on Accuracy Check, the targets are Confused."
+            "frequency": "1/day",
+            "power": "5d12",
+            "effect": "Hurricane has -2 during Accuracy Check unless it’s Raining. On hit, if you got 14 or higher on Accuracy Check, the targets are Confused."
           },
           {
             "name": "Dragon Pulse",
@@ -34306,9 +34306,9 @@
             "range": "Ranged(25ft burst)",
             "moveType": "Normal",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 3d12. Anyone within range of Boomburst is cured of Sleep."
+            "frequency": "1/day",
+            "power": "3d12",
+            "effect": "Anyone within range of Boomburst is cured of Sleep."
           }
         ]
       },
@@ -35300,9 +35300,9 @@
             "range": "Ranged(20ft, 5ft blast)",
             "moveType": "Fire",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d8."
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": ""
           },
           {
             "name": "Hex",
@@ -38906,9 +38906,9 @@
             "range": "Ranged(25ft, 10ft blast)",
             "moveType": "Flying",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 5d12. Hurricane has -2 during Accuracy Check unless it’s Raining. On hit, if you got 14 or higher on Accuracy Check, the targets are Confused."
+            "frequency": "1/day",
+            "power": "5d12",
+            "effect": "Hurricane has -2 during Accuracy Check unless it’s Raining. On hit, if you got 14 or higher on Accuracy Check, the targets are Confused."
           },
           {
             "name": "Leaf Storm",
@@ -39471,9 +39471,9 @@
             "range": "Ranged(30ft beam)",
             "moveType": "Grass",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 5d12. Solar Beam is a two-turn move unless it is Sunny. On the first turn, do nothing. On the second turn or if it is Sunny, roll Solar Beam’s Accuracy Check and damage."
+            "frequency": "1/day",
+            "power": "5d12",
+            "effect": "Solar Beam is a two-turn move unless it is Sunny. On the first turn, do nothing. On the second turn or if it is Sunny, roll Solar Beam’s Accuracy Check and damage."
           }
         ]
       }
@@ -39889,9 +39889,9 @@
             "range": "Ranged(20ft beam)",
             "moveType": "Fire",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d10. On hit, if you got 18 or higher on Accuracy Check, the target is Burned."
+            "frequency": "3/day",
+            "power": "3d10",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Burned."
           },
           {
             "name": "Seed Bomb",
@@ -40047,9 +40047,9 @@
             "range": "Ranged(30ft beam)",
             "moveType": "Grass",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 5d12. Solar Beam is a two-turn move unless it is Sunny. On the first turn, do nothing. On the second turn or if it is Sunny, roll Solar Beam’s Accuracy Check and damage."
+            "frequency": "1/day",
+            "power": "5d12",
+            "effect": "Solar Beam is a two-turn move unless it is Sunny. On the first turn, do nothing. On the second turn or if it is Sunny, roll Solar Beam’s Accuracy Check and damage."
           },
           {
             "name": "Lucky Chant",
@@ -40227,9 +40227,9 @@
             "range": "Ranged(25ft, 10ft blast)",
             "moveType": "Flying",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 5d12. Hurricane has -2 during Accuracy Check unless it’s Raining. On hit, if you got 14 or higher on Accuracy Check, the targets are Confused."
+            "frequency": "1/day",
+            "power": "5d12",
+            "effect": "Hurricane has -2 during Accuracy Check unless it’s Raining. On hit, if you got 14 or higher on Accuracy Check, the targets are Confused."
           },
           {
             "name": "Moonblast",
@@ -40936,9 +40936,9 @@
             "range": "Ranged(30ft beam)",
             "moveType": "Normal",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 3d12."
+            "frequency": "1/day",
+            "power": "3d12",
+            "effect": ""
           },
           {
             "name": "Leaf Storm",
@@ -41949,9 +41949,9 @@
             "range": "Ranged(30ft beam)",
             "moveType": "Grass",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 5d12. Solar Beam is a two-turn move unless it is Sunny. On the first turn, do nothing. On the second turn or if it is Sunny, roll Solar Beam’s Accuracy Check and damage. Sunny Day - Fire Field Effect: 3/day. You create a circle of Sunny Weather with a 60ft diameter. Within the Sunny weather, Fire-type attacks deal an additional 8 damage and Water-type attacks deal 8 less damage. This weather disappears after 2 mins."
+            "frequency": "1/day",
+            "power": "5d12",
+            "effect": "Solar Beam is a two-turn move unless it is Sunny. On the first turn, do nothing. On the second turn or if it is Sunny, roll Solar Beam’s Accuracy Check and damage. Sunny Day - Fire Field Effect: 3/day. You create a circle of Sunny Weather with a 60ft diameter. Within the Sunny weather, Fire-type attacks deal an additional 8 damage and Water-type attacks deal 8 less damage. This weather disappears after 2 mins."
           }
         ]
       },
@@ -42281,9 +42281,9 @@
             "range": "Ranged(10ft)",
             "moveType": "Dragon",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "AtWill 2d8. On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
+            "frequency": "At-Will",
+            "power": "2d8",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
           },
           {
             "name": "Grav Apple",
@@ -43113,9 +43113,9 @@
             "range": "Ranged(30ft beam)",
             "moveType": "Grass",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 5d12. Solar Beam is a two-turn move unless it is Sunny. On the first turn, do nothing. On the second turn or if it is Sunny, roll Solar Beam’s Accuracy Check and damage."
+            "frequency": "1/day",
+            "power": "5d12",
+            "effect": "Solar Beam is a two-turn move unless it is Sunny. On the first turn, do nothing. On the second turn or if it is Sunny, roll Solar Beam’s Accuracy Check and damage."
           }
         ]
       }
@@ -44112,9 +44112,9 @@
             "range": "Ranged(10ft)",
             "moveType": "Dragon",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "AtWill 2d8. On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
+            "frequency": "At-Will",
+            "power": "2d8",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
           },
           {
             "name": "Supersonic",
@@ -44380,9 +44380,9 @@
             "range": "Ranged(25ft beam)",
             "moveType": "Normal",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 5d20. Hyper Beam has a recharge turn and -2 during Accuracy Check."
+            "frequency": "1/day",
+            "power": "5d20",
+            "effect": "Hyper Beam has a recharge turn and -2 during Accuracy Check."
           }
         ]
       }
@@ -46676,9 +46676,9 @@
             "range": "Ranged(20ft)",
             "moveType": "Electric",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "AtWill 1d12. On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
+            "frequency": "At-Will",
+            "power": "1d12",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
           },
           {
             "name": "Mud Bomb",
@@ -50335,9 +50335,9 @@
             "range": "Ranged(30ft beam)",
             "moveType": "Normal",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 3d12."
+            "frequency": "1/day",
+            "power": "3d12",
+            "effect": ""
           }
         ]
       }
@@ -50854,9 +50854,9 @@
             "range": "Ranged(25ft, 10ft blast)",
             "moveType": "Flying",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 5d12. Hurricane has -2 during Accuracy Check unless it’s Raining. On hit, if you got 14 or higher on Accuracy Check, the targets are Confused."
+            "frequency": "1/day",
+            "power": "5d12",
+            "effect": "Hurricane has -2 during Accuracy Check unless it’s Raining. On hit, if you got 14 or higher on Accuracy Check, the targets are Confused."
           }
         ]
       }
@@ -51361,9 +51361,9 @@
             "range": "Ranged(30ft beam)",
             "moveType": "Normal",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 3d12."
+            "frequency": "1/day",
+            "power": "3d12",
+            "effect": ""
           }
         ]
       }
@@ -52305,9 +52305,9 @@
             "range": "Ranged(30ft beam)",
             "moveType": "Normal",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 3d12."
+            "frequency": "1/day",
+            "power": "3d12",
+            "effect": ""
           }
         ]
       }
@@ -53414,9 +53414,9 @@
             "range": "Ranged(25ft burst)",
             "moveType": "Normal",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 3d12. Anyone within range of Boomburst is cured of Sleep."
+            "frequency": "1/day",
+            "power": "3d12",
+            "effect": "Anyone within range of Boomburst is cured of Sleep."
           },
           {
             "name": "Endeavor",
@@ -54741,9 +54741,9 @@
             "range": "Ranged(30ft beam)",
             "moveType": "Normal",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 3d12."
+            "frequency": "1/day",
+            "power": "3d12",
+            "effect": ""
           }
         ]
       },
@@ -55606,9 +55606,9 @@
             "range": "Ranged(30ft beam)",
             "moveType": "Normal",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 3d12."
+            "frequency": "1/day",
+            "power": "3d12",
+            "effect": ""
           }
         ]
       },
@@ -58079,9 +58079,9 @@
             "range": "Ranged(10ft)",
             "moveType": "Dragon",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "AtWill 2d8. On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
+            "frequency": "At-Will",
+            "power": "2d8",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
           },
           {
             "name": "Extrasensory",
@@ -61189,9 +61189,9 @@
             "range": "Ranged(20ft beam)",
             "moveType": "Fire",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d10. On hit, if you got 18 or higher on Accuracy Check, the target is Burned."
+            "frequency": "3/day",
+            "power": "3d10",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Burned."
           },
           {
             "name": "Dragon Pulse",
@@ -61718,9 +61718,9 @@
             "range": "Ranged(20ft burst)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d8. On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
           },
           {
             "name": "Sludge Bomb",
@@ -61887,9 +61887,9 @@
             "range": "Ranged(20ft beam)",
             "moveType": "Fire",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d10. On hit, if you got 18 or higher on Accuracy Check, the target is Burned."
+            "frequency": "3/day",
+            "power": "3d10",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Burned."
           },
           {
             "name": "Night Slash",
@@ -62518,9 +62518,9 @@
             "range": "Ranged(20ft burst)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d8. On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
           },
           {
             "name": "Slack Off",
@@ -62615,9 +62615,9 @@
             "range": "Ranged(20ft burst)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d8. On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
           },
           {
             "name": "Psychic",
@@ -70203,9 +70203,9 @@
             "range": "Ranged(30ft beam)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 5d12. Hydro Pump has -2 during Accuracy Check unless it’s Raining."
+            "frequency": "1/day",
+            "power": "5d12",
+            "effect": "Hydro Pump has -2 during Accuracy Check unless it’s Raining."
           }
         ]
       },
@@ -71345,9 +71345,9 @@
             "range": "Ranged(30ft beam)",
             "moveType": "Grass",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 5d12. Solar Beam is a two-turn move unless it is Sunny. On the first turn, do nothing. On the second turn or if it is Sunny, roll Solar Beam’s Accuracy Check and damage."
+            "frequency": "1/day",
+            "power": "5d12",
+            "effect": "Solar Beam is a two-turn move unless it is Sunny. On the first turn, do nothing. On the second turn or if it is Sunny, roll Solar Beam’s Accuracy Check and damage."
           }
         ]
       },
@@ -72268,9 +72268,9 @@
             "range": "Ranged(10ft)",
             "moveType": "Dragon",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "AtWill 2d8. On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed. Rain Dance - Water Field Effect: 3/day. You create a circle of Raining Weather with a 60ft diameter. Within the Raining weather, Water-type attacks deal an additional 8 damage and Fire-type attacks deal 8 less damage. This weather disappears after 2 mins."
+            "frequency": "At-Will",
+            "power": "2d8",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed. Rain Dance - Water Field Effect: 3/day. You create a circle of Raining Weather with a 60ft diameter. Within the Raining weather, Water-type attacks deal an additional 8 damage and Fire-type attacks deal 8 less damage. This weather disappears after 2 mins."
           }
         ]
       },
@@ -72699,9 +72699,9 @@
             "range": "Ranged(20ft)",
             "moveType": "Electric",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "AtWill 1d12. On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
+            "frequency": "At-Will",
+            "power": "1d12",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
           },
           {
             "name": "Gear Grind",
@@ -72866,9 +72866,9 @@
             "range": "Ranged(25ft beam)",
             "moveType": "Normal",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 5d20. Hyper Beam has a recharge turn and -2 during Accuracy Check."
+            "frequency": "1/day",
+            "power": "5d20",
+            "effect": "Hyper Beam has a recharge turn and -2 during Accuracy Check."
           }
         ]
       }
@@ -73685,9 +73685,9 @@
             "range": "Ranged(10ft)",
             "moveType": "Dragon",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "AtWill 2d8. On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
+            "frequency": "At-Will",
+            "power": "2d8",
+            "effect": "On hit, if you got 18 or higher on Accuracy Check, the target is Paralyzed."
           },
           {
             "name": "Iron Tail",
@@ -74468,9 +74468,9 @@
             "range": "Ranged(20ft beam)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d8. On hit, the target’s Speed is -1 for 10 mins."
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, the target’s Speed is -1 for 10 mins."
           },
           {
             "name": "Helping Hand",
@@ -74735,9 +74735,9 @@
             "range": "Ranged(20ft beam)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d8. On hit, the target’s Speed is -1 for 10 mins."
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, the target’s Speed is -1 for 10 mins."
           },
           {
             "name": "Brine",
@@ -74915,9 +74915,9 @@
             "range": "Ranged(30ft beam)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 5d12. Hydro Pump has -2 during Accuracy Check unless it’s Raining."
+            "frequency": "1/day",
+            "power": "5d12",
+            "effect": "Hydro Pump has -2 during Accuracy Check unless it’s Raining."
           }
         ]
       }
@@ -75255,9 +75255,9 @@
             "range": "Ranged(20ft beam)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d8. On hit, the target’s Speed is -1 for 10 mins."
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, the target’s Speed is -1 for 10 mins."
           },
           {
             "name": "Mud Shot",
@@ -75440,9 +75440,9 @@
             "range": "Ranged(30ft beam)",
             "moveType": "Normal",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 3d12."
+            "frequency": "1/day",
+            "power": "3d12",
+            "effect": ""
           }
         ]
       }
@@ -75537,9 +75537,9 @@
             "range": "Ranged(20ft beam)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d8. On hit, the target’s Speed is -1 for 10 mins."
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, the target’s Speed is -1 for 10 mins."
           },
           {
             "name": "Mud Shot",
@@ -75700,9 +75700,9 @@
             "range": "Ranged(30ft beam)",
             "moveType": "Normal",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 3d12."
+            "frequency": "1/day",
+            "power": "3d12",
+            "effect": ""
           }
         ]
       },
@@ -77014,9 +77014,9 @@
             "range": "Ranged(20ft beam)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d8. On hit, the target’s Speed is -1 for 10 mins."
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, the target’s Speed is -1 for 10 mins."
           },
           {
             "name": "Discharge",
@@ -77200,9 +77200,9 @@
             "range": "Ranged(20ft burst)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d8. On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
           },
           {
             "name": "Dark Pulse",
@@ -77569,9 +77569,9 @@
             "range": "Ranged(20ft beam)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d8. On hit, the target’s Speed is -1 for 10 mins."
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, the target’s Speed is -1 for 10 mins."
           },
           {
             "name": "Crunch",
@@ -77778,9 +77778,9 @@
             "range": "Ranged(20ft beam)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d8. On hit, the target’s Speed is -1 for 10 mins."
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, the target’s Speed is -1 for 10 mins."
           },
           {
             "name": "Brave Bird",
@@ -77952,9 +77952,9 @@
             "range": "Ranged(20ft burst)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d8. On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
           },
           {
             "name": "Recover",
@@ -77970,9 +77970,9 @@
             "range": "Ranged(30ft beam)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 5d12. Hydro Pump has -2 during Accuracy Check unless it’s Raining."
+            "frequency": "1/day",
+            "power": "5d12",
+            "effect": "Hydro Pump has -2 during Accuracy Check unless it’s Raining."
           }
         ]
       },
@@ -79307,9 +79307,9 @@
             "range": "Ranged(20ft burst)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d8. On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
           },
           {
             "name": "Air Slash",
@@ -80051,9 +80051,9 @@
             "range": "Ranged(15ft, 10ft wave)",
             "moveType": "Ice",
             "category": "Special Attack",
-            "frequency": null,
+            "frequency": "1/day",
             "power": null,
-            "effect": "1/ day. On hit, roll 1d20. On a natural result of 17, 18, 19, or 20, the target is set to 0 HP."
+            "effect": "On hit, roll 1d20. On a natural result of 17, 18, 19, or 20, the target is set to 0 HP."
           },
           {
             "name": "Aurora Beam",
@@ -80535,9 +80535,9 @@
             "range": "Ranged(20ft burst)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d8. On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
           },
           {
             "name": "Tackle",
@@ -80659,9 +80659,9 @@
             "range": "Ranged(20ft beam)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d8. On hit, the target’s Speed is -1 for 10 mins."
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, the target’s Speed is -1 for 10 mins."
           }
         ]
       },
@@ -80839,9 +80839,9 @@
             "range": "Ranged(20ft burst)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d8. On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
           },
           {
             "name": "Wrap",
@@ -81212,18 +81212,18 @@
             "range": "Ranged(20ft burst)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d8. On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
           },
           {
             "name": "Water Spout",
             "range": "Ranged(30ft burst)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 3d10. If you are at Max HP, Water Spout has 5d12 for damage instead."
+            "frequency": "1/day",
+            "power": "3d10",
+            "effect": "If you are at Max HP, Water Spout has 5d12 for damage instead."
           },
           {
             "name": "Bounce",
@@ -81580,9 +81580,9 @@
             "range": "Ranged(20ft burst)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d8. On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
           },
           {
             "name": "Roost",
@@ -81598,9 +81598,9 @@
             "range": "Ranged(30ft beam)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "1/ day 5d12. Hydro Pump has -2 during Accuracy Check unless it’s Raining."
+            "frequency": "1/day",
+            "power": "5d12",
+            "effect": "Hydro Pump has -2 during Accuracy Check unless it’s Raining."
           }
         ]
       },
@@ -81969,9 +81969,9 @@
             "range": "Ranged(20ft burst)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d8. On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
           },
           {
             "name": "Ice Fang",
@@ -82135,9 +82135,9 @@
             "range": "Ranged(20ft burst)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d8. On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
           },
           {
             "name": "Psychic",
@@ -82239,9 +82239,9 @@
             "range": "Ranged(20ft burst)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d8. On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
           },
           {
             "name": "Psychic",
@@ -82389,9 +82389,9 @@
             "range": "Ranged(20ft burst)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d8. On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
           },
           {
             "name": "Swagger",
@@ -82522,9 +82522,9 @@
             "range": "Ranged(20ft burst)",
             "moveType": "Water",
             "category": "Special Attack",
-            "frequency": null,
-            "power": null,
-            "effect": "3/ day 3d8. On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
+            "frequency": "3/day",
+            "power": "3d8",
+            "effect": "On hit, if you got 16 or higher on Accuracy Check, the target is Confused."
           }
         ]
       }
