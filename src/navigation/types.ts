@@ -23,6 +23,11 @@ export type ItemsStackParamList = {
   ItemDetail: { itemId: string };
 };
 
+export type MovesStackParamList = {
+  MoveList: undefined;
+  MoveDetail: { moveName: string };
+};
+
 export type HomeStackParamList = {
   Home: undefined;
 };
@@ -39,4 +44,5 @@ export type RootTabParamList = {
   CharactersTab: undefined;
   GmGuideTab: undefined;
   ItemsTab: undefined;
+  MovesTab: undefined;
 };

@@ -19,6 +19,8 @@ import GmGuideDetailScreen from '../screens/GmGuideDetailScreen';
 import ItemsListScreen from '../screens/ItemsListScreen';
 import ItemDetailScreen from '../screens/ItemDetailScreen';
 import PickMoveScreen from '../screens/PickMoveScreen';
+import MovesListScreen from '../screens/MovesListScreen';
+import MoveDetailScreen from '../screens/MoveDetailScreen';
 
 const HomeStack = createNativeStackNavigator();
 const ClassesStack = createNativeStackNavigator();
@@ -26,6 +28,7 @@ const DexStack = createNativeStackNavigator();
 const CharactersStack = createNativeStackNavigator();
 const GmGuideStack = createNativeStackNavigator();
 const ItemsStack = createNativeStackNavigator();
+const MovesStack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
 const screenOptions = {
@@ -84,6 +87,15 @@ function ItemsStackNav() {
   );
 }
 
+function MovesStackNav() {
+  return (
+    <MovesStack.Navigator screenOptions={screenOptions}>
+      <MovesStack.Screen name="MoveList" component={MovesListScreen} options={{ title: 'Moves' }} />
+      <MovesStack.Screen name="MoveDetail" component={MoveDetailScreen} options={{ title: 'Move' }} />
+    </MovesStack.Navigator>
+  );
+}
+
 function GmGuideStackNav() {
   return (
     <GmGuideStack.Navigator screenOptions={screenOptions}>
@@ -122,6 +134,7 @@ export default function RootNavigator() {
         <Tab.Screen name="CharactersTab" component={CharactersStackNav} options={{ title: 'Characters' }} />
         <Tab.Screen name="GmGuideTab" component={GmGuideStackNav} options={{ title: 'GM Guide' }} />
         <Tab.Screen name="ItemsTab" component={ItemsStackNav} options={{ title: 'Items' }} />
+        <Tab.Screen name="MovesTab" component={MovesStackNav} options={{ title: 'Moves' }} />
       </Tab.Navigator>
     </NavigationContainer>
   );

@@ -45,6 +45,11 @@ export default function HomeScreen() {
         desc="Poké Balls, medical items, held items, berries, TMs, and other gear."
         onPress={() => navigation.navigate('ItemsTab')}
       />
+      <NavCard
+        title="Moves"
+        desc="Look up any of the game's moves, filterable by type or proficiency."
+        onPress={() => navigation.navigate('MovesTab')}
+      />
     </ScrollView>
   );
 }
