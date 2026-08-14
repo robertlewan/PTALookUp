@@ -33,6 +33,7 @@ export default function MovesListScreen() {
         value={query}
         onChangeText={setQuery}
       />
+      <Text style={styles.filterLabel}>Filter by proficiency (type, or Attack / Special Attack / Effect)</Text>
       <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.profRow} contentContainerStyle={{ paddingHorizontal: 12 }}>
         <TouchableOpacity onPress={() => setActiveProficiency(null)} style={[styles.profChip, !activeProficiency && styles.profChipActive]}>
           <Text style={styles.profChipText}>All</Text>
@@ -79,6 +80,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: colors.border,
   },
+  filterLabel: { color: colors.textMuted, fontSize: 11, marginHorizontal: 12, marginBottom: 4, textTransform: 'uppercase', letterSpacing: 0.5 },
   profRow: { maxHeight: 40, marginBottom: 8 },
   profChip: {
     paddingHorizontal: 12,
