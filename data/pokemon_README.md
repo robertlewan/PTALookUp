@@ -58,8 +58,9 @@ legend).
 ## Skill/passive description backfill (follow-up pass, 2026-08-14)
 
 A pre-existing gap from the original extraction: **1,813** `skills`/`passives`
-entries (out of 1,757 skill and 2,961 passive entries total) had a `name` but
-an empty `description` — e.g. the Pichu/Pikachu/Raichu family's skill
+entries (out of 1,758 skill and 2,965 passive entries total, counted after
+the fixes below, which added a few missing entries) had a `name` but an
+empty `description` — e.g. the Pichu/Pikachu/Raichu family's skill
 "Zapper" and passives "Charm", "Nasty Plot", "Tail Whip", "Static" were all
 empty on every stage. Root cause, confirmed against `_raw_pokedex_text.txt`:
 the source book only writes a skill/passive's parenthetical description
@@ -79,40 +80,42 @@ for Bulbasaur but "can move around with tongue" for Lickilicky; `Reach`'s
 melee distance ranges 15–35 ft depending on the Pokémon; `Genetic Relation`,
 `Modular`, and `Amorphous` are similarly species-dependent). Only when a
 family had *no* other filled instance of that name did the fix fall back to
-a file-wide canonical value (24 of the 1,813 needed this — all universal,
+a file-wide canonical value (27 of the 1,813 needed this — all universal,
 non-species-dependent descriptions like `Stealth`, `Swords Dance`, `Rattled`,
 confirmed individually against the raw text; the one species-dependent name
 in this group, `grimer-2`'s `Amorphous`, was cross-checked against the base
 `grimer` family and matches). Where multiple non-empty variants of a
-description existed on file (OCR noise — missing hyphens, stray `�`
-mojibake, double spaces), the cleanest variant was kept; no already-present
-description was altered.
+description existed on file (OCR noise — missing hyphens, double spaces,
+inconsistent trailing periods), the cleanest/most common variant was kept;
+no already-present description was altered.
 
 **Empty-description count: 1,813 → 0.**
 
-Nine entries also had a corrupted **name** (not just an empty description),
-all from the same root cause: the raw text lists a skill/passive with its
-description immediately followed by the next name with no comma (e.g.
+Twelve entries also had corrupted **name or description** text, all from the
+same root cause: the raw text lists a skill/passive with its description
+immediately followed by the next name with no separating comma (e.g.
 Boltund: `..., Competitive (If a foe lowers any of your stats, ...) Rattled,
-Strong Jaw ...`), which broke the original comma-based split and merged two
-entries into one. Each was corrected by re-splitting into the two correct
-`{name, description}` entries (Decidueye (Legend)'s `Reach`, Scolipede's
-`Iron Defense`, Boltund's `Competitive`/`Rattled`, Flapple's `Hustle`/`Ripen`,
-Dudunsparce's `Segmented`, Nidorina's `Hustle`/`Poison Point`, Beheeyem's
-`Synchronize`/`Telepathy`, Gholdengo's `Good as Gold`, and Delibird's
-`Hustle`/`Vital Spirit` — the last of these had a non-empty but polluted
-description rather than an empty one, found incidentally while verifying the
-other eight; fixed for the same reason since it left `Vital Spirit` entirely
-missing from Delibird's passives).
+Strong Jaw ...`), which broke the original comma-based split. Depending on
+where the two entries landed in the source list, this either merged them into
+one garbled `name` with an empty `description` (8 cases — Decidueye
+(Legend)'s `Reach`, Scolipede's `Iron Defense`, Boltund's
+`Competitive`/`Rattled`, Flapple's `Hustle`/`Ripen`, Dudunsparce's
+`Segmented`, Nidorina's `Hustle`/`Poison Point`, Beheeyem's
+`Synchronize`/`Telepathy`, and Gholdengo's `Good as Gold`), or left a correct
+`name` but ran its `description` on into the next entry's name-and-text,
+silently dropping that next skill/passive from the list entirely (4 cases —
+Delibird's `Hustle` was swallowing a missing `Vital Spirit`; Weavile's
+`Pickpocket` a missing `Pressure`; Tatsugiri's `Intelligence` a missing
+`Swimmer`; and Basculin's `Rock Head [Blue-Striped]` a *triple* merge
+swallowing both `Rattled [White-Striped]` and `Reckless [Red-Striped]`). All
+twelve were re-split into their correct `{name, description}` entries and
+verified against the raw text.
 
-This pass only scanned for *empty* descriptions, so it would not catch the
-same missing-comma merge bug in a case where the merge happens to leave no
-entry empty (i.e. a described skill/passive's text runs on into a following
-bare name, polluting the description instead of leaving a gap — as Delibird's
-`Hustle` did before it was fixed above). No other instances were found
-during spot-checking, but a full scan for this specific pattern was not run
-across all ~4,700 entries; if a skill/passive's description text ever looks
-like it ends mid-thought, this is the pattern to check for.
+The empty-description scan wouldn't catch the "ran-on description" variant of
+this bug (nothing was empty), so after fixing the ones found by inspection,
+every remaining non-empty `skills`/`passives` description in the file was
+scanned for the tell-tale signature — a `)` appearing before any matching
+`(` in the text — and confirmed clean (0 hits) after the fixes above.
 
 ## Schema
 

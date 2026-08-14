@@ -18062,7 +18062,11 @@
           },
           {
             "name": "Pickpocket",
-            "description": "When you are hit by a melee attack, you steal the offender’s held item, if any.) Pressure (If you are hit by a 3/day attack, the attacker can’t use that attack for the remainder of the day"
+            "description": "When you are hit by a melee attack, you steal the offender’s held item, if any."
+          },
+          {
+            "name": "Pressure",
+            "description": "If you are hit by a 3/day attack, the attacker can’t use that attack for the remainder of the day."
           }
         ],
         "moveModifiers": {
@@ -21085,7 +21089,11 @@
           },
           {
             "name": "Intelligence",
-            "description": "very smart)Swimmer (can swim"
+            "description": "very smart"
+          },
+          {
+            "name": "Swimmer",
+            "description": "can swim"
           },
           {
             "name": "Sushimorph",
@@ -76316,7 +76324,15 @@
           },
           {
             "name": "Rock Head [Blue-Striped]",
-            "description": "Your attacks that damage yourself on hit do not damage yourself.) Rattled [WhiteStriped] (When a foe hits you with a Bug-type, Ghost-type, or Dark-type attack, your Speed is +1 for 10 mins. This can stack.) Reckless [Red-Striped] (Your attacks that damage yourself on hit, deal +4 damage."
+            "description": "Your attacks that damage yourself on hit do not damage yourself."
+          },
+          {
+            "name": "Rattled [White-Striped]",
+            "description": "When a foe hits you with a Bug-type, Ghost-type, or Dark-type attack, your Speed is +1 for 10 mins. This can stack."
+          },
+          {
+            "name": "Reckless [Red-Striped]",
+            "description": "Your attacks that damage yourself on hit, deal +4 damage."
           }
         ],
         "moveModifiers": {
