@@ -18,6 +18,7 @@ import GmGuideListScreen from '../screens/GmGuideListScreen';
 import GmGuideDetailScreen from '../screens/GmGuideDetailScreen';
 import ItemsListScreen from '../screens/ItemsListScreen';
 import ItemDetailScreen from '../screens/ItemDetailScreen';
+import PickMoveScreen from '../screens/PickMoveScreen';
 
 const HomeStack = createNativeStackNavigator();
 const ClassesStack = createNativeStackNavigator();
@@ -69,6 +70,7 @@ function CharactersStackNav() {
       <CharactersStack.Screen name="PickClass" component={PickClassScreen} options={{ title: 'Choose Class', presentation: 'modal' }} />
       <CharactersStack.Screen name="AddPokemon" component={AddPokemonScreen} options={{ title: 'Add Pokémon', presentation: 'modal' }} />
       <CharactersStack.Screen name="PickItem" component={ItemsListScreen} options={{ title: 'Choose Item', presentation: 'modal' }} />
+      <CharactersStack.Screen name="PickMove" component={PickMoveScreen} options={{ title: 'Add Move', presentation: 'modal' }} />
     </CharactersStack.Navigator>
   );
 }

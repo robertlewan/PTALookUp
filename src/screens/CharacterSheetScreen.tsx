@@ -47,6 +47,13 @@ export default function CharacterSheetScreen() {
     setChar(next);
   }
 
+  async function setTrainerLevel(newLevel: number) {
+    if (!char) return;
+    const delta = newLevel - char.trainerLevel;
+    const classes = char.classes.map((c) => ({ ...c, level: Math.max(1, c.level + delta) }));
+    await update({ trainerLevel: newLevel, classes });
+  }
+
   async function rest() {
     if (!char) return;
     const trainerHeal = rollD6();
@@ -97,7 +104,8 @@ export default function CharacterSheetScreen() {
       <TextInput style={styles.nameInput} value={char.name} onChangeText={(v) => update({ name: v })} placeholder="Trainer name" placeholderTextColor={colors.textMuted} />
 
       <Section title="Trainer Level">
-        <Stepper label="Level" value={char.trainerLevel} min={1} onChange={(v) => update({ trainerLevel: v })} />
+        <Stepper label="Level" value={char.trainerLevel} min={1} onChange={setTrainerLevel} />
+        <Text style={styles.emptyHint}>Leveling up raises every picked class (and subclass) by the same amount.</Text>
       </Section>
 
       <Section title="Hit Points">

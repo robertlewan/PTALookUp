@@ -15,6 +15,7 @@ export type CharactersStackParamList = {
   AddPokemon: { characterId: string };
   PickClass: { characterId: string; slot: 'base' | 'advanced'; forBaseId?: string };
   PickItem: { onPick: (itemId: string) => void | Promise<void>; defaultCategory?: string };
+  PickMove: { onPick: (moveName: string) => void | Promise<void>; proficiencies: string[] };
 };
 
 export type ItemsStackParamList = {

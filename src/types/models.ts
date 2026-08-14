@@ -139,6 +139,7 @@ export interface OwnedPokemon {
   notes: string;
   moveUses?: Record<string, number>;
   heldItem?: string | null;
+  extraMoves?: string[];
 }
 
 export interface CharacterSheet {

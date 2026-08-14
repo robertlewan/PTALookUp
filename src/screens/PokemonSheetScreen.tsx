@@ -3,7 +3,7 @@ import { Alert, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View 
 import { useFocusEffect, useNavigation, useRoute } from '@react-navigation/native';
 import { colors } from '../theme/theme';
 import { getCharacter, saveCharacter } from '../storage/characterStorage';
-import { findPokemonStage, pokemonFamilyById, itemById } from '../data';
+import { findPokemonStage, pokemonFamilyById, itemById, itemByName, allMoveByName } from '../data';
 import { Section } from '../components/Section';
 import { TypeBadge } from '../components/TypeBadge';
 import { moveMaxUses, movesForProficiency, remainingUses } from '../utils/moves';
@@ -170,6 +170,9 @@ export default function PokemonSheetScreen() {
             </TouchableOpacity>
           )}
         </View>
+        {mon.heldItem && itemByName.get(mon.heldItem) && (
+          <Text style={styles.heldItemEffect}>{itemByName.get(mon.heldItem)!.effect}</Text>
+        )}
       </Section>
 
       <Section title="Notes">
@@ -239,6 +242,37 @@ export default function PokemonSheetScreen() {
             <MoveRow key={i} move={m} moveUses={mon.moveUses} onUse={() => useMove(m)} onRestore={() => restoreMove(m)} />
           ))}
 
+          {(mon.extraMoves ?? []).map((name) => {
+            const move = allMoveByName.get(name);
+            if (!move) return null;
+            return (
+              <MoveRow
+                key={name}
+                move={move}
+                moveUses={mon.moveUses}
+                onUse={() => useMove(move)}
+                onRestore={() => restoreMove(move)}
+                onRemove={() => updateMon({ extraMoves: (mon.extraMoves ?? []).filter((n) => n !== name) })}
+              />
+            );
+          })}
+
+          <TouchableOpacity
+            style={styles.addBtn}
+            onPress={() =>
+              navigation.navigate('PickMove', {
+                proficiencies: family?.proficiencies ?? [],
+                onPick: async (moveName: string) => {
+                  if (!(mon.extraMoves ?? []).includes(moveName)) {
+                    await updateMon({ extraMoves: [...(mon.extraMoves ?? []), moveName] });
+                  }
+                },
+              })
+            }
+          >
+            <Text style={styles.addBtnText}>+ Add Move</Text>
+          </TouchableOpacity>
+
           <TouchableOpacity onPress={() => navigation.navigate('DexTab', { screen: 'DexDetail', params: { familyId: mon.familyId } })}>
             <Text style={styles.link}>View full Pokédex entry →</Text>
           </TouchableOpacity>
@@ -257,11 +291,13 @@ function MoveRow({
   moveUses,
   onUse,
   onRestore,
+  onRemove,
 }: {
   move: PokemonMove;
   moveUses: Record<string, number> | undefined;
   onUse: () => void;
   onRestore: () => void;
+  onRemove?: () => void;
 }) {
   const max = moveMaxUses(move.frequency);
   const remaining = remainingUses(moveUses, move);
@@ -274,6 +310,11 @@ function MoveRow({
           {move.power ? ` · ${move.power}` : ''}
         </Text>
         {!!move.effect && <Text style={styles.moveEffect}>{move.effect}</Text>}
+        {onRemove && (
+          <TouchableOpacity onPress={onRemove}>
+            <Text style={styles.removeText}>Remove</Text>
+          </TouchableOpacity>
+        )}
       </View>
       {max !== null && (
         <View style={styles.useBox}>
@@ -318,6 +359,8 @@ const styles = StyleSheet.create({
   movesHeaderRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
   restBtn: { backgroundColor: colors.primaryMuted, borderRadius: 8, paddingHorizontal: 10, paddingVertical: 6, marginTop: 6 },
   restBtnText: { color: '#fff', fontWeight: '700', fontSize: 12 },
+  addBtn: { backgroundColor: colors.primaryMuted, borderRadius: 8, padding: 10, alignItems: 'center', marginTop: 8 },
+  addBtnText: { color: '#fff', fontWeight: '700', fontSize: 13 },
   moveRow: { flexDirection: 'row', alignItems: 'center', marginBottom: 8 },
   useBox: { flexDirection: 'row', alignItems: 'center', marginLeft: 8 },
   useStepBtn: { backgroundColor: colors.surfaceAlt, width: 22, height: 22, borderRadius: 5, alignItems: 'center', justifyContent: 'center' },
@@ -334,6 +377,7 @@ const styles = StyleSheet.create({
   skillChipTextActive: { color: '#fff' },
   heldItemRow: { flexDirection: 'row', alignItems: 'center', marginTop: 4 },
   heldItemText: { color: colors.text, fontSize: 14, flex: 1 },
+  heldItemEffect: { color: colors.textMuted, fontSize: 12, lineHeight: 17, marginTop: 4 },
   addBtnSmall: { backgroundColor: colors.primaryMuted, borderRadius: 6, paddingHorizontal: 10, paddingVertical: 6, marginLeft: 8 },
   addBtnSmallText: { color: '#fff', fontWeight: '700', fontSize: 12 },
   removeText: { color: '#f87171', fontSize: 12, fontWeight: '700' },
