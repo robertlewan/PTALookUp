@@ -3,7 +3,7 @@ import { Alert, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View 
 import { useFocusEffect, useNavigation, useRoute } from '@react-navigation/native';
 import { colors } from '../theme/theme';
 import { getCharacter, saveCharacter } from '../storage/characterStorage';
-import { findPokemonStage, pokemonFamilyById, itemById, itemByName, allMoveByName, natures, natureByName } from '../data';
+import { findPokemonStage, pokemonFamilyById, itemById, itemByName, allMoveByName, allPassiveByName, natures, natureByName } from '../data';
 import { Section } from '../components/Section';
 import { TypeBadge } from '../components/TypeBadge';
 import { moveMaxUses, movesForProficiency, remainingUses } from '../utils/moves';
@@ -232,7 +232,7 @@ export default function PokemonSheetScreen() {
             </>
           )}
 
-          {ref.stage.passives.length > 0 && (
+          {(ref.stage.passives.length > 0 || (mon.extraPassives ?? []).length > 0) && (
             <>
               <Text style={styles.subTitle}>Passives</Text>
               {ref.stage.passives.map((p, i) => (
@@ -240,8 +240,38 @@ export default function PokemonSheetScreen() {
                   <Text style={styles.bold}>{p.name}</Text> — {p.description}
                 </Text>
               ))}
+              {(mon.extraPassives ?? []).map((name) => {
+                const passive = allPassiveByName.get(name);
+                if (!passive) return null;
+                return (
+                  <View key={name} style={styles.extraPassiveRow}>
+                    <Text style={[styles.body, { flex: 1 }]}>
+                      <Text style={styles.bold}>{passive.name}</Text> — {passive.description}
+                    </Text>
+                    <TouchableOpacity
+                      onPress={() => updateMon({ extraPassives: (mon.extraPassives ?? []).filter((n) => n !== name) })}
+                    >
+                      <Text style={styles.removeText}>Remove</Text>
+                    </TouchableOpacity>
+                  </View>
+                );
+              })}
             </>
           )}
+          <TouchableOpacity
+            style={styles.addPassiveBtn}
+            onPress={() =>
+              navigation.navigate('PickPassive', {
+                onPick: async (passiveName: string) => {
+                  if (!(mon.extraPassives ?? []).includes(passiveName)) {
+                    await updateMon({ extraPassives: [...(mon.extraPassives ?? []), passiveName] });
+                  }
+                },
+              })
+            }
+          >
+            <Text style={styles.addBtnSmallText}>+ Add Passive</Text>
+          </TouchableOpacity>
 
           {family && family.proficiencies.length > 0 && (
             <>
@@ -407,6 +437,8 @@ const styles = StyleSheet.create({
   heldItemText: { color: colors.text, fontSize: 14, flex: 1 },
   heldItemEffect: { color: colors.textMuted, fontSize: 12, lineHeight: 17, marginTop: 4 },
   addBtnSmall: { backgroundColor: colors.primaryMuted, borderRadius: 6, paddingHorizontal: 10, paddingVertical: 6, marginLeft: 8 },
+  addPassiveBtn: { backgroundColor: colors.primaryMuted, borderRadius: 6, paddingHorizontal: 10, paddingVertical: 6, marginTop: 4, marginBottom: 8, alignSelf: 'flex-start' },
+  extraPassiveRow: { flexDirection: 'row', alignItems: 'flex-start', marginBottom: 4 },
   addBtnSmallText: { color: '#fff', fontWeight: '700', fontSize: 12 },
   removeText: { color: '#f87171', fontSize: 12, fontWeight: '700' },
   notesInput: {

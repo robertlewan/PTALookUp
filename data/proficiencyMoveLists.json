@@ -1,0 +1,497 @@
+[
+  {
+    "proficiency": "Bruiser",
+    "flavorText": "Bruisers are ready for slug fests and strike with heavy arms or legs or throw their power into the ground or toss things around at foes.",
+    "moves": [
+      "Belly Drum",
+      "Body Slam",
+      "Breaking Swipe",
+      "Brutal Swing",
+      "Counter",
+      "Darkest Lariat",
+      "Double Edge",
+      "Earth Power",
+      "Earthquake",
+      "Hammer Arm",
+      "Headbutt",
+      "Iron Head",
+      "Lash Out",
+      "Play Rough",
+      "Revenge",
+      "Slam",
+      "Stomping Tantrum",
+      "Strength",
+      "Submission",
+      "Superpower",
+      "Thrash"
+    ]
+  },
+  {
+    "proficiency": "Cutesy",
+    "flavorText": "Pokémon who can learn from the cutesy list abuse their appearance to trick foes. They’re often cute.",
+    "moves": [
+      "Disarming Voice",
+      "Draining Kiss",
+      "Follow Me",
+      "Nuzzle",
+      "Pounce",
+      "Sweet Kiss",
+      "Yawn"
+    ]
+  },
+  {
+    "proficiency": "Draconian",
+    "flavorText": "Draconian Pokémon are not always Dragon-type, but often resemble the dragons or a part of the dragon egg group.",
+    "moves": [
+      "Dragon Claw",
+      "Dragon Rush",
+      "Dragon Tail",
+      "Dragon Breath",
+      "Dragon Rage"
+    ]
+  },
+  {
+    "proficiency": "Energy Blast",
+    "flavorText": "Pokémon with access to energy blasts can form wild en- ergy and release beams of power. These are all powerful attacks and sometimes there won’t be tutors who can teach these moves except for a few in a whole region.",
+    "moves": [
+      "Dark Pulse",
+      "Dazzling Gleam",
+      "Dragon Pulse",
+      "Flash Cannon",
+      "Psybeam",
+      "Shadow Ball",
+      "Signal Beam"
+    ]
+  },
+  {
+    "proficiency": "Elemental Attack",
+    "flavorText": "Elemental attacks consist of projectile Electric, Fire, and Ice-type attacks. The Pokémon with access to these moves will sometimes only have access to parts of this list, as specified per Pokemon: Pokémon proficiency entries will say “Elemental Attacks E, F, and/or I” indicating Elec- tric, Fire, and/or Ice compatibility. If a Pokémon just has “Elemental Attacks” without any indicators, they have access to the entire list.",
+    "moves": [
+      "Charge Beam",
+      "Shock Wave",
+      "Thunder",
+      "Thunder Shock",
+      "Thunderbolt",
+      "Ember",
+      "Fire Blast",
+      "Fire Spin",
+      "Flame Burst",
+      "Flamethrower",
+      "Heat Wave",
+      "Blizzard",
+      "Ice Beam",
+      "Icy Wind"
+    ]
+  },
+  {
+    "proficiency": "Fangs",
+    "flavorText": "Many Pokémon with fangs can gather energy to their mouths and do great damage to enemies. Not every fanged Pokémon can use every fang move and they’re de- fined per move.",
+    "moves": [
+      "Bite",
+      "Bug Bite",
+      "Crunch",
+      "Fire Fang",
+      "Hyper Fang",
+      "Ice Fang",
+      "Poison Fang",
+      "Psychic Fangs",
+      "Thunder Fang"
+    ]
+  },
+  {
+    "proficiency": "Floral",
+    "flavorText": "The floral list has many Pokémon who have some kind of flower on their body or are closely related to flowers.",
+    "moves": [
+      "Aromatherapy",
+      "Energy Ball",
+      "Grassy Terrain",
+      "Petal Blizzard",
+      "Petal Dance",
+      "Sleep Powder",
+      "Stun Spore",
+      "Sweet Scent"
+    ]
+  },
+  {
+    "proficiency": "Glutton",
+    "flavorText": "A Pokémon can weaponize their eating habits if it has the stomach to.",
+    "moves": [
+      "Belch",
+      "Gastro Acid",
+      "Lick",
+      "Spit Up",
+      "Stockpile",
+      "Swallow"
+    ]
+  },
+  {
+    "proficiency": "Hexwork",
+    "flavorText": "Hexwork involves attacks that aim to punish and subdue foes and the Pokémon who can use these moves are dark and mischievous.",
+    "moves": [
+      "Confuse Ray",
+      "Destiny Bond",
+      "Disable",
+      "Dream Eater",
+      "Heal Block",
+      "Hex",
+      "Hypnosis",
+      "Mean Look",
+      "Memento",
+      "Pain Split",
+      "Trick",
+      "Will-O-Wisp"
+    ]
+  },
+  {
+    "proficiency": "Healer",
+    "flavorText": "Healers have an aura of healing that they can exert unto others with their power. These moves are particularly use- ful when on long journeys if your Pokémon can learn them.",
+    "moves": [
+      "Heal Pulse",
+      "Healing Wish",
+      "Life Dew",
+      "Refresh",
+      "Safeguard",
+      "Wish"
+    ]
+  },
+  {
+    "proficiency": "Horned",
+    "flavorText": "Horned Pokémon can learn these moves.",
+    "moves": [
+      "Drill Run",
+      "Horn Attack",
+      "Ice Spinner",
+      "Megahorn",
+      "Poison Jab",
+      "Poison Sting",
+      "Smart Strike"
+    ]
+  },
+  {
+    "proficiency": "Lepidopteran",
+    "flavorText": "Pokémon who produce powders on their wings or very light petals can be taught these moves.",
+    "moves": [
+      "Poison Powder",
+      "Powder",
+      "Rage Powder",
+      "Sleep Powder",
+      "Stun Spore"
+    ]
+  },
+  {
+    "proficiency": "Martial",
+    "flavorText": "The martial list is extensive and has two sub groups, the Punches List and the Kicks List. Some Pokémon only have access to Punches or Kicks, while others only have access to all of the Martial moves. On proficiency lists, a Pokémon will be noted as “Martial,” covering everything here, or possibly, “Martial Punches,” covering the martial list and punches, or even just “Punches,” or, “Kicks,” so Pokémon can only use just the moves on the Punches list.",
+    "moves": [
+      "Acrobatics",
+      "Aura Sphere",
+      "Close Combat",
+      "Cross Chop",
+      "Dual Chop",
+      "Force Palm",
+      "Karate Chop",
+      "Rock Climb",
+      "Smack Down",
+      "Throat Chop",
+      "Vacuum Wave",
+      "Vital Throw",
+      "Wake-Up Slap"
+    ]
+  },
+  {
+    "proficiency": "Punches",
+    "flavorText": null,
+    "moves": [
+      "Bullet Punch",
+      "Comet Punch",
+      "Dizzy Punch",
+      "Drain Punch",
+      "Dynamic Punch",
+      "Fire Punch",
+      "Focus Punch",
+      "Ice Punch",
+      "Mach Punch",
+      "Mega Punch",
+      "Poison Jab",
+      "Power-Up Punch",
+      "Sky Uppercut",
+      "Sucker Punch",
+      "Thunder Punch"
+    ]
+  },
+  {
+    "proficiency": "Kicks",
+    "flavorText": null,
+    "moves": [
+      "Axe Kick",
+      "Blaze Kick",
+      "Double Kick",
+      "High Jump Kick",
+      "Jump Kick",
+      "Low Kick",
+      "Low Sweep",
+      "Mega Kick",
+      "Rolling Kick",
+      "Triple Axel"
+    ]
+  },
+  {
+    "proficiency": "Magnetism",
+    "flavorText": "Some Pokémon can manipulate magnetic fields without necessarily using electric-based powers.",
+    "moves": [
+      "Magnet Pull",
+      "Magnet Rise",
+      "Electric Terrain",
+      "Lock-On"
+    ]
+  },
+  {
+    "proficiency": "Munition",
+    "flavorText": "Pokémon who fire projectiles or use loose rubble on the ground can learn from this munitions list.",
+    "moves": [
+      "Bullet Seed",
+      "Electro Ball",
+      "Gyro Ball",
+      "Mud Bomb",
+      "Rock Blast",
+      "Sludge Bomb"
+    ]
+  },
+  {
+    "proficiency": "Normal Block",
+    "flavorText": "The Normal Block is a wild range of moves that many Normal-type Pokémon have access to. Many other Poké- mon also have access to the Normal Block. Some Poké- mon will not have access to the whole Normal Block and may have limitation such as “Normal Block No Spe- cial Attacks” or even “Normal Block No Fire-type Moves” in their proficiencies.",
+    "moves": [
+      "Astonish",
+      "Avalanche",
+      "Blizzard",
+      "Brick Break",
+      "Charge Beam",
+      "Dynamic Punch",
+      "Ember",
+      "Fire Blast",
+      "Fire Spin",
+      "Flame Burst",
+      "Flame Wheel",
+      "Flamethrower",
+      "Focus Blast",
+      "Focus Punch",
+      "Grass Knot",
+      "Gunk Shot",
+      "Gyro Ball",
+      "Heat Wave",
+      "Ice Beam",
+      "Icy Wind",
+      "Incinerate",
+      "Mud Shot",
+      "Mud Sport",
+      "Mud-Slap",
+      "Power-Up Punch",
+      "Psychic",
+      "Rain Dance",
+      "Rock Smash",
+      "Rock Tomb",
+      "Rollout",
+      "Seismic Toss",
+      "Shadow Ball",
+      "Shock Wave",
+      "Submission",
+      "Sunny Day",
+      "Thunder",
+      "Thunder Shock",
+      "Thunder Wave",
+      "Thunderbolt",
+      "Wild Charge",
+      "Zap Cannon",
+      "Zen Headbutt"
+    ]
+  },
+  {
+    "proficiency": "Parasitic",
+    "flavorText": "Through needle, fang, or roots, some Pokémon can use these moves to drain the life out of other Pokémon.",
+    "moves": [
+      "Leech Life",
+      "Absorb",
+      "Giga Drain",
+      "Mega Drain"
+    ]
+  },
+  {
+    "proficiency": "Piscian",
+    "flavorText": "Fins, gills and a tail make you compatible with this move list.",
+    "moves": [
+      "Aqua Tail",
+      "Body Slam",
+      "Bounce",
+      "Dive",
+      "Flail",
+      "Signal Beam",
+      "Slam",
+      "Water Pulse",
+      "Whirlpool"
+    ]
+  },
+  {
+    "proficiency": "Prickly",
+    "flavorText": "Pokémon who are able to learn from the prickly list have spikes, spines, and other pokey features.",
+    "moves": [
+      "Acupressure",
+      "Ice Spinner",
+      "Pin Missile",
+      "Poison Jab",
+      "Poison Sting",
+      "Spike Cannon",
+      "Spikes",
+      "Twineedle"
+    ]
+  },
+  {
+    "proficiency": "Pulse",
+    "flavorText": "Some Pokémon can manipulate auras and project ener- gies from themselves.",
+    "moves": [
+      "Aura Sphere",
+      "Dark Pulse",
+      "Dragon Pulse",
+      "Heal Pulse",
+      "Terrain Pulse",
+      "Water Pulse"
+    ]
+  },
+  {
+    "proficiency": "Sound",
+    "flavorText": "Some Pokémon can manipulate their voices to produce powerful effects. It should be noted that not all sound- related moves are on the Sound List.",
+    "moves": [
+      "Boomburst",
+      "Echoed Voice",
+      "Hyper Voice",
+      "Round",
+      "Sing",
+      "Sonic Boom",
+      "Supersonic",
+      "Synchronoise",
+      "Uproar"
+    ]
+  },
+  {
+    "proficiency": "Spellcraft",
+    "flavorText": "Many Pokémon are capable of making magical effects real; unlike hexwork, the move list that often but not al- ways paired with spellcraft, spellcraft is not always mali- cious.",
+    "moves": [
+      "Ally Switch",
+      "Destiny Bond",
+      "Disable",
+      "Flash",
+      "Gravity",
+      "Heal Block",
+      "Healing Wish",
+      "Light Screen",
+      "Lucky Chant",
+      "Magic Coat",
+      "Magic Room",
+      "Magical Leaf",
+      "Mean Look",
+      "Misty Terrain",
+      "Mystical Fire",
+      "Pain Split",
+      "Reflect",
+      "Safeguard",
+      "Sing",
+      "Teleport",
+      "Wish"
+    ]
+  },
+  {
+    "proficiency": "Stampeding",
+    "flavorText": "Strong and heavy Pokémon can throw their weight around and really throw down.",
+    "moves": [
+      "Assurance",
+      "Belly Drum",
+      "Block",
+      "Body Press",
+      "Body Slam",
+      "Bulldoze",
+      "Double Edge",
+      "Earthquake",
+      "Head Smash",
+      "Headbutt",
+      "Heavy Slam",
+      "Outrage",
+      "Rock Slide",
+      "Sand Tomb",
+      "Slam",
+      "Steamroller",
+      "Steel Roller",
+      "Stomp",
+      "Stomping Tantrum",
+      "Stone Edge",
+      "Strength",
+      "Surf",
+      "Thrash"
+    ]
+  },
+  {
+    "proficiency": "Tricky",
+    "flavorText": "Many Pokémon outsmart or take advantage of an oppo- nent’s naivety by playing mean tricks or plainly fighting dirty.",
+    "moves": [
+      "Burning Jealousy",
+      "Fake Out",
+      "Feint Attack",
+      "Flatter",
+      "Knock Off",
+      "Payback",
+      "Punishment",
+      "Quash",
+      "Sucker Punch",
+      "Swagger",
+      "Switcheroo",
+      "Thief",
+      "Throat Chop"
+    ]
+  },
+  {
+    "proficiency": "Weather",
+    "flavorText": "Pokémon who can control the weather use this list.",
+    "moves": [
+      "Defog",
+      "Hail",
+      "Haze",
+      "Mist",
+      "Rain Dance",
+      "Snowscape",
+      "Sunny Day"
+    ]
+  },
+  {
+    "proficiency": "Weird",
+    "flavorText": "Pokémon who are strange and manipulate strange fields of energy in the world are weird and use weird moves.",
+    "moves": [
+      "Confuse Ray",
+      "Gravity",
+      "Lucky Chant",
+      "Magic Room",
+      "Mean Look",
+      "Misty Terrain",
+      "Switcheroo",
+      "Trick Room",
+      "Wonder Room"
+    ]
+  },
+  {
+    "proficiency": "Winged",
+    "flavorText": "Winged Pokémon can learn these moves.",
+    "moves": [
+      "Aerial Ace",
+      "Acrobatics",
+      "Bounce",
+      "Defog",
+      "Dual Wingbeat",
+      "Fairy Wind",
+      "Ominous Wind",
+      "Razor Wind",
+      "Roost",
+      "Silver Wind",
+      "Sky Attack",
+      "Sky Drop",
+      "Steel Wing",
+      "Twister",
+      "Wing Attack"
+    ]
+  }
+]

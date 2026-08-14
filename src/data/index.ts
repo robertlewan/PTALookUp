@@ -7,7 +7,20 @@ import gmGuideRaw from '../../data/gmGuide.json';
 import itemsRaw from '../../data/items.json';
 import allMovesRaw from '../../data/allMoves.json';
 import naturesRaw from '../../data/natures.json';
-import type { TrainerClass, TrainerSkill, PokemonFamily, PokemonSkill, GmGuideSection, Item, PokemonMove, Nature } from '../types/models';
+import allPassivesRaw from '../../data/allPassives.json';
+import proficiencyMoveListsRaw from '../../data/proficiencyMoveLists.json';
+import type {
+  TrainerClass,
+  TrainerSkill,
+  PokemonFamily,
+  PokemonSkill,
+  GmGuideSection,
+  Item,
+  PokemonMove,
+  Nature,
+  PokemonPassive,
+  ProficiencyMoveList,
+} from '../types/models';
 
 function toModifier(v: unknown): number {
   if (typeof v === 'number') return v;
@@ -54,12 +67,16 @@ export const pokemonSkills = pokemonSkillsRaw as PokemonSkill[];
 export const gmGuideSections = gmGuideRaw as GmGuideSection[];
 export const items = itemsRaw as Item[];
 export const natures = naturesRaw as Nature[];
+export const allPassives = allPassivesRaw as PokemonPassive[];
+export const proficiencyMoveLists = proficiencyMoveListsRaw as ProficiencyMoveList[];
 
 export const trainerClassById = new Map(trainerClasses.map((c) => [c.id, c]));
 export const pokemonFamilyById = new Map(pokemonFamilies.map((p) => [p.familyId, p]));
 export const itemById = new Map(items.map((i) => [i.id, i]));
 export const itemByName = new Map(items.map((i) => [i.name, i]));
 export const natureByName = new Map(natures.map((n) => [n.name, n]));
+export const allPassiveByName = new Map(allPassives.map((p) => [p.name, p]));
+export const proficiencyMoveListByName = new Map(proficiencyMoveLists.map((l) => [l.proficiency, l]));
 
 export function baseClasses(): TrainerClass[] {
   return trainerClasses.filter((c) => c.tier === 'base');

@@ -2,13 +2,18 @@ import React, { useMemo, useState } from 'react';
 import { FlatList, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { colors, typeColors } from '../theme/theme';
-import { allMoves } from '../data';
+import { allMoves, proficiencyMoveLists } from '../data';
 import { movesForProficiency } from '../utils/moves';
 
 // Proficiency tags a move can be looked up by: every Pokemon type, plus the
 // three attack-category proficiencies (matches how Trainer/Pokemon
 // proficiencies are actually written in the source book).
 const PROFICIENCIES = [...Object.keys(typeColors), 'Attack', 'Special Attack', 'Effect'];
+
+// Move-class flavor proficiencies (Bruiser, Floral, Healer, etc.) from the
+// PHB's "Proficiency Lists" chapter - these aren't types or attack
+// categories, so they're kept in their own filter row.
+const MOVE_CLASS_PROFICIENCIES = proficiencyMoveLists.map((l) => l.proficiency).sort();
 
 export default function MovesListScreen() {
   const navigation = useNavigation<any>();
@@ -33,7 +38,7 @@ export default function MovesListScreen() {
         value={query}
         onChangeText={setQuery}
       />
-      <Text style={styles.filterLabel}>Filter by proficiency (type, or Attack / Special Attack / Effect)</Text>
+      <Text style={styles.filterLabel}>Type / attack-category proficiencies</Text>
       <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.profRow} contentContainerStyle={{ paddingHorizontal: 12 }}>
         <TouchableOpacity onPress={() => setActiveProficiency(null)} style={[styles.profChip, !activeProficiency && styles.profChipActive]}>
           <Text style={styles.profChipText}>All</Text>
@@ -43,6 +48,18 @@ export default function MovesListScreen() {
             key={p}
             onPress={() => setActiveProficiency(activeProficiency === p ? null : p)}
             style={[styles.profChip, { backgroundColor: typeColors[p] ?? colors.surfaceAlt }, activeProficiency === p && styles.profChipActive]}
+          >
+            <Text style={styles.profChipText}>{p}</Text>
+          </TouchableOpacity>
+        ))}
+      </ScrollView>
+      <Text style={styles.filterLabel}>Move-class proficiencies</Text>
+      <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.profRow} contentContainerStyle={{ paddingHorizontal: 12 }}>
+        {MOVE_CLASS_PROFICIENCIES.map((p) => (
+          <TouchableOpacity
+            key={p}
+            onPress={() => setActiveProficiency(activeProficiency === p ? null : p)}
+            style={[styles.profChip, activeProficiency === p && styles.profChipActive]}
           >
             <Text style={styles.profChipText}>{p}</Text>
           </TouchableOpacity>

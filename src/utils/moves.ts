@@ -1,5 +1,6 @@
 import type { PokemonMove } from '../types/models';
 import { typeColors } from '../theme/theme';
+import { proficiencyMoveListByName } from '../data';
 
 // Parses a move's `frequency` field (e.g. "3/day", "1/day", "At-Will") into a
 // max-uses-before-Rest count. Returns null for unlimited/unparseable frequencies.
@@ -18,11 +19,16 @@ export function remainingUses(moveUses: Record<string, number> | undefined, move
 
 // Groups a stage's moves under a family's proficiency tags. Type-named
 // proficiencies (e.g. "Grass") match by the move's own type; "Attack" /
-// "Special Attack" / "Effect" proficiencies match by move category. Other
-// proficiency tags (move-class flavor tags like "Bruiser") have no reliable
-// mapping from the extracted data, so they're returned with an empty list.
+// "Special Attack" / "Effect" proficiencies match by move category; move-class
+// flavor tags (e.g. "Bruiser", "Floral", "Healer") match against the PHB's
+// "Proficiency Lists" chapter (data/proficiencyMoveLists.json). A trailing
+// parenthetical on a family's proficiency string (e.g. "Pulse (Blastoise)",
+// "Stampeding (Venusaur)") is stripped before matching.
 export function movesForProficiency(moves: PokemonMove[], proficiency: string): PokemonMove[] {
-  const p = proficiency.trim();
+  const p = proficiency
+    .trim()
+    .replace(/\s*\([^)]*\)\s*$/, '')
+    .trim();
   const isType = Object.prototype.hasOwnProperty.call(typeColors, p);
   if (isType) {
     return moves.filter((m) => m.moveType === p);
@@ -36,6 +42,11 @@ export function movesForProficiency(moves: PokemonMove[], proficiency: string): 
   }
   if (pLower === 'effect') {
     return moves.filter((m) => m.category === 'Effect');
+  }
+  const list = proficiencyMoveListByName.get(p);
+  if (list) {
+    const nameSet = new Set(list.moves);
+    return moves.filter((m) => nameSet.has(m.name));
   }
   return [];
 }

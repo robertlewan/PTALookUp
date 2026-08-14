@@ -101,6 +101,12 @@ export interface GmGuideSection {
   table: GmGuideTable | null;
 }
 
+export interface ProficiencyMoveList {
+  proficiency: string;
+  flavorText: string | null;
+  moves: string[];
+}
+
 export interface Item {
   id: string;
   name: string;
@@ -148,6 +154,7 @@ export interface OwnedPokemon {
   moveUses?: Record<string, number>;
   heldItem?: string | null;
   extraMoves?: string[];
+  extraPassives?: string[];
   nature?: string | null;
 }
 
