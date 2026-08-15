@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import { FlatList, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { FlatList, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { colors, typeColors } from '../theme/theme';
 import { pokemonFamilies } from '../data';
@@ -33,7 +33,7 @@ export default function PokedexListScreen() {
         value={query}
         onChangeText={setQuery}
       />
-      <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.typeRow} contentContainerStyle={{ paddingHorizontal: 12 }}>
+      <View style={styles.typeRow}>
         <TouchableOpacity onPress={() => setActiveType(null)} style={[styles.typeChip, !activeType && styles.typeChipActive]}>
           <Text style={styles.typeChipText}>All</Text>
         </TouchableOpacity>
@@ -46,7 +46,7 @@ export default function PokedexListScreen() {
             <Text style={styles.typeChipText}>{t}</Text>
           </TouchableOpacity>
         ))}
-      </ScrollView>
+      </View>
       <FlatList
         data={filtered}
         keyExtractor={(f) => f.familyId}
@@ -82,12 +82,13 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: colors.border,
   },
-  typeRow: { maxHeight: 40, marginBottom: 8 },
+  typeRow: { flexDirection: 'row', flexWrap: 'wrap', paddingHorizontal: 12, marginBottom: 8 },
   typeChip: {
     paddingHorizontal: 12,
     paddingVertical: 6,
     borderRadius: 14,
     marginRight: 8,
+    marginBottom: 8,
     backgroundColor: colors.surfaceAlt,
     justifyContent: 'center',
   },

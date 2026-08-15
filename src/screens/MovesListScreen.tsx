@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import { FlatList, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { FlatList, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { colors, typeColors } from '../theme/theme';
 import { allMoves, proficiencyMoveLists } from '../data';
@@ -39,7 +39,7 @@ export default function MovesListScreen() {
         onChangeText={setQuery}
       />
       <Text style={styles.filterLabel}>Type / attack-category proficiencies</Text>
-      <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.profRow} contentContainerStyle={{ paddingHorizontal: 12 }}>
+      <View style={styles.profWrap}>
         <TouchableOpacity onPress={() => setActiveProficiency(null)} style={[styles.profChip, !activeProficiency && styles.profChipActive]}>
           <Text style={styles.profChipText}>All</Text>
         </TouchableOpacity>
@@ -52,9 +52,9 @@ export default function MovesListScreen() {
             <Text style={styles.profChipText}>{p}</Text>
           </TouchableOpacity>
         ))}
-      </ScrollView>
+      </View>
       <Text style={styles.filterLabel}>Move-class proficiencies</Text>
-      <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.profRow} contentContainerStyle={{ paddingHorizontal: 12 }}>
+      <View style={styles.profWrap}>
         {MOVE_CLASS_PROFICIENCIES.map((p) => (
           <TouchableOpacity
             key={p}
@@ -64,7 +64,7 @@ export default function MovesListScreen() {
             <Text style={styles.profChipText}>{p}</Text>
           </TouchableOpacity>
         ))}
-      </ScrollView>
+      </View>
       <FlatList
         data={filtered}
         keyExtractor={(m) => m.name}
@@ -98,12 +98,13 @@ const styles = StyleSheet.create({
     borderColor: colors.border,
   },
   filterLabel: { color: colors.textMuted, fontSize: 11, marginHorizontal: 12, marginBottom: 4, textTransform: 'uppercase', letterSpacing: 0.5 },
-  profRow: { maxHeight: 40, marginBottom: 8 },
+  profWrap: { flexDirection: 'row', flexWrap: 'wrap', paddingHorizontal: 12, marginBottom: 8 },
   profChip: {
     paddingHorizontal: 12,
     paddingVertical: 6,
     borderRadius: 14,
     marginRight: 8,
+    marginBottom: 8,
     backgroundColor: colors.surfaceAlt,
     justifyContent: 'center',
   },

@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import { FlatList, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { FlatList, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import { colors } from '../theme/theme';
 import { items } from '../data';
@@ -34,7 +34,7 @@ export default function ItemsListScreen() {
         value={query}
         onChangeText={setQuery}
       />
-      <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.categoryRow} contentContainerStyle={{ paddingHorizontal: 12 }}>
+      <View style={styles.categoryRow}>
         <TouchableOpacity onPress={() => setActiveCategory(null)} style={[styles.categoryChip, !activeCategory && styles.categoryChipActive]}>
           <Text style={styles.categoryChipText}>All</Text>
         </TouchableOpacity>
@@ -47,7 +47,7 @@ export default function ItemsListScreen() {
             <Text style={styles.categoryChipText}>{c}</Text>
           </TouchableOpacity>
         ))}
-      </ScrollView>
+      </View>
       <FlatList
         data={filtered}
         keyExtractor={(i) => i.id}
@@ -90,12 +90,13 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: colors.border,
   },
-  categoryRow: { maxHeight: 40, marginBottom: 8 },
+  categoryRow: { flexDirection: 'row', flexWrap: 'wrap', paddingHorizontal: 12, marginBottom: 8 },
   categoryChip: {
     paddingHorizontal: 12,
     paddingVertical: 6,
     borderRadius: 14,
     marginRight: 8,
+    marginBottom: 8,
     backgroundColor: colors.surfaceAlt,
     justifyContent: 'center',
   },
