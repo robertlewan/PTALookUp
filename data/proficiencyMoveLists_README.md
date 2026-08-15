@@ -8,12 +8,17 @@ Parser: `data/_parse_proficiency_lists.py` (re-run any time to regenerate
 
 ## Section boundaries
 
-- Start: `text.find('Bruiser List')` → offset **2096445**. Confirmed this is a
-  clean boundary — the text immediately before it is `Blades/Claw List
-  Continued` (the end of the *type*-proficiency section, which this task
-  explicitly excludes), followed by the `Proficiency Lists` running
-  header/footer and a `===== PAGE 759 =====` marker, then `Bruiser List`
-  starts fresh at the top of the non-type section.
+- Start: `text.find('Bruiser List')` → offset **2096445**. The text
+  immediately before it is `Blades/Claw List Continued`, followed by the
+  `Proficiency Lists` running header/footer and a `===== PAGE 759 =====`
+  marker, then `Bruiser List` starts fresh. **Correction (see "Any / Avian /
+  Blades/Claws" section below): this boundary was originally read as the
+  start of a separate "non-type section," with `Blades/Claw List` assumed to
+  belong to an excluded "type-proficiency section" before it. That was
+  wrong — `Any`, `Avian`, and `Blades/Claws` are the first three lists in
+  this *same* Move Groups section (its own intro paragraph lists all 32 in
+  one TOC), just missed because the boundary search started one list group
+  too late. They were added in the follow-up pass.**
 - End: `text.find('Signature Moves', start)` → offset **2150040**. This is
   the *second* occurrence of the string "Signature Moves" in the file (the
   first, at offset 14750, is an unrelated table-of-contents mention early in
@@ -159,3 +164,55 @@ consistency rather than silently "corrected."
   alongside the repo's existing `_parse_*.py` scripts for reproducibility)
 
 No other files in `data/` were modified.
+
+## Follow-up: Any / Avian / Blades/Claws lists added (2026-08-15)
+
+The original 29-list extraction above missed the first three entries of the
+Move Groups section's own table of contents:
+
+```
+     Any        Magnetism
+     Avian   Munition
+     Blades/Claws  Normal Block
+     Bruiser   Parasitic
+     ...
+```
+
+(`_raw_pokedex_text.txt:69847-69862`.) The section start boundary
+(`text.find('Bruiser List')`) landed one list-group too late — `Any List`,
+`Avian List`, and `Blades/Claws List` sit *before* `Bruiser List` in the same
+chapter (`_raw_pokedex_text.txt:69868-70086`), not in a separate excluded
+section as the original notes assumed. Confirmed by checking `pokemon.json`:
+`Avian` (41 families), `Blades` (19 families), and `Claws` (23 families) are
+all actively-used proficiency tags with no matching list to resolve moves
+against, before this fix.
+
+**Any List** (46 moves, e.g. Tackle, Toxic, Protect, Substitute): per the
+section's own intro paragraph, "any Pokémon can learn from the Any List"
+regardless of proficiency tags — accordingly no `pokemon.json` family lists
+"Any" as an explicit proficiency (it's implicit for everyone), but the list
+is included for completeness/parity with the book and in case future
+features want it (e.g. an "always available" moves reference). No dedicated
+flavor paragraph follows the heading (unlike the other lists), so
+`flavorText: null`, matching the precedent already set for `Punches`/`Kicks`.
+
+**Avian List** (4 moves: Brave Bird, Drill Peck, Peck, Mirror Move) — added
+as `"Avian"`, matching `pokemon.json`'s tag exactly.
+
+**Blades/Claws List** (15 moves: Aerial Ace, Air Slash, Crush Claw, Cut, Fury
+Cutter, Fury Swipes, Metal Claw, Night Slash, Psycho Cut, Razor Wind,
+Scratch, Shadow Claw, Slash, Solar Blade, X-Scissor) is one single list in
+the book (one heading, no internal sub-division), but `pokemon.json` uses
+**two different tag strings** for it — `"Blades"` and `"Claws"` — never the
+book's own `"Blades/Claws"` spelling. Since `movesForProficiency`
+(`src/utils/moves.ts`) looks up `proficiencyMoveListByName` by exact string,
+a single `"Blades/Claws"` entry would resolve neither tag. Added as **two**
+entries, `"Blades"` and `"Claws"`, with identical `moves`/`flavorText`, so
+both tags resolve correctly in the app.
+
+All 65 new move names (46 + 4 + 15) were verified against `allMoves.json`
+the same way as the original 29 lists: 0 unmatched, 0 duplicates within a
+list.
+
+**Updated totals: 33 lists (was 29), 401 total move-name entries counting
+`Claws` and `Blades` separately (was 321).**
