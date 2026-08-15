@@ -22,6 +22,7 @@ import PickMoveScreen from '../screens/PickMoveScreen';
 import PickPassiveScreen from '../screens/PickPassiveScreen';
 import MovesListScreen from '../screens/MovesListScreen';
 import MoveDetailScreen from '../screens/MoveDetailScreen';
+import CombatScreen from '../screens/CombatScreen';
 
 const HomeStack = createNativeStackNavigator();
 const ClassesStack = createNativeStackNavigator();
@@ -30,6 +31,7 @@ const CharactersStack = createNativeStackNavigator();
 const GmGuideStack = createNativeStackNavigator();
 const ItemsStack = createNativeStackNavigator();
 const MovesStack = createNativeStackNavigator();
+const CombatStack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
 const screenOptions = {
@@ -107,6 +109,14 @@ function GmGuideStackNav() {
   );
 }
 
+function CombatStackNav() {
+  return (
+    <CombatStack.Navigator screenOptions={screenOptions}>
+      <CombatStack.Screen name="Combat" component={CombatScreen} options={{ title: 'Combat' }} />
+    </CombatStack.Navigator>
+  );
+}
+
 const navTheme = {
   ...DarkTheme,
   colors: {
@@ -137,6 +147,7 @@ export default function RootNavigator() {
         <Tab.Screen name="GmGuideTab" component={GmGuideStackNav} options={{ title: 'GM Guide' }} />
         <Tab.Screen name="ItemsTab" component={ItemsStackNav} options={{ title: 'Items' }} />
         <Tab.Screen name="MovesTab" component={MovesStackNav} options={{ title: 'Moves' }} />
+        <Tab.Screen name="CombatTab" component={CombatStackNav} options={{ title: 'Combat' }} />
       </Tab.Navigator>
     </NavigationContainer>
   );

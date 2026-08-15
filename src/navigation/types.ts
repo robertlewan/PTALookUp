@@ -37,6 +37,10 @@ export type GmGuideStackParamList = {
   GmGuideDetail: { sectionId: string };
 };
 
+export type CombatStackParamList = {
+  Combat: undefined;
+};
+
 export type RootTabParamList = {
   HomeTab: undefined;
   ClassesTab: undefined;
@@ -45,4 +49,5 @@ export type RootTabParamList = {
   GmGuideTab: undefined;
   ItemsTab: undefined;
   MovesTab: undefined;
+  CombatTab: undefined;
 };

@@ -179,3 +179,32 @@ export interface CharacterSheet {
   createdAt: string;
   updatedAt: string;
 }
+
+// ---- Combat map (battle grid, local to the app) ----
+
+export type CombatTokenKind =
+  | 'circle-black'
+  | 'circle-white'
+  | 'square-black'
+  | 'square-white'
+  | 'triangle-black'
+  | 'tree'
+  | 'rock'
+  | 'water';
+
+export interface CombatToken {
+  id: string;
+  kind: CombatTokenKind;
+  row: number;
+  col: number;
+  // Footprint in grid cells (row/col mark the top-left cell). Only circle
+  // tokens support anything beyond 1 (for Large/Huge/Gigantic creatures).
+  size: 1 | 2 | 3 | 4;
+  label?: string;
+}
+
+export interface CombatMap {
+  rows: number;
+  cols: number;
+  tokens: CombatToken[];
+}

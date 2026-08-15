@@ -50,6 +50,11 @@ export default function HomeScreen() {
         desc="Look up any of the game's moves, filterable by type or proficiency."
         onPress={() => navigation.navigate('MovesTab')}
       />
+      <NavCard
+        title="Combat"
+        desc="A lettered/numbered battle grid — place circle, square, triangle, and terrain tokens for encounters."
+        onPress={() => navigation.navigate('CombatTab')}
+      />
     </ScrollView>
   );
 }
