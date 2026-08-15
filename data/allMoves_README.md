@@ -53,26 +53,41 @@ it (or of `▼`/`▲` symbols, which were expanded to words) remains anywhere in
   The parser searches all three positions. All 698 moves ended up with a resolved,
   non-null frequency.
 
-## Garbled/uncertain data — flagged for manual review
+## Garbled dice values — root cause found, 54/70 fixed (2026-08-15 follow-up)
 
-The raw pypdf extraction drops the ones-digit of many `d`-notation dice values (e.g.
-`3d8` prints as `3d `/`3d.`), evidently a font/glyph extraction quirk specific to that
-character run. Per the task instructions, these are kept as the **raw garbled string**
-(e.g. `"3d"`) rather than guessed at, so `allMoves.json` will show `power: "3d"` etc. for
-these 70 moves. **All of these need the correct trailing digit filled in by a human with
-the physical/PDF rulebook in hand** (or by cross-referencing another edition of the PTA
-handbook) before the data is fully usable for damage calculations:
+The raw pypdf extraction drops the ones-digit of 70 `d`-notation dice values (e.g. `3d8`
+extracts as `3d `). Root cause confirmed by rendering the actual PDF pages to images
+(pypdf's text layer isn't the issue - the digit doesn't exist as a normal character in
+the source at all): every one of these 70 spots shows a small icon glyph (looks like a
+stylized animal face) exactly where the missing digit should be, in the *rendered* page
+too, not just the extracted text. This is a broken font/reference substitution baked into
+the source PDF itself (most likely an auto-computed field, e.g. a cross-reference to a
+value elsewhere in the source document, that failed to resolve at export time and got
+replaced with a fallback "missing glyph" icon) - the true digit isn't recoverable from
+this PDF by any extraction or rendering method, visual included.
 
-Acrobatics, Air Slash, Alluring Voice, Aqua Cutter, Aqua Tail, Aura Sphere, Avalanche,
-Axe Kick, Belch, Blaze Kick, Body Slam, Boomburst, Bounce, Bug Buzz, Crabhammer,
-Cross Chop, Crunch, Dark Pulse, Dig, Dive, Double Edge, Dragon Hammer, Drill Peck,
-Drill Run, Earthquake, Energy Ball, Extrasensory, Facade, Flail, Flamethrower,
-Flash Cannon, Fly, Focus Blast, Focus Punch, Frustration, Gyro Ball, Head Charge,
-Heart Stamp, Heat Crash, Heat Wave, Heavy Slam, Hidden Power, Hyper Drill, Ice Beam,
-Ice Hammer, Inferno, Iron Head, Low Kick, Moonblast, Mud Bomb, Nuzzle, Petal Blizzard,
-Phantom Force, Play Rough, Poison Tail, Power Gem, Psychic, Psyshock, Return,
-Rock Climb, Shadow Ball, Signal Beam, Sky Uppercut, Slam, Spirit Break, Strength,
-Submission, Thunderbolt, Waterfall, Wild Charge
+**Fix applied:** `data/pokemon.json` and `data/legendaryPokemon.json` still carry their
+own independently-extracted power values for these same move names (from the older
+3.0-era Pokedex book, pre-dating the 3.0→3.5 reconciliation done in
+`src/data/index.ts`). Where a move's dice *count* in that old data matches the
+(ungarbled) count already present in the new garbled value - e.g. new `"3d"` vs old
+`"3d12"`, both count `3` - the die *size* very likely carried over unchanged between
+versions, so the old value's size was borrowed to complete the new one. **54 of 70
+resolved this way**, all listed in the script that did it (since removed; see git history
+of this file for the mapping if needed) - e.g. Ice Beam/Thunderbolt/Flamethrower →
+`3d10`, Acrobatics/Air Slash/Aura Sphere → `3d12`.
+
+**16 still garbled** (`power` ends in a bare `"Nd"` with no size) - either the move
+doesn't appear in any current Pokemon's moveset to cross-reference (`Alluring Voice`,
+`Belch`, `Frustration`, `Hidden Power`, `Rock Climb`), or the dice *count* itself changed
+between 3.0 and 3.5 (making the old die size unsafe to borrow - the whole formula
+changed, e.g. `Earthquake` went from old `5d12` to new count `3`, `Cross Chop`/`Focus
+Blast`/`Focus Punch`/`Ice Hammer`/`Inferno` similarly from old `5d12` to new count `4`):
+`Avalanche`, `Cross Chop`, `Double Edge`, `Earthquake`, `Extrasensory`, `Focus Blast`,
+`Focus Punch`, `Heat Wave`, `Ice Hammer`, `Inferno`, `Poison Tail`. A targeted web search
+for community PTA 3.5 references turned up nothing usable for these. These 16 need a
+human with an alternate copy of the 3.5 rulebook (or a non-corrupted export of it) to
+resolve.
 
 Other individually-flagged edge cases (all preserved with best-judgment handling, listed
 in full in `data/_moves_review_notes.txt`):

@@ -41,7 +41,7 @@
     "range": "Melee",
     "moveType": "Flying",
     "category": "Attack",
-    "power": "3d",
+    "power": "3d12",
     "effect": "If you aren't holding a held item, Acrobatics gets +1d power and you may move 20ft before and after striking."
   },
   {
@@ -104,7 +104,7 @@
     "range": "Ranged(15ft)",
     "moveType": "Flying",
     "category": "Special Attack",
-    "power": "3d",
+    "power": "3d12",
     "effect": "On hit, 14 or higher during Accuracy Check inflicts Dazed. Wind."
   },
   {
@@ -167,7 +167,7 @@
     "range": "Melee",
     "moveType": "Water",
     "category": "Attack",
-    "power": "3d",
+    "power": "3d10",
     "effect": "Aqua Cutter is Lethal."
   },
   {
@@ -203,7 +203,7 @@
     "range": "Melee",
     "moveType": "Water",
     "category": "Attack",
-    "power": "3d",
+    "power": "3d12",
     "effect": "On hit, push the target 10ft. If the target collides, they explode dealing 2d6 damage to the target and everything around the target in a 5ft burst."
   },
   {
@@ -275,7 +275,7 @@
     "range": "Ranged(30ft)",
     "moveType": "Fighting",
     "category": "Special Attack",
-    "power": "3d",
+    "power": "3d12",
     "effect": "Before accuracy check, each ally within 30ft including yourself can pay 4 HP. For each ally who does, Aura Sphere deals +2 damage and has +1 during accuracy check. Aura."
   },
   {
@@ -329,7 +329,7 @@
     "range": "Melee",
     "moveType": "Fighting",
     "category": "Attack",
-    "power": "3d",
+    "power": "3d8",
     "effect": "On hit, 16 or higher during Accuracy Check inflicts Confused. If you miss, you have Defense down and SpDefense down until your next turn."
   },
   {
@@ -464,7 +464,7 @@
     "range": "Melee",
     "moveType": "Fire",
     "category": "Attack",
-    "power": "3d",
+    "power": "3d12",
     "effect": "Stance: You are immune to being Bound, Burned, Dazed and Drowsy, but lose 1d6 HP at the end of your turns. On hit, 16 or higher during Accuracy Check inflicts Burn."
   },
   {
@@ -509,7 +509,7 @@
     "range": "Melee",
     "moveType": "Normal",
     "category": "Attack",
-    "power": "3d",
+    "power": "3d12",
     "effect": "On hit, 14 or higher during Accuracy Check inflicts Paralysis. Body Slam can Paralyze Electric-types."
   },
   {
@@ -554,7 +554,7 @@
     "range": "Ranged(25ft burst)",
     "moveType": "Normal",
     "category": "Special Attack",
-    "power": "3d",
+    "power": "3d12",
     "effect": "Boomburst cures all allies of Drowsiness without damaging them. Sound."
   },
   {
@@ -563,7 +563,7 @@
     "range": "Melee",
     "moveType": "Flying",
     "category": "Attack",
-    "power": "3d",
+    "power": "3d12",
     "effect": "Bounce has Turns. [Turn 1] Leap 40ft vertically, then you don't fall until your next turn. [Turn 2] Return to the ground, move up to twice your speed, then you may roll Bounce’s Accuracy Check and power. On hit, 14 or higher during Accuracy Check inflicts Paralysis. Bounce can Paralyze Electric-types."
   },
   {
@@ -653,7 +653,7 @@
     "range": "Ranged(10ft burst)",
     "moveType": "Bug",
     "category": "Special Attack",
-    "power": "3d",
+    "power": "3d12",
     "effect": "On hit, the next time any targets of Bug Buzz are hit by any ally, that ally has +1d power during the attack. Sound."
   },
   {
@@ -1013,7 +1013,7 @@
     "range": "Melee",
     "moveType": "Water",
     "category": "Attack",
-    "power": "3d",
+    "power": "3d10",
     "effect": "Crabhammer is Lethal. On hit, the target is Bound to you until you choose to release them during your turn. Crabhammer always hits targets who are Bound to you."
   },
   {
@@ -1049,7 +1049,7 @@
     "range": "Melee",
     "moveType": "Dark",
     "category": "Attack",
-    "power": "3d",
+    "power": "3d10",
     "effect": "On hit, target is Latched. If they try to move away from you, they are freed after taking Physical Melee Dark 1d damage."
   },
   {
@@ -1085,7 +1085,7 @@
     "range": "Ranged(10ft)",
     "moveType": "Dark",
     "category": "Special Attack",
-    "power": "3d",
+    "power": "3d10",
     "effect": "On hit, 16 or higher during Accuracy Check inflicts Dazed. Aura."
   },
   {
@@ -1157,7 +1157,7 @@
     "range": "Melee",
     "moveType": "Ground",
     "category": "Attack",
-    "power": "3d",
+    "power": "3d10",
     "effect": "Dig has Turns. [Turn 1] Burrow 40ft down. [Turn 2] Return to the surface, move up to twice your speed +25ft, then you may roll Dig’s Accuracy Check and power."
   },
   {
@@ -1202,7 +1202,7 @@
     "range": "Melee",
     "moveType": "Water",
     "category": "Attack",
-    "power": "3d",
+    "power": "3d10",
     "effect": "Dive can only be used in water at least 5ft deep and has Turns. [Turn 1] Swim up to 40ft down. Until your next turn, when you are targeted the attacker has disadvantage. [Turn 2] Return to the surface, move up to twice your speed +25ft, then you may roll Dive’s Accuracy Check and power."
   },
   {
@@ -1337,7 +1337,7 @@
     "range": "Melee",
     "moveType": "Dragon",
     "category": "Attack",
-    "power": "3d",
+    "power": "3d12",
     "effect": "If you haven't moved this turn, Dragon Hammer deals +1d damage."
   },
   {
@@ -1409,7 +1409,7 @@
     "range": "Melee",
     "moveType": "Flying",
     "category": "Attack",
-    "power": "3d",
+    "power": "3d10",
     "effect": "If you are at half your HP or lower, you get +4 during Accuracy Check."
   },
   {
@@ -1418,7 +1418,7 @@
     "range": "Melee",
     "moveType": "Ground",
     "category": "Attack",
-    "power": "3d",
+    "power": "3d10",
     "effect": "Drill Run is Lethal."
   },
   {
@@ -1598,7 +1598,7 @@
     "range": "Ranged(25ft)",
     "moveType": "Grass",
     "category": "Special Attack",
-    "power": "3d",
+    "power": "3d10",
     "effect": "On hit, the target gets SpDefense down. Energy Ball has +1d power in Sunny Weather."
   },
   {
@@ -1661,7 +1661,7 @@
     "range": "Melee",
     "moveType": "Normal",
     "category": "Attack",
-    "power": "3d",
+    "power": "3d8",
     "effect": "You ignore all afflictions during the turn you use Facade, and Facade gets +1d Power for each affliction ignored."
   },
   {
@@ -1850,7 +1850,7 @@
     "range": "Melee",
     "moveType": "Normal",
     "category": "Attack",
-    "power": "1d",
+    "power": "1d10",
     "effect": "If you are at less than half of your Max HP, Flail has +2d power. If you are at less than 5 HP, Flail has +4d power instead."
   },
   {
@@ -1886,7 +1886,7 @@
     "range": "Ranged(20ft beam)",
     "moveType": "Fire",
     "category": "Special Attack",
-    "power": "3d",
+    "power": "3d10",
     "effect": "If there is only one target in Flamethrower’s beam, Flamethrower has advantage. On hit, 18 or higher during Accuracy Check inflicts Burned."
   },
   {
@@ -1913,7 +1913,7 @@
     "range": "Ranged(20ft)",
     "moveType": "Steel",
     "category": "Special Attack",
-    "power": "3d",
+    "power": "3d10",
     "effect": "Once per combat, if you didn’t move this turn, you don’t exhaust a use of Flash Cannon."
   },
   {
@@ -1958,7 +1958,7 @@
     "range": "Melee",
     "moveType": "Flying",
     "category": "Attack",
-    "power": "3d",
+    "power": "3d12",
     "effect": "Fly can only be used when you have at least 30ft of sky above you and has Turns. [Turn 1] Fly up to 40ft up. Until your next turn, when you are targeted the attacker has disadvantage. [Turn 2] Move up to twice your speed +25ft, then you may roll Fly’s Accuracy Check and power."
   },
   {
@@ -2291,7 +2291,7 @@
     "range": "Melee",
     "moveType": "Steel",
     "category": "Attack",
-    "power": "3d",
+    "power": "3d10",
     "effect": "Gyro Ball rolls against the target's Speed during Accuracy Check."
   },
   {
@@ -2336,7 +2336,7 @@
     "range": "Melee",
     "moveType": "Normal",
     "category": "Attack",
-    "power": "3d",
+    "power": "3d12",
     "effect": "Head Charge gets +1d Power if your movement this turn was in a straight line and at least 20ft. On hit, you lose 2d HP."
   },
   {
@@ -2417,7 +2417,7 @@
     "range": "Melee",
     "moveType": "Psychic",
     "category": "Attack",
-    "power": "2d",
+    "power": "2d8",
     "effect": "On hit, 18 or higher during Accuracy Check inflicts Entranced."
   },
   {
@@ -2426,7 +2426,7 @@
     "range": "Melee",
     "moveType": "Fire",
     "category": "Attack",
-    "power": "3d",
+    "power": "3d10",
     "effect": "If the target is Light or Featherweight, Heat Crash has +1d power. On hit, the target gets Defense down if they are lighter than you."
   },
   {
@@ -2444,7 +2444,7 @@
     "range": "Melee",
     "moveType": "Steel",
     "category": "Attack",
-    "power": "3d",
+    "power": "3d10",
     "effect": "If the target is Light or Featherweight, Heavy Slam has +1d power. On hit, the target gets Attack down if they are lighter than you."
   },
   {
@@ -2597,7 +2597,7 @@
     "range": "Melee",
     "moveType": "Normal",
     "category": "Attack",
-    "power": "3d",
+    "power": "3d10",
     "effect": "On hit, before dealing damage, destroy any temporary HP on the target. Hyper Drill can't miss if your target was adjacent to you at the beginning of your turn."
   },
   {
@@ -2642,7 +2642,7 @@
     "range": "Ranged(20ft beam)",
     "moveType": "Ice",
     "category": "Special Attack",
-    "power": "3d",
+    "power": "3d10",
     "effect": "If there is only one target in Ice Beam’s beam, Ice Beam has advantage. On hit, 18 or higher during Accuracy Check inflicts Frostbite."
   },
   {
@@ -2804,7 +2804,7 @@
     "range": "Melee",
     "moveType": "Steel",
     "category": "Attack",
-    "power": "3d",
+    "power": "3d10",
     "effect": "On hit, 17 or higher during Accuracy Check inflicts Dazed."
   },
   {
@@ -3047,7 +3047,7 @@
     "range": "Melee",
     "moveType": "Fighting",
     "category": "Attack",
-    "power": "3d",
+    "power": "3d10",
     "effect": "If the target weighs more than you, Low Kick gets +1d power. On hit, the target gets Speed down if they are heavier than you."
   },
   {
@@ -3434,7 +3434,7 @@
     "range": "Ranged(20ft)",
     "moveType": "Fairy",
     "category": "Special Attack",
-    "power": "3d",
+    "power": "3d10",
     "effect": "On hit, if you last move wasn’t Fairy-type, inflict Entranced."
   },
   {
@@ -3488,7 +3488,7 @@
     "range": "Ranged(10ft)",
     "moveType": "Ground",
     "category": "Special Attack",
-    "power": "3d",
+    "power": "3d8",
     "effect": "Place difficult terrain in a 5ft burst around the target."
   },
   {
@@ -3605,7 +3605,7 @@
     "range": "Melee",
     "moveType": "Electric",
     "category": "Attack",
-    "power": "1d",
+    "power": "1d10",
     "effect": "On hit, afflict Paralysis."
   },
   {
@@ -3749,7 +3749,7 @@
     "range": "Ranged(10ft burst)",
     "moveType": "Grass",
     "category": "Attack",
-    "power": "3d",
+    "power": "3d10",
     "effect": "If you’re in Grassy Terrain, gain 1d8 temporary HP. Wind."
   },
   {
@@ -3767,7 +3767,7 @@
     "range": "Melee",
     "moveType": "Ghost",
     "category": "Attack",
-    "power": "3d",
+    "power": "3d12",
     "effect": "Phantom Force has Turns. [Turn 1] Disappear from the battlefield. [Turn 2] Reappear anywhere within 25 ft of where you vanished, move up to your movement speed, then you may roll Phantom Force’s Accuracy Check and power."
   },
   {
@@ -3794,7 +3794,7 @@
     "range": "Melee",
     "moveType": "Fairy",
     "category": "Attack",
-    "power": "3d",
+    "power": "3d10",
     "effect": "On hit, the target is Entranced."
   },
   {
@@ -3920,7 +3920,7 @@
     "range": "Ranged(20ft)",
     "moveType": "Rock",
     "category": "Special Attack",
-    "power": "3d",
+    "power": "3d10",
     "effect": "On hit, the target gets Defense down."
   },
   {
@@ -3974,7 +3974,7 @@
     "range": "Ranged(25ft)",
     "moveType": "Psychic",
     "category": "Special Attack",
-    "power": "3d",
+    "power": "3d10",
     "effect": "On hit, move the target 20ft, if they collide, they get SpDefense down."
   },
   {
@@ -4037,7 +4037,7 @@
     "range": "Ranged(20ft)",
     "moveType": "Psychic",
     "category": "Special Attack",
-    "power": "3d",
+    "power": "3d10",
     "effect": "Psyshock is rolled against the target's Defense stat instead of SpDefense."
   },
   {
@@ -4262,7 +4262,7 @@
     "range": "Melee",
     "moveType": "Normal",
     "category": "Attack",
-    "power": "3d",
+    "power": "3d10",
     "effect": "Return can only be used if you have 3 or more loyalty. Stance: You may intercept attacks for your trainer without using your turn for the round."
   },
   {
@@ -4577,7 +4577,7 @@
     "range": "Ranged(20ft)",
     "moveType": "Ghost",
     "category": "Special Attack",
-    "power": "3d",
+    "power": "3d10",
     "effect": "On hit, the target gets SpDefense down."
   },
   {
@@ -4721,7 +4721,7 @@
     "range": "Ranged(15ft beam)",
     "moveType": "Bug",
     "category": "Special Attack",
-    "power": "3d",
+    "power": "3d10",
     "effect": "On hit, 18 or higher during Accuracy Check inflicts Confused."
   },
   {
@@ -4802,7 +4802,7 @@
     "range": "Melee",
     "moveType": "Fighting",
     "category": "Attack",
-    "power": "3d",
+    "power": "3d10",
     "effect": "Sky Uppercut has +2d8 power against Flying-type targets. While using Sky Uppercut, you may jump up to 60ft vertically."
   },
   {
@@ -4820,7 +4820,7 @@
     "range": "Melee",
     "moveType": "Normal",
     "category": "Attack",
-    "power": "3d",
+    "power": "3d10",
     "effect": "On hit, push the target 10ft. If the target collides, the obstruction loses 2d8 HP."
   },
   {
@@ -5108,7 +5108,7 @@
     "range": "Melee",
     "moveType": "Fairy",
     "category": "Attack",
-    "power": "3d",
+    "power": "3d10",
     "effect": "On hit, the target gets SpAttack down."
   },
   {
@@ -5279,7 +5279,7 @@
     "range": "Melee",
     "moveType": "Normal",
     "category": "Attack",
-    "power": "3d",
+    "power": "3d10",
     "effect": "On hit, the target is moved 15ft away from you. If the target collides, the obstruction loses 2d6 HP."
   },
   {
@@ -5351,7 +5351,7 @@
     "range": "Melee",
     "moveType": "Fighting",
     "category": "Attack",
-    "power": "3d",
+    "power": "3d10",
     "effect": "On hit, the target is Bound to you until the start of your next turn. At the start of their turn, both you and the target lose 1d8 HP."
   },
   {
@@ -5738,7 +5738,7 @@
     "range": "Ranged(30ft)",
     "moveType": "Electric",
     "category": "Special Attack",
-    "power": "3d",
+    "power": "3d10",
     "effect": "On hit, 16 or higher during Accuracy Check inflicts Paralysis."
   },
   {
@@ -6107,7 +6107,7 @@
     "range": "Melee",
     "moveType": "Water",
     "category": "Attack",
-    "power": "3d",
+    "power": "3d10",
     "effect": "On hit, 18 or higher during Accuracy Check inflicts Dazed."
   },
   {
@@ -6152,7 +6152,7 @@
     "range": "Melee",
     "moveType": "Electric",
     "category": "Attack",
-    "power": "3d",
+    "power": "3d10",
     "effect": "On hit, you lose 1d HP."
   },
   {

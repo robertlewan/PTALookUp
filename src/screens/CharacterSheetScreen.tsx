@@ -155,7 +155,7 @@ export default function CharacterSheetScreen() {
             navigation.navigate('PickClass', {
               characterId: char.id,
               onPick: async (classId: string) => {
-                await update({ classes: [...char.classes, { classId, level: 1 }] });
+                await update({ classes: [...char.classes, { classId, level: Math.max(1, char.trainerLevel) }] });
               },
             })
           }
