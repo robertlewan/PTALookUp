@@ -129,6 +129,7 @@ export default function CharacterSheetScreen() {
       </Section>
 
       <Section title="Trainer Classes">
+        <Text style={styles.emptyHint}>Each class's level can be adjusted independently with +/−; leveling up the trainer above still bumps every class by the same amount.</Text>
         {char.classes.map((pick, i) => {
           const cls = trainerClassById.get(pick.classId);
           return (
@@ -137,7 +138,28 @@ export default function CharacterSheetScreen() {
               style={styles.classRow}
               onPress={() => cls && navigation.navigate('ClassDetail', { classId: cls.id })}
             >
-              <Text style={styles.classRowText}>{cls?.name ?? pick.classId} · Lvl {pick.level}</Text>
+              <Text style={styles.classRowText}>{cls?.name ?? pick.classId}</Text>
+              <TouchableOpacity
+                style={styles.classLevelStepBtn}
+                onPress={(e) => {
+                  e.stopPropagation();
+                  const classes = char.classes.map((c, idx) => (idx === i ? { ...c, level: Math.max(1, c.level - 1) } : c));
+                  update({ classes });
+                }}
+              >
+                <Text style={styles.stepBtnText}>−</Text>
+              </TouchableOpacity>
+              <Text style={styles.classLevelValue}>Lvl {pick.level}</Text>
+              <TouchableOpacity
+                style={styles.classLevelStepBtn}
+                onPress={(e) => {
+                  e.stopPropagation();
+                  const classes = char.classes.map((c, idx) => (idx === i ? { ...c, level: c.level + 1 } : c));
+                  update({ classes });
+                }}
+              >
+                <Text style={styles.stepBtnText}>+</Text>
+              </TouchableOpacity>
               <TouchableOpacity
                 onPress={(e) => {
                   e.stopPropagation();
@@ -344,7 +366,9 @@ const styles = StyleSheet.create({
     marginBottom: 6,
   },
   classRowText: { color: colors.text, fontSize: 14, fontWeight: '600', flex: 1 },
-  removeText: { color: '#f87171', fontSize: 12, fontWeight: '700' },
+  classLevelStepBtn: { backgroundColor: colors.surfaceAlt, width: 24, height: 24, borderRadius: 5, alignItems: 'center', justifyContent: 'center' },
+  classLevelValue: { color: colors.text, fontSize: 13, fontWeight: '700', marginHorizontal: 8, minWidth: 42, textAlign: 'center' },
+  removeText: { color: '#f87171', fontSize: 12, fontWeight: '700', marginLeft: 10 },
   addBtn: { backgroundColor: colors.primaryMuted, borderRadius: 8, padding: 10, alignItems: 'center', marginTop: 4 },
   addBtnText: { color: '#fff', fontWeight: '700', fontSize: 13 },
   restBtn: { backgroundColor: colors.primaryMuted, borderRadius: 8, padding: 10, alignItems: 'center', marginTop: 10 },
