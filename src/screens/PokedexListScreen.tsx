@@ -7,10 +7,13 @@ import { TypeBadge } from '../components/TypeBadge';
 
 const ALL_TYPES = Object.keys(typeColors);
 
+type SortMode = 'name' | 'eggGroup';
+
 export default function PokedexListScreen() {
   const navigation = useNavigation<any>();
   const [query, setQuery] = useState('');
   const [activeType, setActiveType] = useState<string | null>(null);
+  const [sortBy, setSortBy] = useState<SortMode>('name');
 
   const filtered = useMemo(() => {
     let list = pokemonFamilies;
@@ -19,10 +22,17 @@ export default function PokedexListScreen() {
     }
     if (query.trim()) {
       const q = query.toLowerCase();
-      list = list.filter((f) => f.familyName.toLowerCase().includes(q));
+      list = list.filter((f) => f.familyName.toLowerCase().includes(q) || f.stages.some((s) => s.name.toLowerCase().includes(q)));
+    }
+    if (sortBy === 'eggGroup') {
+      list = [...list].sort((a, b) => {
+        const ega = a.biology?.eggGroups?.[0] ?? 'zzzz';
+        const egb = b.biology?.eggGroups?.[0] ?? 'zzzz';
+        return ega === egb ? a.familyName.localeCompare(b.familyName) : ega.localeCompare(egb);
+      });
     }
     return list;
-  }, [query, activeType]);
+  }, [query, activeType, sortBy]);
 
   return (
     <View style={styles.container}>
@@ -47,16 +57,28 @@ export default function PokedexListScreen() {
           </TouchableOpacity>
         ))}
       </View>
+      <View style={styles.sortRow}>
+        <Text style={styles.sortLabel}>Sort:</Text>
+        <TouchableOpacity onPress={() => setSortBy('name')} style={[styles.sortChip, sortBy === 'name' && styles.sortChipActive]}>
+          <Text style={styles.sortChipText}>Name</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => setSortBy('eggGroup')} style={[styles.sortChip, sortBy === 'eggGroup' && styles.sortChipActive]}>
+          <Text style={styles.sortChipText}>Egg Group</Text>
+        </TouchableOpacity>
+      </View>
       <FlatList
         data={filtered}
         keyExtractor={(f) => f.familyId}
         contentContainerStyle={{ padding: 12 }}
         renderItem={({ item }) => {
           const first = item.stages[0];
+          const eggGroups = item.biology?.eggGroups ?? [];
           return (
             <TouchableOpacity style={styles.row} onPress={() => navigation.navigate('DexDetail', { familyId: item.familyId })}>
               <View style={{ flex: 1 }}>
                 <Text style={styles.rowTitle}>{item.familyName}</Text>
+                {item.stages.length > 1 && <Text style={styles.evoLine}>{item.stages.map((s) => s.name).join(' → ')}</Text>}
+                {sortBy === 'eggGroup' && eggGroups.length > 0 && <Text style={styles.eggGroupText}>{eggGroups.join(', ')}</Text>}
                 <View style={styles.badgeRow}>{first?.types.map((t) => <TypeBadge key={t} type={t} />)}</View>
               </View>
               {item.rarity && <Text style={styles.rarity}>{item.rarity}</Text>}
@@ -94,6 +116,13 @@ const styles = StyleSheet.create({
   },
   typeChipActive: { borderWidth: 2, borderColor: colors.text },
   typeChipText: { color: '#fff', fontSize: 12, fontWeight: '700' },
+  sortRow: { flexDirection: 'row', alignItems: 'center', paddingHorizontal: 12, marginBottom: 8 },
+  sortLabel: { color: colors.textMuted, fontSize: 12, marginRight: 8 },
+  sortChip: { paddingHorizontal: 12, paddingVertical: 6, borderRadius: 14, marginRight: 8, backgroundColor: colors.surfaceAlt },
+  sortChipActive: { backgroundColor: colors.primary },
+  sortChipText: { color: '#fff', fontSize: 12, fontWeight: '700' },
+  evoLine: { color: colors.textMuted, fontSize: 11, marginBottom: 2 },
+  eggGroupText: { color: colors.accent, fontSize: 11, marginBottom: 2 },
   row: {
     backgroundColor: colors.surface,
     borderRadius: 10,

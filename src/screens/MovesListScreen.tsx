@@ -19,6 +19,7 @@ export default function MovesListScreen() {
   const navigation = useNavigation<any>();
   const [query, setQuery] = useState('');
   const [activeProficiency, setActiveProficiency] = useState<string | null>(null);
+  const [showFilters, setShowFilters] = useState(false);
 
   const filtered = useMemo(() => {
     let list = activeProficiency ? movesForProficiency(allMoves, activeProficiency) : allMoves;
@@ -38,33 +39,47 @@ export default function MovesListScreen() {
         value={query}
         onChangeText={setQuery}
       />
-      <Text style={styles.filterLabel}>Type / attack-category proficiencies</Text>
-      <View style={styles.profWrap}>
-        <TouchableOpacity onPress={() => setActiveProficiency(null)} style={[styles.profChip, !activeProficiency && styles.profChipActive]}>
-          <Text style={styles.profChipText}>All</Text>
-        </TouchableOpacity>
-        {PROFICIENCIES.map((p) => (
-          <TouchableOpacity
-            key={p}
-            onPress={() => setActiveProficiency(activeProficiency === p ? null : p)}
-            style={[styles.profChip, { backgroundColor: typeColors[p] ?? colors.surfaceAlt }, activeProficiency === p && styles.profChipActive]}
-          >
-            <Text style={styles.profChipText}>{p}</Text>
+      <TouchableOpacity style={styles.filterToggle} onPress={() => setShowFilters((v) => !v)}>
+        <Text style={styles.filterToggleText}>
+          {showFilters ? '▾' : '▸'} Filter by proficiency{activeProficiency ? `: ${activeProficiency}` : ''}
+        </Text>
+        {activeProficiency && !showFilters && (
+          <TouchableOpacity onPress={() => setActiveProficiency(null)}>
+            <Text style={styles.filterClearText}>Clear</Text>
           </TouchableOpacity>
-        ))}
-      </View>
-      <Text style={styles.filterLabel}>Move-class proficiencies</Text>
-      <View style={styles.profWrap}>
-        {MOVE_CLASS_PROFICIENCIES.map((p) => (
-          <TouchableOpacity
-            key={p}
-            onPress={() => setActiveProficiency(activeProficiency === p ? null : p)}
-            style={[styles.profChip, activeProficiency === p && styles.profChipActive]}
-          >
-            <Text style={styles.profChipText}>{p}</Text>
-          </TouchableOpacity>
-        ))}
-      </View>
+        )}
+      </TouchableOpacity>
+      {showFilters && (
+        <>
+          <Text style={styles.filterLabel}>Type / attack-category proficiencies</Text>
+          <View style={styles.profWrap}>
+            <TouchableOpacity onPress={() => setActiveProficiency(null)} style={[styles.profChip, !activeProficiency && styles.profChipActive]}>
+              <Text style={styles.profChipText}>All</Text>
+            </TouchableOpacity>
+            {PROFICIENCIES.map((p) => (
+              <TouchableOpacity
+                key={p}
+                onPress={() => setActiveProficiency(activeProficiency === p ? null : p)}
+                style={[styles.profChip, { backgroundColor: typeColors[p] ?? colors.surfaceAlt }, activeProficiency === p && styles.profChipActive]}
+              >
+                <Text style={styles.profChipText}>{p}</Text>
+              </TouchableOpacity>
+            ))}
+          </View>
+          <Text style={styles.filterLabel}>Move-class proficiencies</Text>
+          <View style={styles.profWrap}>
+            {MOVE_CLASS_PROFICIENCIES.map((p) => (
+              <TouchableOpacity
+                key={p}
+                onPress={() => setActiveProficiency(activeProficiency === p ? null : p)}
+                style={[styles.profChip, activeProficiency === p && styles.profChipActive]}
+              >
+                <Text style={styles.profChipText}>{p}</Text>
+              </TouchableOpacity>
+            ))}
+          </View>
+        </>
+      )}
       <FlatList
         data={filtered}
         keyExtractor={(m) => m.name}
@@ -97,6 +112,21 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: colors.border,
   },
+  filterToggle: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginHorizontal: 12,
+    marginBottom: 8,
+    paddingVertical: 8,
+    paddingHorizontal: 12,
+    backgroundColor: colors.surface,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: colors.border,
+  },
+  filterToggleText: { color: colors.text, fontSize: 13, fontWeight: '700' },
+  filterClearText: { color: colors.accent, fontSize: 12, fontWeight: '700' },
   filterLabel: { color: colors.textMuted, fontSize: 11, marginHorizontal: 12, marginBottom: 4, textTransform: 'uppercase', letterSpacing: 0.5 },
   profWrap: { flexDirection: 'row', flexWrap: 'wrap', paddingHorizontal: 12, marginBottom: 8 },
   profChip: {
