@@ -235,13 +235,14 @@ export default function CharacterSheetScreen() {
       </Section>
 
       <Section title="Party">
+        {char.party.length === 0 && <Text style={styles.emptyHint}>No Pokémon in the active party.</Text>}
         {char.party.map((mon) => {
           const family = pokemonFamilyById.get(mon.familyId);
           return (
             <TouchableOpacity
               key={mon.id}
               style={styles.classRow}
-              onPress={() => navigation.navigate('PokemonSheet', { characterId: char.id, pokemonId: mon.id })}
+              onPress={() => navigation.navigate('PokemonSheet', { characterId: char.id, pokemonId: mon.id, location: 'party' })}
             >
               <Text style={styles.classRowText}>
                 {mon.nickname || mon.stageName} ({family?.familyName ?? mon.familyId} · {mon.stageName}) · Lvl {mon.level}
@@ -261,6 +262,38 @@ export default function CharacterSheetScreen() {
           }
         >
           <Text style={styles.addBtnText}>+ Add Pokémon</Text>
+        </TouchableOpacity>
+      </Section>
+
+      <Section title="Box">
+        <Text style={styles.emptyHint}>Pokémon in the box aren't part of the active party — move them here and back anytime.</Text>
+        {char.box.length === 0 && <Text style={styles.emptyHint}>Box is empty.</Text>}
+        {char.box.map((mon) => {
+          const family = pokemonFamilyById.get(mon.familyId);
+          return (
+            <TouchableOpacity
+              key={mon.id}
+              style={styles.classRow}
+              onPress={() => navigation.navigate('PokemonSheet', { characterId: char.id, pokemonId: mon.id, location: 'box' })}
+            >
+              <Text style={styles.classRowText}>
+                {mon.nickname || mon.stageName} ({family?.familyName ?? mon.familyId} · {mon.stageName}) · Lvl {mon.level}
+              </Text>
+            </TouchableOpacity>
+          );
+        })}
+        <TouchableOpacity
+          style={styles.addBtn}
+          onPress={() =>
+            navigation.navigate('AddPokemon', {
+              characterId: char.id,
+              onAdd: async (familyId: string, stageName: string) => {
+                await update({ box: [...char.box, newOwnedPokemon(familyId, stageName)] });
+              },
+            })
+          }
+        >
+          <Text style={styles.addBtnText}>+ Add to Box</Text>
         </TouchableOpacity>
       </Section>
 

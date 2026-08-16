@@ -8,7 +8,9 @@ async function readAll(): Promise<CharacterSheet[]> {
   const raw = await AsyncStorage.getItem(STORAGE_KEY);
   if (!raw) return [];
   try {
-    return JSON.parse(raw) as CharacterSheet[];
+    const characters = JSON.parse(raw) as CharacterSheet[];
+    // Migration: characters saved before the Box feature existed have no `box` field.
+    return characters.map((c) => ({ ...c, box: c.box ?? [] }));
   } catch {
     return [];
   }
@@ -58,6 +60,7 @@ export function newCharacter(name: string): CharacterSheet {
     inventory: [],
     notes: '',
     party: [],
+    box: [],
     createdAt: now,
     updatedAt: now,
   };

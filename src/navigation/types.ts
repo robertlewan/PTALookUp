@@ -11,7 +11,7 @@ export type DexStackParamList = {
 export type CharactersStackParamList = {
   CharacterList: undefined;
   CharacterSheet: { characterId: string };
-  PokemonSheet: { characterId: string; pokemonId: string };
+  PokemonSheet: { characterId: string; pokemonId: string; location?: 'party' | 'box' };
   AddPokemon: { characterId: string };
   PickClass: { characterId: string; slot: 'base' | 'advanced'; forBaseId?: string };
   PickItem: { onPick: (itemId: string) => void | Promise<void>; defaultCategory?: string };

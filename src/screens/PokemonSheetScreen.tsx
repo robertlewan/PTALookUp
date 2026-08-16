@@ -16,7 +16,8 @@ const COMMON_STATUS = ['Poisoned', 'Burned', 'Paralyzed', 'Asleep', 'Frozen', 'C
 export default function PokemonSheetScreen() {
   const route = useRoute<any>();
   const navigation = useNavigation<any>();
-  const { characterId, pokemonId }: { characterId: string; pokemonId: string } = route.params;
+  const { characterId, pokemonId, location = 'party' }: { characterId: string; pokemonId: string; location?: 'party' | 'box' } =
+    route.params;
   const [char, setChar] = useState<CharacterSheet | null>(null);
 
   const load = useCallback(() => {
@@ -33,11 +34,12 @@ export default function PokemonSheetScreen() {
     );
   }
 
-  const mon = char.party.find((p) => p.id === pokemonId);
+  const listKey = location === 'box' ? 'box' : 'party';
+  const mon = char[listKey].find((p) => p.id === pokemonId);
   if (!mon) {
     return (
       <View style={styles.container}>
-        <Text style={styles.empty}>This Pokémon is no longer in the party.</Text>
+        <Text style={styles.empty}>This Pokémon is no longer in the {listKey}.</Text>
       </View>
     );
   }
@@ -47,18 +49,28 @@ export default function PokemonSheetScreen() {
 
   async function updateMon(patch: Partial<OwnedPokemon>) {
     if (!char) return;
-    const party = char.party.map((p) => (p.id === pokemonId ? { ...p, ...patch } : p));
-    const next = { ...char, party };
+    const list = char[listKey].map((p) => (p.id === pokemonId ? { ...p, ...patch } : p));
+    const next = { ...char, [listKey]: list };
     await saveCharacter(next);
     setChar(next);
   }
 
   async function removeMon() {
     if (!char) return;
-    const party = char.party.filter((p) => p.id !== pokemonId);
-    const next = { ...char, party };
+    const list = char[listKey].filter((p) => p.id !== pokemonId);
+    const next = { ...char, [listKey]: list };
     await saveCharacter(next);
     setChar(next);
+    navigation.goBack();
+  }
+
+  async function transferMon() {
+    if (!char) return;
+    const other = listKey === 'party' ? 'box' : 'party';
+    const list = char[listKey].filter((p) => p.id !== pokemonId);
+    const otherList = [...char[other], mon!];
+    const next = { ...char, [listKey]: list, [other]: otherList };
+    await saveCharacter(next);
     navigation.goBack();
   }
 
@@ -296,9 +308,32 @@ export default function PokemonSheetScreen() {
               <Text style={styles.restBtnText}>Rest (refresh moves)</Text>
             </TouchableOpacity>
           </View>
-          {ref.stage.moves.map((m, i) => (
-            <MoveRow key={i} move={m} moveUses={mon.moveUses} onUse={() => useMove(m)} onRestore={() => restoreMove(m)} />
-          ))}
+          {ref.stage.moves
+            .filter((m) => !(mon.removedMoves ?? []).includes(m.name))
+            .map((m, i) => (
+              <MoveRow
+                key={i}
+                move={m}
+                moveUses={mon.moveUses}
+                onUse={() => useMove(m)}
+                onRestore={() => restoreMove(m)}
+                onRemove={() => updateMon({ removedMoves: [...(mon.removedMoves ?? []), m.name] })}
+              />
+            ))}
+
+          {(mon.removedMoves ?? []).length > 0 && (
+            <View style={{ marginBottom: 8 }}>
+              <Text style={styles.removedMovesLabel}>Removed from default moveset:</Text>
+              {(mon.removedMoves ?? []).map((name) => (
+                <View key={name} style={styles.removedMoveRow}>
+                  <Text style={styles.removedMoveText}>{name}</Text>
+                  <TouchableOpacity onPress={() => updateMon({ removedMoves: (mon.removedMoves ?? []).filter((n) => n !== name) })}>
+                    <Text style={styles.link}>Restore</Text>
+                  </TouchableOpacity>
+                </View>
+              ))}
+            </View>
+          )}
 
           {(mon.extraMoves ?? []).map((name) => {
             const move = allMoveByName.get(name);
@@ -337,8 +372,12 @@ export default function PokemonSheetScreen() {
         </Section>
       )}
 
+      <TouchableOpacity style={styles.transferBtn} onPress={transferMon}>
+        <Text style={styles.transferBtnText}>{listKey === 'party' ? '→ Move to Box' : '→ Move to Party'}</Text>
+      </TouchableOpacity>
+
       <TouchableOpacity style={styles.deleteBtn} onPress={removeMon}>
-        <Text style={styles.deleteBtnText}>Remove from Party</Text>
+        <Text style={styles.deleteBtnText}>Remove from {listKey === 'party' ? 'Party' : 'Box'}</Text>
       </TouchableOpacity>
     </ScrollView>
   );
@@ -455,6 +494,11 @@ const styles = StyleSheet.create({
   subTitle: { color: colors.primary, fontSize: 12, fontWeight: '700', marginTop: 8, marginBottom: 4, textTransform: 'uppercase' },
   moveEffect: { color: colors.textMuted, fontSize: 12, lineHeight: 17 },
   link: { color: colors.accent, fontSize: 13, fontWeight: '600', marginTop: 6 },
+  removedMovesLabel: { color: colors.textMuted, fontSize: 11, textTransform: 'uppercase', letterSpacing: 0.5, marginBottom: 4 },
+  removedMoveRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingVertical: 3 },
+  removedMoveText: { color: colors.textMuted, fontSize: 13, textDecorationLine: 'line-through' },
+  transferBtn: { alignItems: 'center', padding: 12, marginTop: 8 },
+  transferBtnText: { color: colors.accent, fontWeight: '700' },
   deleteBtn: { alignItems: 'center', padding: 16, marginBottom: 40 },
   deleteBtnText: { color: '#f87171', fontWeight: '700' },
 });

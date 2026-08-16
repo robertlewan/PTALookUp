@@ -154,6 +154,7 @@ export interface OwnedPokemon {
   moveUses?: Record<string, number>;
   heldItem?: string | null;
   extraMoves?: string[];
+  removedMoves?: string[];
   extraPassives?: string[];
   nature?: string | null;
 }
@@ -176,6 +177,7 @@ export interface CharacterSheet {
   inventory: string[];
   notes: string;
   party: OwnedPokemon[];
+  box: OwnedPokemon[];
   createdAt: string;
   updatedAt: string;
 }
