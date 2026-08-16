@@ -147,7 +147,6 @@ export interface OwnedPokemon {
   familyId: string;
   stageName: string;
   nickname: string;
-  level: number;
   currentHp: number;
   statusConditions: string[];
   notes: string;

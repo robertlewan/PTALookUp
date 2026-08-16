@@ -245,7 +245,7 @@ export default function CharacterSheetScreen() {
               onPress={() => navigation.navigate('PokemonSheet', { characterId: char.id, pokemonId: mon.id, location: 'party' })}
             >
               <Text style={styles.classRowText}>
-                {mon.nickname || mon.stageName} ({family?.familyName ?? mon.familyId} · {mon.stageName}) · Lvl {mon.level}
+                {mon.nickname || mon.stageName} ({family?.familyName ?? mon.familyId} · {mon.stageName})
               </Text>
             </TouchableOpacity>
           );
@@ -277,7 +277,7 @@ export default function CharacterSheetScreen() {
               onPress={() => navigation.navigate('PokemonSheet', { characterId: char.id, pokemonId: mon.id, location: 'box' })}
             >
               <Text style={styles.classRowText}>
-                {mon.nickname || mon.stageName} ({family?.familyName ?? mon.familyId} · {mon.stageName}) · Lvl {mon.level}
+                {mon.nickname || mon.stageName} ({family?.familyName ?? mon.familyId} · {mon.stageName})
               </Text>
             </TouchableOpacity>
           );

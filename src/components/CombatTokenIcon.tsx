@@ -11,15 +11,15 @@ const EMOJI: Partial<Record<CombatTokenKind, string>> = {
 const INK = '#0b0d10';
 const PAPER = '#f2f4f7';
 
-function Triangle({ size, color }: { size: number; color: string }) {
+function Triangle({ width, height, color }: { width: number; height: number; color: string }) {
   return (
     <View
       style={{
         width: 0,
         height: 0,
-        borderLeftWidth: size / 2,
-        borderRightWidth: size / 2,
-        borderBottomWidth: size * 0.87,
+        borderLeftWidth: width / 2,
+        borderRightWidth: width / 2,
+        borderBottomWidth: height,
         borderLeftColor: 'transparent',
         borderRightColor: 'transparent',
         borderBottomColor: color,
@@ -63,13 +63,23 @@ export function CombatTokenIcon({ kind, size }: { kind: CombatTokenKind; size: n
   }
 
   if (kind === 'triangle-black') {
+    // Draws an outlined triangle as an outer (white) triangle with a smaller
+    // inner (black) triangle offset by a fixed `stroke` on all four sides —
+    // width shrinks and height shrinks independently so the border reads as
+    // an even ring instead of tapering to nothing at the tip.
+    const outerWidth = size;
+    const outerHeight = size * 0.87;
+    const outerTop = (size - outerHeight) / 2;
+    const stroke = Math.max(1.5, size * 0.08);
+    const innerWidth = Math.max(0, outerWidth - stroke * 2);
+    const innerHeight = Math.max(0, outerHeight - stroke * 2);
     return (
-      <View style={{ width: size, height: size, alignItems: 'center', justifyContent: 'center' }}>
-        <View style={{ position: 'absolute' }}>
-          <Triangle size={size} color={PAPER} />
+      <View style={{ width: size, height: size }}>
+        <View style={{ position: 'absolute', top: outerTop, left: 0 }}>
+          <Triangle width={outerWidth} height={outerHeight} color={PAPER} />
         </View>
-        <View style={{ position: 'absolute', top: 2.5 }}>
-          <Triangle size={size - 5} color={INK} />
+        <View style={{ position: 'absolute', top: outerTop + stroke, left: stroke }}>
+          <Triangle width={innerWidth} height={innerHeight} color={INK} />
         </View>
       </View>
     );

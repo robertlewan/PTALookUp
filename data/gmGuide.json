@@ -73,5 +73,99 @@
     "title": "Pokécredit Rewards",
     "body": "Pokécredit (P) Rewards Pokécredits are an important resource in any modern setting for your players. Whether its from odd jobs, by selling rarities found in the wilds, or through league sanctioned battles, your players should be earning Pokécredits so they may succeed during their adventure. Things to consider– These are all suggestions for getting money to your players. If your setting doesn’t have free health care, make sure you’re giving them more opportunities to make some money. If your setting involves scarcity of goods, consider that many items might cost more and so again, players should have more chances to earn money. League Battles Whenever your trainers engage in battle with other trainers, they may wager their Pokécredits against the other trainer’s. Any given NPC trainer is unlikely to want to wager more than 500P in a single battle, but if they are battling with allies in a multi-battle the NPC trainer may wager more than that in a large pool of Pokécredits. When trainers begin battles in bad faith and start an attack before any terms of battle are agreed upon, like how many Pokémon are being used or whether or not a trainer even agreed to a battle, the battle would not be considered league sanctioned and would be unlikely to award any Pokécredits either way. When participating in exhibition matches at gyms, losers may be paid at least 15P to a loser but if it’s a good show, the gym’s staff may pay as much as 25P. The winners would likely be paid double whatever the losers are paid. Consider the size of the Gym and the crowd size as well, the larger the crowd the more a gym may pay trainers to entertain crowds between gym challenges. While we’re on Pokémon gyms, Gym Leaders will likely have a package set of rewards for league challengers. Sometimes they will reward technical machines and a set amount of Pokécredits to encourage challengers to continue with their league careers (1,000P or even 3,000P). Depending on your setting, it’s possible that players are very well funded for the entertainment they provide via battle and so are paid even more, starting at 2,500P and possibly paying out up to 10,000P for defeating a gym leader. Winning bracketed tournaments also have excellent payouts, depending on the buy in– whatever the buy in is, winners will likely receive at least half of the pot from entry fees. Regional Championships will pay out up to 250,000P to first place winners, paying up to 50,000P even for eighth place.\n\nContests Pokémon contests tend to pay out to third place as well, awarding up to 2,000P for first place. Contest halls make their money from spectators who will spend credits on concessions or specialized products that trainers have used to help their Pokémon win pageants so contest running halls will further incentivize contest participation from trainers with bigger prizes for particularly fabulous trainers. Grand festivals will have exorbitant payouts for grand winners sometimes exceeding the pay outs of regional league championships. While there may not be as many spectators showing up for a region’s grand festival, contestants can potentially walk away with over 400,000 Pokécredits as festival champion.\n\nRare Goods While exploring the wilds, at your discretion you can award rare items to your players that they can later sell to traders at open markets or trinket shops. If trainers spend time looking for random goods in the wild, or if they scare away a wild who drops a random item, you can use this table below if you’d like. Item Estimated Value Roll on 1d100 Common Berries Variable 1 - 60 Uncommon Berries Variable 61 - 70 Rare Berries Variable 71 - 75 Rare Fungi 200 - 800P 76 - 80 Trainer Items Variable 81 - 85 Human-made Pokémon trainer items Precious Gems 1,000P 86 - 90 Diamonds, Pearls, Stardust, Rubies, Sapphires, etc. Rare Stones 2,500P 91 - 94 Rare Materials 15,000P 95 - 98 Large Gold Nuggets, Comet Shards, Slabs of Silver, etc. Ancient Relics 20,000P - 200,000P 99 - 100 Rare artifacts of a time long past",
     "table": null
+  },
+  {
+    "id": "inflictions",
+    "title": "Inflictions",
+    "body": "Inflictions (Status Afflictions) When a Pokémon or trainer is inflicted with a status affliction in combat, it changes how they can act and what happens to them each round. Afflictions come in two flavors. Persistent afflictions stick around after combat ends and need to be cured — by an item, a move, visiting a Pokémon Center, or GM ruling — before they wear off. Volatile afflictions are tied to the fight itself and clear automatically once the scene or encounter ends.\n\nA Pokémon can only be affected by one Persistent affliction at a time (a second one usually can’t take hold until the first is cured), but Volatile afflictions can stack alongside a Persistent one and alongside each other. Remind your players to track afflictions on their sheet, and remember that a wild Pokémon’s capture rate improves while it’s afflicted (see Capture Rates), so a status condition is often a trainer’s best opening for a catch as well as a fight.",
+    "table": {
+      "columns": [
+        "Affliction",
+        "Kind",
+        "Effect"
+      ],
+      "rows": [
+        [
+          "Burned",
+          "Persistent",
+          "Takes damage at the start of each of its turns; its Attack-based combat stages are treated as reduced while burned."
+        ],
+        [
+          "Frozen",
+          "Persistent",
+          "Cannot take actions and cannot dodge; has a chance to thaw out at the start of each of its turns, and Fire-type damage thaws it immediately."
+        ],
+        [
+          "Paralyzed",
+          "Persistent",
+          "Speed is sharply reduced and it has a chance to be unable to act on its turn."
+        ],
+        [
+          "Poisoned",
+          "Persistent",
+          "Takes damage at the start of each of its turns until cured."
+        ],
+        [
+          "Badly Poisoned",
+          "Persistent",
+          "Like Poisoned, but the damage taken increases each round it isn’t cured."
+        ],
+        [
+          "Asleep",
+          "Persistent",
+          "Cannot take actions; has a chance to wake up at the start of each of its turns, and taking damage can wake it early."
+        ],
+        [
+          "Confused",
+          "Volatile",
+          "Has a chance to hurt itself instead of following through on its chosen action each turn."
+        ],
+        [
+          "Cursed",
+          "Volatile",
+          "Takes damage at the start of each of its turns for the rest of the scene."
+        ],
+        [
+          "Disabled",
+          "Volatile",
+          "One specific move it just used can’t be used again until the affliction ends."
+        ],
+        [
+          "Enraged",
+          "Volatile",
+          "Must keep attacking and can’t use non-damaging moves, but hits harder while enraged."
+        ],
+        [
+          "Flinch",
+          "Volatile",
+          "Loses its next action; only relevant if it hasn’t acted yet this round."
+        ],
+        [
+          "Infatuated",
+          "Volatile",
+          "Has a chance to freeze up instead of acting whenever it targets the Pokémon it’s infatuated with."
+        ],
+        [
+          "Slowed",
+          "Volatile",
+          "Acts later in the turn order and has reduced Speed for the rest of the scene."
+        ],
+        [
+          "Stuck",
+          "Volatile",
+          "Cannot move away from its current position or be switched out."
+        ],
+        [
+          "Suppressed",
+          "Volatile",
+          "Its Ability stops functioning for the rest of the scene."
+        ],
+        [
+          "Vulnerable",
+          "Volatile",
+          "Takes extra damage from incoming attacks for the rest of the scene."
+        ]
+      ]
+    }
   }
 ]

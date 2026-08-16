@@ -73,7 +73,6 @@ export function newOwnedPokemon(familyId: string, stageName: string): CharacterS
     familyId,
     stageName,
     nickname: '',
-    level: 1,
     currentHp: ref?.stage.stats.hp ?? 1,
     statusConditions: [],
     notes: '',

@@ -114,16 +114,6 @@ export default function PokemonSheetScreen() {
 
       <Section title="Status">
         <View style={styles.stepperRow}>
-          <Text style={styles.stepperLabel}>Level</Text>
-          <TouchableOpacity style={styles.stepBtn} onPress={() => updateMon({ level: Math.max(1, mon.level - 1) })}>
-            <Text style={styles.stepBtnText}>−</Text>
-          </TouchableOpacity>
-          <Text style={styles.stepperValue}>{mon.level}</Text>
-          <TouchableOpacity style={styles.stepBtn} onPress={() => updateMon({ level: mon.level + 1 })}>
-            <Text style={styles.stepBtnText}>+</Text>
-          </TouchableOpacity>
-        </View>
-        <View style={styles.stepperRow}>
           <Text style={styles.stepperLabel}>Current HP</Text>
           <TouchableOpacity style={styles.stepBtn} onPress={() => updateMon({ currentHp: Math.max(0, mon.currentHp - 1) })}>
             <Text style={styles.stepBtnText}>−</Text>

@@ -7,32 +7,34 @@ import { TypeBadge } from '../components/TypeBadge';
 
 const ALL_TYPES = Object.keys(typeColors);
 
-type SortMode = 'name' | 'eggGroup';
+// "Human - Like" vs "Human-Like" is a data-entry inconsistency in the source
+// book extraction; normalize so both collapse into a single filter chip.
+const normalizeEggGroup = (g: string) => g.replace(/\s*-\s*/g, '-');
+
+const familyEggGroups = (f: (typeof pokemonFamilies)[number]) => (f.biology?.eggGroups ?? []).map(normalizeEggGroup);
+
+const ALL_EGG_GROUPS = Array.from(new Set(pokemonFamilies.flatMap(familyEggGroups))).sort();
 
 export default function PokedexListScreen() {
   const navigation = useNavigation<any>();
   const [query, setQuery] = useState('');
   const [activeType, setActiveType] = useState<string | null>(null);
-  const [sortBy, setSortBy] = useState<SortMode>('name');
+  const [activeEggGroup, setActiveEggGroup] = useState<string | null>(null);
 
   const filtered = useMemo(() => {
     let list = pokemonFamilies;
     if (activeType) {
       list = list.filter((f) => f.stages.some((s) => s.types.includes(activeType)));
     }
+    if (activeEggGroup) {
+      list = list.filter((f) => familyEggGroups(f).includes(activeEggGroup));
+    }
     if (query.trim()) {
       const q = query.toLowerCase();
       list = list.filter((f) => f.familyName.toLowerCase().includes(q) || f.stages.some((s) => s.name.toLowerCase().includes(q)));
     }
-    if (sortBy === 'eggGroup') {
-      list = [...list].sort((a, b) => {
-        const ega = a.biology?.eggGroups?.[0] ?? 'zzzz';
-        const egb = b.biology?.eggGroups?.[0] ?? 'zzzz';
-        return ega === egb ? a.familyName.localeCompare(b.familyName) : ega.localeCompare(egb);
-      });
-    }
     return list;
-  }, [query, activeType, sortBy]);
+  }, [query, activeType, activeEggGroup]);
 
   return (
     <View style={styles.container}>
@@ -57,14 +59,22 @@ export default function PokedexListScreen() {
           </TouchableOpacity>
         ))}
       </View>
-      <View style={styles.sortRow}>
-        <Text style={styles.sortLabel}>Sort:</Text>
-        <TouchableOpacity onPress={() => setSortBy('name')} style={[styles.sortChip, sortBy === 'name' && styles.sortChipActive]}>
-          <Text style={styles.sortChipText}>Name</Text>
+      <View style={styles.typeRow}>
+        <TouchableOpacity
+          onPress={() => setActiveEggGroup(null)}
+          style={[styles.sortChip, !activeEggGroup && styles.sortChipActive]}
+        >
+          <Text style={styles.sortChipText}>All Egg Groups</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => setSortBy('eggGroup')} style={[styles.sortChip, sortBy === 'eggGroup' && styles.sortChipActive]}>
-          <Text style={styles.sortChipText}>Egg Group</Text>
-        </TouchableOpacity>
+        {ALL_EGG_GROUPS.map((g) => (
+          <TouchableOpacity
+            key={g}
+            onPress={() => setActiveEggGroup(activeEggGroup === g ? null : g)}
+            style={[styles.sortChip, activeEggGroup === g && styles.sortChipActive]}
+          >
+            <Text style={styles.sortChipText}>{g}</Text>
+          </TouchableOpacity>
+        ))}
       </View>
       <FlatList
         data={filtered}
@@ -78,7 +88,7 @@ export default function PokedexListScreen() {
               <View style={{ flex: 1 }}>
                 <Text style={styles.rowTitle}>{item.familyName}</Text>
                 {item.stages.length > 1 && <Text style={styles.evoLine}>{item.stages.map((s) => s.name).join(' → ')}</Text>}
-                {sortBy === 'eggGroup' && eggGroups.length > 0 && <Text style={styles.eggGroupText}>{eggGroups.join(', ')}</Text>}
+                {eggGroups.length > 0 && <Text style={styles.eggGroupText}>{eggGroups.join(', ')}</Text>}
                 <View style={styles.badgeRow}>{first?.types.map((t) => <TypeBadge key={t} type={t} />)}</View>
               </View>
               {item.rarity && <Text style={styles.rarity}>{item.rarity}</Text>}
@@ -116,9 +126,14 @@ const styles = StyleSheet.create({
   },
   typeChipActive: { borderWidth: 2, borderColor: colors.text },
   typeChipText: { color: '#fff', fontSize: 12, fontWeight: '700' },
-  sortRow: { flexDirection: 'row', alignItems: 'center', paddingHorizontal: 12, marginBottom: 8 },
-  sortLabel: { color: colors.textMuted, fontSize: 12, marginRight: 8 },
-  sortChip: { paddingHorizontal: 12, paddingVertical: 6, borderRadius: 14, marginRight: 8, backgroundColor: colors.surfaceAlt },
+  sortChip: {
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 14,
+    marginRight: 8,
+    marginBottom: 8,
+    backgroundColor: colors.surfaceAlt,
+  },
   sortChipActive: { backgroundColor: colors.primary },
   sortChipText: { color: '#fff', fontSize: 12, fontWeight: '700' },
   evoLine: { color: colors.textMuted, fontSize: 11, marginBottom: 2 },

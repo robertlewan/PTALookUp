@@ -11,7 +11,8 @@ export default function PickMoveScreen() {
   const proficiencies: string[] = route.params.proficiencies ?? [];
   const [query, setQuery] = useState('');
 
-  const isProficient = (moveType: string) => proficiencies.some((p) => p.toLowerCase() === moveType.toLowerCase());
+  const isProficient = (moveType: string | null) =>
+    !!moveType && proficiencies.some((p) => p.toLowerCase() === moveType.toLowerCase());
 
   const filtered = useMemo(() => {
     if (!query.trim()) return allMoves;
@@ -47,7 +48,7 @@ export default function PickMoveScreen() {
             >
               <Text style={[styles.rowTitle, !proficient && styles.rowTitleDim]}>{item.name}</Text>
               <Text style={styles.rowMeta}>
-                {item.frequency} · {item.range} · {item.moveType} {item.category}
+                {item.frequency} · {item.range} · {item.moveType ?? 'Typeless'} {item.category}
                 {item.power ? ` · ${item.power}` : ''}
               </Text>
             </TouchableOpacity>
