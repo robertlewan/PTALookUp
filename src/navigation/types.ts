@@ -28,6 +28,11 @@ export type MovesStackParamList = {
   MoveDetail: { moveName: string };
 };
 
+export type PassivesStackParamList = {
+  PassiveList: undefined;
+  PassiveDetail: { passiveName: string };
+};
+
 export type HomeStackParamList = {
   Home: undefined;
 };
@@ -49,5 +54,6 @@ export type RootTabParamList = {
   GmGuideTab: undefined;
   ItemsTab: undefined;
   MovesTab: undefined;
+  PassivesTab: undefined;
   CombatTab: undefined;
 };

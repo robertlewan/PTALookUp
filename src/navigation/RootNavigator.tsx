@@ -22,6 +22,8 @@ import PickMoveScreen from '../screens/PickMoveScreen';
 import PickPassiveScreen from '../screens/PickPassiveScreen';
 import MovesListScreen from '../screens/MovesListScreen';
 import MoveDetailScreen from '../screens/MoveDetailScreen';
+import PassivesListScreen from '../screens/PassivesListScreen';
+import PassiveDetailScreen from '../screens/PassiveDetailScreen';
 import CombatScreen from '../screens/CombatScreen';
 
 const HomeStack = createNativeStackNavigator();
@@ -31,6 +33,7 @@ const CharactersStack = createNativeStackNavigator();
 const GmGuideStack = createNativeStackNavigator();
 const ItemsStack = createNativeStackNavigator();
 const MovesStack = createNativeStackNavigator();
+const PassivesStack = createNativeStackNavigator();
 const CombatStack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
@@ -100,6 +103,15 @@ function MovesStackNav() {
   );
 }
 
+function PassivesStackNav() {
+  return (
+    <PassivesStack.Navigator screenOptions={screenOptions}>
+      <PassivesStack.Screen name="PassiveList" component={PassivesListScreen} options={{ title: 'Passives' }} />
+      <PassivesStack.Screen name="PassiveDetail" component={PassiveDetailScreen} options={{ title: 'Passive' }} />
+    </PassivesStack.Navigator>
+  );
+}
+
 function GmGuideStackNav() {
   return (
     <GmGuideStack.Navigator screenOptions={screenOptions}>
@@ -147,6 +159,7 @@ export default function RootNavigator() {
         <Tab.Screen name="GmGuideTab" component={GmGuideStackNav} options={{ title: 'GM Guide' }} />
         <Tab.Screen name="ItemsTab" component={ItemsStackNav} options={{ title: 'Items' }} />
         <Tab.Screen name="MovesTab" component={MovesStackNav} options={{ title: 'Moves' }} />
+        <Tab.Screen name="PassivesTab" component={PassivesStackNav} options={{ title: 'Passives' }} />
         <Tab.Screen name="CombatTab" component={CombatStackNav} options={{ title: 'Combat' }} />
       </Tab.Navigator>
     </NavigationContainer>

@@ -51,6 +51,11 @@ export default function HomeScreen() {
         onPress={() => navigation.navigate('MovesTab')}
       />
       <NavCard
+        title="Passives"
+        desc="Browse every Pokémon passive and see which families know it."
+        onPress={() => navigation.navigate('PassivesTab')}
+      />
+      <NavCard
         title="Combat"
         desc="A lettered/numbered battle grid — place circle, square, triangle, and terrain tokens for encounters."
         onPress={() => navigation.navigate('CombatTab')}

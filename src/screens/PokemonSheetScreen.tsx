@@ -11,7 +11,19 @@ import { applyNature, STAT_LABELS, STAT_FLAVORS } from '../utils/nature';
 import { HpInput } from '../components/HpInput';
 import type { CharacterSheet, OwnedPokemon, PokemonMove } from '../types/models';
 
-const COMMON_STATUS = ['Poisoned', 'Burned', 'Paralyzed', 'Asleep', 'Frozen', 'Confused'];
+const COMMON_STATUS = [
+  'Bound',
+  'Burn',
+  'Confused',
+  'Dazed',
+  'Disabled',
+  'Drowsy',
+  'Entranced',
+  'Frostbite',
+  'Paralysis',
+  'Poisoned',
+  'Toxified',
+];
 
 export default function PokemonSheetScreen() {
   const route = useRoute<any>();
@@ -19,6 +31,7 @@ export default function PokemonSheetScreen() {
   const { characterId, pokemonId, location = 'party' }: { characterId: string; pokemonId: string; location?: 'party' | 'box' } =
     route.params;
   const [char, setChar] = useState<CharacterSheet | null>(null);
+  const [evolveOpen, setEvolveOpen] = useState(false);
 
   const load = useCallback(() => {
     getCharacter(characterId).then((c) => c && setChar(c));
@@ -98,6 +111,19 @@ export default function PokemonSheetScreen() {
     Alert.alert('Rest', `${mon!.nickname || mon!.stageName} refreshed all move uses and healed ${healed} HP.`);
   }
 
+  function evolveMon(stage: { name: string; stats: { hp: number } }) {
+    Alert.alert('Evolve', `Evolve ${mon!.nickname || mon!.stageName} into ${stage.name}?`, [
+      { text: 'Cancel', style: 'cancel' },
+      {
+        text: 'Evolve',
+        onPress: () => {
+          setEvolveOpen(false);
+          updateMon({ stageName: stage.name, currentHp: Math.min(mon!.currentHp, stage.stats.hp) });
+        },
+      },
+    ]);
+  }
+
   return (
     <ScrollView style={styles.container} contentContainerStyle={{ padding: 14 }}>
       <TextInput
@@ -111,6 +137,28 @@ export default function PokemonSheetScreen() {
         {family?.familyName ?? mon.familyId} · {mon.stageName}
       </Text>
       {ref && <View style={styles.badgeRow}>{ref.stage.types.map((t) => <TypeBadge key={t} type={t} />)}</View>}
+
+      {family && family.stages.length > 1 && (
+        <>
+          <TouchableOpacity style={styles.evolveBtn} onPress={() => setEvolveOpen((o) => !o)}>
+            <Text style={styles.evolveBtnText}>{evolveOpen ? 'Cancel Evolve' : '✦ Evolve'}</Text>
+          </TouchableOpacity>
+          {evolveOpen && (
+            <View style={styles.evolveOptions}>
+              {family.evolutionText && <Text style={styles.heldItemEffect}>{family.evolutionText}</Text>}
+              <View style={styles.skillWrap}>
+                {family.stages
+                  .filter((s) => s.name !== mon.stageName)
+                  .map((s) => (
+                    <TouchableOpacity key={s.name} style={styles.skillChip} onPress={() => evolveMon(s)}>
+                      <Text style={styles.skillChipText}>{s.name}</Text>
+                    </TouchableOpacity>
+                  ))}
+              </View>
+            </View>
+          )}
+        </>
+      )}
 
       <Section title="Status">
         <View style={styles.stepperRow}>
@@ -437,6 +485,9 @@ const styles = StyleSheet.create({
   },
   species: { color: colors.textMuted, fontSize: 13, marginBottom: 6 },
   badgeRow: { flexDirection: 'row', flexWrap: 'wrap', marginBottom: 8 },
+  evolveBtn: { backgroundColor: colors.accent, borderRadius: 8, paddingHorizontal: 12, paddingVertical: 8, alignSelf: 'flex-start', marginBottom: 8 },
+  evolveBtnText: { color: '#fff', fontWeight: '700', fontSize: 13 },
+  evolveOptions: { marginBottom: 12 },
   stepperRow: { flexDirection: 'row', alignItems: 'center', marginBottom: 10 },
   stepperLabel: { color: colors.textMuted, fontSize: 13, marginRight: 10, minWidth: 90 },
   stepBtn: { backgroundColor: colors.surfaceAlt, width: 28, height: 28, borderRadius: 6, alignItems: 'center', justifyContent: 'center' },

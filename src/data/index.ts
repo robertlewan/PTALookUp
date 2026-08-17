@@ -78,6 +78,26 @@ export const natureByName = new Map(natures.map((n) => [n.name, n]));
 export const allPassiveByName = new Map(allPassives.map((p) => [p.name, p]));
 export const proficiencyMoveListByName = new Map(proficiencyMoveLists.map((l) => [l.proficiency, l]));
 
+// Reverse index: passive name -> the Pokémon families that have it natively
+// on at least one evolutionary stage (per the Pokédex data), with which
+// stages specifically carry it.
+export const familiesForPassiveName = new Map<string, { familyId: string; familyName: string; stages: string[] }[]>();
+for (const family of pokemonFamilies) {
+  const stagesByPassive = new Map<string, string[]>();
+  for (const stage of family.stages) {
+    for (const p of stage.passives) {
+      const arr = stagesByPassive.get(p.name) ?? [];
+      arr.push(stage.name);
+      stagesByPassive.set(p.name, arr);
+    }
+  }
+  for (const [passiveName, stages] of stagesByPassive) {
+    const arr = familiesForPassiveName.get(passiveName) ?? [];
+    arr.push({ familyId: family.familyId, familyName: family.familyName, stages });
+    familiesForPassiveName.set(passiveName, arr);
+  }
+}
+
 export function baseClasses(): TrainerClass[] {
   return trainerClasses.filter((c) => c.tier === 'base');
 }

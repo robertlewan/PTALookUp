@@ -1,6 +1,6 @@
 import type { PokemonMove } from '../types/models';
 import { typeColors } from '../theme/theme';
-import { proficiencyMoveListByName } from '../data';
+import { proficiencyMoveListByName, proficiencyMoveLists } from '../data';
 
 // Parses a move's `frequency` field (e.g. "3/day", "1/day", "At-Will") into a
 // max-uses-before-Rest count. Returns null for unlimited/unparseable frequencies.
@@ -49,4 +49,17 @@ export function movesForProficiency(moves: PokemonMove[], proficiency: string): 
     return moves.filter((m) => nameSet.has(m.name));
   }
   return [];
+}
+
+// The reverse of movesForProficiency: every proficiency tag a given move
+// belongs to (its type, its category, and any move-class flavor lists from
+// the PHB's "Proficiency Lists" chapter that name it).
+export function proficienciesForMove(move: PokemonMove): string[] {
+  const tags = new Set<string>();
+  if (move.moveType) tags.add(move.moveType);
+  if (move.category) tags.add(move.category);
+  for (const list of proficiencyMoveLists) {
+    if (list.moves.includes(move.name)) tags.add(list.proficiency);
+  }
+  return [...tags];
 }

@@ -76,94 +76,332 @@
   },
   {
     "id": "inflictions",
-    "title": "Inflictions",
-    "body": "Inflictions (Status Afflictions) When a Pokémon or trainer is inflicted with a status affliction in combat, it changes how they can act and what happens to them each round. Afflictions come in two flavors. Persistent afflictions stick around after combat ends and need to be cured — by an item, a move, visiting a Pokémon Center, or GM ruling — before they wear off. Volatile afflictions are tied to the fight itself and clear automatically once the scene or encounter ends.\n\nA Pokémon can only be affected by one Persistent affliction at a time (a second one usually can’t take hold until the first is cured), but Volatile afflictions can stack alongside a Persistent one and alongside each other. Remind your players to track afflictions on their sheet, and remember that a wild Pokémon’s capture rate improves while it’s afflicted (see Capture Rates), so a status condition is often a trainer’s best opening for a catch as well as a fight.",
+    "title": "Afflictions",
+    "body": "In addition to damage, the effects of a successful attack will sometimes give its target an Affliction. Afflictions have various effects and can hinder movement, how attacks are made, or in extreme cases, whether attacks can be made at all. If a trainer or Pokémon passes their whole turn, staying still, they don’t suffer any damage from their Afflictions that turn, and may still make checks to cure themselves. Once at the start of your turn, as a Free Action, you may make one Affliction check to try to cure one of your Afflictions — an Affliction check is a 1d20 roll against the DC listed for that Affliction below. There’s no cap on how many different Afflictions a target can be carrying at once; each one is tracked and cured separately. A wild Pokémon’s capture rate improves while it’s afflicted (see Capture Rates), so landing a status is often a trainer’s best opening for a catch as well as a fight.",
     "table": {
       "columns": [
         "Affliction",
-        "Kind",
+        "Cure Check",
         "Effect"
       ],
       "rows": [
         [
-          "Burned",
-          "Persistent",
-          "Takes damage at the start of each of its turns; its Attack-based combat stages are treated as reduced while burned."
+          "Bound",
+          "16 (contested by the Binder)",
+          "Stuck to the character who bound you (the Binder) or to the ground. Can’t use held items, and can’t move unless heavier than the Binder — if you do move, the Binder moves with you. Attacks against anyone other than the Binder are disadvantaged; the Binder has advantage attacking you. Ends the moment either of you hits 0 HP."
         ],
         [
-          "Frozen",
-          "Persistent",
-          "Cannot take actions and cannot dodge; has a chance to thaw out at the start of each of its turns, and Fire-type damage thaws it immediately."
-        ],
-        [
-          "Paralyzed",
-          "Persistent",
-          "Speed is sharply reduced and it has a chance to be unable to act on its turn."
-        ],
-        [
-          "Poisoned",
-          "Persistent",
-          "Takes damage at the start of each of its turns until cured."
-        ],
-        [
-          "Badly Poisoned",
-          "Persistent",
-          "Like Poisoned, but the damage taken increases each round it isn’t cured."
-        ],
-        [
-          "Asleep",
-          "Persistent",
-          "Cannot take actions; has a chance to wake up at the start of each of its turns, and taking damage can wake it early."
+          "Burn",
+          "16 (11 if Ice or Water-type)",
+          "Attack▼ at the start of your turn; lose 1d6 HP whenever you take an action. Fire-types are immune unless stated otherwise."
         ],
         [
           "Confused",
-          "Volatile",
-          "Has a chance to hurt itself instead of following through on its chosen action each turn."
+          "16",
+          "Movement is halved. When you attack, roll a Confusion check: 16 cures it, 11+ lets you use the move you meant to, 10 or less makes you randomly use a different one of your moves against the same target."
         ],
         [
-          "Cursed",
-          "Volatile",
-          "Takes damage at the start of each of its turns for the rest of the scene."
+          "Dazed",
+          "Cures itself",
+          "Your next attack or skill check is made at disadvantage. You’re cured the instant that action resolves (win or lose), or immediately if you’re hit and damaged first. Can’t be Dazed again until the end of your next turn."
         ],
         [
           "Disabled",
-          "Volatile",
-          "One specific move it just used can’t be used again until the affliction ends."
+          "Only by leaving combat",
+          "The specific move you just used can’t be used again until you’re out of combat for a minute, knocked out, or returned to a Poké Ball."
         ],
         [
-          "Enraged",
-          "Volatile",
-          "Must keep attacking and can’t use non-damaging moves, but hits harder while enraged."
+          "Drowsy",
+          "16, then 14, 12, 10, 8, 6",
+          "Movement is halved and every non‑At-Will move or feature drops to 1/day frequency — anything already used today at a higher frequency can’t be used again while Drowsy, though it still only counts once toward the daily total once cured."
         ],
         [
-          "Flinch",
-          "Volatile",
-          "Loses its next action; only relevant if it hasn’t acted yet this round."
+          "Entranced",
+          "16",
+          "Movement is halved unless moving toward the Pokémon that entranced you (the Entrancer). Attacks against the Entrancer are disadvantaged; the Entrancer has advantage attacking you. Cured instantly if the Entrancer hits you with an attack. Trainers can’t be Entranced."
         ],
         [
-          "Infatuated",
-          "Volatile",
-          "Has a chance to freeze up instead of acting whenever it targets the Pokémon it’s infatuated with."
+          "Frostbite",
+          "16 (11 if Fire-type)",
+          "Sp. Attack▼ at the start of your turn; lose 1d6 HP whenever you take an action. Ice-types are immune unless stated otherwise."
         ],
         [
-          "Slowed",
-          "Volatile",
-          "Acts later in the turn order and has reduced Speed for the rest of the scene."
+          "Paralysis",
+          "16",
+          "Can’t use held items; Speed▼ at the start of your turn. When you move, roll a Paralysis check: 16 cures it, 11+ you move normally, 10 or less you gain Speed▼▼ (stacking to ▼▼▼ if you already have it)."
         ],
         [
-          "Stuck",
-          "Volatile",
-          "Cannot move away from its current position or be switched out."
+          "Poisoned",
+          "16",
+          "Lose 1d10 HP whenever you take an action. Cured automatically if reduced to 0 HP. Poison and Steel-types are immune unless stated otherwise."
         ],
         [
-          "Suppressed",
-          "Volatile",
-          "Its Ability stops functioning for the rest of the scene."
+          "Toxified",
+          "16",
+          "Lose 1d8 HP whenever you take an action, rising to 2d8, then 3d8, 4d8, 5d8, and so on each turn it isn’t cured. Cured automatically if reduced to 0 HP. Poison and Steel-types are immune unless stated otherwise."
+        ]
+      ]
+    }
+  },
+  {
+    "id": "field-conditions",
+    "title": "Field Conditions",
+    "body": "Field Conditions can change the terms of battle, and with three types of Field Condition, you can really set up a favorable advantage. Whenever you create a Field Condition, you’re centered in the middle of the Terrain, Weather, or Zone effect you create — each effect’s radius is defined per move. If a Terrain move is used while another Terrain is already active within its diameter, it replaces the older Terrain; the same is true for Weather and Zones. Whether it’s Terrain, Weather, or a Zone, Field Conditions end after two minutes.",
+    "table": {
+      "columns": [
+        "Kind",
+        "Name",
+        "Effect"
+      ],
+      "rows": [
+        [
+          "Terrain",
+          "Electric Terrain",
+          "Anyone touching the ground is immune to Drowsy and Entranced. Electric-type attacks deal +4 damage."
         ],
         [
-          "Vulnerable",
-          "Volatile",
-          "Takes extra damage from incoming attacks for the rest of the scene."
+          "Terrain",
+          "Flowery Terrain",
+          "At the start of their turns, Fairy-types and Grass-types get Defense▲ or SpDefense▲. Fairy-type and Grass-type attacks deal +4 damage."
+        ],
+        [
+          "Terrain",
+          "Grassy Terrain",
+          "Anyone who acts recovers 1d8 HP after acting. Grass-type attacks deal +4 damage."
+        ],
+        [
+          "Terrain",
+          "Misty Terrain",
+          "Dragon-type attacks are resisted by anyone not already resistant to them, and Afflictions cannot be given to anyone. Fairy-type attacks deal +4 damage."
+        ],
+        [
+          "Terrain",
+          "Muddy Terrain",
+          "Electric-type attacks deal −8 damage; Ground-type attacks deal +4 damage."
+        ],
+        [
+          "Terrain",
+          "Psychic Terrain",
+          "Anyone touching the ground is immune to damage from Reaction moves or Priority moves used out of turn order. Psychic-type attacks deal +4 damage."
+        ],
+        [
+          "Terrain",
+          "Wet Terrain",
+          "Pokémon with the Flopper or Beached Skill ignore those Skills while acting here. Fire-type attacks deal −8 damage; Water-type attacks deal +4 damage."
+        ],
+        [
+          "Weather",
+          "Hailing Weather",
+          "Anyone who acts takes 2d4 damage after acting unless they’re Ice-type. Ice-type attacks deal +4 damage."
+        ],
+        [
+          "Weather",
+          "Hazy Weather",
+          "Anyone who acts loses all Stat ▲/▼. Attacks made within or into it may not add bonuses to their AC."
+        ],
+        [
+          "Weather",
+          "Misty Weather",
+          "No one here can be given ▼. Fairy-type and Ghost-type attacks deal +4 damage."
+        ],
+        [
+          "Weather",
+          "Pyroclastic Weather",
+          "Anyone who acts takes 2d4 damage after acting unless they’re Fire-type. Fire-type attacks deal +4 damage."
+        ],
+        [
+          "Weather",
+          "Raining Weather",
+          "Water-type attacks deal +4 damage; Fire-type attacks deal −8 damage."
+        ],
+        [
+          "Weather",
+          "Sandstorming Weather",
+          "Anyone who acts takes 2d4 damage after acting unless they’re Ground, Rock, or Steel-type. Rock-type attacks deal +4 damage."
+        ],
+        [
+          "Weather",
+          "Snowy Weather",
+          "At the start of their turns, Ice-types get Defense▲ or SpDefense▲. Ice-type attacks deal +4 damage."
+        ],
+        [
+          "Weather",
+          "Sunny Weather",
+          "Fire-type attacks deal +4 damage; Water-type attacks deal −8 damage."
+        ],
+        [
+          "Weather",
+          "Gusty Weather",
+          "At the start of their turns, Flying-types and their adjacent allies get Speed▲. Flying-type attacks deal +4 damage."
+        ],
+        [
+          "Zone",
+          "Gravitized Zone",
+          "No one can leave the ground. Attacks made against targets get +1 during AC, and any Ground-type immunities are treated as resisted."
+        ],
+        [
+          "Zone",
+          "Ionic Zone",
+          "All Normal-type moves are treated as Electric-type."
+        ],
+        [
+          "Zone",
+          "Magical Zone",
+          "All Held Items lose their abilities, and Medicine Items can’t be used with any effect (Mega Stones and Z-Crystals are unaffected)."
+        ],
+        [
+          "Zone",
+          "Tricky Zone",
+          "Reverse the turn order established during initiative. Priority moves used out of turn order let their user act last instead of first."
+        ],
+        [
+          "Zone",
+          "Wonderful Zone",
+          "The stat values of Defense and Special Defense are swapped."
+        ]
+      ]
+    }
+  },
+  {
+    "id": "tutoring",
+    "title": "Tutoring",
+    "body": "Some attacks require no experience with tutoring moves. For Move Tutors, certain Coordinators, or other strategy-oriented trainers, tutoring is a special skill — but some moves can be taught by basically any trainer to nearly any Pokémon. If a trainer has downtime and wants to pad out a Pokémon’s moveset with a safety option once it’s exhausted all other choices, they can use this list. Moves taught this way must still fit the Pokémon’s proficiencies, though most of the moves below are already on the Any proficiency list. Look up any move’s full frequency, range, and effect text in the Moves tab. (Player’s Handbook, p. 185.)",
+    "table": {
+      "columns": [
+        "Move",
+        "Who Can Tutor It",
+        "Downtime Required"
+      ],
+      "rows": [
+        [
+          "After You",
+          "Any trainer",
+          "4 hours"
+        ],
+        [
+          "Celebrate",
+          "Any trainer",
+          "4 hours"
+        ],
+        [
+          "Cut",
+          "Any trainer",
+          "4 hours"
+        ],
+        [
+          "Growl",
+          "Any trainer",
+          "4 hours"
+        ],
+        [
+          "Horn Attack",
+          "Any trainer",
+          "4 hours"
+        ],
+        [
+          "Leer",
+          "Any trainer",
+          "4 hours"
+        ],
+        [
+          "Pound",
+          "Any trainer",
+          "4 hours"
+        ],
+        [
+          "Sand Attack",
+          "Any trainer",
+          "4 hours"
+        ],
+        [
+          "Scratch",
+          "Any trainer",
+          "4 hours"
+        ],
+        [
+          "Splash",
+          "Any trainer",
+          "4 hours"
+        ],
+        [
+          "Tackle",
+          "Any trainer",
+          "4 hours"
+        ],
+        [
+          "Double Hit",
+          "Any trainer, level 5+",
+          "6 hours"
+        ],
+        [
+          "Double Slap",
+          "Any trainer, level 5+",
+          "6 hours"
+        ],
+        [
+          "Focus Energy",
+          "Any trainer, level 5+",
+          "6 hours"
+        ],
+        [
+          "Fury Attack",
+          "Any trainer, level 5+",
+          "6 hours"
+        ],
+        [
+          "Hold Back",
+          "Any trainer, level 5+",
+          "6 hours"
+        ],
+        [
+          "Tail Slap",
+          "Any trainer, level 5+",
+          "6 hours"
+        ],
+        [
+          "Tickle",
+          "Any trainer, level 5+",
+          "6 hours"
+        ],
+        [
+          "Double Edge",
+          "Any trainer, level 10+",
+          "8 hours"
+        ],
+        [
+          "Frustration",
+          "Any trainer, level 10+",
+          "8 hours"
+        ],
+        [
+          "Hidden Power",
+          "Any trainer, level 10+",
+          "8 hours"
+        ],
+        [
+          "Mega Kick",
+          "Any trainer, level 10+",
+          "8 hours"
+        ],
+        [
+          "Mega Punch",
+          "Any trainer, level 10+",
+          "8 hours"
+        ],
+        [
+          "Return",
+          "Any trainer, level 10+",
+          "8 hours"
+        ],
+        [
+          "Slam",
+          "Any trainer, level 10+",
+          "8 hours"
+        ],
+        [
+          "Slash",
+          "Any trainer, level 10+",
+          "8 hours"
         ]
       ]
     }
