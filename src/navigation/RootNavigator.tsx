@@ -20,6 +20,7 @@ import ItemsListScreen from '../screens/ItemsListScreen';
 import ItemDetailScreen from '../screens/ItemDetailScreen';
 import PickMoveScreen from '../screens/PickMoveScreen';
 import AddCustomMoveScreen from '../screens/AddCustomMoveScreen';
+import AddCustomPassiveScreen from '../screens/AddCustomPassiveScreen';
 import PickPassiveScreen from '../screens/PickPassiveScreen';
 import MovesListScreen from '../screens/MovesListScreen';
 import MoveDetailScreen from '../screens/MoveDetailScreen';
@@ -82,6 +83,7 @@ function CharactersStackNav() {
       <CharactersStack.Screen name="PickItem" component={ItemsListScreen} options={{ title: 'Choose Item', presentation: 'modal' }} />
       <CharactersStack.Screen name="PickMove" component={PickMoveScreen} options={{ title: 'Add Move', presentation: 'modal' }} />
       <CharactersStack.Screen name="AddCustomMove" component={AddCustomMoveScreen} options={{ title: 'Custom Move', presentation: 'modal' }} />
+      <CharactersStack.Screen name="AddCustomPassive" component={AddCustomPassiveScreen} options={{ title: 'Custom Passive', presentation: 'modal' }} />
       <CharactersStack.Screen name="PickPassive" component={PickPassiveScreen} options={{ title: 'Add Passive', presentation: 'modal' }} />
     </CharactersStack.Navigator>
   );

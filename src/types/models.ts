@@ -148,6 +148,11 @@ export interface CustomMove {
   effect: string;
 }
 
+export interface CustomPassive {
+  name: string;
+  description: string;
+}
+
 export interface OwnedPokemon {
   id: string;
   familyId: string;
@@ -162,6 +167,7 @@ export interface OwnedPokemon {
   removedMoves?: string[];
   customMoves?: CustomMove[];
   extraPassives?: string[];
+  customPassives?: CustomPassive[];
   nature?: string | null;
 }
 

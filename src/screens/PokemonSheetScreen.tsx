@@ -9,7 +9,7 @@ import { TypeBadge } from '../components/TypeBadge';
 import { moveMaxUses, movesForProficiency, remainingUses } from '../utils/moves';
 import { applyNature, STAT_LABELS, STAT_FLAVORS } from '../utils/nature';
 import { HpInput } from '../components/HpInput';
-import type { CharacterSheet, CustomMove, OwnedPokemon, PokemonMove } from '../types/models';
+import type { CharacterSheet, CustomMove, CustomPassive, OwnedPokemon, PokemonMove } from '../types/models';
 
 const COMMON_STATUS = [
   'Bound',
@@ -282,7 +282,7 @@ export default function PokemonSheetScreen() {
             </>
           )}
 
-          {(ref.stage.passives.length > 0 || (mon.extraPassives ?? []).length > 0) && (
+          {(ref.stage.passives.length > 0 || (mon.extraPassives ?? []).length > 0 || (mon.customPassives ?? []).length > 0) && (
             <>
               <Text style={styles.subTitle}>Passives</Text>
               {ref.stage.passives.map((p, i) => (
@@ -306,22 +306,49 @@ export default function PokemonSheetScreen() {
                   </View>
                 );
               })}
+              {(mon.customPassives ?? []).map((passive, i) => (
+                <View key={`custom-${i}`} style={styles.extraPassiveRow}>
+                  <Text style={[styles.body, { flex: 1 }]}>
+                    <Text style={styles.bold}>{passive.name}</Text>
+                    {passive.description ? ` — ${passive.description}` : ''}
+                  </Text>
+                  <TouchableOpacity
+                    onPress={() => updateMon({ customPassives: (mon.customPassives ?? []).filter((_, idx) => idx !== i) })}
+                  >
+                    <Text style={styles.removeText}>Remove</Text>
+                  </TouchableOpacity>
+                </View>
+              ))}
             </>
           )}
-          <TouchableOpacity
-            style={styles.addPassiveBtn}
-            onPress={() =>
-              navigation.navigate('PickPassive', {
-                onPick: async (passiveName: string) => {
-                  if (!(mon.extraPassives ?? []).includes(passiveName)) {
-                    await updateMon({ extraPassives: [...(mon.extraPassives ?? []), passiveName] });
-                  }
-                },
-              })
-            }
-          >
-            <Text style={styles.addBtnSmallText}>+ Add Passive</Text>
-          </TouchableOpacity>
+          <View style={styles.passiveBtnRow}>
+            <TouchableOpacity
+              style={styles.addPassiveBtn}
+              onPress={() =>
+                navigation.navigate('PickPassive', {
+                  onPick: async (passiveName: string) => {
+                    if (!(mon.extraPassives ?? []).includes(passiveName)) {
+                      await updateMon({ extraPassives: [...(mon.extraPassives ?? []), passiveName] });
+                    }
+                  },
+                })
+              }
+            >
+              <Text style={styles.addBtnSmallText}>+ Add Passive</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.addPassiveBtnSecondary}
+              onPress={() =>
+                navigation.navigate('AddCustomPassive', {
+                  onAdd: async (passive: CustomPassive) => {
+                    await updateMon({ customPassives: [...(mon.customPassives ?? []), passive] });
+                  },
+                })
+              }
+            >
+              <Text style={styles.addPassiveBtnSecondaryText}>+ Add Custom Passive</Text>
+            </TouchableOpacity>
+          </View>
 
           {family && family.proficiencies.length > 0 && (
             <>
@@ -553,7 +580,17 @@ const styles = StyleSheet.create({
   heldItemText: { color: colors.text, fontSize: 14, flex: 1 },
   heldItemEffect: { color: colors.textMuted, fontSize: 12, lineHeight: 17, marginTop: 4 },
   addBtnSmall: { backgroundColor: colors.primaryMuted, borderRadius: 6, paddingHorizontal: 10, paddingVertical: 6, marginLeft: 8 },
-  addPassiveBtn: { backgroundColor: colors.primaryMuted, borderRadius: 6, paddingHorizontal: 10, paddingVertical: 6, marginTop: 4, marginBottom: 8, alignSelf: 'flex-start' },
+  passiveBtnRow: { flexDirection: 'row', flexWrap: 'wrap', marginTop: 4, marginBottom: 8 },
+  addPassiveBtn: { backgroundColor: colors.primaryMuted, borderRadius: 6, paddingHorizontal: 10, paddingVertical: 6, marginRight: 8, alignSelf: 'flex-start' },
+  addPassiveBtnSecondary: {
+    borderRadius: 6,
+    paddingHorizontal: 10,
+    paddingVertical: 6,
+    alignSelf: 'flex-start',
+    borderWidth: 1,
+    borderColor: colors.border,
+  },
+  addPassiveBtnSecondaryText: { color: colors.textMuted, fontWeight: '700', fontSize: 12 },
   extraPassiveRow: { flexDirection: 'row', alignItems: 'flex-start', marginBottom: 4 },
   addBtnSmallText: { color: '#fff', fontWeight: '700', fontSize: 12 },
   removeText: { color: '#f87171', fontSize: 12, fontWeight: '700' },
