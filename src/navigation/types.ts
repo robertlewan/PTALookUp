@@ -16,6 +16,7 @@ export type CharactersStackParamList = {
   PickClass: { characterId: string; slot: 'base' | 'advanced'; forBaseId?: string };
   PickItem: { onPick: (itemId: string) => void | Promise<void>; defaultCategory?: string };
   PickMove: { onPick: (moveName: string) => void | Promise<void>; proficiencies: string[] };
+  AddCustomMove: { onAdd: (move: { name: string; frequency: string; effect: string }) => void | Promise<void> };
 };
 
 export type ItemsStackParamList = {

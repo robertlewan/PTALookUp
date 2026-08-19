@@ -10,7 +10,7 @@ export function moveMaxUses(frequency: string | null): number | null {
   return m ? parseInt(m[1], 10) : null;
 }
 
-export function remainingUses(moveUses: Record<string, number> | undefined, move: PokemonMove): number | null {
+export function remainingUses(moveUses: Record<string, number> | undefined, move: Pick<PokemonMove, 'name' | 'frequency'>): number | null {
   const max = moveMaxUses(move.frequency);
   if (max === null) return null;
   const stored = moveUses?.[move.name];

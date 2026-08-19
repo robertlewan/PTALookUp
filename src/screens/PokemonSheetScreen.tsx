@@ -9,7 +9,7 @@ import { TypeBadge } from '../components/TypeBadge';
 import { moveMaxUses, movesForProficiency, remainingUses } from '../utils/moves';
 import { applyNature, STAT_LABELS, STAT_FLAVORS } from '../utils/nature';
 import { HpInput } from '../components/HpInput';
-import type { CharacterSheet, OwnedPokemon, PokemonMove } from '../types/models';
+import type { CharacterSheet, CustomMove, OwnedPokemon, PokemonMove } from '../types/models';
 
 const COMMON_STATUS = [
   'Bound',
@@ -87,7 +87,7 @@ export default function PokemonSheetScreen() {
     navigation.goBack();
   }
 
-  function useMove(move: PokemonMove) {
+  function useMove(move: Pick<PokemonMove, 'name' | 'frequency'>) {
     const max = moveMaxUses(move.frequency);
     if (max === null) return; // At-Will or unparseable frequency: nothing to track
     const current = remainingUses(mon!.moveUses, move) ?? max;
@@ -95,7 +95,7 @@ export default function PokemonSheetScreen() {
     updateMon({ moveUses: { ...(mon!.moveUses ?? {}), [move.name]: current - 1 } });
   }
 
-  function restoreMove(move: PokemonMove) {
+  function restoreMove(move: Pick<PokemonMove, 'name' | 'frequency'>) {
     const max = moveMaxUses(move.frequency);
     if (max === null) return;
     const current = remainingUses(mon!.moveUses, move) ?? max;
@@ -388,6 +388,17 @@ export default function PokemonSheetScreen() {
             );
           })}
 
+          {(mon.customMoves ?? []).map((move, i) => (
+            <MoveRow
+              key={`custom-${i}`}
+              move={move}
+              moveUses={mon.moveUses}
+              onUse={() => useMove(move)}
+              onRestore={() => restoreMove(move)}
+              onRemove={() => updateMon({ customMoves: (mon.customMoves ?? []).filter((_, idx) => idx !== i) })}
+            />
+          ))}
+
           <TouchableOpacity
             style={styles.addBtn}
             onPress={() =>
@@ -402,6 +413,19 @@ export default function PokemonSheetScreen() {
             }
           >
             <Text style={styles.addBtnText}>+ Add Move</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={styles.addBtnSecondary}
+            onPress={() =>
+              navigation.navigate('AddCustomMove', {
+                onAdd: async (move: CustomMove) => {
+                  await updateMon({ customMoves: [...(mon.customMoves ?? []), move] });
+                },
+              })
+            }
+          >
+            <Text style={styles.addBtnSecondaryText}>+ Add Custom Move</Text>
           </TouchableOpacity>
 
           <TouchableOpacity onPress={() => navigation.navigate('DexTab', { screen: 'DexDetail', params: { familyId: mon.familyId } })}>
@@ -428,7 +452,7 @@ function MoveRow({
   onRestore,
   onRemove,
 }: {
-  move: PokemonMove;
+  move: Pick<PokemonMove, 'name' | 'frequency'> & Partial<Pick<PokemonMove, 'range' | 'moveType' | 'category' | 'power' | 'effect'>>;
   moveUses: Record<string, number> | undefined;
   onUse: () => void;
   onRestore: () => void;
@@ -436,13 +460,16 @@ function MoveRow({
 }) {
   const max = moveMaxUses(move.frequency);
   const remaining = remainingUses(moveUses, move);
+  const metaParts = [move.frequency, move.range, [move.moveType, move.category].filter(Boolean).join(' ') || null, move.power].filter(
+    (p): p is string => !!p
+  );
 
   return (
     <View style={styles.moveRow}>
       <View style={{ flex: 1 }}>
         <Text style={styles.body}>
-          <Text style={styles.bold}>{move.name}</Text> · {move.frequency} · {move.range} · {move.moveType} {move.category}
-          {move.power ? ` · ${move.power}` : ''}
+          <Text style={styles.bold}>{move.name}</Text>
+          {metaParts.length > 0 ? ` · ${metaParts.join(' · ')}` : ''}
         </Text>
         {!!move.effect && <Text style={styles.moveEffect}>{move.effect}</Text>}
         {onRemove && (
@@ -499,6 +526,15 @@ const styles = StyleSheet.create({
   restBtnText: { color: '#fff', fontWeight: '700', fontSize: 12 },
   addBtn: { backgroundColor: colors.primaryMuted, borderRadius: 8, padding: 10, alignItems: 'center', marginTop: 8 },
   addBtnText: { color: '#fff', fontWeight: '700', fontSize: 13 },
+  addBtnSecondary: {
+    borderRadius: 8,
+    padding: 10,
+    alignItems: 'center',
+    marginTop: 8,
+    borderWidth: 1,
+    borderColor: colors.border,
+  },
+  addBtnSecondaryText: { color: colors.textMuted, fontWeight: '700', fontSize: 13 },
   moveRow: { flexDirection: 'row', alignItems: 'center', marginBottom: 8 },
   useBox: { flexDirection: 'row', alignItems: 'center', marginLeft: 8 },
   useStepBtn: { backgroundColor: colors.surfaceAlt, width: 22, height: 22, borderRadius: 5, alignItems: 'center', justifyContent: 'center' },

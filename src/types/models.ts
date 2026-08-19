@@ -142,6 +142,12 @@ export interface TrainerClassPick {
   level: number;
 }
 
+export interface CustomMove {
+  name: string;
+  frequency: string;
+  effect: string;
+}
+
 export interface OwnedPokemon {
   id: string;
   familyId: string;
@@ -154,6 +160,7 @@ export interface OwnedPokemon {
   heldItem?: string | null;
   extraMoves?: string[];
   removedMoves?: string[];
+  customMoves?: CustomMove[];
   extraPassives?: string[];
   nature?: string | null;
 }
